@@ -24,7 +24,7 @@
 ### Domain 2: Image Creation, Management, and Registry (20% of exam)
 
 * [Describe the use of Dockerfile.](data/2.Image_creation_management_registry/describe_the_use_of_dockerfile.yaml)
-* Describe options, such as add, copy, volumes, expose, entry point.
+* [Describe options, such as add, copy, volumes, expose, entry point.](data/2.Image_creation_management_registry/identify_display_main_parts_dockerfile.yaml)
 * Identify and display the main parts of a Dockerfile.
 * Describe and demonstrate how to create an efficient image via a Dockerfile.
 * Describe and demonstrate how to use CLI commands to manage images, such as list, delete, prune, rmi.
@@ -79,7 +79,7 @@ Content may include the following:
 * Describe the process of signing an image.
 * Describe default engine security.
 * Describe swarm default security.
-* Describe MTLS.
+* [Describe MTLS.](data/5.Security/describe_mtls.yaml)
 * Describe identity roles.
 * Compare and contrast UCP workers and managers.
 * Describe the process to use external certificates with UCP and DTR.
