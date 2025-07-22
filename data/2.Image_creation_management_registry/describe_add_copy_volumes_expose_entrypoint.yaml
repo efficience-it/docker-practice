@@ -1,0 +1,56 @@
+questions:
+  - uuid: 53f78b5c-1f2e-4a38-a2bc-1e3035c35eac
+    question: What is the purpose of the ADD instruction in a Dockerfile?
+    answers:
+      - { value: 'To copy files and extract remote archives', correct: true }
+      - { value: 'To download images from a registry', correct: false }
+      - { value: 'To execute a command during build', correct: false }
+    link: https://docs.docker.com/engine/reference/builder/#add
+
+  - uuid: 40838e71-0431-4df2-a943-16860128cb58
+    question: How does COPY differ from ADD in Dockerfiles?
+    answers:
+      - { value: 'COPY only copies local files without extraction', correct: true }
+      - { value: 'COPY can handle remote URLs like ADD', correct: false }
+      - { value: 'COPY installs dependencies', correct: false }
+    link: https://docs.docker.com/engine/reference/builder/#copy
+
+  - uuid: 3a2c3006-f8cf-43d2-9d94-5602c8a239fc
+    question: What does VOLUME do in a Dockerfile?
+    answers:
+      - { value: 'Declares a mount point for persistent data', correct: true }
+      - { value: 'Mounts a remote volume at runtime', correct: false }
+      - { value: 'Defines image build layers', correct: false }
+    link: https://docs.docker.com/engine/reference/builder/#volume
+
+  - uuid: 1dbcf23d-c54b-4f4a-a5e3-ec614e66ff4c
+    question: What is the function of EXPOSE in a Dockerfile?
+    answers:
+      - { value: 'Documents which ports the container listens on', correct: true }
+      - { value: 'Opens firewall ports automatically', correct: false }
+      - { value: 'Publishes ports to the host', correct: false }
+    link: https://docs.docker.com/engine/reference/builder/#expose
+
+  - uuid: b33939a6-9cfa-4ff2-9e32-209299cb04b3
+    question: Why would you use ENTRYPOINT instead of CMD?
+    answers:
+      - { value: 'To define a fixed binary that always runs in the container', correct: true }
+      - { value: 'To override the container image name', correct: false }
+      - { value: 'To expose a port for incoming traffic', correct: false }
+    link: https://docs.docker.com/engine/reference/builder/#entrypoint
+
+  - uuid: d5991f59-934f-4fa8-b5b4-6b0f43017080
+    question: Which instruction is best for extracting a remote tar.gz file into the image?
+    answers:
+      - { value: 'ADD', correct: true }
+      - { value: 'COPY', correct: false }
+      - { value: 'VOLUME', correct: false }
+    link: https://docs.docker.com/engine/reference/builder/#add
+
+  - uuid: c65c18c0-199a-4c82-a9a2-8ce6edce60a4
+    question: What happens when you use EXPOSE without publishing the port?
+    answers:
+      - { value: 'The port is documented but not published to the host automatically', correct: true }
+      - { value: 'The port becomes accessible from the host immediately', correct: false }
+      - { value: 'Docker maps it to a random host port', correct: false }
+    link: https://docs.docker.com/engine/reference/builder/#expose
