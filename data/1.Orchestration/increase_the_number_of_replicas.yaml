@@ -1,0 +1,162 @@
+questions:
+  - uuid: 1d1f5e1c-908a-4ad3-bc23-4d2eb4a9b101
+    question: What is the purpose of increasing the number of replicas for a Docker Swarm service?
+    answers:
+      - { value: 'To improve fault tolerance and load distribution', correct: true }
+      - { value: 'To increase the memory limit of a container', correct: false }
+      - { value: 'To mount more volumes into a container', correct: false }
+      - { value: 'To enable IPv6 networking', correct: false }
+    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
+
+  - uuid: 74c54825-263f-4c85-9e36-bd68e96c8b78
+    question: Which command increases the number of replicas of an existing service in Docker Swarm?
+    answers:
+      - { value: 'docker service scale myservice=5', correct: true }
+      - { value: 'docker service update --scale=5 myservice', correct: false }
+      - { value: 'docker swarm scale myservice=5', correct: false }
+      - { value: 'docker container update --replicas 5 myservice', correct: false }
+    link: https://docs.docker.com/engine/reference/commandline/service_scale/
+
+  - uuid: 3528e1be-d79f-4f82-b0a8-ff71f2d3c0d7
+    question: What happens if a node running a service replica fails in Swarm mode?
+    answers:
+      - { value: 'Another node will automatically run a new replica to maintain the desired state', correct: true }
+      - { value: 'The replica count decreases permanently', correct: false }
+      - { value: 'The service enters maintenance mode', correct: false }
+      - { value: 'The container is automatically restarted on the failed node', correct: false }
+    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
+
+  - uuid: 13e68b20-8139-43b0-9a3b-958fa6c144db
+    question: How can you verify that all replicas of a service are running as expected?
+    answers:
+      - { value: 'docker service ps <service>', correct: true }
+      - { value: 'docker ps --replica', correct: false }
+      - { value: 'docker node inspect <service>', correct: false }
+      - { value: 'docker info replicas', correct: false }
+    link: https://docs.docker.com/engine/reference/commandline/service_ps/
+
+  - uuid: 93333a3d-85cc-43b0-b0f0-93f51469f901
+    question: When scaling a service to more replicas, what factor determines which node receives new tasks?
+    answers:
+      - { value: 'The Swarm scheduler based on node availability and constraints', correct: true }
+      - { value: 'The alphabetical order of node hostnames', correct: false }
+      - { value: 'Manual assignment in the scale command', correct: false }
+      - { value: 'The order in which containers were created', correct: false }
+    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/swarm-scheduler/
+
+  - uuid: 4aaf4749-efb3-4e04-9e17-32d455a1bde7
+    question: What happens if you scale a service beyond the total number of available nodes?
+    answers:
+      - { value: 'Some replicas remain in Pending state until nodes are available', correct: true }
+      - { value: 'Docker automatically provisions more nodes', correct: false }
+      - { value: 'The command fails immediately', correct: false }
+      - { value: 'Swarm randomly kills existing tasks', correct: false }
+    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
+
+  - uuid: 283add58-7c01-4a7e-9721-f6c832a17662
+    question: Which of the following is a requirement to scale a service using `docker service scale`?
+    answers:
+      - { value: 'Swarm mode must be enabled', correct: true }
+      - { value: 'A volume must be attached', correct: false }
+      - { value: 'TLS authentication must be disabled', correct: false }
+      - { value: 'The service must be in global mode', correct: false }
+    link: https://docs.docker.com/engine/reference/commandline/service_scale/
+
+  - uuid: ffd99d1f-0d80-4cfa-b305-8a151d278f91
+    question: How do you scale a service named “webapp” to 10 replicas using the `docker service update` command?
+    answers:
+      - { value: 'docker service update --replicas 10 webapp', correct: true }
+      - { value: 'docker service scale webapp=10', correct: false }
+      - { value: 'docker update --replicas=10 webapp', correct: false }
+      - { value: 'docker container scale webapp --replicas 10', correct: false }
+    link: https://docs.docker.com/engine/reference/commandline/service_update/
+
+  - uuid: 7f4b1b9e-d68d-4d95-83e0-92d785c418f4
+    question: What is the default restart policy for a Swarm service replica?
+    answers:
+      - { value: 'restart on-failure', correct: true }
+      - { value: 'never', correct: false }
+      - { value: 'always', correct: false }
+      - { value: 'restart-on-update', correct: false }
+    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
+
+  - uuid: 9f58e066-2e38-49d3-8f89-8b8379e845f2
+    question: What command can show you how many replicas are running and desired?
+    answers:
+      - { value: 'docker service ls', correct: true }
+      - { value: 'docker ps --services', correct: false }
+      - { value: 'docker node ps', correct: false }
+      - { value: 'docker info --services', correct: false }
+    link: https://docs.docker.com/engine/reference/commandline/service_ls/
+
+  - uuid: 5e0a6d9b-13ad-4d96-9e4c-bb28e1344db0
+    question: Which of these is a key reason to scale services horizontally in Docker Swarm?
+    answers:
+      - { value: 'To handle increased application load by distributing across replicas', correct: true }
+      - { value: 'To convert a service into a privileged container', correct: false }
+      - { value: 'To switch a container from bridge to host network', correct: false }
+      - { value: 'To enable multi-stage builds in a container', correct: false }
+    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
+
+  - uuid: 872ab1a5-d8eb-4bce-ae80-90bb99e6c5be
+    question: What limitation applies when increasing replicas of a service that uses local volume storage?
+    answers:
+      - { value: 'Data may not be shared between replicas on different nodes', correct: true }
+      - { value: 'The replicas cannot use Docker secrets', correct: false }
+      - { value: 'The service must be recreated from scratch', correct: false }
+      - { value: 'Swarm disables automatic scaling', correct: false }
+    link: https://docs.docker.com/storage/volumes/
+
+  - uuid: 9eb47370-3621-498b-8c3d-ea19c8f64e00
+    question: How can you limit which nodes replicas of a service are deployed to?
+    answers:
+      - { value: 'By using placement constraints', correct: true }
+      - { value: 'By labeling containers', correct: false }
+      - { value: 'By adding replica affinity', correct: false }
+      - { value: 'By setting node CPU quotas', correct: false }
+    link: https://docs.docker.com/engine/swarm/services/#placement-constraints
+
+  - uuid: f9e45a08-6c3c-49a0-90c6-d81d6f86e926
+    question: What happens if you try to scale a service that was created in global mode?
+    answers:
+      - { value: 'The scale operation fails with an error', correct: true }
+      - { value: 'Docker converts the service to replicated mode', correct: false }
+      - { value: 'Nothing happens — replicas remain unchanged', correct: false }
+      - { value: 'Swarm automatically increases CPU quotas', correct: false }
+    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
+
+  - uuid: 12c94943-b201-4987-826a-7161b54ce36f
+    question: What flag in `docker service create` sets the number of replicas?
+    answers:
+      - { value: '--replicas', correct: true }
+      - { value: '--instances', correct: false }
+      - { value: '--tasks', correct: false }
+      - { value: '--scale', correct: false }
+    link: https://docs.docker.com/engine/reference/commandline/service_create/
+
+  - uuid: d5e30c33-bc69-44ea-bb8c-37779c2c1a5e
+    question: How can you scale a service temporarily for testing purposes?
+    answers:
+      - { value: 'Use docker service scale and then scale it back manually', correct: true }
+      - { value: 'Run docker container update with a TTL', correct: false }
+      - { value: 'Set replicas in docker-compose.yaml and restart', correct: false }
+      - { value: 'Use docker run --replica-count', correct: false }
+    link: https://docs.docker.com/engine/reference/commandline/service_scale/
+
+  - uuid: a17fa2eb-9b92-446f-8771-2dbe4a76b55c
+    question: What mechanism ensures that the number of replicas stays consistent in Docker Swarm?
+    answers:
+      - { value: 'Swarm’s desired state reconciliation loop', correct: true }
+      - { value: 'Kubernetes controller manager', correct: false }
+      - { value: 'Health check interval enforcement', correct: false }
+      - { value: 'Eventual consistency daemon', correct: false }
+    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
+
+  - uuid: 351184f6-3e87-4c76-b0f3-944f478b2617
+    question: Which Docker command would *not* work outside Swarm mode to scale replicas?
+    answers:
+      - { value: 'docker service scale', correct: true }
+      - { value: 'docker run --replica-count', correct: false }
+      - { value: 'docker container run --replicas', correct: false }
+      - { value: 'docker compose up --scale', correct: false }
+    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
