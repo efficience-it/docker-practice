@@ -6,7 +6,7 @@ questions:
       - { value: "A service is used only for debugging", correct: false }
       - { value: "A container is available only in Swarm mode", correct: false }
       - { value: "A service runs only on Kubernetes", correct: false }
-    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
 
   - uuid: 317cf799-80eb-4e33-842c-06efbe9c5f24
     question: Which Docker mode is required to run services?
@@ -15,7 +15,7 @@ questions:
       - { value: "Bridge mode", correct: false }
       - { value: "Standalone mode", correct: false }
       - { value: "Debug mode", correct: false }
-    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
 
   - uuid: e093d760-cdc6-4202-8d66-3de24fa07a4e
     question: Which Docker command runs a container in standalone mode?
@@ -24,7 +24,7 @@ questions:
       - { value: "docker service create", correct: false }
       - { value: "docker swarm init", correct: false }
       - { value: "docker deploy", correct: false }
-    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
 
   - uuid: 8a11e631-48ef-4f3e-9d34-62241c348c95
     question: Which Docker command is used to run a service in Swarm mode?
@@ -33,7 +33,7 @@ questions:
       - { value: "docker run", correct: false }
       - { value: "docker compose start", correct: false }
       - { value: "docker exec", correct: false }
-    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
 
   - uuid: 8876c479-70bb-4c50-956a-5a9c45bbecad
     question: Which of the following is an advantage of using a service over a single container?
@@ -42,7 +42,7 @@ questions:
       - { value: "Runs faster", correct: false }
       - { value: "Requires fewer resources", correct: false }
       - { value: "Has less overhead than a container", correct: false }
-    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
 
   - uuid: 535cb6d7-4fc9-4d68-97a5-d80099b179d9
     question: In Docker Swarm, how does the system maintain the desired state of a service?
@@ -51,7 +51,7 @@ questions:
       - { value: "By restarting containers using `docker run`", correct: false }
       - { value: "By disabling health checks", correct: false }
       - { value: "By disabling container restarts", correct: false }
-    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
 
   - uuid: 95f86d63-54e8-4a44-a215-b6be062a58de
     question: What is a task in the context of a Docker Swarm service?
@@ -60,7 +60,7 @@ questions:
       - { value: "A label assigned to a worker node", correct: false }
       - { value: "A health check probe", correct: false }
       - { value: "A Compose YAML definition", correct: false }
-    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
 
   - uuid: 9c8bc27d-24e2-4c60-b6d0-3e3f08e7c1a4
     question: Which of the following features is **only** available when using services in Swarm?
@@ -69,7 +69,7 @@ questions:
       - { value: "Volume mounting", correct: false }
       - { value: "Port publishing", correct: false }
       - { value: "Running containers in the background", correct: false }
-    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
 
   - uuid: 48240365-1b98-4eb3-8e9d-d09b9b9c2d28
     question: What does a Docker Swarm service do when one of its containers fails?
@@ -78,7 +78,7 @@ questions:
       - { value: "Sends a manual alert to the admin", correct: false }
       - { value: "Stops the entire service", correct: false }
       - { value: "Leaves the system in degraded state", correct: false }
-    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
 
   - uuid: cdc7beac-55d5-4f8a-86e7-e5e772ec29ed
     question: When should you prefer using a `docker run` over `docker service create`?
@@ -87,4 +87,4 @@ questions:
       - { value: "When you want replicas automatically managed", correct: false }
       - { value: "When you're using Swarm orchestration", correct: false }
       - { value: "When your application needs global services", correct: false }
-    link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers

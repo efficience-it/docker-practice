@@ -6,7 +6,7 @@ questions:
       - { value: 'To share networking between containers', correct: false }
       - { value: 'To increase CPU allocation', correct: false }
       - { value: 'To run the container in privileged mode', correct: false }
-    link: https://docs.docker.com/storage/volumes/
+    help: https://docs.docker.com/storage/volumes/
 
   - uuid: 9ad3bfc1-fb73-4a6f-8ae2-5b29045c857c
     question: What does the following command do? docker run -v myvolume:/data busybox
@@ -15,7 +15,7 @@ questions:
       - { value: 'It creates a bind mount to the host’s /data directory', correct: false }
       - { value: 'It maps a volume from another container', correct: false }
       - { value: 'It adds a secret from a volume to the container', correct: false }
-    link: https://docs.docker.com/storage/volumes/
+    help: https://docs.docker.com/storage/volumes/
 
   - uuid: 71333e7b-774e-4327-894f-40324cf27632
     question: Which flag is used with docker service create to mount a volume in Swarm mode?
@@ -24,7 +24,7 @@ questions:
       - { value: '--volume', correct: false }
       - { value: '--v', correct: false }
       - { value: '--bind', correct: false }
-    link: https://docs.docker.com/storage/volumes/#use-a-volume-with-docker-services
+    help: https://docs.docker.com/storage/volumes/#use-a-volume-with-docker-services
 
   - uuid: f46e74db-d046-4346-bf07-8d17b216a5c3
     question: What type of mount is most recommended for production use in Docker?
@@ -33,7 +33,7 @@ questions:
       - { value: 'Bind mounts', correct: false }
       - { value: 'tmpfs mounts', correct: false }
       - { value: 'Anonymous volumes', correct: false }
-    link: https://docs.docker.com/storage/volumes/#choose-the-right-type-of-mount
+    help: https://docs.docker.com/storage/volumes/#choose-the-right-type-of-mount
 
   - uuid: 85d40d8b-7eb1-4b27-82f7-51e694a4bfa2
     question: What happens when you use a named volume that doesn’t exist?
@@ -42,7 +42,7 @@ questions:
       - { value: 'Docker throws an error and refuses to run', correct: false }
       - { value: 'The container fails silently', correct: false }
       - { value: 'It creates a bind mount to /tmp', correct: false }
-    link: https://docs.docker.com/storage/volumes/#start-a-container-with-a-volume
+    help: https://docs.docker.com/storage/volumes/#start-a-container-with-a-volume
 
   - uuid: 2b2e9f8c-a2f4-4668-8e8e-cd4e51a12f2e
     question: What happens when a non-empty volume is mounted over a directory that already contains files in a container?
@@ -51,7 +51,7 @@ questions:
       - { value: 'Docker merges the content of the volume and the container directory', correct: false }
       - { value: 'Docker refuses to mount the volume', correct: false }
       - { value: 'An error is thrown at runtime', correct: false }
-    link: https://docs.docker.com/storage/volumes/#mounting-a-volume-over-existing-data
+    help: https://docs.docker.com/storage/volumes/#mounting-a-volume-over-existing-data
 
   - uuid: ef5c2c80-f413-41df-bc60-16e89181d222
     question: Which mount propagation mode do Docker volumes use by default?
@@ -60,7 +60,7 @@ questions:
       - { value: 'shared', correct: false }
       - { value: 'slave', correct: false }
       - { value: 'rshared', correct: false }
-    link: https://docs.docker.com/storage/volumes/#when-to-use-volumes
+    help: https://docs.docker.com/storage/volumes/#when-to-use-volumes
 
   - uuid: 7041ae89-e857-4c8c-93a6-418d8e7cfb79
     question: Which flag must be used to mount a volume subdirectory?
@@ -69,7 +69,7 @@ questions:
       - { value: 'subdir', correct: false }
       - { value: 'mount-dir', correct: false }
       - { value: 'submount', correct: false }
-    link: https://docs.docker.com/storage/volumes/#mount-a-volume-subdirectory
+    help: https://docs.docker.com/storage/volumes/#mount-a-volume-subdirectory
 
   - uuid: e1ff04e7-3483-4bc2-b8c2-f8a67e85b258
     question: Which command creates a named volume that uses the NFS driver with custom mount options?
@@ -78,7 +78,7 @@ questions:
       - { value: 'docker volume create --type=nfs --mount-options addr=10.0.0.10 nfsvolume', correct: false }
       - { value: 'docker run --volume-driver=nfs:/data:/app nfsvolume', correct: false }
       - { value: 'docker nfs create --device=/data --address=10.0.0.10 nfsvolume', correct: false }
-    link: https://docs.docker.com/storage/volumes/#create-a-service-which-creates-an-nfs-volume
+    help: https://docs.docker.com/storage/volumes/#create-a-service-which-creates-an-nfs-volume
 
   - uuid: 1fd63a5a-7d9a-4af0-a013-b0e28fc9d1d9
     question: When using an anonymous volume, what happens if the container is removed with `--rm`?
@@ -87,7 +87,7 @@ questions:
       - { value: 'The volume becomes named automatically', correct: false }
       - { value: 'The volume persists until explicitly pruned', correct: false }
       - { value: 'Docker raises an error about losing volume data', correct: false }
-    link: https://docs.docker.com/storage/volumes/#remove-anonymous-volumes
+    help: https://docs.docker.com/storage/volumes/#remove-anonymous-volumes
 
   - uuid: 4c3d1b19-c32d-4ad7-8888-5dd2b6e97f19
     question: Why is `--mount` preferred over `--volume` when creating advanced mounts?
@@ -96,7 +96,7 @@ questions:
       - { value: 'Because it is required by Docker Compose', correct: false }
       - { value: 'Because it is the only option that supports named volumes', correct: false }
       - { value: 'Because --volume is deprecated', correct: false }
-    link: https://docs.docker.com/storage/volumes/#syntax
+    help: https://docs.docker.com/storage/volumes/#syntax
 
   - uuid: 7c1ddc93-d034-4ed8-b65e-7af645edcc26
     question: What does the `volume-nocopy` option prevent?
@@ -105,7 +105,7 @@ questions:
       - { value: 'Volume mounting on container restart', correct: false }
       - { value: 'Data synchronization between host and container', correct: false }
       - { value: 'Sharing the volume between containers', correct: false }
-    link: https://docs.docker.com/storage/volumes/#options-for--mount
+    help: https://docs.docker.com/storage/volumes/#options-for--mount
 
   - uuid: b4945d44-620e-4af6-bb47-9ec80253eefe
     question: What behavior is expected if two containers use the same named volume?
@@ -114,7 +114,7 @@ questions:
       - { value: 'Docker denies simultaneous access', correct: false }
       - { value: 'The second container gets a copy-on-write snapshot', correct: false }
       - { value: 'Only one container has access at a time', correct: false }
-    link: https://docs.docker.com/storage/volumes/#a-volumes-lifecycle
+    help: https://docs.docker.com/storage/volumes/#a-volumes-lifecycle
 
   - uuid: a5b12d1e-cba4-42d8-aebf-06325c9b621f
     question: What volume mount strategy should be used to avoid persistent data on container stop?
@@ -123,7 +123,7 @@ questions:
       - { value: 'Bind mount to /dev/null', correct: false }
       - { value: 'Readonly named volume', correct: false }
       - { value: 'Ephemeral block mount', correct: false }
-    link: https://docs.docker.com/storage/tmpfs/
+    help: https://docs.docker.com/storage/tmpfs/
 
   - uuid: 8ddcd8aa-4783-4646-a938-01f1a9d2953f
     question: What command removes all unused volumes?
@@ -132,7 +132,7 @@ questions:
       - { value: 'docker volume clean', correct: false }
       - { value: 'docker volume gc', correct: false }
       - { value: 'docker volume rm --unused', correct: false }
-    link: https://docs.docker.com/engine/reference/commandline/volume_prune/
+    help: https://docs.docker.com/engine/reference/commandline/volume_prune/
   - uuid: 19bdc9ba-d6b5-46f4-b8d9-9244ae7d3df7
     question: What happens when an empty volume is mounted into a container directory that contains files?
     answers:
@@ -140,7 +140,7 @@ questions:
       - { value: 'Docker merges the volume and container files', correct: false }
       - { value: 'The container directory is cleared', correct: false }
       - { value: 'The volume remains empty', correct: false }
-    link: https://docs.docker.com/storage/volumes/#mounting-a-volume-over-existing-data
+    help: https://docs.docker.com/storage/volumes/#mounting-a-volume-over-existing-data
   - uuid: 7f89c209-e1cd-4f78-b6bc-471d80c53c2e
     question: When creating a Docker service with a local volume driver, what is the default behavior?
     answers:
@@ -148,7 +148,7 @@ questions:
       - { value: 'All replicas share a single volume', correct: false }
       - { value: 'Volume is mounted read-only by default', correct: false }
       - { value: 'Docker denies the use of local volumes in Swarm', correct: false }
-    link: https://docs.docker.com/storage/volumes/#start-a-service-with-volumes
+    help: https://docs.docker.com/storage/volumes/#start-a-service-with-volumes
   - uuid: 07ae0b4d-c6b0-4f3c-90b0-4c4064c8b80f
     question: What is the purpose of the `--volumes-from` flag when running a container?
     answers:
@@ -156,4 +156,4 @@ questions:
       - { value: 'To mount volumes from the Docker daemon', correct: false }
       - { value: 'To create a temporary tmpfs mount', correct: false }
       - { value: 'To bind-mount all host volumes', correct: false }
-    link: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes
+    help: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes

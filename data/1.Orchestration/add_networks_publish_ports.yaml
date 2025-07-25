@@ -6,7 +6,7 @@ questions:
       - { value: 'host', correct: false }
       - { value: 'overlay', correct: false }
       - { value: 'macvlan', correct: false }
-    link: https://docs.docker.com/network/
+    help: https://docs.docker.com/network/
 
   - uuid: 1819e7eb-5d38-49f8-a6cb-abc5c7e6d5b1
     question: Which flag is used to publish a port from a container to the host?
@@ -15,7 +15,7 @@ questions:
       - { value: '--expose', correct: false }
       - { value: '--network', correct: false }
       - { value: '--dns', correct: false }
-    link: https://docs.docker.com/network/
+    help: https://docs.docker.com/network/
 
   - uuid: 3b7f5025-6b0f-4d3e-b91d-7fa84d392a4e
     question: What does the command `docker run -p 8080:80 nginx` do?
@@ -24,7 +24,7 @@ questions:
       - { value: 'It maps port 80 on the host to port 8080 in the container', correct: false }
       - { value: 'It exposes port 80 in the container only', correct: false }
       - { value: 'It publishes all container ports to the host', correct: false }
-    link: https://docs.docker.com/network/
+    help: https://docs.docker.com/network/
 
   - uuid: a6c9a839-cf4a-4de6-a24d-b4e0b40c76c3
     question: What is a user-defined bridge network useful for?
@@ -33,7 +33,7 @@ questions:
       - { value: 'Enabling external DNS resolution', correct: false }
       - { value: 'Publishing ports to the internet', correct: false }
       - { value: 'Configuring IPv6 for containers', correct: false }
-    link: https://docs.docker.com/network/
+    help: https://docs.docker.com/network/
 
   - uuid: b7d01f2b-4dfb-4b7e-b0cf-0f73e2c2d884
     question: What happens if you use the `none` network driver?
@@ -42,7 +42,7 @@ questions:
       - { value: 'The container uses host networking', correct: false }
       - { value: 'The container shares network with another container', correct: false }
       - { value: 'The container has full internet access', correct: false }
-    link: https://docs.docker.com/network/
+    help: https://docs.docker.com/network/
 
   - uuid: 4e1a16e1-cb62-4a4c-8c8b-4a1b4a707eb8
     question: Which driver allows containers on different hosts to communicate in a Swarm?
@@ -51,7 +51,7 @@ questions:
       - { value: 'bridge', correct: false }
       - { value: 'host', correct: false }
       - { value: 'ipvlan', correct: false }
-    link: https://docs.docker.com/network/
+    help: https://docs.docker.com/network/
 
   - uuid: 1bdb9159-f16a-4cf7-bcb9-b6aa64c4562d
     question: How can you make a port published to the host only accessible from localhost?
@@ -60,7 +60,7 @@ questions:
       - { value: 'Use --network host', correct: false }
       - { value: 'Use --expose 80', correct: false }
       - { value: 'Use -p 0.0.0.0:8080:80', correct: false }
-    link: https://docs.docker.com/network/
+    help: https://docs.docker.com/network/
 
   - uuid: d2f5124d-d5e3-4043-8ee1-f29e8c0dc553
     question: Which network mode removes isolation between container and host?
@@ -69,7 +69,7 @@ questions:
       - { value: 'bridge', correct: false }
       - { value: 'none', correct: false }
       - { value: 'overlay', correct: false }
-    link: https://docs.docker.com/network/
+    help: https://docs.docker.com/network/
 
   - uuid: 44d54f24-b71c-4214-87fd-402e3a128db1
     question: How do you connect a running container to a new network?
@@ -78,7 +78,7 @@ questions:
       - { value: 'docker connect', correct: false }
       - { value: 'docker run --connect', correct: false }
       - { value: 'docker attach --network', correct: false }
-    link: https://docs.docker.com/network/
+    help: https://docs.docker.com/network/
 
   - uuid: a3d1e117-9e71-4c55-b1bc-f26bc03e7b1f
     question: Which flag assigns a specific IP address to a container on a network?
@@ -87,4 +87,4 @@ questions:
       - { value: '--address', correct: false }
       - { value: '--hostname', correct: false }
       - { value: '--dns-ip', correct: false }
-    link: https://docs.docker.com/network/
+    help: https://docs.docker.com/network/

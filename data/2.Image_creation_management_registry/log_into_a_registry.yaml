@@ -6,7 +6,7 @@ questions:
       - { value: 'docker auth', correct: false }
       - { value: 'docker connect', correct: false }
       - { value: 'docker signin', correct: false }
-    link: https://docs.docker.com/engine/reference/commandline/login/
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: 273b4e98-2bc7-4f64-a09c-8a5f63be9911
     question: What is the default Docker registry when no registry is specified?
@@ -15,7 +15,7 @@ questions:
       - { value: 'Quay.io', correct: false }
       - { value: 'Harbor', correct: false }
       - { value: 'Amazon ECR', correct: false }
-    link: https://docs.docker.com/docker-hub/
+    help: https://docs.docker.com/docker-hub/
 
   - uuid: 46c6c189-15f9-44fd-8f39-d08a9b6a9ac6
     question: Where are Docker credentials stored by default on Linux systems?
@@ -24,7 +24,7 @@ questions:
       - { value: '~/.docker/credentials.yml', correct: false }
       - { value: '/etc/docker/registry.yml', correct: false }
       - { value: '~/.docker/auth.json', correct: false }
-    link: https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+    help: https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 
   - uuid: bfa24e9f-3502-42cb-b2d7-b0f59de04f8d
     question: Which file contains the base64-encoded credentials after running docker login?
@@ -33,7 +33,7 @@ questions:
       - { value: 'auth.json', correct: false }
       - { value: 'secrets.json', correct: false }
       - { value: 'registry.json', correct: false }
-    link: https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+    help: https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 
   - uuid: 8fba6f2a-e1ad-48b3-9a3e-2cc3b0d05dc2
     question: What option allows you to specify a custom registry when using `docker login`?
@@ -42,7 +42,7 @@ questions:
       - { value: 'docker login --target myregistry.io', correct: false }
       - { value: 'docker login -r myregistry.io', correct: false }
       - { value: 'docker login --registry myregistry.io', correct: false }
-    link: https://docs.docker.com/engine/reference/commandline/login/
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: c1f65931-bdb9-4437-b292-c6d4f02fa5f1
     question: Which of the following is a private container registry service?
@@ -59,7 +59,7 @@ questions:
       - { value: 'docker login ecr', correct: false }
       - { value: 'docker login --ecr-credentials', correct: false }
       - { value: 'aws login --docker', correct: false }
-    link: https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html
+    help: https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html
 
   - uuid: 16510ab2-2053-487f-951b-f8d631c15e8e
     question: What does Docker return after a successful login?

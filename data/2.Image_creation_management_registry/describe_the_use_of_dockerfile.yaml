@@ -5,7 +5,7 @@ questions:
       - { value: 'To automate image creation using versioned instructions', correct: true }
       - { value: 'To deploy containers in Kubernetes', correct: false }
       - { value: 'To configure Docker Hub settings', correct: false }
-    link: https://docs.docker.com/engine/reference/builder/
+    help: https://docs.docker.com/engine/reference/builder/
 
   - uuid: c174e319-85dc-47d2-bde5-fc9482c87212
     question: Why is using a Dockerfile preferable to creating images manually?
@@ -13,7 +13,7 @@ questions:
       - { value: 'It ensures repeatability and automation', correct: true }
       - { value: 'It improves image compression', correct: false }
       - { value: 'It creates containers instead of images', correct: false }
-    link: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+    help: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 
   - uuid: 1d87b0ec-ecc7-42f2-88d5-5cd193449bfa
     question: What does a Dockerfile define?
@@ -21,7 +21,7 @@ questions:
       - { value: 'The step-by-step instructions to build a Docker image', correct: true }
       - { value: 'The orchestration of services across nodes', correct: false }
       - { value: 'The logging behavior of running containers', correct: false }
-    link: https://docs.docker.com/engine/reference/builder/
+    help: https://docs.docker.com/engine/reference/builder/
 
   - uuid: e7f40412-2c7a-4bfa-9eac-7a5aa7e708f6
     question: How does a Dockerfile help with CI/CD pipelines?
@@ -29,7 +29,7 @@ questions:
       - { value: 'It enables consistent image builds across environments', correct: true }
       - { value: 'It deploys applications to production automatically', correct: false }
       - { value: 'It replaces the Docker daemon configuration', correct: false }
-    link: https://docs.docker.com/build/ci/
+    help: https://docs.docker.com/build/ci/
 
   - uuid: 3c5fbd4f-cf77-46a3-a8a4-063408c5f9b3
     question: Which of the following best describes a Dockerfile?
@@ -37,4 +37,4 @@ questions:
       - { value: 'A text file containing image build instructions', correct: true }
       - { value: 'A binary image used to start containers', correct: false }
       - { value: 'A volume definition file for persistent storage', correct: false }
-    link: https://docs.docker.com/engine/reference/builder/
+    help: https://docs.docker.com/engine/reference/builder/
