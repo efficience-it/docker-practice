@@ -2,7 +2,7 @@
 
 ### Domain 1: Orchestration (25% of exam)
 
-* Complete the setup of a swarm mode cluster, with managers and worker nodes
+* [Complete the setup of a swarm mode cluster, with managers and worker nodes](data/1.Orchestration/complete_setup_swarm_mode_cluster_managers_worker_nodes.yaml)
 * Describe and demonstrate how to extend the instructions to run individual containers into running services under swarm.
 * Describe the importance of quorum in a swarm cluster.
 * Describe the difference between running a container and running a service.
@@ -10,8 +10,8 @@
 * Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy"
 * Manipulate a running stack of services.
 * Describe and demonstrate orchestration activities.
-* Increase the number of replicas.
-* Add networks, publish ports.
+* [Increase the number of replicas.](data/1.Orchestration/increase_the_number_of_replicas.yaml)
+* [Add networks, publish ports.](data/1.Orchestration/add_networks_publish_ports.yaml)
 * [Mount volumes.](data/1.Orchestration/mount_volumes.yaml)
 * Describe and demonstrate how to run replicated and global services.
 * Apply node labels to demonstrate placement of tasks.

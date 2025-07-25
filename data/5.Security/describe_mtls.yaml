@@ -81,7 +81,7 @@ questions:
     link: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
 
   - uuid: 3f7409ec-14f1-4c38-9c6e-768cfe9f7c43
-    question: What do the letters in "mTLS" stand for?
+    question: What do the letters in 'mTLS' stand for?
     answers:
       - { value: 'Mutual Transport Layer Security', correct: true }
       - { value: 'Managed TLS Security', correct: false }

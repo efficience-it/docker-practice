@@ -40,7 +40,7 @@ questions:
     answers:
       - { value: 'docker inspect --ip-only <container>', correct: false }
       - { value: 'docker info --network <container>', correct: false }
-      - { value: 'docker inspect -f "{{ .NetworkSettings.IPAddress }}" <container>', correct: true }
+      - { value: "docker inspect -f '{{ .NetworkSettings.IPAddress }}' <container>", correct: true }
       - { value: 'docker logs --network-info <container>', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/
 
@@ -49,71 +49,71 @@ questions:
     answers:
       - { value: "Using the format '{{range .NetworkSettings.Networks}}{{.MacAddress}}{{end}}'", correct: true }
       - { value: "Using the format '{{.MAC}}'", correct: false }
-      - { value: "docker inspect --mac", correct: false }
+      - { value: 'docker inspect --mac', correct: false }
       - { value: "Using the format '{{.Network.Mac}}'", correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#get-an-instances-mac-address
 
   - uuid: 292be32d-6601-4b64-889a-78ed87a6d593
     question: Which field reveals the container's log file location?
     answers:
-      - { value: "LogPath", correct: true }
-      - { value: "LogFile", correct: false }
-      - { value: "LoggingPath", correct: false }
-      - { value: "ContainerLog", correct: false }
+      - { value: 'LogPath', correct: true }
+      - { value: 'LogFile', correct: false }
+      - { value: 'LoggingPath', correct: false }
+      - { value: 'ContainerLog', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#get-an-instances-log-path
 
   - uuid: 71ae206c-7b39-4b37-97f4-b597310d0b2c
     question: How do you retrieve the image name used by a container?
     answers:
-      - { value: "Using the field .Config.Image", correct: true }
-      - { value: "Using the field .Image.Name", correct: false }
+      - { value: 'Using the field .Config.Image', correct: true }
+      - { value: 'Using the field .Image.Name', correct: false }
       - { value: "With 'docker image inspect'", correct: false }
-      - { value: "From .Metadata.Image", correct: false }
+      - { value: 'From .Metadata.Image', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#get-an-instances-image-name
 
   - uuid: 9db23e15-e12d-49f8-a429-dfcbd9f9b8f5
     question: What does the 'SizeRw' field represent in a container's inspect output?
     answers:
-      - { value: "The size of the writable layer compared to the image", correct: true }
-      - { value: "The total size of all image layers", correct: false }
-      - { value: "The memory consumed by the container", correct: false }
-      - { value: "The root filesystem size", correct: false }
+      - { value: 'The size of the writable layer compared to the image', correct: true }
+      - { value: 'The total size of all image layers', correct: false }
+      - { value: 'The memory consumed by the container', correct: false }
+      - { value: 'The root filesystem size', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#inspect-the-size-of-a-container
 
   - uuid: 6afcb090-45c7-45ef-9817-f1049d6536b0
     question: Which command shows volume details specifically?
     answers:
-      - { value: "docker inspect --type=volume myvolume", correct: true }
-      - { value: "docker inspect myvolume --only-volume", correct: false }
-      - { value: "docker volume inspect --details", correct: false }
-      - { value: "docker info --volumes", correct: false }
+      - { value: 'docker inspect --type=volume myvolume', correct: true }
+      - { value: 'docker inspect myvolume --only-volume', correct: false }
+      - { value: 'docker volume inspect --details', correct: false }
+      - { value: 'docker info --volumes', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#specify-target-type---type
 
   - uuid: 6ad0d3f8-0834-4011-a942-9be3d30fc17a
     question: What is the result of using the '--type' flag incorrectly?
     answers:
-      - { value: "The command may return ambiguous or incorrect results", correct: true }
-      - { value: "It crashes the Docker daemon", correct: false }
-      - { value: "It lists only containers", correct: false }
-      - { value: "It disables network inspection", correct: false }
+      - { value: 'The command may return ambiguous or incorrect results', correct: true }
+      - { value: 'It crashes the Docker daemon', correct: false }
+      - { value: 'It lists only containers', correct: false }
+      - { value: 'It disables network inspection', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#specify-target-type---type
 
   - uuid: d50e1c3d-1f36-4b7b-a8ae-94f00ef1168f
     question: What happens if you inspect multiple objects at once?
     answers:
-      - { value: "The output is an array of results", correct: true }
-      - { value: "Docker throws an error", correct: false }
-      - { value: "Only the first object is returned", correct: false }
-      - { value: "Only container types are shown", correct: false }
+      - { value: 'The output is an array of results', correct: true }
+      - { value: 'Docker throws an error', correct: false }
+      - { value: 'Only the first object is returned', correct: false }
+      - { value: 'Only container types are shown', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/
 
   - uuid: 3f0b5099-9cc6-4144-bb5f-82064c5e373b
     question: What does 'SizeRootFs' represent in inspect output?
     answers:
-      - { value: "Total size of the container’s filesystem", correct: true }
-      - { value: "The base image size", correct: false }
-      - { value: "The combined memory and disk usage", correct: false }
-      - { value: "Only the changed files", correct: false }
+      - { value: 'Total size of the container’s filesystem', correct: true }
+      - { value: 'The base image size', correct: false }
+      - { value: 'The combined memory and disk usage', correct: false }
+      - { value: 'Only the changed files', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#inspect-the-size-of-a-container
 
   - uuid: 7827e2be-77e1-4380-a173-9f64dba7c5d9
@@ -122,7 +122,7 @@ questions:
       - { value: "Using '{{range $p, $conf := .NetworkSettings.Ports}} {{$p}} -> {{(index $conf 0).HostPort}} {{end}}'", correct: true }
       - { value: "Using '{{.PortMap}}'", correct: false }
       - { value: "With '--list-ports'", correct: false }
-      - { value: "Via docker network inspect", correct: false }
+      - { value: 'Via docker network inspect', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#list-all-port-bindings
 
   - uuid: d7c4dcd3-2542-4e5e-a0cf-01fd640fa73f
@@ -137,44 +137,44 @@ questions:
   - uuid: b0e1a41f-b260-4090-91e4-9df6f1909c83
     question: What does the --size flag add to the output of 'docker inspect'?
     answers:
-      - { value: "It includes SizeRootFs and SizeRw fields for containers", correct: true }
-      - { value: "It adds memory and CPU usage statistics", correct: false }
-      - { value: "It enables verbose logging output", correct: false }
-      - { value: "It shows the image size in MB", correct: false }
+      - { value: 'It includes SizeRootFs and SizeRw fields for containers', correct: true }
+      - { value: 'It adds memory and CPU usage statistics', correct: false }
+      - { value: 'It enables verbose logging output', correct: false }
+      - { value: 'It shows the image size in MB', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#inspect-the-size-of-a-container
 
   - uuid: f08b0930-7c4f-43a6-85b0-312ef6b7e8cc
     question: Which inspect field tells you if a container is currently running?
     answers:
-      - { value: ".State.Running", correct: true }
-      - { value: ".Status", correct: false }
-      - { value: ".Active", correct: false }
-      - { value: ".HostConfig.State", correct: false }
+      - { value: '.State.Running', correct: true }
+      - { value: '.Status', correct: false }
+      - { value: '.Active', correct: false }
+      - { value: '.HostConfig.State', correct: false }
     link: https://docs.docker.com/engine/api/v1.43/#tag/Container/operation/ContainerInspect
 
   - uuid: 11a5b2f3-fd1a-43d5-9a1e-d9c8a6098f14
     question: What does an ExitCode of 137 typically indicate in 'docker inspect'?
     answers:
-      - { value: "The container was killed by the system (e.g., out-of-memory)", correct: true }
-      - { value: "The container exited normally", correct: false }
-      - { value: "The container was paused", correct: false }
-      - { value: "The container is still running", correct: false }
+      - { value: 'The container was killed by the system (e.g., out-of-memory)', correct: true }
+      - { value: 'The container exited normally', correct: false }
+      - { value: 'The container was paused', correct: false }
+      - { value: 'The container is still running', correct: false }
     link: https://docs.docker.com/engine/reference/run/#exit-status
 
   - uuid: e01bb0a4-3d67-4d6c-bb71-18981db6f3a5
     question: What is the effect of using '{{json .Config}}' with docker inspect --format?
     answers:
-      - { value: "It renders the Config object in JSON format", correct: true }
-      - { value: "It filters only the container ID", correct: false }
-      - { value: "It converts all fields to base64", correct: false }
-      - { value: "It disables structured output", correct: false }
+      - { value: 'It renders the Config object in JSON format', correct: true }
+      - { value: 'It filters only the container ID', correct: false }
+      - { value: 'It converts all fields to base64', correct: false }
+      - { value: 'It disables structured output', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#get-a-subsection-in-json-format
 
   - uuid: 4b758c3e-2b67-4fa4-8db4-8e2e45c220d7
     question: Why would you use the --type flag with docker inspect?
     answers:
-      - { value: "To disambiguate between objects with the same name", correct: true }
-      - { value: "To limit the inspect result to container IDs only", correct: false }
-      - { value: "To trigger recursive inspection", correct: false }
-      - { value: "To enable secure inspect mode", correct: false }
+      - { value: 'To disambiguate between objects with the same name', correct: true }
+      - { value: 'To limit the inspect result to container IDs only', correct: false }
+      - { value: 'To trigger recursive inspection', correct: false }
+      - { value: 'To enable secure inspect mode', correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#specify-target-type---type
