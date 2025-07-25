@@ -122,7 +122,7 @@ questions:
   - uuid: e8163c62-013b-4b84-bcc6-d51247618b87
     question: How can you identify a manager node?
     answers:
-      - { value: 'docker node ls shows 'Leader' or 'Reachable'', correct: true }
+      - { value: "docker node ls shows 'Leader' or 'Reachable'", correct: true }
       - { value: 'docker info --role manager', correct: false }
       - { value: 'docker manager status', correct: false }
       - { value: 'docker swarm role manager', correct: false }
