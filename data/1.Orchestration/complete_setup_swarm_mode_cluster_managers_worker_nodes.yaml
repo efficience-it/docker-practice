@@ -2,159 +2,159 @@ questions:
   - uuid: d111dbe3-907f-41cd-9b28-8be4c3c1ae99
     question: What command initializes a Docker Swarm cluster?
     answers:
-      - { value: "docker swarm init", correct: true }
-      - { value: "docker swarm start", correct: false }
-      - { value: "docker swarm enable", correct: false }
-      - { value: "docker swarm create", correct: false }
+      - { value: 'docker swarm init', correct: true }
+      - { value: 'docker swarm start', correct: false }
+      - { value: 'docker swarm enable', correct: false }
+      - { value: 'docker swarm create', correct: false }
 
   - uuid: 83beef23-d18b-48a8-a2e4-4f88fe20c262
     question: Which command provides the join token for worker nodes?
     answers:
-      - { value: "docker swarm join-token worker", correct: true }
-      - { value: "docker swarm get-token", correct: false }
-      - { value: "docker node join-token worker", correct: false }
-      - { value: "docker swarm token", correct: false }
+      - { value: 'docker swarm join-token worker', correct: true }
+      - { value: 'docker swarm get-token', correct: false }
+      - { value: 'docker node join-token worker', correct: false }
+      - { value: 'docker swarm token', correct: false }
 
   - uuid: 4b89cc5e-6246-47bc-b37c-98183e139cb5
     question: What port must be open for Swarm manager communication?
     answers:
-      - { value: "2377", correct: true }
-      - { value: "7946", correct: false }
-      - { value: "4789", correct: false }
-      - { value: "443", correct: false }
+      - { value: '2377', correct: true }
+      - { value: '7946', correct: false }
+      - { value: '4789', correct: false }
+      - { value: '443', correct: false }
 
   - uuid: 7e73541c-343e-41cd-b64d-7f3dd9e2b993
     question: What is required to join a node to a Swarm cluster?
     answers:
-      - { value: "Join token and manager IP", correct: true }
-      - { value: "Node alias and hostname", correct: false }
-      - { value: "Service definition", correct: false }
-      - { value: "TLS certificate", correct: false }
+      - { value: 'Join token and manager IP', correct: true }
+      - { value: 'Node alias and hostname', correct: false }
+      - { value: 'Service definition', correct: false }
+      - { value: 'TLS certificate', correct: false }
 
   - uuid: b1c7e6e9-7306-4533-9502-cc28bfe9f9b6
     question: Which command joins a node as a worker to a Swarm?
     answers:
-      - { value: "docker swarm join --token <token> <manager_ip>:2377", correct: true }
-      - { value: "docker join swarm --worker", correct: false }
-      - { value: "docker swarm connect --worker", correct: false }
-      - { value: "docker worker join", correct: false }
+      - { value: 'docker swarm join --token <token> <manager_ip>:2377', correct: true }
+      - { value: 'docker join swarm --worker', correct: false }
+      - { value: 'docker swarm connect --worker', correct: false }
+      - { value: 'docker worker join', correct: false }
 
   - uuid: e69e4a5d-77b4-4be4-a7ee-4b2b4c1a8a94
     question: Which command lists nodes in a Swarm?
     answers:
-      - { value: "docker node ls", correct: true }
-      - { value: "docker swarm list", correct: false }
-      - { value: "docker nodes", correct: false }
-      - { value: "docker node status", correct: false }
+      - { value: 'docker node ls', correct: true }
+      - { value: 'docker swarm list', correct: false }
+      - { value: 'docker nodes', correct: false }
+      - { value: 'docker node status', correct: false }
 
   - uuid: f631c1b0-5c27-4bb3-b5f5-104b02ae49a0
     question: How can you promote a worker to a manager?
     answers:
-      - { value: "docker node promote <node_name>", correct: true }
-      - { value: "docker promote node <node_name>", correct: false }
-      - { value: "docker swarm promote <node>", correct: false }
-      - { value: "docker manager add <node>", correct: false }
+      - { value: 'docker node promote <node_name>', correct: true }
+      - { value: 'docker promote node <node_name>', correct: false }
+      - { value: 'docker swarm promote <node>', correct: false }
+      - { value: 'docker manager add <node>', correct: false }
 
   - uuid: aea13f0e-8fd1-4e53-b7a4-5cf646a6b184
     question: What is the minimum number of managers required to tolerate one failure?
     answers:
-      - { value: "3", correct: true }
-      - { value: "2", correct: false }
-      - { value: "1", correct: false }
-      - { value: "5", correct: false }
+      - { value: '3', correct: true }
+      - { value: '2', correct: false }
+      - { value: '1', correct: false }
+      - { value: '5', correct: false }
 
   - uuid: 9c4d3060-f2aa-4a9b-a6e0-4ea1bb87001b
     question: Which command rotates the join tokens for security?
     answers:
-      - { value: "docker swarm join-token --rotate", correct: true }
-      - { value: "docker swarm rotate-token", correct: false }
-      - { value: "docker node rotate", correct: false }
-      - { value: "docker swarm init --reset-tokens", correct: false }
+      - { value: 'docker swarm join-token --rotate', correct: true }
+      - { value: 'docker swarm rotate-token', correct: false }
+      - { value: 'docker node rotate', correct: false }
+      - { value: 'docker swarm init --reset-tokens', correct: false }
 
   - uuid: f99376bb-3672-4f08-99bb-c5a7b2b49c45
     question: What is the default behavior of a node after joining a Swarm?
     answers:
-      - { value: "It acts as a worker", correct: true }
-      - { value: "It automatically becomes a manager", correct: false }
-      - { value: "It starts a service", correct: false }
-      - { value: "It initializes a new Swarm", correct: false }
+      - { value: 'It acts as a worker', correct: true }
+      - { value: 'It automatically becomes a manager', correct: false }
+      - { value: 'It starts a service', correct: false }
+      - { value: 'It initializes a new Swarm', correct: false }
 
   - uuid: 88ef38e7-eef9-4a35-a164-e6ddfb22e729
     question: How is manager quorum calculated in Docker Swarm?
     answers:
-      - { value: "A majority of managers must be available", correct: true }
-      - { value: "At least one manager must be online", correct: false }
-      - { value: "50% of all nodes", correct: false }
-      - { value: "All managers must be running", correct: false }
+      - { value: 'A majority of managers must be available', correct: true }
+      - { value: 'At least one manager must be online', correct: false }
+      - { value: '50% of all nodes', correct: false }
+      - { value: 'All managers must be running', correct: false }
 
   - uuid: 5ad67aa2-cbe3-4a4a-b29d-05f13545f117
     question: What command leaves a Swarm node and removes all state?
     answers:
-      - { value: "docker swarm leave --force", correct: true }
-      - { value: "docker swarm quit", correct: false }
-      - { value: "docker swarm disconnect", correct: false }
-      - { value: "docker node remove", correct: false }
+      - { value: 'docker swarm leave --force', correct: true }
+      - { value: 'docker swarm quit', correct: false }
+      - { value: 'docker swarm disconnect', correct: false }
+      - { value: 'docker node remove', correct: false }
 
   - uuid: 4d2345fc-f5df-4cf6-bf46-e99a6333de55
     question: How do you force a node to rejoin a Swarm with a new role?
     answers:
-      - { value: "Leave the Swarm and rejoin with the new token", correct: true }
-      - { value: "Restart the node with --role flag", correct: false }
-      - { value: "Reboot the manager", correct: false }
-      - { value: "Use docker swarm switch-role", correct: false }
+      - { value: 'Leave the Swarm and rejoin with the new token', correct: true }
+      - { value: 'Restart the node with --role flag', correct: false }
+      - { value: 'Reboot the manager', correct: false }
+      - { value: 'Use docker swarm switch-role', correct: false }
 
   - uuid: b89d1e15-87a6-4ef9-991d-94e5091c194f
     question: What happens if a Swarm loses quorum?
     answers:
-      - { value: "Managers cannot make scheduling decisions", correct: true }
-      - { value: "Workers stop running containers", correct: false }
-      - { value: "All services stop", correct: false }
-      - { value: "The Swarm switches to standalone mode", correct: false }
+      - { value: 'Managers cannot make scheduling decisions', correct: true }
+      - { value: 'Workers stop running containers', correct: false }
+      - { value: 'All services stop', correct: false }
+      - { value: 'The Swarm switches to standalone mode', correct: false }
 
   - uuid: 190a33f2-42fc-4f26-86e6-5c87069f5fa6
     question: Which roles can schedule services in Swarm?
     answers:
-      - { value: "Managers only", correct: true }
-      - { value: "Workers only", correct: false }
-      - { value: "Both managers and workers", correct: false }
-      - { value: "None, only the CLI schedules", correct: false }
+      - { value: 'Managers only', correct: true }
+      - { value: 'Workers only', correct: false }
+      - { value: 'Both managers and workers', correct: false }
+      - { value: 'None, only the CLI schedules', correct: false }
 
   - uuid: e8163c62-013b-4b84-bcc6-d51247618b87
     question: How can you identify a manager node?
     answers:
-      - { value: "docker node ls shows 'Leader' or 'Reachable'", correct: true }
-      - { value: "docker info --role manager", correct: false }
-      - { value: "docker manager status", correct: false }
-      - { value: "docker swarm role manager", correct: false }
+      - { value: 'docker node ls shows 'Leader' or 'Reachable'', correct: true }
+      - { value: 'docker info --role manager', correct: false }
+      - { value: 'docker manager status', correct: false }
+      - { value: 'docker swarm role manager', correct: false }
 
   - uuid: 0d2b1a8e-588f-4939-8f3d-712183646f55
     question: What flag allows you to advertise a specific IP when initializing the Swarm?
     answers:
-      - { value: "--advertise-addr", correct: true }
-      - { value: "--bind-ip", correct: false }
-      - { value: "--init-ip", correct: false }
-      - { value: "--host", correct: false }
+      - { value: '--advertise-addr', correct: true }
+      - { value: '--bind-ip', correct: false }
+      - { value: '--init-ip', correct: false }
+      - { value: '--host', correct: false }
 
   - uuid: 50e16c5d-6f3b-48a4-858a-cb3c97dd6fbd
     question: Where are Swarm metadata and certificates stored?
     answers:
-      - { value: "/var/lib/docker/swarm", correct: true }
-      - { value: "/etc/docker/swarm", correct: false }
-      - { value: "/opt/docker/swarm", correct: false }
-      - { value: "/root/.docker/swarm", correct: false }
+      - { value: '/var/lib/docker/swarm', correct: true }
+      - { value: '/etc/docker/swarm', correct: false }
+      - { value: '/opt/docker/swarm', correct: false }
+      - { value: '/root/.docker/swarm', correct: false }
 
   - uuid: 2b7fbc91-f2d0-4ef6-b1ea-8aebff36507b
     question: Which network is used by default for service-to-service communication in Swarm?
     answers:
-      - { value: "ingress", correct: true }
-      - { value: "bridge", correct: false }
-      - { value: "host", correct: false }
-      - { value: "internal", correct: false }
+      - { value: 'ingress', correct: true }
+      - { value: 'bridge', correct: false }
+      - { value: 'host', correct: false }
+      - { value: 'internal', correct: false }
 
   - uuid: 4f46ac3c-95b5-4fe6-8b36-bd6d3e87b404
     question: How do you demote a manager to a worker?
     answers:
-      - { value: "docker node demote <node_name>", correct: true }
-      - { value: "docker node revoke <node_name>", correct: false }
-      - { value: "docker swarm drop-manager <node_name>", correct: false }
-      - { value: "docker node delete-role", correct: false }
+      - { value: 'docker node demote <node_name>', correct: true }
+      - { value: 'docker node revoke <node_name>', correct: false }
+      - { value: 'docker swarm drop-manager <node_name>', correct: false }
+      - { value: 'docker node delete-role', correct: false }
