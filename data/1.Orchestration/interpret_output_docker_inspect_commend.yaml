@@ -48,9 +48,9 @@ questions:
     question: How can you display the container's MAC address using 'docker inspect'?
     answers:
       - { value: 'Using the format '{{range .NetworkSettings.Networks}}{{.MacAddress}}{{end}}'', correct: true }
-      - { value: 'Using the format '{{.MAC}}'', correct: false }
+      - { value: "Using the format '{{.MAC}}'", correct: false }
       - { value: 'docker inspect --mac', correct: false }
-      - { value: 'Using the format '{{.Network.Mac}}'', correct: false }
+      - { value: "Using the format '{{.Network.Mac}}'", correct: false }
     link: https://docs.docker.com/engine/reference/commandline/inspect/#get-an-instances-mac-address
 
   - uuid: 292be32d-6601-4b64-889a-78ed87a6d593
