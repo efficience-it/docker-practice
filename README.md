@@ -12,7 +12,7 @@
 * Describe and demonstrate orchestration activities.
 * Increase the number of replicas.
 * Add networks, publish ports.
-* Mount volumes.
+* [Mount volumes.](data/1.Orchestration/mount_volumes.yaml)
 * Describe and demonstrate how to run replicated and global services.
 * Apply node labels to demonstrate placement of tasks.
 * Describe and demonstrate how to use templates with “docker service create”.
@@ -35,7 +35,7 @@
 * Describe and demonstrate how to modify an image to a single layer.
 * Describe and demonstrate registry functions.
 * Deploy a registry.
-* Log into a registry.
+* [Log into a registry.](data/2.Image_creation_management_registry/log_into_a_registry.yaml)
 * Utilize search in a registry.
 * Push an image to a registry.
 * Sign an image in a registry.
