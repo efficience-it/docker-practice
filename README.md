@@ -4,9 +4,9 @@
 
 * [Complete the setup of a swarm mode cluster, with managers and worker nodes](data/1.Orchestration/complete_setup_swarm_mode_cluster_managers_worker_nodes.yaml)
 * Describe and demonstrate how to extend the instructions to run individual containers into running services under swarm.
-* Describe the importance of quorum in a swarm cluster.
-* Describe the difference between running a container and running a service.
-* Interpret the output of “docker inspect” commands.
+* [Describe the importance of quorum in a swarm cluster.](data/1.Orchestration/describe_importance_quorum_swarm_cluster.yaml)
+* [Describe the difference between running a container and running a service.](data/1.Orchestration/describe_difference_between_running_container_and_service.yaml)
+* [Interpret the output of “docker inspect” commands.](data/1.Orchestration/interpret_output_docker_inspect_commend.yaml)
 * Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy"
 * Manipulate a running stack of services.
 * Describe and demonstrate orchestration activities.
@@ -29,7 +29,7 @@
 * Describe and demonstrate how to create an efficient image via a Dockerfile.
 * Describe and demonstrate how to use CLI commands to manage images, such as list, delete, prune, rmi.
 * Describe and demonstrate how to inspect images and report specific attributes using filter and format
-* Describe and demonstrate how to tag an image.
+* [Describe and demonstrate how to tag an image.](data/2.Image_creation_management_registry/describe_demonstrate_how_to_tag_image.yaml)
 * Describe and demonstrate how to apply a file to create a Docker image.
 * Describe and demonstrate how to display layers of a Docker image
 * Describe and demonstrate how to modify an image to a single layer.
