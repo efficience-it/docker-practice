@@ -1,0 +1,117 @@
+questions:
+  - uuid: f001ed43-49b9-4b1d-92c3-3b0b45a5b7a3
+    question: What is the first required instruction in a Dockerfile?
+    answers:
+      - { value: 'FROM', correct: true }
+      - { value: 'RUN', correct: false }
+      - { value: 'CMD', correct: false }
+      - { value: 'ENTRYPOINT', correct: false }
+    help: 'https://docs.docker.com/engine/reference/builder/#from'
+
+  - uuid: f7126c35-273e-4b5a-98eb-3fb9e51a6c1d
+    question: What is the main difference between CMD and ENTRYPOINT?
+    answers:
+      - { value: 'ENTRYPOINT is used to define the container’s executable; CMD provides default arguments', correct: true }
+      - { value: 'CMD runs first, ENTRYPOINT second', correct: false }
+      - { value: 'CMD is only valid with FROM scratch', correct: false }
+      - { value: 'ENTRYPOINT cannot accept parameters', correct: false }
+    help: 'https://docs.docker.com/engine/reference/builder/#cmd'
+
+  - uuid: 6c4c0c0a-1b3f-4a5f-b300-f34b39891b21
+    question: Which instruction copies local files into the image and preserves metadata?
+    answers:
+      - { value: 'ADD', correct: true }
+      - { value: 'COPY', correct: false }
+      - { value: 'RUN', correct: false }
+      - { value: 'ENV', correct: false }
+    help: 'https://docs.docker.com/engine/reference/builder/#add'
+
+  - uuid: afb382b4-01f3-4a69-bd92-7e196aa42a71
+    question: Which instruction is recommended over the other for clarity between ADD and COPY?
+    answers:
+      - { value: 'COPY', correct: true }
+      - { value: 'ADD', correct: false }
+      - { value: 'RUN', correct: false }
+      - { value: 'LABEL', correct: false }
+    help: 'https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#add-or-copy'
+
+  - uuid: a9cde287-6c94-4ae4-97d1-91fe77be1085
+    question: Which instruction sets environment variables in a Dockerfile?
+    answers:
+      - { value: 'ENV', correct: true }
+      - { value: 'ARG', correct: false }
+      - { value: 'LABEL', correct: false }
+      - { value: 'RUN', correct: false }
+    help: 'https://docs.docker.com/engine/reference/builder/#env'
+
+  - uuid: 59828f4e-0635-4528-a06c-c7309f8ae091
+    question: What is the purpose of the WORKDIR instruction?
+    answers:
+      - { value: 'It sets the working directory for subsequent commands', correct: true }
+      - { value: 'It defines the mount point for volumes', correct: false }
+      - { value: 'It specifies a startup script', correct: false }
+      - { value: 'It overrides the CMD instruction', correct: false }
+    help: 'https://docs.docker.com/engine/reference/builder/#workdir'
+
+  - uuid: 16822d10-7c66-47a4-8a92-3db3e86a5e3f
+    question: What does the VOLUME instruction do in a Dockerfile?
+    answers:
+      - { value: 'Declares a mount point for persistent storage', correct: true }
+      - { value: 'Sets environment variables', correct: false }
+      - { value: 'Exposes container ports', correct: false }
+      - { value: 'Defines build-time variables', correct: false }
+    help: 'https://docs.docker.com/engine/reference/builder/#volume'
+
+  - uuid: fcd4e96e-2ac8-4c29-8f47-c8fceaf32947
+    question: How can you pass build-time variables to a Dockerfile?
+    answers:
+      - { value: 'Using the ARG instruction', correct: true }
+      - { value: 'Using ENV only', correct: false }
+      - { value: 'With LABEL', correct: false }
+      - { value: 'With EXPOSE', correct: false }
+    help: 'https://docs.docker.com/engine/reference/builder/#arg'
+
+  - uuid: 5f1fc1f1-05a6-49b2-944f-1fd65e785542
+    question: What is the recommended way to avoid large intermediate image layers?
+    answers:
+      - { value: 'Use multi-stage builds', correct: true }
+      - { value: 'Use VOLUME', correct: false }
+      - { value: 'Use EXPOSE', correct: false }
+      - { value: 'Run all commands in ENTRYPOINT', correct: false }
+    help: 'https://docs.docker.com/develop/develop-images/multistage-build/'
+
+  - uuid: 7e6ea2a4-0b61-4ce3-b476-05c5b90f79b4
+    question: What does the EXPOSE instruction do?
+    answers:
+      - { value: 'Documents which port the container will listen on at runtime', correct: true }
+      - { value: 'Publishes the port to the host', correct: false }
+      - { value: 'Creates a new network', correct: false }
+      - { value: 'Connects containers', correct: false }
+    help: 'https://docs.docker.com/engine/reference/builder/#expose'
+
+  - uuid: 3b9dca59-97fc-4b96-bdfc-3641d85ac2d0
+    question: What does the SHELL instruction in Dockerfile define?
+    answers:
+      - { value: 'The default shell used in RUN instructions (on Windows)', correct: true }
+      - { value: 'The script that starts the container', correct: false }
+      - { value: 'The CMD to override ENTRYPOINT', correct: false }
+      - { value: 'The default entrypoint', correct: false }
+    help: 'https://docs.docker.com/engine/reference/builder/#shell'
+
+  - uuid: 1dcae0a9-48b6-4d49-877e-0cf93a6a00dc
+    question: Which instruction lets you document metadata in a Docker image?
+    answers:
+      - { value: 'LABEL', correct: true }
+      - { value: 'ARG', correct: false }
+      - { value: 'RUN', correct: false }
+      - { value: 'ENV', correct: false }
+    help: 'https://docs.docker.com/engine/reference/builder/#label'
+
+  - uuid: 5c0d2ef4-934f-43b3-bb59-2c5fdbd88dc5
+    question: What is the benefit of using the exec form of ENTRYPOINT?
+    answers:
+      - { value: 'It avoids the shell, ensuring proper signal handling', correct: true }
+      - { value: 'It supports environment variable expansion', correct: false }
+      - { value: 'It allows chaining multiple commands', correct: false }
+      - { value: 'It allows inline comments', correct: false }
+    help: 'https://docs.docker.com/engine/reference/builder/#entrypoint'

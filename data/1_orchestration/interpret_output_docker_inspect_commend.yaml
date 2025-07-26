@@ -67,7 +67,7 @@ questions:
     answers:
       - { value: 'Using the field .Config.Image', correct: true }
       - { value: 'Using the field .Image.Name', correct: false }
-      - { value: "With 'docker image inspect'", correct: false }
+      - { value: 'With `docker image inspect`', correct: false }
       - { value: 'From .Metadata.Image', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/inspect/#get-an-instances-image-name
 

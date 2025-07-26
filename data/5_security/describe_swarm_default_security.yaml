@@ -1,0 +1,90 @@
+questions:
+  - uuid: 7942e591-03d5-4d2f-b497-8bc0a8c713b6
+    question: What is the default method of securing communication between nodes in a Docker Swarm?
+    answers:
+      - { value: 'Mutual TLS (mTLS)', correct: true }
+      - { value: 'SSH tunneling', correct: false }
+      - { value: 'Basic authentication', correct: false }
+      - { value: 'IP whitelisting', correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
+
+  - uuid: 9d271f87-d8a4-4b73-b8b3-fc680e6fa2f3
+    question: What type of certificate is automatically issued to each node in a Swarm cluster?
+    answers:
+      - { value: 'X.509 certificate signed by the Swarm CA', correct: true }
+      - { value: 'Self-signed certificate', correct: false }
+      - { value: 'JWT token', correct: false }
+      - { value: 'OAuth2 token', correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
+
+  - uuid: bc2b5c8f-1f71-438b-b3be-77a2c7586e32
+    question: How often does Docker Swarm rotate node certificates by default?
+    answers:
+      - { value: 'Every 90 days', correct: true }
+      - { value: 'Every 24 hours', correct: false }
+      - { value: 'Never unless manually rotated', correct: false }
+      - { value: 'Every 7 days', correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/#certificate-rotation
+
+  - uuid: 49f8b379-d3d3-4b7d-b228-c88fc404cd52
+    question: Who signs the certificates in a Docker Swarm cluster?
+    answers:
+      - { value: 'The built-in Swarm Certificate Authority (CA)', correct: true }
+      - { value: 'Docker Hub', correct: false }
+      - { value: 'External CA service', correct: false }
+      - { value: 'Leader manager only', correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/#certificate-authority
+
+  - uuid: 36eb1a93-49d3-4b0c-951c-bdcce80ed7e1
+    question: How is the initial trust established when joining a Swarm?
+    answers:
+      - { value: 'Using a join token and the manager’s CA root', correct: true }
+      - { value: 'By exchanging SSH keys', correct: false }
+      - { value: 'Through an OAuth handshake', correct: false }
+      - { value: 'Manual certificate upload', correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/#bootstrapping-trust
+
+  - uuid: 5df8d4f1-2e76-45f1-8fd7-d63a1f52f96d
+    question: Which of the following is true about join tokens in Docker Swarm?
+    answers:
+      - { value: 'They are used to authenticate new nodes joining the swarm', correct: true }
+      - { value: 'They must be renewed every 24 hours', correct: false }
+      - { value: 'They are encrypted and stored in Docker Hub', correct: false }
+      - { value: 'They are only used by manager nodes', correct: false }
+    help: https://docs.docker.com/engine/swarm/join-nodes/
+
+  - uuid: 222a6045-4d6a-48a4-ade8-40c34074819c
+    question: What command is used to rotate the CA certificate in a Swarm cluster?
+    answers:
+      - { value: 'docker swarm ca --rotate', correct: true }
+      - { value: 'docker rotate swarm-ca', correct: false }
+      - { value: 'docker cert renew', correct: false }
+      - { value: 'docker swarm update-ca', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/swarm_ca/
+
+  - uuid: b1cbda68-5f20-4fd6-81c8-39911e65de0c
+    question: Can worker nodes initiate encrypted communication with other nodes?
+    answers:
+      - { value: 'Yes, all nodes use mTLS for all communication', correct: true }
+      - { value: 'No, only managers use mTLS', correct: false }
+      - { value: 'Only with manual configuration', correct: false }
+      - { value: 'Only when using a VPN', correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/#automatic-encryption
+
+  - uuid: c3a057d6-bb62-4c0d-a9de-97b9303b2973
+    question: Where is the Swarm CA key stored?
+    answers:
+      - { value: 'On manager nodes', correct: true }
+      - { value: 'On worker nodes', correct: false }
+      - { value: 'In Docker Hub', correct: false }
+      - { value: 'In the user’s local `.docker` folder', correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/#certificate-authority
+
+  - uuid: 0ac77b49-9a8a-4b76-85a5-7b39e450b99a
+    question: Which Swarm components communicate over encrypted channels by default?
+    answers:
+      - { value: 'All manager and worker nodes', correct: true }
+      - { value: 'Only between manager nodes', correct: false }
+      - { value: 'Only for overlay network traffic', correct: false }
+      - { value: 'Only during join process', correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/#automatic-encryption

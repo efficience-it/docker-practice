@@ -11,7 +11,7 @@ questions:
   - uuid: 9ad3bfc1-fb73-4a6f-8ae2-5b29045c857c
     question: What does the following command do? docker run -v myvolume:/data busybox
     answers:
-      - { value: "It mounts the volume 'myvolume' at /data in the container", correct: true }
+      - { value: 'It mounts the volume `myvolume` at /data in the container', correct: true }
       - { value: 'It creates a bind mount to the host’s /data directory', correct: false }
       - { value: 'It maps a volume from another container', correct: false }
       - { value: 'It adds a secret from a volume to the container', correct: false }

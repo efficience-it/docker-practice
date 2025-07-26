@@ -1,0 +1,80 @@
+questions:
+  - uuid: 61e52cbf-06a5-4a62-bc09-25c50c60f35a
+    question: What is the purpose of the Raft consensus algorithm in Docker Swarm?
+    answers:
+      - { value: 'To ensure consistent state across all manager nodes', correct: true }
+      - { value: 'To optimize CPU usage across worker nodes', correct: false }
+      - { value: 'To isolate tasks from each other', correct: false }
+      - { value: 'To replicate containers to every node', correct: false }
+
+  - uuid: 4cb3c00e-6a91-4c13-8a56-82ebc2a1dc4d
+    question: What does quorum mean in the context of a Swarm cluster?
+    answers:
+      - { value: 'The minimum number of managers that must agree to perform operations', correct: true }
+      - { value: 'The number of services running in a cluster', correct: false }
+      - { value: 'The number of worker nodes available', correct: false }
+      - { value: 'The total number of nodes in the overlay network', correct: false }
+
+  - uuid: 6a92d949-6c73-4ef4-9d92-ec4a3794a7ff
+    question: How many managers are needed for quorum in a 5-node Swarm manager cluster?
+    answers:
+      - { value: '3', correct: true }
+      - { value: '2', correct: false }
+      - { value: '5', correct: false }
+      - { value: '4', correct: false }
+
+  - uuid: d5bb7762-4b3f-4566-b832-359e9a1882bb
+    question: What happens if quorum is lost in a Docker Swarm cluster?
+    answers:
+      - { value: 'New operations like task rebalancing and scheduling stop', correct: true }
+      - { value: 'Worker nodes shut down', correct: false }
+      - { value: 'Existing containers stop running', correct: false }
+      - { value: 'The overlay network becomes unavailable', correct: false }
+
+  - uuid: 0cfd0af8-4a25-4a9c-87c2-2ea4f33b80c5
+    question: Which of the following best describes a key property of Raft consensus in Swarm?
+    answers:
+      - { value: 'Fault tolerance with consistent replicated state across managers', correct: true }
+      - { value: 'Load balancing between containers', correct: false }
+      - { value: 'Isolated state per node', correct: false }
+      - { value: 'Redundant service logs on workers', correct: false }
+
+  - uuid: 7a3c7482-ea0e-4bc5-8e71-8ccaa6b837a2
+    question: What role does the Leader Manager play in a Swarm cluster?
+    answers:
+      - { value: 'It is responsible for scheduling tasks', correct: true }
+      - { value: 'It manages container logs', correct: false }
+      - { value: 'It stores secrets securely', correct: false }
+      - { value: 'It performs image builds', correct: false }
+
+  - uuid: 4c7fdb99-f9f0-45e6-bdb6-5dfcbf7a40db
+    question: What occurs if the Leader Manager fails but quorum is still present?
+    answers:
+      - { value: 'A new leader is elected and scheduling continues', correct: true }
+      - { value: 'Swarm shuts down all tasks', correct: false }
+      - { value: 'Worker nodes are promoted automatically', correct: false }
+      - { value: 'The cluster is re-initialized', correct: false }
+
+  - uuid: 0f9ae5e6-8990-4179-a847-b6a50b759e18
+    question: Which of the following does Raft consensus in Swarm **not** handle?
+    answers:
+      - { value: 'CPU resource limits', correct: true }
+      - { value: 'Leader election', correct: false }
+      - { value: 'Cluster membership', correct: false }
+      - { value: 'Globally consistent object sequencing', correct: false }
+
+  - uuid: 81b88aef-29c8-4be6-87c1-fc06b3c4a2f5
+    question: What is the maximum number of manager failures tolerated in a 7-node Swarm manager cluster?
+    answers:
+      - { value: '3', correct: true }
+      - { value: '4', correct: false }
+      - { value: '5', correct: false }
+      - { value: '2', correct: false }
+
+  - uuid: 937374e7-303a-4c79-a17d-b9a3f8ff37e1
+    question: Why is it important not to have an even number of managers in a Swarm cluster?
+    answers:
+      - { value: 'An even number reduces the fault tolerance because quorum is always a majority', correct: true }
+      - { value: 'Docker only supports odd numbers', correct: false }
+      - { value: 'It affects networking performance', correct: false }
+      - { value: 'Overlay networks require odd numbers', correct: false }

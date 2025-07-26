@@ -1,0 +1,90 @@
+questions:
+  - uuid: b5f0c99c-4164-48df-b297-3e640d012774
+    question: What is the purpose of tagging an image in Docker?
+    answers:
+      - { value: 'To assign a human-readable identifier to an image', correct: true }
+      - { value: 'To encrypt the image contents', correct: false }
+      - { value: 'To compress the image', correct: false }
+      - { value: 'To run the image in privileged mode', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/tag/
+
+  - uuid: 46ce021c-91c5-4ef1-b1e6-c3a9056fd138
+    question: What is the correct syntax to tag an image?
+    answers:
+      - { value: 'docker tag SOURCE_IMAGE TARGET_IMAGE[:TAG]', correct: true }
+      - { value: 'docker add-tag SOURCE TARGET', correct: false }
+      - { value: 'docker image rename', correct: false }
+      - { value: 'docker tag-image --source TARGET', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/tag/
+
+  - uuid: b1687c8f-459a-4991-b1ff-91edce5895cd
+    question: What happens if you omit the `:TAG` portion when tagging an image?
+    answers:
+      - { value: 'Docker assigns the tag `latest` by default', correct: true }
+      - { value: 'Docker fails with an error', correct: false }
+      - { value: 'Docker removes the previous tag', correct: false }
+      - { value: 'Docker tags the image as `default`', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/tag/
+
+  - uuid: 24784794-39d6-4edb-88a1-22960ed02aaf
+    question: What is a valid example of tagging a local image `myimage` as version `v1`?
+    answers:
+      - { value: 'docker tag myimage myrepo/myimage:v1', correct: true }
+      - { value: 'docker tag myrepo:v1 myimage', correct: false }
+      - { value: 'docker tag v1 myrepo/myimage', correct: false }
+      - { value: 'docker tag --version v1 myimage', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/tag/
+
+  - uuid: c82abf04-f9df-421c-9bdf-57d0c4f5cf4e
+    question: What is the effect of tagging an image with a registry name?
+    answers:
+      - { value: 'Prepares the image for pushing to the specified registry', correct: true }
+      - { value: 'Starts an automatic image scan', correct: false }
+      - { value: 'Encrypts the image for transport', correct: false }
+      - { value: 'Removes all other tags', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/tag/
+
+  - uuid: 19ae74a1-987f-4e0b-b89c-c292ba62cd63
+    question: What does the command `docker tag myapp:latest myregistry.example.com/myapp:v2` do?
+    answers:
+      - { value: 'Creates a new tag referencing the same image', correct: true }
+      - { value: 'Moves the image to a new repository', correct: false }
+      - { value: 'Renames the image', correct: false }
+      - { value: 'Pushes the image to the registry', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/tag/
+
+  - uuid: 78057aa2-caf1-474f-937e-bdc997a8ab69
+    question: What is the maximum number of tags an image can have?
+    answers:
+      - { value: 'Unlimited', correct: true }
+      - { value: 'One', correct: false }
+      - { value: 'Ten', correct: false }
+      - { value: 'Depends on the registry', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/tag/
+
+  - uuid: 9722b92e-b65b-47a5-b41d-f37ef4d37723
+    question: If two tags point to the same image ID, what happens when you remove one tag?
+    answers:
+      - { value: 'The image remains accessible via the other tag', correct: true }
+      - { value: 'The image is deleted', correct: false }
+      - { value: 'All tags are removed', correct: false }
+      - { value: 'Docker removes the image from the local cache', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/tag/
+
+  - uuid: e4cfbe38-3033-4b0e-8f2e-3f1ec1992c0e
+    question: Can you tag an image with a full URL including port number?
+    answers:
+      - { value: 'Yes, for private registries', correct: true }
+      - { value: 'No, Docker only supports docker.io', correct: false }
+      - { value: 'Only if using TLS', correct: false }
+      - { value: 'Only if the port is 443', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/tag/
+
+  - uuid: 13d4e4eb-4dc9-42f6-93de-7620386fc093
+    question: What is the role of image tags in CI/CD pipelines?
+    answers:
+      - { value: 'They allow version tracking and promote immutable deployments', correct: true }
+      - { value: 'They prevent image pulling from registries', correct: false }
+      - { value: 'They are only for internal registry use', correct: false }
+      - { value: 'They compress image size', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/tag/
