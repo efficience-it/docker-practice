@@ -1,0 +1,118 @@
+questions:
+  - uuid: 14596cd3-0c20-47aa-bd2a-bba765352315
+    question: What is a core principle of the Kubernetes Container Network Interface (CNI) model?
+    answers:
+      - { value: "All Pods can communicate with all other Pods without NAT", correct: true }
+      - { value: "Each Pod must manually configure NAT", correct: false }
+      - { value: "Pods can only communicate within the same namespace", correct: false }
+      - { value: "Each Pod has multiple IPs by default", correct: false }
+    help: https://kubernetes.io/help/concepts/cluster-administration/networking/#flat-network
+
+  - uuid: 68952c0c-bb62-4e59-9911-c9dc3b7e3e1e
+    question: In Kubernetes, what does each Pod receive in terms of networking?
+    answers:
+      - { value: "A unique IP address", correct: true }
+      - { value: "A shared IP with the node", correct: false }
+      - { value: "No IP address until a service is created", correct: false }
+      - { value: "An IP tied to its namespace", correct: false }
+    help: https://kubernetes.io/help/concepts/cluster-administration/networking/#kubernetes-model
+
+  - uuid: 97bdb862-c891-44c7-8889-e0e22e50754f
+    question: What is the purpose of a CNI plugin in Kubernetes?
+    answers:
+      - { value: "To configure network interfaces for Pods", correct: true }
+      - { value: "To manage ingress controllers", correct: false }
+      - { value: "To load balance external traffic", correct: false }
+      - { value: "To create DNS entries for services", correct: false }
+    help: https://kubernetes.io/help/concepts/extend-kubernetes/compute-storage-net/network-plugins/
+
+  - uuid: e6523cb3-e99b-4cd8-88d2-bd8be25c4c4b
+    question: What is the key function of kube-proxy in the Kubernetes networking model?
+    answers:
+      - { value: "Maintains network rules on nodes to allow service access", correct: true }
+      - { value: "Assigns IPs to Pods", correct: false }
+      - { value: "Acts as a DHCP server for containers", correct: false }
+      - { value: "Routes DNS queries to external resolvers", correct: false }
+    help: https://kubernetes.io/help/concepts/services-networking/service/#virtual-ips-and-service-proxies
+
+  - uuid: 963a0ad1-8991-4d19-b087-23b84fd13712
+    question: Which networking assumption is required by Kubernetes for inter-Pod communication?
+    answers:
+      - { value: "No NAT between Pods", correct: true }
+      - { value: "Pods must use host networking", correct: false }
+      - { value: "DNS must be configured manually", correct: false }
+      - { value: "Pods communicate only via services", correct: false }
+    help: https://kubernetes.io/help/concepts/cluster-administration/networking/#requirements
+
+  - uuid: 03ef515e-812a-4b84-8b68-8c9ac67a05e7
+    question: What networking model does Kubernetes enforce for communication?
+    answers:
+      - { value: "Flat network model where Pods have full routability", correct: true }
+      - { value: "Hierarchical network model with segmented routing", correct: false }
+      - { value: "Container-to-node NAT model", correct: false }
+      - { value: "IP-over-IP overlay model", correct: false }
+    help: https://kubernetes.io/help/concepts/cluster-administration/networking/#kubernetes-model
+
+  - uuid: e2c9645a-09c0-4aa4-8e4c-76179f7a42a4
+    question: What is the role of a Kubernetes Service in the network model?
+    answers:
+      - { value: "It provides stable network endpoints for accessing Pods", correct: true }
+      - { value: "It assigns IPs to Pods", correct: false }
+      - { value: "It replaces kube-dns", correct: false }
+      - { value: "It manages ingress controllers", correct: false }
+    help: https://kubernetes.io/help/concepts/services-networking/service/
+
+  - uuid: 2aa6ff98-f105-44df-9a63-4e6df3c734cf
+    question: How does Kubernetes ensure service discovery in the cluster?
+    answers:
+      - { value: "By using DNS records created by kube-dns/CoreDNS", correct: true }
+      - { value: "By injecting IPs into environment variables only", correct: false }
+      - { value: "By requiring manual IP configuration in Pods", correct: false }
+      - { value: "By using static host files", correct: false }
+    help: https://kubernetes.io/help/concepts/services-networking/dns-pod-service/
+
+  - uuid: 1782764a-2fcf-4643-a1d8-2434b45c7cf7
+    question: What is the difference between ClusterIP, NodePort, and LoadBalancer in Kubernetes?
+    answers:
+      - { value: "They define how a Service is exposed inside or outside the cluster", correct: true }
+      - { value: "They control which namespace a Service belongs to", correct: false }
+      - { value: "They configure ingress network policies", correct: false }
+      - { value: "They assign IP addresses to nodes", correct: false }
+    help: https://kubernetes.io/help/concepts/services-networking/service/#publishing-services-service-types
+
+  - uuid: 2754d9f5-b82e-4f7d-9a7a-1e2f3b07e3ac
+    question: Which Service type should you use to expose an application externally without an external load balancer?
+    answers:
+      - { value: "NodePort", correct: true }
+      - { value: "ClusterIP", correct: false }
+      - { value: "ExternalName", correct: false }
+      - { value: "Headless", correct: false }
+    help: https://kubernetes.io/help/concepts/services-networking/service/#nodeport
+
+  - uuid: e0db5b13-d0d2-4041-bb12-e631a4265a47
+    question: What is a headless service in Kubernetes?
+    answers:
+      - { value: "A service without a cluster IP, used for direct Pod-to-Pod communication", correct: true }
+      - { value: "A service without labels", correct: false }
+      - { value: "A service that has no DNS entry", correct: false }
+      - { value: "A deprecated type of service", correct: false }
+    help: https://kubernetes.io/help/concepts/services-networking/service/#headless-services
+
+  - uuid: 95bcb9ee-7fc7-44a0-99d1-5a28b5b42f6f
+    question: What is the main role of a NetworkPolicy in Kubernetes?
+    answers:
+      - { value: "To restrict traffic between Pods and namespaces", correct: true }
+      - { value: "To assign IPs to services", correct: false }
+      - { value: "To route ingress traffic", correct: false }
+      - { value: "To create CNI plugins", correct: false }
+    help: https://kubernetes.io/help/concepts/services-networking/network-policies/
+
+  - uuid: 570f42f3-21e7-4a90-b146-9f2c7fd85b4e
+    question: Can Kubernetes guarantee pod-to-pod communication across all nodes without additional setup?
+    answers:
+      - { value: "Only if a proper CNI plugin implementing the flat network model is installed", correct: true }
+      - { value: "Yes, always by default", correct: false }
+      - { value: "No, communication is restricted by default", correct: false }
+      - { value: "Only when using NodePort services", correct: false }
+    help: https://kubernetes.io/help/concepts/cluster-administration/networking/
+

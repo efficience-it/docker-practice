@@ -70,7 +70,7 @@
 * Describe and demonstrate how to deploy a service on a Docker overlay network.
 * Describe and demonstrate how to troubleshoot container and engine logs to resolve connectivity issues between containers.
 * Describe how to route traffic to Kubernetes pods using ClusterIP and NodePort services.
-* Describe the Kubertnetes’ container network model.
+* [Describe the Kubertnetes’ container network model.](data/4.Networking/describe_kubertnetes_container_network_model.yaml)
 
 ### Domain 5: Security (15% of exam)
 
@@ -78,7 +78,7 @@ Content may include the following:
 * Describe security administration and tasks.
 * Describe the process of signing an image.
 * Describe default engine security.
-* Describe swarm default security.
+* [Describe swarm default security.](data/5.Security/describe_swarm_default_security.yaml)
 * [Describe MTLS.](data/5.Security/describe_mtls.yaml)
 * Describe identity roles.
 * Compare and contrast UCP workers and managers.
