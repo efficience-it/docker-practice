@@ -67,7 +67,7 @@ questions:
     answers:
       - { value: 'Using the field .Config.Image', correct: true }
       - { value: 'Using the field .Image.Name', correct: false }
-      - { value: "With 'docker image inspect'", correct: false }
+      - { value: 'With `docker image inspect`', correct: false }
       - { value: 'From .Metadata.Image', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/inspect/#get-an-instances-image-name
 
@@ -119,9 +119,9 @@ questions:
   - uuid: 7827e2be-77e1-4380-a173-9f64dba7c5d9
     question: How do you list all port bindings using 'docker inspect'?
     answers:
-      - { value: "Using '{{range $p, $conf := .NetworkSettings.Ports}} {{$p}} -> {{(index $conf 0).HostPort}} {{end}}'", correct: true }
-      - { value: "Using '{{.PortMap}}'", correct: false }
-      - { value: "With '--list-ports'", correct: false }
+      - { value: 'Using `{{range $p, $conf := .NetworkSettings.Ports}} {{$p}} -> {{(index $conf 0).HostPort}} {{end}}`', correct: true }
+      - { value: 'Using `{{.PortMap}}`', correct: false }
+      - { value: 'With `--list-ports`', correct: false }
       - { value: 'Via docker network inspect', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/inspect/#list-all-port-bindings
 

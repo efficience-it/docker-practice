@@ -58,7 +58,7 @@
 ### Domain 4: Networking (15% of exam)
 
 * Describe the Container Network Model and how it interfaces with the Docker engine and network and IPAM drivers.
-* Describe the different types and use cases for the built-in network drivers.
+* [Describe the different types and use cases for the built-in network drivers.](data/4_Networking/describe_different_types_use_cases_built_in_network_drivers.yaml)
 * Describe the types of traffic that flow between the Docker engine, registry and UCP controllers.
 * Describe and demonstrate how to create a Docker bridge network for developers to use for their containers.
 * Describe and demonstrate how to publish a port so that an application is accessible externally.
@@ -84,7 +84,7 @@ Content may include the following:
 * Compare and contrast UCP workers and managers.
 * Describe the process to use external certificates with UCP and DTR.
 * Describe and demonstrate that an image passes a security scan.
-* Describe and demonstrate how to enable Docker Content Trust.
+* [Describe and demonstrate how to enable Docker Content Trust.](data/5_Security/describe_demonstrate_how_enable_docker_content_trust.yaml)
 * Describe and demonstrate how to configure RBAC with UCP.
 * Describe and demonstrate how to integrate UCP with LDAP/AD.
 * Describe and demonstrate how to create UCP client bundles.
