@@ -15,7 +15,7 @@ questions:
       - { value: "--privileged", correct: false }
       - { value: "--security-opt", correct: false }
       - { value: "--read-only", correct: false }
-    help: https://docs.docker.com/engine/security/capabilities/
+    help: https://docs.docker.com/engine/containers/run/#runtime-privilege-and-linux-capabilities
 
   - uuid: 1c8123d2-9858-4aa6-8102-dbe0e69e6b8a
     question: What is a good practice when configuring user permissions in a Dockerfile?
