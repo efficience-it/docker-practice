@@ -1,0 +1,81 @@
+questions:
+  - uuid: 5fef9edb-10cf-44be-866b-2b942bcb3a38
+    question: What does the `docker search` command do?
+    answers:
+      - { value: "Searches Docker Hub for images", correct: true }
+      - { value: "Searches a local registry for containers", correct: false }
+      - { value: "Searches running containers on the host", correct: false }
+      - { value: "Searches the file system for Dockerfiles", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/search/
+
+  - uuid: 23b8b2fc-0f42-4c7a-913a-5f22b85f7a46
+    question: Which option allows filtering images by number of stars in `docker search`?
+    answers:
+      - { value: "--filter stars=3", correct: true }
+      - { value: "--stars=3", correct: false }
+      - { value: "--rating=3", correct: false }
+      - { value: "--star-count=3", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/search/#filtering---filter
+
+  - uuid: 51f98b1d-09e9-4d5d-bcad-e03b7f04121a
+    question: How can you filter search results to show only official images?
+    answers:
+      - { value: "--filter is-official=true", correct: true }
+      - { value: "--official-only", correct: false }
+      - { value: "--type=official", correct: false }
+      - { value: "--filter type=official", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/search/#filtering---filter
+
+  - uuid: 9b315a2e-7a18-4c84-80eb-4c0cf79c3a1b
+    question: What does the `--no-trunc` option do in `docker search`?
+    answers:
+      - { value: "Prevents description text from being truncated", correct: true }
+      - { value: "Shows truncated results", correct: false }
+      - { value: "Disables text wrapping", correct: false }
+      - { value: "Truncates the output to improve performance", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/search/#display-non-truncated-description---no-trunc
+
+  - uuid: 8b8368f6-d3b4-42e5-b33c-fc7d97f6df9f
+    question: Which command shows only images named "busybox" with at least 3 stars and that are official?
+    answers:
+      - { value: "docker search --filter is-official=true --filter stars=3 busybox", correct: true }
+      - { value: "docker search --official-only --stars=3 busybox", correct: false }
+      - { value: "docker search busybox --filter=official:yes", correct: false }
+      - { value: "docker search --stars=3 --type=official busybox", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/search/#is-official
+
+  - uuid: 96de43b5-f1f2-49cd-9184-ffbfad529e95
+    question: What is the purpose of the `--limit` option in `docker search`?
+    answers:
+      - { value: "Limit the number of search results", correct: true }
+      - { value: "Limit the number of layers in each image", correct: false }
+      - { value: "Limit the search timeout", correct: false }
+      - { value: "Limit search to private registries", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/search/#limit-search-results---limit
+
+  - uuid: 482a4ccf-c2e9-4e0c-8727-178ccebfec3a
+    question: What does the `--format` option in `docker search` do?
+    answers:
+      - { value: "Formats the output using a Go template", correct: true }
+      - { value: "Formats the image for pushing", correct: false }
+      - { value: "Displays detailed manifest information", correct: false }
+      - { value: "Specifies an output file", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/search/#format-the-output---format
+
+  - uuid: b3144f90-d96c-4c4d-9d5e-9d7f3e03a350
+    question: What placeholder would you use in a Go template to print the star count in a formatted search result?
+    answers:
+      - { value: ".StarCount", correct: true }
+      - { value: ".Stars", correct: false }
+      - { value: ".Rating", correct: false }
+      - { value: ".Favorites", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/search/#format-the-output---format
+
+  - uuid: b490376e-624f-421f-92e7-7ecb746d6d6c
+    question: Which command would list image names and star counts, separated by a colon?
+    answers:
+      - { value: 'docker search --format "{{.Name}}: {{.StarCount}}" nginx', correct: true }
+      - { value: 'docker search --format "{{Name}}: {{StarCount}}" nginx', correct: false }
+      - { value: 'docker search nginx --columns name,stars', correct: false }
+      - { value: 'docker search nginx --output=name:stars', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/search/#format-the-output---format

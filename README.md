@@ -5,14 +5,14 @@
 * [Complete the setup of a swarm mode cluster, with managers and worker nodes](data/1.Orchestration/complete_setup_swarm_mode_cluster_managers_worker_nodes.yaml)
 * Describe and demonstrate how to extend the instructions to run individual containers into running services under swarm.
 * [Describe the importance of quorum in a swarm cluster.](data/1.Orchestration/describe_importance_quorum_swarm_cluster.yaml)
-* [Describe the difference between running a container and running a service.](data/1.Orchestration/describe_difference_between_running_container_and_service.yaml)
-* [Interpret the output of “docker inspect” commands.](data/1.Orchestration/interpret_output_docker_inspect_commend.yaml)
+* [Describe the difference between running a container and running a service.](data/1_Orchestration/describe_difference_between_running_container_and_service.yaml)
+* [Interpret the output of “docker inspect” commands.](data/1_Orchestration/interpret_output_docker_inspect_commend.yaml)
 * Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy"
 * Manipulate a running stack of services.
 * Describe and demonstrate orchestration activities.
-* [Increase the number of replicas.](data/1.Orchestration/increase_the_number_of_replicas.yaml)
-* [Add networks, publish ports.](data/1.Orchestration/add_networks_publish_ports.yaml)
-* [Mount volumes.](data/1.Orchestration/mount_volumes.yaml)
+* [Increase the number of replicas.](data/1_Orchestration/increase_the_number_of_replicas.yaml)
+* [Add networks, publish ports.](data/1_Orchestration/add_networks_publish_ports.yaml)
+* [Mount volumes.](data/1_Orchestration/mount_volumes.yaml)
 * Describe and demonstrate how to run replicated and global services.
 * Apply node labels to demonstrate placement of tasks.
 * Describe and demonstrate how to use templates with “docker service create”.
@@ -23,22 +23,22 @@
 
 ### Domain 2: Image Creation, Management, and Registry (20% of exam)
 
-* [Describe the use of Dockerfile.](data/2.Image_creation_management_registry/describe_the_use_of_dockerfile.yaml)
-* [Describe options, such as add, copy, volumes, expose, entry point.](data/2.Image_creation_management_registry/identify_display_main_parts_dockerfile.yaml)
-* Identify and display the main parts of a Dockerfile.
+* [Describe the use of Dockerfile.](data/2_Image_creation_management_registry/describe_the_use_of_dockerfile.yaml)
+* [Describe options, such as add, copy, volumes, expose, entry point.](data/2_Image_creation_management_registry/identify_display_main_parts_dockerfile.yaml)
+* [Identify and display the main parts of a Dockerfile.](data/2_Image_creation_management_registry/identify_display_main_parts_dockerfile.yaml)
 * Describe and demonstrate how to create an efficient image via a Dockerfile.
 * Describe and demonstrate how to use CLI commands to manage images, such as list, delete, prune, rmi.
-* Describe and demonstrate how to inspect images and report specific attributes using filter and format
-* [Describe and demonstrate how to tag an image.](data/2.Image_creation_management_registry/describe_demonstrate_how_to_tag_image.yaml)
+* [Describe and demonstrate how to inspect images and report specific attributes using filter and format](data/2_Image_creation_management_registry/describe_demonstrate_how_to_inspec_images_report_specifi_attributes_using_filter_format.yaml)
+* [Describe and demonstrate how to tag an image.](data/2_Image_creation_management_registry/describe_demonstrate_how_to_tag_image.yaml)
 * Describe and demonstrate how to apply a file to create a Docker image.
 * Describe and demonstrate how to display layers of a Docker image
 * Describe and demonstrate how to modify an image to a single layer.
 * Describe and demonstrate registry functions.
 * Deploy a registry.
-* [Log into a registry.](data/2.Image_creation_management_registry/log_into_a_registry.yaml)
-* Utilize search in a registry.
-* Push an image to a registry.
-* Sign an image in a registry.
+* [Log into a registry.](data/2_Image_creation_management_registry/log_into_a_registry.yaml)
+* [Utilize search in a registry.](data/2_Image_creation_management_registry/utilize_search_in_a_registry.yaml)
+* [Push an image to a registry.](data/2_Image_creation_management_registry/push_an_image_to_a_registry.yaml)
+* [Sign an image in a registry.](data/2_Image_creation_management_registry/sign_an_image_in_a_registry.yaml)
 * Pull and delete images from a registry.
 
 ### Domain 3: Installation and Configuration (15% of exam)
@@ -70,7 +70,7 @@
 * Describe and demonstrate how to deploy a service on a Docker overlay network.
 * Describe and demonstrate how to troubleshoot container and engine logs to resolve connectivity issues between containers.
 * Describe how to route traffic to Kubernetes pods using ClusterIP and NodePort services.
-* Describe the Kubertnetes’ container network model.
+* [Describe the Kubertnetes’ container network model.](data/4_Networking/describe_kubernetes_container_network_model.yaml)
 
 ### Domain 5: Security (15% of exam)
 
@@ -79,7 +79,7 @@ Content may include the following:
 * Describe the process of signing an image.
 * Describe default engine security.
 * Describe swarm default security.
-* [Describe MTLS.](data/5.Security/describe_mtls.yaml)
+* [Describe MTLS.](data/5_Security/describe_mtls.yaml)
 * Describe identity roles.
 * Compare and contrast UCP workers and managers.
 * Describe the process to use external certificates with UCP and DTR.
