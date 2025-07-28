@@ -42,7 +42,7 @@ questions:
       - { value: 'TLS certificate and key', correct: false }
       - { value: 'Access to Docker EE license', correct: false }
       - { value: 'UCP admin privileges', correct: false }
-    help: 'https://docs.docker.com/engine/security/trust/trust_implementation/'
+    help: 'https://docs.docker.com/engine/security/trust/'
 
   - uuid: 02eb5f4a-8f6b-4c3a-8a63-d8b6b3b7faba
     question: Which Docker CLI command can be used to view trusted image signatures?
