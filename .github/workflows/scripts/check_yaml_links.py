@@ -6,7 +6,7 @@ from requests.exceptions import RequestException
 
 MAX_WORKERS = 10
 TIMEOUT = 10
-EXCLUDED_DOMAINS = ['github.com']
+EXCLUDED_DOMAINS = ['github.com', 'kubernetes.io']
 
 checked_urls = {}
 broken_links = []
@@ -25,7 +25,7 @@ def check_url(url):
 
     try:
         headers = {
-            "User-Agent": "Mozilla/5.0 (compatible; LinkChecker/1.0)"
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
         }
         response = requests.head(url, headers=headers, allow_redirects=True, timeout=TIMEOUT)
         if response.status_code >= 400:
