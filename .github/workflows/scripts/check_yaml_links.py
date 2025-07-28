@@ -6,7 +6,7 @@ from requests.exceptions import RequestException
 
 MAX_WORKERS = 10
 TIMEOUT = 10
-EXCLUDED_DOMAINS = ['github.com']
+EXCLUDED_DOMAINS = ['github.com', 'kubernetes.io']
 
 checked_urls = {}
 broken_links = []
