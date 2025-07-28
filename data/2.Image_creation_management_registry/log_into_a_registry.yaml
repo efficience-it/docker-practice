@@ -51,6 +51,7 @@ questions:
       - { value: 'Docker Desktop', correct: false }
       - { value: 'VS Code', correct: false }
       - { value: 'Alpine Linux', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: 65243d7e-bb1a-4e56-a528-e1b0b946305c
     question: How do you log into AWS ECR via Docker CLI?
@@ -68,6 +69,7 @@ questions:
       - { value: 'Authenticated', correct: false }
       - { value: 'Access Granted', correct: false }
       - { value: '200 OK', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: 356b270a-0bc2-4b4a-8dbe-b8cf236063f5
     question: What command logs you out from a registry?
@@ -76,6 +78,7 @@ questions:
       - { value: 'docker signout', correct: false }
       - { value: 'docker disconnect', correct: false }
       - { value: 'docker unlogin', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: d1cd4f6f-6f11-4a39-a215-116e1d10c4d4
     question: If you omit a registry in docker login, which registry is used?
@@ -84,6 +87,7 @@ questions:
       - { value: 'The last used registry', correct: false }
       - { value: 'A local registry', correct: false }
       - { value: 'GitHub Container Registry', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: 35a72e70-3555-4fd5-8548-efef91b437b2
     question: What flag should you use to avoid typing your password in the terminal?
@@ -92,6 +96,7 @@ questions:
       - { value: '--secure-auth', correct: false }
       - { value: '--no-echo', correct: false }
       - { value: '--stdin-pass', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: 4b9ac1b7-4dc7-4476-80fc-c7e8f05c38c2
     question: Which of the following registries supports anonymous pull by default?
@@ -100,6 +105,7 @@ questions:
       - { value: 'Amazon ECR', correct: false }
       - { value: 'Azure Container Registry', correct: false }
       - { value: 'GitHub Container Registry', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: b3f9fdd1-e0ef-4aa4-aec4-2b5b3f95b2d3
     question: What is the risk of checking `~/.docker/config.json` into version control?
@@ -108,6 +114,7 @@ questions:
       - { value: 'It can crash the Docker CLI', correct: false }
       - { value: 'It corrupts the local registry', correct: false }
       - { value: 'It disables image pushes', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: 3aaf0c2c-94dc-46ae-82c9-5f26a497ce3b
     question: Can `docker login` be used in CI pipelines?
@@ -116,6 +123,7 @@ questions:
       - { value: 'No, it only works interactively', correct: false }
       - { value: 'Only with GitHub Actions', correct: false }
       - { value: 'Only with SSH keys', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: 777d64b4-9b7c-4fa2-90c2-60c5ee7e3c2f
     question: What does the Docker Engine use to authenticate with a registry after login?
@@ -124,6 +132,7 @@ questions:
       - { value: 'A running background process', correct: false }
       - { value: 'SSH certificate', correct: false }
       - { value: 'TLS mutual authentication', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: 1aa0e409-e659-46a6-b1cc-7b5c37935411
     question: What is the correct command to authenticate with a private registry at myregistry.local?
@@ -132,6 +141,7 @@ questions:
       - { value: 'docker login --registry myregistry.local', correct: false }
       - { value: 'docker connect myregistry.local', correct: false }
       - { value: 'docker login --host myregistry.local', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: 13a6612f-b3d3-4210-b77f-39588c39f353
     question: What should you do before pushing an image to Docker Hub?
@@ -140,6 +150,7 @@ questions:
       - { value: 'Restart the Docker daemon', correct: false }
       - { value: 'Run docker pull', correct: false }
       - { value: 'Export the image to tar first', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: d95e82c4-d361-420f-9d97-b5eb09c09cf1
     question: What happens if docker login fails?
@@ -148,6 +159,7 @@ questions:
       - { value: 'The system attempts offline mode', correct: false }
       - { value: 'A prompt to try again appears', correct: false }
       - { value: 'Docker retries silently in the background', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: b0c38b0e-290f-44a2-bc42-0a6a52e8823c
     question: What authentication method does Docker login use with Docker Hub?
@@ -156,6 +168,7 @@ questions:
       - { value: 'OAuth 2.0', correct: false }
       - { value: 'JWT tokens only', correct: false }
       - { value: 'SSH challenge-response', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: f6ea0aa0-5a3b-46e5-bf8a-140bfda4a7c6
     question: How can a user revoke a previously saved Docker login token?
@@ -164,3 +177,4 @@ questions:
       - { value: 'Clear all Docker system cache', correct: false }
       - { value: 'Logout from Docker Desktop', correct: false }
       - { value: 'Restart the host machine', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/login/
