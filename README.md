@@ -58,7 +58,7 @@
 ### Domain 4: Networking (15% of exam)
 
 * Describe the Container Network Model and how it interfaces with the Docker engine and network and IPAM drivers.
-* Describe the different types and use cases for the built-in network drivers.
+* [Describe the different types and use cases for the built-in network drivers.](data/4_Networking/describe_different_types_use_cases_built_in_network_drivers.yaml)
 * Describe the types of traffic that flow between the Docker engine, registry and UCP controllers.
 * Describe and demonstrate how to create a Docker bridge network for developers to use for their containers.
 * Describe and demonstrate how to publish a port so that an application is accessible externally.

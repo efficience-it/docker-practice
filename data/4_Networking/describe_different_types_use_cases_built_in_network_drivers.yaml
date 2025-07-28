@@ -1,0 +1,90 @@
+questions:
+  - uuid: e2f6b6c1-6832-4ff5-9b68-902db4fcd05d
+    question: What is the primary purpose of the bridge network driver?
+    answers:
+      - { value: "To allow container-to-container communication on a single host", correct: true }
+      - { value: "To span containers across multiple Docker hosts", correct: false }
+      - { value: "To isolate containers from the host network", correct: false }
+      - { value: "To expose services to the internet", correct: false }
+    help: "https://docs.docker.com/engine/network/drivers/bridge/"
+
+  - uuid: 48aee02c-d576-4c3e-b54c-eed847f61f70
+    question: Which built-in Docker network driver should you use to enable communication between services across nodes in a Swarm cluster?
+    answers:
+      - { value: "overlay", correct: true }
+      - { value: "bridge", correct: false }
+      - { value: "macvlan", correct: false }
+      - { value: "host", correct: false }
+    help: "https://docs.docker.com/engine/network/drivers/overlay/"
+
+  - uuid: 3a6bce4a-8e9f-4c53-bc99-2bde9b37961c
+    question: What is the host network driver used for?
+    answers:
+      - { value: "To run containers with direct access to the host’s network stack", correct: true }
+      - { value: "To isolate containers from each other", correct: false }
+      - { value: "To assign static IPs to containers", correct: false }
+      - { value: "To encrypt traffic between services", correct: false }
+    help: "https://docs.docker.com/engine/network/drivers/host/"
+
+  - uuid: d0d0c3db-98c0-4725-8b68-160b15574b7a
+    question: Which network driver should you use to assign a MAC address to a container from your LAN?
+    answers:
+      - { value: "macvlan", correct: true }
+      - { value: "bridge", correct: false }
+      - { value: "host", correct: false }
+      - { value: "overlay", correct: false }
+    help: "https://docs.docker.com/engine/network/drivers/macvlan/"
+
+  - uuid: 07f01327-ea86-4635-8424-0c3ebc92e6d4
+    question: What is the purpose of the none network driver?
+    answers:
+      - { value: "To disable all networking for the container", correct: true }
+      - { value: "To enable encrypted traffic between containers", correct: false }
+      - { value: "To run containers with host DNS", correct: false }
+      - { value: "To allow containers to auto-discover each other", correct: false }
+    help: "https://docs.docker.com/engine/network/tutorials/standalone/#use-the-none-network"
+
+  - uuid: f2c1690e-78d5-43e4-82cb-10d5e042189b
+    question: What happens when a container is connected to the host network driver?
+    answers:
+      - { value: "The container shares the host’s network namespace", correct: true }
+      - { value: "The container gets a new network namespace", correct: false }
+      - { value: "The container is assigned a MAC address", correct: false }
+      - { value: "The container is isolated from the internet", correct: false }
+    help: "https://docs.docker.com/engine/network/drivers/host/"
+
+  - uuid: 2ab48a46-30f7-4552-9180-39fa8a57c03e
+    question: In which scenario would using the macvlan driver be appropriate?
+    answers:
+      - { value: "When containers need to appear as physical devices on the network", correct: true }
+      - { value: "When running many containers with NAT", correct: false }
+      - { value: "When containers only need outbound internet access", correct: false }
+      - { value: "When containers should not access the network", correct: false }
+    help: "https://docs.docker.com/engine/network/drivers/macvlan/"
+
+  - uuid: 85e3f083-302e-4d9e-86cb-9c8b1ff08e7d
+    question: Which network driver does Docker use by default if none is specified?
+    answers:
+      - { value: "bridge", correct: true }
+      - { value: "host", correct: false }
+      - { value: "overlay", correct: false }
+      - { value: "macvlan", correct: false }
+    help: "https://docs.docker.com/engine/network/drivers/bridge/"
+
+  - uuid: 2b3439e4-5674-4e85-bcf5-cf4ac86b2b31
+    question: Which network driver supports service discovery and encryption in Docker Swarm?
+    answers:
+      - { value: "overlay", correct: true }
+      - { value: "bridge", correct: false }
+      - { value: "macvlan", correct: false }
+      - { value: "host", correct: false }
+    help: "https://docs.docker.com/engine/network/drivers/overlay/"
+
+  - uuid: 82beef4a-3a80-4303-8985-6ce0df5ad2c4
+    question: Which Docker network driver is best suited for isolating containers from the network entirely?
+    answers:
+      - { value: "none", correct: true }
+      - { value: "host", correct: false }
+      - { value: "bridge", correct: false }
+      - { value: "overlay", correct: false }
+    help: "https://docs.docker.com/engine/network/tutorials/standalone/#use-the-none-network"
