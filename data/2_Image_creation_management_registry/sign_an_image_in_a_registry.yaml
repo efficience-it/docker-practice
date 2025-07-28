@@ -42,7 +42,7 @@ questions:
       - { value: "Vault", correct: false }
       - { value: "GPG", correct: false }
       - { value: "HashiSign", correct: false }
-    help: https://docs.docker.com/notary/
+    help: https://github.com/notaryproject/notary#using-notary
 
   - uuid: 741a8e0a-d685-464a-a678-57d571c3d2cc
     question: Which keys are involved in the Docker Content Trust system?

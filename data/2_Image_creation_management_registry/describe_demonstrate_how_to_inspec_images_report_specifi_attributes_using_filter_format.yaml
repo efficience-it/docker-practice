@@ -40,6 +40,7 @@ questions:
     answers:
       - { value: 'docker images --format "{{.ID}}: {{.Repository}}"', correct: true }
       - { value: 'docker images --format "{{.Image}}: {{.Name}}"', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/image_ls/
 
   - uuid: e54ad2de-5be4-4385-944b-d0c991d3f88e
     question: What does the `--format` flag allow in `docker images`?
