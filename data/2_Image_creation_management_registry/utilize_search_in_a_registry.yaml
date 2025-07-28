@@ -74,8 +74,8 @@ questions:
   - uuid: b490376e-624f-421f-92e7-7ecb746d6d6c
     question: Which command would list image names and star counts, separated by a colon?
     answers:
-      - { value: 'docker search --format '{{.Name}}: {{.StarCount}}' nginx', correct: true }
-      - { value: 'docker search --format '{{Name}}: {{StarCount}}' nginx', correct: false }
+      - { value: "docker search --format '{{.Name}}: {{.StarCount}}' nginx", correct: true }
+      - { value: "docker search --format '{{Name}}: {{StarCount}}' nginx", correct: false }
       - { value: 'docker search nginx --columns name,stars', correct: false }
       - { value: 'docker search nginx --output=name:stars', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/search/#format-the-output---format

@@ -29,7 +29,7 @@ questions:
   - uuid: a05de06a-dff3-4b02-9f56-045650ec2e34
     question: What does the `--read-only` flag do for a container?
     answers:
-      - { value: 'Mounts the container's root filesystem as read-only', correct: true }
+      - { value: "Mounts the container's root filesystem as read-only", correct: true }
       - { value: 'Makes host directories immutable', correct: false }
       - { value: 'Blocks access to external networks', correct: false }
       - { value: 'Disables user input', correct: false }

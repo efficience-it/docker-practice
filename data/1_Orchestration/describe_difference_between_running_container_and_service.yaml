@@ -85,6 +85,6 @@ questions:
     answers:
       - { value: 'When you want a quick, one-off container without high availability', correct: true }
       - { value: 'When you want replicas automatically managed', correct: false }
-      - { value: 'When you're using Swarm orchestration', correct: false }
+      - { value: "When you're using Swarm orchestration", correct: false }
       - { value: 'When your application needs global services', correct: false }
     help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#services-tasks-and-containers

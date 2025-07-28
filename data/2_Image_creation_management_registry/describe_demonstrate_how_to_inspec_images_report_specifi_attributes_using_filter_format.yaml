@@ -38,8 +38,8 @@ questions:
   - uuid: b0a18a67-7c4e-44cf-869d-393f6aa3a239
     question: Which of the following would show image IDs and repositories using Go templates?
     answers:
-      - { value: 'docker images --format '{{.ID}}: {{.Repository}}'', correct: true }
-      - { value: 'docker images --format '{{.Image}}: {{.Name}}'', correct: false }
+      - { value: "docker images --format '{{.ID}}: {{.Repository}}'", correct: true }
+      - { value: "docker images --format '{{.Image}}: {{.Name}}'", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/image_ls/
 
   - uuid: e54ad2de-5be4-4385-944b-d0c991d3f88e
