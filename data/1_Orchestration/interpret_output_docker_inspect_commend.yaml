@@ -40,17 +40,17 @@ questions:
     answers:
       - { value: 'docker inspect --ip-only <container>', correct: false }
       - { value: 'docker info --network <container>', correct: false }
-      - { value: "docker inspect -f '{{ .NetworkSettings.IPAddress }}' <container>", correct: true }
+      - { value: 'docker inspect -f '{{ .NetworkSettings.IPAddress }}' <container>', correct: true }
       - { value: 'docker logs --network-info <container>', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/inspect/
 
   - uuid: 5e7f3841-bd3f-4e3e-b63b-73f4b7b9482e
     question: How can you display the container's MAC address using 'docker inspect'?
     answers:
-      - { value: "Using the format '{{range .NetworkSettings.Networks}}{{.MacAddress}}{{end}}'", correct: true }
-      - { value: "Using the format '{{.MAC}}'", correct: false }
+      - { value: 'Using the format '{{range .NetworkSettings.Networks}}{{.MacAddress}}{{end}}'', correct: true }
+      - { value: 'Using the format '{{.MAC}}'', correct: false }
       - { value: 'docker inspect --mac', correct: false }
-      - { value: "Using the format '{{.Network.Mac}}'", correct: false }
+      - { value: 'Using the format '{{.Network.Mac}}'', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/inspect/#get-an-instances-mac-address
 
   - uuid: 292be32d-6601-4b64-889a-78ed87a6d593
@@ -67,7 +67,7 @@ questions:
     answers:
       - { value: 'Using the field .Config.Image', correct: true }
       - { value: 'Using the field .Image.Name', correct: false }
-      - { value: "With 'docker image inspect'", correct: false }
+      - { value: 'With 'docker image inspect'', correct: false }
       - { value: 'From .Metadata.Image', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/inspect/#get-an-instances-image-name
 
@@ -119,9 +119,9 @@ questions:
   - uuid: 7827e2be-77e1-4380-a173-9f64dba7c5d9
     question: How do you list all port bindings using 'docker inspect'?
     answers:
-      - { value: "Using '{{range $p, $conf := .NetworkSettings.Ports}} {{$p}} -> {{(index $conf 0).HostPort}} {{end}}'", correct: true }
-      - { value: "Using '{{.PortMap}}'", correct: false }
-      - { value: "With '--list-ports'", correct: false }
+      - { value: 'Using '{{range $p, $conf := .NetworkSettings.Ports}} {{$p}} -> {{(index $conf 0).HostPort}} {{end}}'', correct: true }
+      - { value: 'Using '{{.PortMap}}'', correct: false }
+      - { value: 'With '--list-ports'', correct: false }
       - { value: 'Via docker network inspect', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/inspect/#list-all-port-bindings
 

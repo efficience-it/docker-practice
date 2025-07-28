@@ -2,109 +2,109 @@ questions:
   - uuid: 1688d9c4-231c-4c8f-9d9a-9e7d4f1b657e
     question: What is the main purpose of signing a Docker image?
     answers:
-      - { value: "To ensure the image comes from a trusted source and has not been tampered with", correct: true }
-      - { value: "To compress the image layers for faster uploads", correct: false }
-      - { value: "To add a tag to the image", correct: false }
-      - { value: "To publish the image to all registries", correct: false }
+      - { value: 'To ensure the image comes from a trusted source and has not been tampered with', correct: true }
+      - { value: 'To compress the image layers for faster uploads', correct: false }
+      - { value: 'To add a tag to the image', correct: false }
+      - { value: 'To publish the image to all registries', correct: false }
     help: https://github.com/notaryproject/notary
 
   - uuid: 2b9e7e4c-27f5-44d3-b0fd-199cd77a1521
     question: Which Docker feature is used for signing images?
     answers:
-      - { value: "Docker Content Trust (DCT)", correct: true }
-      - { value: "Docker Security Engine (DSE)", correct: false }
-      - { value: "Docker Swarm Authenticator", correct: false }
-      - { value: "Docker Encryption Protocol (DEP)", correct: false }
+      - { value: 'Docker Content Trust (DCT)', correct: true }
+      - { value: 'Docker Security Engine (DSE)', correct: false }
+      - { value: 'Docker Swarm Authenticator', correct: false }
+      - { value: 'Docker Encryption Protocol (DEP)', correct: false }
     help: https://docs.docker.com/engine/security/trust/
 
   - uuid: 90f4c0f6-4bc0-4c9d-9cd1-bab401be4bb6
     question: What environment variable must be enabled to use Docker Content Trust?
     answers:
-      - { value: "DOCKER_CONTENT_TRUST=1", correct: true }
-      - { value: "DOCKER_TRUST_MODE=ENABLED", correct: false }
-      - { value: "ENABLE_IMAGE_SIGNING=true", correct: false }
-      - { value: "DCT_ENABLED=1", correct: false }
+      - { value: 'DOCKER_CONTENT_TRUST=1', correct: true }
+      - { value: 'DOCKER_TRUST_MODE=ENABLED', correct: false }
+      - { value: 'ENABLE_IMAGE_SIGNING=true', correct: false }
+      - { value: 'DCT_ENABLED=1', correct: false }
     help: https://docs.docker.com/engine/security/trust/
 
   - uuid: 71f3094d-2cf2-4cd4-84e1-b5e97cfe7a91
     question: What command is used to sign a Docker image using Docker Content Trust?
     answers:
-      - { value: "docker trust sign IMAGE[:TAG]", correct: true }
-      - { value: "docker image sign IMAGE[:TAG]", correct: false }
-      - { value: "docker image verify IMAGE[:TAG]", correct: false }
-      - { value: "docker trust enable IMAGE[:TAG]", correct: false }
+      - { value: 'docker trust sign IMAGE[:TAG]', correct: true }
+      - { value: 'docker image sign IMAGE[:TAG]', correct: false }
+      - { value: 'docker image verify IMAGE[:TAG]', correct: false }
+      - { value: 'docker trust enable IMAGE[:TAG]', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/trust_sign/
 
   - uuid: 91d5b8a5-c18c-4fcf-977f-4e92c1ef26cf
     question: What does enabling Docker Content Trust prevent?
     answers:
-      - { value: "Pulling unsigned images", correct: true }
-      - { value: "Creating multi-stage builds", correct: false }
-      - { value: "Uploading image logs", correct: false }
-      - { value: "Overwriting local images", correct: false }
+      - { value: 'Pulling unsigned images', correct: true }
+      - { value: 'Creating multi-stage builds', correct: false }
+      - { value: 'Uploading image logs', correct: false }
+      - { value: 'Overwriting local images', correct: false }
     help: https://docs.docker.com/engine/security/trust/
 
   - uuid: 5659ea44-4dc4-4fa6-92ef-7d2c58b9b3f4
     question: What key types are required when initializing trust on a repo using DCT?
     answers:
-      - { value: "Root key and repository key", correct: true }
-      - { value: "TLS key and client key", correct: false }
-      - { value: "CA key and encryption key", correct: false }
-      - { value: "JWT key and Docker ID", correct: false }
+      - { value: 'Root key and repository key', correct: true }
+      - { value: 'TLS key and client key', correct: false }
+      - { value: 'CA key and encryption key', correct: false }
+      - { value: 'JWT key and Docker ID', correct: false }
     help: https://docs.docker.com/engine/security/trust/trust_automation/
 
   - uuid: fce1830c-5cc4-45d6-a58f-163eecab2c15
     question: What does a Notary server store in the context of Docker image signing?
     answers:
-      - { value: "Signed metadata and public keys", correct: true }
-      - { value: "Full image layers", correct: false }
-      - { value: "Authentication tokens", correct: false }
-      - { value: "Compressed image tarballs", correct: false }
+      - { value: 'Signed metadata and public keys', correct: true }
+      - { value: 'Full image layers', correct: false }
+      - { value: 'Authentication tokens', correct: false }
+      - { value: 'Compressed image tarballs', correct: false }
     help: https://github.com/notaryproject/notary
 
   - uuid: 0a8fe539-1f53-4ed6-bb3b-680e2b7f3dbf
     question: What is a practical security benefit of using image signing?
     answers:
-      - { value: "Prevents deployment of tampered or malicious images", correct: true }
-      - { value: "Reduces container startup time", correct: false }
-      - { value: "Enables automatic volume mounting", correct: false }
-      - { value: "Improves image compression", correct: false }
+      - { value: 'Prevents deployment of tampered or malicious images', correct: true }
+      - { value: 'Reduces container startup time', correct: false }
+      - { value: 'Enables automatic volume mounting', correct: false }
+      - { value: 'Improves image compression', correct: false }
     help: https://docs.docker.com/engine/security/trust/
 
   - uuid: 611bcfa9-f4e3-465b-939b-dab7e0739a60
     question: What does the `docker trust inspect IMAGE` command show?
     answers:
-      - { value: "Signers and signature metadata for an image", correct: true }
-      - { value: "Layer history of an image", correct: false }
-      - { value: "Build logs of the image", correct: false }
-      - { value: "Container memory limits", correct: false }
+      - { value: 'Signers and signature metadata for an image', correct: true }
+      - { value: 'Layer history of an image', correct: false }
+      - { value: 'Build logs of the image', correct: false }
+      - { value: 'Container memory limits', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/trust_inspect/
 
   - uuid: 2a3c763f-1c1e-4bc3-a116-0fc8818a808c
     question: When using DCT, what happens if you try to pull an image without a valid signature?
     answers:
-      - { value: "The pull fails with a trust error", correct: true }
-      - { value: "The image is pulled but not run", correct: false }
-      - { value: "The image is pulled but marked as untrusted", correct: false }
-      - { value: "The image is automatically signed locally", correct: false }
+      - { value: 'The pull fails with a trust error', correct: true }
+      - { value: 'The image is pulled but not run', correct: false }
+      - { value: 'The image is pulled but marked as untrusted', correct: false }
+      - { value: 'The image is automatically signed locally', correct: false }
     help: https://docs.docker.com/engine/security/trust/
 
   - uuid: b5a8a396-2b59-4eaa-920f-8409f09e2b3b
     question: What does the `docker trust inspect` command do?
     answers:
-      - { value: "It displays signature metadata for a Docker image", correct: true }
-      - { value: "It validates the Docker daemon's TLS settings", correct: false }
-      - { value: "It signs an image using a trusted GPG key", correct: false }
-      - { value: "It encrypts layers before pushing to a registry", correct: false }
+      - { value: 'It displays signature metadata for a Docker image', correct: true }
+      - { value: 'It validates the Docker daemon's TLS settings', correct: false }
+      - { value: 'It signs an image using a trusted GPG key', correct: false }
+      - { value: 'It encrypts layers before pushing to a registry', correct: false }
     help: https://docs.docker.com/reference/cli/docker/trust/inspect/
 
   - uuid: d732cc93-f9aa-4a35-b2be-2dd3269015e2
     question: Which `docker trust` subcommand provides a human-readable view of who signed an image?
     answers:
-      - { value: "`docker trust inspect --pretty`", correct: true }
-      - { value: "`docker trust view`", correct: false }
-      - { value: "`docker trust verify`", correct: false }
-      - { value: "`docker trust show`", correct: false }
+      - { value: '`docker trust inspect --pretty`', correct: true }
+      - { value: '`docker trust view`', correct: false }
+      - { value: '`docker trust verify`', correct: false }
+      - { value: '`docker trust show`', correct: false }
     help: https://docs.docker.com/reference/cli/docker/trust/inspect/
 
 
