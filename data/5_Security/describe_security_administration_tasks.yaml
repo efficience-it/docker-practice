@@ -1,0 +1,91 @@
+questions:
+  - uuid: 52f2c3be-9987-440c-9891-b4f4fa13fbb9
+    question: What is the principle of least privilege in the context of Docker containers?
+    answers:
+      - { value: "Giving containers only the permissions they need to function", correct: true }
+      - { value: "Running containers with full root access", correct: false }
+      - { value: "Sharing host files with all containers", correct: false }
+      - { value: "Allowing containers to configure Docker itself", correct: false }
+    help: https://docs.docker.com/engine/security/security/
+
+  - uuid: b38d8947-2f6e-4a38-8c79-6355b508ec88
+    question: Which Docker flag allows you to drop Linux capabilities from a container?
+    answers:
+      - { value: "--cap-drop", correct: true }
+      - { value: "--privileged", correct: false }
+      - { value: "--security-opt", correct: false }
+      - { value: "--read-only", correct: false }
+    help: https://docs.docker.com/engine/security/capabilities/
+
+  - uuid: 1c8123d2-9858-4aa6-8102-dbe0e69e6b8a
+    question: What is a good practice when configuring user permissions in a Dockerfile?
+    answers:
+      - { value: "Set a non-root user with the USER instruction", correct: true }
+      - { value: "Always use the root user for flexibility", correct: false }
+      - { value: "Change the host’s passwd file", correct: false }
+      - { value: "Use the host’s user account for authentication", correct: false }
+    help: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user
+
+  - uuid: a05de06a-dff3-4b02-9f56-045650ec2e34
+    question: What does the `--read-only` flag do for a container?
+    answers:
+      - { value: "Mounts the container's root filesystem as read-only", correct: true }
+      - { value: "Makes host directories immutable", correct: false }
+      - { value: "Blocks access to external networks", correct: false }
+      - { value: "Disables user input", correct: false }
+    help: https://docs.docker.com/engine/reference/run/#read-only
+
+  - uuid: 3cd56a68-fab3-4e60-9d44-e0fc5105d5ea
+    question: What is the role of AppArmor or SELinux in Docker?
+    answers:
+      - { value: "They provide mandatory access control policies for containers", correct: true }
+      - { value: "They encrypt Docker images", correct: false }
+      - { value: "They manage container network drivers", correct: false }
+      - { value: "They configure systemd inside containers", correct: false }
+    help: https://docs.docker.com/engine/security/apparmor/
+
+  - uuid: 00c5b64f-355e-45dc-b9a7-8b40ac9e91f3
+    question: How does Docker manage secrets securely in Swarm mode?
+    answers:
+      - { value: "Secrets are encrypted at rest and only exposed in-memory to relevant services", correct: true }
+      - { value: "Secrets are passed as environment variables", correct: false }
+      - { value: "Secrets are stored in bind mounts", correct: false }
+      - { value: "Secrets are hardcoded in the image", correct: false }
+    help: https://docs.docker.com/engine/swarm/secrets/
+
+  - uuid: 76b8d3e0-37d8-4011-a89f-57fae0840c21
+    question: What is the effect of using the `--privileged` flag with `docker run`?
+    answers:
+      - { value: "Gives the container full access to all devices and host capabilities", correct: true }
+      - { value: "Isolates the container from the host", correct: false }
+      - { value: "Restricts network access", correct: false }
+      - { value: "Prevents volume mounting", correct: false }
+    help: https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities
+
+  - uuid: 253eb20f-8cf4-4be6-84fd-26ef58d62f3e
+    question: What is the recommended way to audit container activity?
+    answers:
+      - { value: "Use auditd or container-aware logging solutions", correct: true }
+      - { value: "Log everything in the container’s environment variables", correct: false }
+      - { value: "Only review the image’s Dockerfile", correct: false }
+      - { value: "Manually inspect file system changes", correct: false }
+    help: https://docs.docker.com/config/containers/logging/
+
+  - uuid: d3593c9d-009e-4b8c-9b1e-248fa317a3dc
+    question: What security mechanism can be used to prevent a container from accessing host devices?
+    answers:
+      - { value: "Use a custom seccomp profile", correct: true }
+      - { value: "Expose the container with --network host", correct: false }
+      - { value: "Enable experimental features", correct: false }
+      - { value: "Mount /dev directly", correct: false }
+    help: https://docs.docker.com/engine/security/seccomp/
+
+  - uuid: f201b3e3-1f79-4e7e-89f4-9acfa01d8b1b
+    question: In Docker Enterprise, how are access permissions typically managed?
+    answers:
+      - { value: "Using Role-Based Access Control (RBAC)", correct: true }
+      - { value: "Through Unix file permissions", correct: false }
+      - { value: "Only via swarm manager tokens", correct: false }
+      - { value: "Via container labels", correct: false }
+    help: https://docs.docker.com/ee/ucp/authorization/
+

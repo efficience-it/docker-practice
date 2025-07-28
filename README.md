@@ -75,8 +75,8 @@
 ### Domain 5: Security (15% of exam)
 
 Content may include the following:
-* Describe security administration and tasks.
-* Describe the process of signing an image.
+* [Describe security administration and tasks.](data/5_Security/describe_security_administration_tasks.yaml)
+* [Describe the process of signing an image.](data/5_Security/describe_process_signing_image.yaml)
 * Describe default engine security.
 * Describe swarm default security.
 * [Describe MTLS.](data/5_Security/describe_mtls.yaml)
