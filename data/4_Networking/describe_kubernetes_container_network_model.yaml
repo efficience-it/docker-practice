@@ -6,7 +6,7 @@ questions:
       - { value: "Each Pod must manually configure NAT", correct: false }
       - { value: "Pods can only communicate within the same namespace", correct: false }
       - { value: "Each Pod has multiple IPs by default", correct: false }
-    help: https://kubernetes.io/docs/concepts/cluster-administration/networking/#flat-network
+    help: https://kubernetes.io/docs/concepts/cluster-administration/networking/
 
   - uuid: 68952c0c-bb62-4e59-9911-c9dc3b7e3e1e
     question: In Kubernetes, what does each Pod receive in terms of networking?
@@ -15,7 +15,7 @@ questions:
       - { value: "A shared IP with the node", correct: false }
       - { value: "No IP address until a service is created", correct: false }
       - { value: "An IP tied to its namespace", correct: false }
-    help: https://kubernetes.io/docs/concepts/cluster-administration/networking/#kubernetes-model
+    help: https://kubernetes.io/docs/concepts/cluster-administration/networking/
 
   - uuid: 97bdb862-c891-44c7-8889-e0e22e50754f
     question: What is the purpose of a CNI plugin in Kubernetes?
