@@ -1,10 +1,20 @@
 import os
 import sys
-
+import re
+import uuid
 import yaml
 
+def is_valid_uuid4(val):
+    try:
+        return str(uuid.UUID(val, version=4)) == val
+    except ValueError:
+        return False
+
+def is_valid_url(url):
+    return re.match(r"^https?://[^\s]+$", url) is not None
+
 def validate_yaml(file_path):
-    with open(file_path, 'r') as stream:
+    with open(file_path, 'r', encoding='utf-8') as stream:
         try:
             data = yaml.safe_load(stream)
         except yaml.YAMLError as exc:
@@ -13,29 +23,42 @@ def validate_yaml(file_path):
 
     errors = []
 
-    for i, question in enumerate(data.get('questions', [])):
-        question_text = question.get('question', '').strip()
-        if len(question_text) < 3:
-            errors.append(f"Question {i + 1} ('{question_text}') in {file_path} must have at least 3 characters.")
+    if not isinstance(data, dict) or 'questions' not in data:
+        errors.append(f"File {file_path} must have a top-level key 'questions'.")
+        return False
 
-        for j, answer in enumerate(question.get('answers', [])):
-            answer_text = answer.get('value', '').strip()
-            if len(answer_text) < 1:
-                errors.append(f"Answer {j + 1} ('{answer_text}') for question {i + 1} ('{question_text}') in {file_path} must have at least 1 character.")
+    for i, question in enumerate(data['questions']):
+        if not isinstance(question, dict):
+            errors.append(f"Question {i + 1} in {file_path} is not a dictionary.")
+            continue
 
-        correct_answers = [answer for answer in question.get('answers', []) if answer.get('correct')]
+        uuid_ = question.get('uuid')
+        if not uuid_ or not is_valid_uuid4(uuid_):
+            errors.append(f"Question {i + 1} in {file_path} has an invalid or missing UUID.")
+
+        qtext = question.get('question', '').strip()
+        if len(qtext) < 3:
+            errors.append(f"Question {i + 1} ('{qtext}') in {file_path} must have at least 3 characters.")
+
+        if 'answers' not in question or not isinstance(question['answers'], list):
+            errors.append(f"Question {i + 1} in {file_path} is missing 'answers' or it is not a list.")
+            continue
+
+        correct_answers = []
+        for j, answer in enumerate(question['answers']):
+            val = answer.get('value', '').strip()
+            if len(val) < 1:
+                errors.append(f"Answer {j + 1} ('{val}') for question {i + 1} in {file_path} must have at least 1 character.")
+            if answer.get('correct') is True:
+                correct_answers.append(answer)
 
         if not correct_answers:
-            errors.append(f"Question {i + 1} ('{question_text}') in {file_path} does not have any correct answers.")
-        elif len(correct_answers) > 0 and not all(answer.get('correct') == True for answer in correct_answers):
-            errors.append(f"Question {i + 1} ('{question_text}') in {file_path} has some answers incorrectly marked as correct.")
-        elif len(correct_answers) == 1 and any(answer.get('correct') == True for answer in correct_answers):
-            # If there is only one correct answer, ensure there is no more than one correct answer
-            if len(correct_answers) > 1:
-                errors.append(f"Question {i + 1} ('{question_text}') in {file_path} has multiple answers marked as correct, but should have only one.")
-        elif len(correct_answers) > 1:
-            # If there are multiple correct answers, no issue
-            pass
+            errors.append(f"Question {i + 1} ('{qtext}') in {file_path} does not have any correct answers.")
+
+        if 'help' not in question:
+            errors.append(f"Question {i + 1} in {file_path} is missing the 'help' field.")
+        elif not is_valid_url(question['help']):
+            errors.append(f"Question {i + 1} in {file_path} has an invalid URL in 'help': {question['help']}")
 
     if errors:
         for error in errors:
