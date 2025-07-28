@@ -42,7 +42,7 @@ questions:
       - { value: 'The alphabetical order of node hostnames', correct: false }
       - { value: 'Manual assignment in the scale command', correct: false }
       - { value: 'The order in which containers were created', correct: false }
-    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/swarm-scheduler/
+    help: https://docs.docker.com/engine/swarm/services/
 
   - uuid: 4aaf4749-efb3-4e04-9e17-32d455a1bde7
     question: What happens if you scale a service beyond the total number of available nodes?

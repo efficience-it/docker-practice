@@ -60,7 +60,7 @@ questions:
       - { value: 'docker node rotate-cert', correct: false }
       - { value: 'docker swarm ca --rotate', correct: true }
       - { value: 'docker swarm cert-rotate', correct: false }
-    help: https://docs.docker.com/engine/swarm/swarm-certificate-rotation/
+    help: https://docs.docker.com/reference/cli/docker/swarm/ca/
 
   - uuid: 6cb6716c-46d9-4301-877e-4c559fc1736f
     question: What does the --opt encrypted flag do when creating a Docker overlay network?
