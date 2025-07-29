@@ -1,0 +1,90 @@
+questions:
+  - uuid: 915cfc8c-72d3-46a7-9797-fc980ef2452d
+    question: What is the minimum recommended number of CPUs for installing Docker Universal Control Plane (UCP)?
+    answers:
+      - { value: "2", correct: false }
+      - { value: "4", correct: true }
+      - { value: "1", correct: false }
+      - { value: "8", correct: false }
+    help: https://docs.docker.com/ee/ucp/admin/install/system-requirements/
+
+  - uuid: bbc16b4e-7291-4b64-9270-14b60c9a0d79
+    question: What is the minimum amount of RAM recommended for a UCP manager node?
+    answers:
+      - { value: "8 GB", correct: true }
+      - { value: "2 GB", correct: false }
+      - { value: "4 GB", correct: false }
+      - { value: "16 GB", correct: false }
+    help: https://docs.docker.com/ee/ucp/admin/install/system-requirements/
+
+  - uuid: 23d16894-3160-442e-b03d-90919a251929
+    question: What storage backend is recommended for production-grade Docker deployments?
+    answers:
+      - { value: "overlay2", correct: true }
+      - { value: "aufs", correct: false }
+      - { value: "vfs", correct: false }
+      - { value: "btrfs", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/
+
+  - uuid: 67a48e29-32c3-4267-a931-c08b3cb0531b
+    question: For DTR (Docker Trusted Registry), what is the minimum disk space required per node?
+    answers:
+      - { value: "100 GB", correct: true }
+      - { value: "20 GB", correct: false }
+      - { value: "50 GB", correct: false }
+      - { value: "10 GB", correct: false }
+    help: https://docs.docker.com/ee/dtr/admin/install/system-requirements/
+
+  - uuid: 5a75c1b2-0cbd-4fc2-83cf-1f189d84cc13
+    question: Why is it recommended to run Docker on a 64-bit operating system?
+    answers:
+      - { value: "Docker only supports 64-bit CPUs", correct: true }
+      - { value: "To support graphical applications", correct: false }
+      - { value: "It is required for GPU support", correct: false }
+      - { value: "To support encrypted volumes", correct: false }
+    help: https://docs.docker.com/engine/install/
+
+  - uuid: 4f0a6e2e-58ef-45f7-86f3-1dd289b9bdee
+    question: Which factor is most important when sizing disk for a Docker host?
+    answers:
+      - { value: "The number and size of container images and volumes", correct: true }
+      - { value: "The number of CPUs available", correct: false }
+      - { value: "The number of open ports", correct: false }
+      - { value: "The amount of GPU RAM", correct: false }
+    help: https://docs.docker.com/config/containers/storage/
+
+  - uuid: b47a5e44-6c70-4534-a689-5ac4486938db
+    question: Which of the following is a supported Linux distribution for production Docker deployments?
+    answers:
+      - { value: "CentOS 7 or higher", correct: true }
+      - { value: "macOS", correct: false }
+      - { value: "Windows 10 Home", correct: false }
+      - { value: "Arch Linux", correct: false }
+    help: https://docs.docker.com/engine/install/
+
+  - uuid: 9f7f1aeb-cfdf-4716-94a2-8c6c8d85f32c
+    question: Why is it recommended to avoid using a root volume for Docker storage?
+    answers:
+      - { value: "To prevent Docker from consuming the entire root filesystem", correct: true }
+      - { value: "It causes slow container startup", correct: false }
+      - { value: "Root volumes do not support overlay drivers", correct: false }
+      - { value: "Security scanners can't access root volumes", correct: false }
+    help: https://docs.docker.com/storage/
+
+  - uuid: 05176b68-5a8b-4814-8753-ffec40440f12
+    question: What is the typical port required to access UCP via a browser?
+    answers:
+      - { value: "443", correct: true }
+      - { value: "2377", correct: false }
+      - { value: "8080", correct: false }
+      - { value: "1234", correct: false }
+    help: https://docs.docker.com/ee/ucp/admin/install/system-requirements/
+
+  - uuid: 3ebadf1d-31d8-4e68-9626-58cc94a2bd6d
+    question: When planning a Docker installation, why is it important to consider the total number of containers?
+    answers:
+      - { value: "Each container consumes CPU, memory, and storage resources", correct: true }
+      - { value: "Each container opens a new TCP connection", correct: false }
+      - { value: "More containers require fewer ports", correct: false }
+      - { value: "Containers run only one at a time", correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/

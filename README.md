@@ -43,7 +43,7 @@
 
 ### Domain 3: Installation and Configuration (15% of exam)
 
-* Describe sizing requirements for installation.
+* [Describe sizing requirements for installation.](data/3_installation_and_configuration/describe_sizing_requirements_for_installation.yaml)
 * Describe and demonstrate the setup of repo, selection of a storage driver, and installation of the Docker engine on multiple platforms.
 * Describe and demonstrate configuration of logging drivers (splunk, journald, etc.).
 * Describe and demonstrate how to set up swarm, configure managers, add nodes, and setup the backup schedule.
