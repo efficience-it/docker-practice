@@ -1,0 +1,163 @@
+questions:
+  - uuid: 03f11c15-58be-4f32-9d6c-61f30f03fd83
+    question: What does the `docker image ls` command do?
+    answers:
+      - { value: "Lists all local images", correct: true }
+      - { value: "Removes all unused images", correct: false }
+      - { value: "Deletes all containers", correct: false }
+      - { value: "Pulls all available tags", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/image_ls/"
+
+  - uuid: 0de7c78c-c9f7-4f47-a9f6-609ad49c59f4
+    question: How do you delete an image with ID `abc123`?
+    answers:
+      - { value: "docker image rm abc123", correct: true }
+      - { value: "docker delete image abc123", correct: false }
+      - { value: "docker image delete abc123", correct: false }
+      - { value: "docker rm image abc123", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/rmi/"
+
+  - uuid: 0f7d1518-e4d5-46c2-b25f-2b5a253ad4c7
+    question: What happens if you delete an image that is used by a container?
+    answers:
+      - { value: "Docker will prevent the deletion", correct: true }
+      - { value: "The container is automatically removed", correct: false }
+      - { value: "The image is forcibly deleted and the container breaks", correct: false }
+      - { value: "Nothing happens", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/rmi/"
+
+  - uuid: 44fc1af8-688b-4a9e-b444-350fd39abfdf
+    question: What does `docker image prune` do?
+    answers:
+      - { value: "Removes dangling images", correct: true }
+      - { value: "Removes all images", correct: false }
+      - { value: "Removes all running containers", correct: false }
+      - { value: "Deletes unused volumes", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/image_prune/"
+
+  - uuid: b6f05e8b-3592-42d3-b113-49a6e12d3797
+    question: Which command removes all unused images, not just dangling ones?
+    answers:
+      - { value: "docker image prune -a", correct: true }
+      - { value: "docker image rm --all", correct: false }
+      - { value: "docker image delete all", correct: false }
+      - { value: "docker image clean", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/image_prune/"
+
+  - uuid: c3574c79-c108-4625-820f-705a3c4e72cb
+    question: How can you display the size of each image on disk?
+    answers:
+      - { value: "docker image ls", correct: true }
+      - { value: "docker image stats", correct: false }
+      - { value: "docker disk image", correct: false }
+      - { value: "docker image info", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/image_ls/"
+
+  - uuid: 9ea611c5-8f59-4fc5-bdf4-55c3a3e93f7b
+    question: What does the `-f` option do in `docker image ls -f dangling=true`?
+    answers:
+      - { value: "Filters images by the specified condition", correct: true }
+      - { value: "Forces listing even if the image is used", correct: false }
+      - { value: "Frees space used by the image", correct: false }
+      - { value: "Fetches image metadata", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/image_ls/"
+
+  - uuid: 5b2ef56c-1f4e-4c3e-b71b-147fc2aab45e
+    question: What does the `docker image rm $(docker image ls -q)` command do?
+    answers:
+      - { value: "Deletes all images", correct: true }
+      - { value: "Lists all image IDs", correct: false }
+      - { value: "Creates a backup of images", correct: false }
+      - { value: "Stops containers", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/rmi/"
+
+  - uuid: 75f2aa1a-14a8-4b14-9816-bdbbfe58fa13
+    question: What is the result of `docker image ls -a`?
+    answers:
+      - { value: "Lists all images including intermediate ones", correct: true }
+      - { value: "Lists only running containers", correct: false }
+      - { value: "Shows storage usage", correct: false }
+      - { value: "Filters for official images only", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/image_ls/"
+
+  - uuid: 9b07005c-3e6a-4650-a7a6-8e3a3d4071ae
+    question: What does "dangling image" mean in Docker?
+    answers:
+      - { value: "An image without a tag (none) and not referenced by any container", correct: true }
+      - { value: "A container that is stopped", correct: false }
+      - { value: "An image from a deprecated registry", correct: false }
+      - { value: "An image with syntax errors", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/image_prune/#description"
+
+  - uuid: 588729ad-9a3a-4ff2-a0bb-746a324f497a
+    question: What command removes all unused containers, networks, images, and build cache?
+    answers:
+      - { value: "docker system prune", correct: true }
+      - { value: "docker image prune -a", correct: false }
+      - { value: "docker container prune --all", correct: false }
+      - { value: "docker clean", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/system_prune/"
+
+  - uuid: 90cb0be6-e345-4f2e-a251-b2d2eb1e7072
+    question: What is the effect of deleting an image layer that is shared by multiple images?
+    answers:
+      - { value: "The layer is kept as long as it's referenced by another image", correct: true }
+      - { value: "The layer is deleted and all images become invalid", correct: false }
+      - { value: "The layer is compressed", correct: false }
+      - { value: "Docker restarts all containers using that image", correct: false }
+    help: "https://docs.docker.com/storage/storagedriver/#container-and-layer-lifecycle"
+
+  - uuid: c60f97d6-9249-4f6c-8a98-d9c2e194b8df
+    question: Which command shows only the image IDs?
+    answers:
+      - { value: "docker image ls -q", correct: true }
+      - { value: "docker image show --ids", correct: false }
+      - { value: "docker image inspect all", correct: false }
+      - { value: "docker images --only-id", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/image_ls/#quiet"
+
+  - uuid: c0e08be0-45de-4944-9519-1be0e5bcf87e
+    question: Which command is safest for reclaiming space without affecting running containers?
+    answers:
+      - { value: "docker image prune", correct: true }
+      - { value: "docker image rm -f", correct: false }
+      - { value: "docker image rm $(docker image ls -q)", correct: false }
+      - { value: "docker system prune -a", correct: false }
+    help: "https://docs.docker.com/config/pruning/#remove-unused-images"
+
+  - uuid: 1fa734c6-c8f3-4fe5-8b1d-f3dd1e7742da
+    question: How do you inspect metadata of a specific image?
+    answers:
+      - { value: "docker image inspect <image>", correct: true }
+      - { value: "docker inspect-image <image>", correct: false }
+      - { value: "docker image show <image>", correct: false }
+      - { value: "docker image get <image>", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/inspect/"
+
+  - uuid: 8d05baf9-8f3d-4fa4-8907-5a4f99e0a4aa
+    question: What happens if you run `docker image rm` on an image currently used by a running container?
+    answers:
+      - { value: "The command fails with an error", correct: true }
+      - { value: "The image is deleted and container crashes", correct: false }
+      - { value: "The container is paused", correct: false }
+      - { value: "The image is removed silently", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/rmi/#examples"
+
+  - uuid: d28ed9da-b4cb-4a3e-b6ef-7f02a2d3f373
+    question: Which Docker command removes all stopped containers, all unused networks, all dangling images, and optionally volumes?
+    answers:
+      - { value: "docker system prune --volumes", correct: true }
+      - { value: "docker container prune -a", correct: false }
+      - { value: "docker prune --all", correct: false }
+      - { value: "docker image prune --all", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/system_prune/#remove-volumes"
+
+  - uuid: e22a9915-6cd4-4c52-9a7d-e9c3f1d387c2
+    question: Why would `docker image prune -a` be considered dangerous in a CI/CD pipeline?
+    answers:
+      - { value: "It removes all unused images, including those without containers", correct: true }
+      - { value: "It stops all services running", correct: false }
+      - { value: "It permanently deletes the Docker daemon", correct: false }
+      - { value: "It logs you out of Docker Hub", correct: false }
+    help: "https://docs.docker.com/config/pruning/"
+
