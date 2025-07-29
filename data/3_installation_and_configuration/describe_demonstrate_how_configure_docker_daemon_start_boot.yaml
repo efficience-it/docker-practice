@@ -1,0 +1,73 @@
+questions:
+  - uuid: fcb949b7-fb69-49f5-b70e-1900e342f4f5
+    question: How can you ensure the Docker daemon starts automatically on system boot (Linux)?
+    answers:
+      - { value: "Enable the Docker service using systemd", correct: true }
+      - { value: "Create a cron job for Docker", correct: false }
+      - { value: "Run docker-start in .bashrc", correct: false }
+      - { value: "Use docker login --autostart", correct: false }
+    help: https://docs.docker.com/config/daemon/start/
+
+  - uuid: c1b0e604-fc79-47e2-9875-3eaf1b166ed2
+    question: What is the correct systemd command to enable the Docker daemon at startup?
+    answers:
+      - { value: "sudo systemctl enable docker", correct: true }
+      - { value: "sudo docker start --on-boot", correct: false }
+      - { value: "docker enable daemon", correct: false }
+      - { value: "systemctl autostart docker.service", correct: false }
+    help: https://docs.docker.com/config/daemon/start/
+
+  - uuid: 2f79646d-3aa6-42d6-9005-b2cf9ab32688
+    question: How do you verify that the Docker daemon is enabled to start at boot?
+    answers:
+      - { value: "sudo systemctl is-enabled docker", correct: true }
+      - { value: "docker status --boot", correct: false }
+      - { value: "sudo docker daemon --check", correct: false }
+      - { value: "cat /etc/init.d/docker.status", correct: false }
+    help: https://docs.docker.com/config/daemon/start/
+
+  - uuid: b3ea7a27-015d-4cd7-a314-1f56ddf8f727
+    question: On a system using systemd, what does `systemctl enable docker` do?
+    answers:
+      - { value: "Registers the Docker service to start at system boot", correct: true }
+      - { value: "Starts the Docker service immediately", correct: false }
+      - { value: "Builds Docker images automatically", correct: false }
+      - { value: "Grants root access to Docker", correct: false }
+    help: https://docs.docker.com/config/daemon/start/
+
+  - uuid: 00ae3c6f-6e8a-4320-8792-71dc1e3cf7db
+    question: Which Linux init system is typically used to manage Docker service startup?
+    answers:
+      - { value: "systemd", correct: true }
+      - { value: "launchd", correct: false }
+      - { value: "upstart", correct: false }
+      - { value: "supervisord", correct: false }
+    help: https://docs.docker.com/config/daemon/start/
+
+  - uuid: e9f2175f-5d27-4681-bc43-00680ac3b345
+    question: After modifying Docker daemon configuration in `/etc/docker/daemon.json`, what must you do?
+    answers:
+      - { value: "Restart the Docker daemon", correct: true }
+      - { value: "Reboot the system", correct: false }
+      - { value: "Log out and back in", correct: false }
+      - { value: "Reinstall Docker", correct: false }
+    help: https://docs.docker.com/config/daemon/
+
+  - uuid: 59307116-5f8e-4cb2-bbce-e8a02fe18a83
+    question: On Windows, how do you configure Docker Desktop to start on login?
+    answers:
+      - { value: "Enable 'Start Docker Desktop when you log in' in settings", correct: true }
+      - { value: "Edit systemd unit", correct: false }
+      - { value: "Use `docker login --autostart`", correct: false }
+      - { value: "Enable via Group Policy Editor", correct: false }
+    help: https://docs.docker.com/desktop/settings/windows/
+
+  - uuid: 53efb6e0-2a6d-4a96-89e9-6317f03bb11c
+    question: If the Docker daemon fails to start automatically at boot, what should you check first?
+    answers:
+      - { value: "The systemd service status with `systemctl status docker`", correct: true }
+      - { value: "The Docker image ID", correct: false }
+      - { value: "Your container entrypoint", correct: false }
+      - { value: "The contents of your Dockerfile", correct: false }
+    help: https://docs.docker.com/config/daemon/
+

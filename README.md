@@ -48,7 +48,7 @@
 * Describe and demonstrate configuration of logging drivers (splunk, journald, etc.).
 * Describe and demonstrate how to set up swarm, configure managers, add nodes, and setup the backup schedule.
 * Describe and demonstrate how to create and manage user and teams.
-* Describe and demonstrate how to configure the Docker daemon to start on boot.
+* [Describe and demonstrate how to configure the Docker daemon to start on boot.](data/3_installation_and_configuration/describe_demonstrate_how_configure_docker_daemon_start_boot.yaml)
 * Describe and demonstrate how to use certificate-based client-server authentication to ensure a Docker daemon has the rights to access images on a registry.
 * Describe the use of namespaces, cgroups, and certificate configuration.
 * Describe and interpret errors to troubleshoot installation issues without assistance.
