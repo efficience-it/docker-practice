@@ -26,7 +26,7 @@
 * [Describe the use of Dockerfile.](data/2_Image_creation_management_registry/describe_the_use_of_dockerfile.yaml)
 * [Describe options, such as add, copy, volumes, expose, entry point.](data/2_Image_creation_management_registry/identify_display_main_parts_dockerfile.yaml)
 * [Identify and display the main parts of a Dockerfile.](data/2_Image_creation_management_registry/identify_display_main_parts_dockerfile.yaml)
-* Describe and demonstrate how to create an efficient image via a Dockerfile.
+* [Describe and demonstrate how to create an efficient image via a Dockerfile.](data/2_Image_creation_management_registry/describe_demonstrate_how_create_efficient_image_via_dockerfile.yaml)
 * Describe and demonstrate how to use CLI commands to manage images, such as list, delete, prune, rmi.
 * [Describe and demonstrate how to inspect images and report specific attributes using filter and format](data/2_Image_creation_management_registry/describe_demonstrate_how_to_inspec_images_report_specifi_attributes_using_filter_format.yaml)
 * [Describe and demonstrate how to tag an image.](data/2_Image_creation_management_registry/describe_demonstrate_how_to_tag_image.yaml)
