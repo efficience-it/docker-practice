@@ -26,8 +26,8 @@
 * [Describe the use of Dockerfile.](data/2_Image_creation_management_registry/describe_the_use_of_dockerfile.yaml)
 * [Describe options, such as add, copy, volumes, expose, entry point.](data/2_Image_creation_management_registry/identify_display_main_parts_dockerfile.yaml)
 * [Identify and display the main parts of a Dockerfile.](data/2_Image_creation_management_registry/identify_display_main_parts_dockerfile.yaml)
-* Describe and demonstrate how to create an efficient image via a Dockerfile.
-* Describe and demonstrate how to use CLI commands to manage images, such as list, delete, prune, rmi.
+* [Describe and demonstrate how to create an efficient image via a Dockerfile.](data/2_Image_creation_management_registry/describe_demonstrate_how_create_efficient_image_via_dockerfile.yaml)
+* [Describe and demonstrate how to use CLI commands to manage images, such as list, delete, prune, rmi.](data/2_Image_creation_management_registry/describe_demonstrate_how_use_cli_command_manage_images_list_delete_prune_rmi.yaml)
 * [Describe and demonstrate how to inspect images and report specific attributes using filter and format](data/2_Image_creation_management_registry/describe_demonstrate_how_to_inspec_images_report_specifi_attributes_using_filter_format.yaml)
 * [Describe and demonstrate how to tag an image.](data/2_Image_creation_management_registry/describe_demonstrate_how_to_tag_image.yaml)
 * Describe and demonstrate how to apply a file to create a Docker image.
@@ -43,12 +43,12 @@
 
 ### Domain 3: Installation and Configuration (15% of exam)
 
-* Describe sizing requirements for installation.
+* [Describe sizing requirements for installation.](data/3_installation_and_configuration/describe_sizing_requirements_for_installation.yaml)
 * Describe and demonstrate the setup of repo, selection of a storage driver, and installation of the Docker engine on multiple platforms.
 * Describe and demonstrate configuration of logging drivers (splunk, journald, etc.).
 * Describe and demonstrate how to set up swarm, configure managers, add nodes, and setup the backup schedule.
 * Describe and demonstrate how to create and manage user and teams.
-* Describe and demonstrate how to configure the Docker daemon to start on boot.
+* [Describe and demonstrate how to configure the Docker daemon to start on boot.](data/3_installation_and_configuration/describe_demonstrate_how_configure_docker_daemon_start_boot.yaml)
 * Describe and demonstrate how to use certificate-based client-server authentication to ensure a Docker daemon has the rights to access images on a registry.
 * Describe the use of namespaces, cgroups, and certificate configuration.
 * Describe and interpret errors to troubleshoot installation issues without assistance.
@@ -74,7 +74,6 @@
 
 ### Domain 5: Security (15% of exam)
 
-Content may include the following:
 * [Describe security administration and tasks.](data/5_Security/describe_security_administration_tasks.yaml)
 * [Describe the process of signing an image.](data/5_Security/describe_process_signing_image.yaml)
 * Describe default engine security.

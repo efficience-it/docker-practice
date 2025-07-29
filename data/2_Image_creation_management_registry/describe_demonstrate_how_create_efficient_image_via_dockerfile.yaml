@@ -1,0 +1,90 @@
+questions:
+  - uuid: d51595e0-e02e-44c3-98e7-9993f4f124b4
+    question: Why is it recommended to use a minimal base image like `alpine`?
+    answers:
+      - { value: "It reduces the final image size", correct: true }
+      - { value: "It includes systemd support by default", correct: false }
+      - { value: "It speeds up runtime performance", correct: false }
+      - { value: "It automatically updates security patches", correct: false }
+    help: "https://docs.docker.com/develop/dev-best-practices/#use-a-small-base-image"
+
+  - uuid: 320a3c3b-cbee-4e36-9491-66aa9d2f13b6
+    question: What is the advantage of using multi-stage builds in a Dockerfile?
+    answers:
+      - { value: "It allows creating smaller final images by excluding build dependencies", correct: true }
+      - { value: "It improves runtime performance by splitting processes", correct: false }
+      - { value: "It enables parallel build execution", correct: false }
+      - { value: "It allows using multiple base OSes in the same image", correct: false }
+    help: "https://docs.docker.com/develop/develop-images/multistage-build/"
+
+  - uuid: 8307e190-b728-4cb6-a406-90b86dd23de4
+    question: Why should you avoid using `latest` as a tag in the `FROM` instruction?
+    answers:
+      - { value: "It can lead to non-reproducible builds", correct: true }
+      - { value: "It disables caching in image layers", correct: false }
+      - { value: "It forces the image to run in privileged mode", correct: false }
+      - { value: "It increases image size", correct: false }
+    help: "https://docs.docker.com/develop/dev-best-practices/#pin-versions-of-base-images"
+
+  - uuid: f65d1575-7769-45b6-97b6-b3b5c5082681
+    question: What is the impact of combining `RUN` instructions into a single layer?
+    answers:
+      - { value: "It reduces the number of layers and overall image size", correct: true }
+      - { value: "It increases build time but improves caching", correct: false }
+      - { value: "It prevents the use of environment variables", correct: false }
+      - { value: "It disables multi-architecture support", correct: false }
+    help: "https://docs.docker.com/develop/dev-best-practices/#minimize-the-number-of-layers"
+
+  - uuid: 3beecfae-4006-460f-9391-b7d9fefbc6e5
+    question: What is a best practice when installing packages in a Dockerfile?
+    answers:
+      - { value: "Use `--no-install-recommends` to avoid unnecessary dependencies", correct: true }
+      - { value: "Always update the system packages with `apt upgrade`", correct: false }
+      - { value: "Install all packages in separate `RUN` statements", correct: false }
+      - { value: "Use `apt install` without updating package lists", correct: false }
+    help: "https://docs.docker.com/develop/dev-best-practices/#run"
+
+  - uuid: c63d21fc-7982-4cd2-b3d4-22df8bc9fd44
+    question: Why is it recommended to clean up temporary files and caches in Dockerfile?
+    answers:
+      - { value: "To reduce image size and avoid unnecessary files", correct: true }
+      - { value: "To improve container runtime speed", correct: false }
+      - { value: "To allow multi-user support", correct: false }
+      - { value: "To avoid invalid syntax", correct: false }
+    help: "https://docs.docker.com/develop/dev-best-practices/#run"
+
+  - uuid: 05df128d-4b2c-4ae2-9e0c-06e01a5d2b12
+    question: How can the use of `.dockerignore` contribute to image efficiency?
+    answers:
+      - { value: "It prevents unnecessary files from being sent to the Docker daemon", correct: true }
+      - { value: "It increases the number of layers for better caching", correct: false }
+      - { value: "It forces Docker to rebuild the image", correct: false }
+      - { value: "It speeds up container startup", correct: false }
+    help: "https://docs.docker.com/develop/dev-best-practices/#dockerignore"
+
+  - uuid: 3e42b90e-6a91-44a9-aac2-cdc846e933a2
+    question: What is a downside of installing packages with `curl | sh` in a Dockerfile?
+    answers:
+      - { value: "It makes the build non-reproducible and less secure", correct: true }
+      - { value: "It improves cache layer efficiency", correct: false }
+      - { value: "It disables multi-stage support", correct: false }
+      - { value: "It fails on Alpine images", correct: false }
+    help: "https://docs.docker.com/develop/dev-best-practices/#installing-software"
+
+  - uuid: 6c6b165c-59bb-41ef-900f-38b5485b1d1e
+    question: Which of the following helps to leverage Docker's layer caching effectively?
+    answers:
+      - { value: "Order instructions from least to most frequently changing", correct: true }
+      - { value: "Use ENV variables before FROM", correct: false }
+      - { value: "Avoid using COPY commands", correct: false }
+      - { value: "Install dependencies last", correct: false }
+    help: "https://docs.docker.com/develop/dev-best-practices/#leverage-build-cache"
+
+  - uuid: 2fa7635b-e142-42bc-979e-7a361927e4a7
+    question: Why should secrets or tokens never be added in Dockerfile ENV instructions?
+    answers:
+      - { value: "Because image layers are stored in cleartext and cached", correct: true }
+      - { value: "Because ENV variables are not supported", correct: false }
+      - { value: "Because they are encrypted by default", correct: false }
+      - { value: "Because Docker blocks secret keys automatically", correct: false }
+    help: "https://docs.docker.com/develop/dev-best-practices/#dont-store-secrets-in-images"
