@@ -91,7 +91,7 @@
 ### Domain 6: Storage and Volumes (10% of exam)
 
 * Identify the correct graph drivers to uses with various operating systems.
-* Describe and demonstrate how to configure devicemapper.
+* [Describe and demonstrate how to configure devicemapper.](data/6_storage_and_volumes/describe_demonstrate_how_to_configure_devicemapper.yaml)
 * Compare and contrast object and block storage and when they should be used.
 * Describe how an application is composed of layers and where these layers reside on the filesystem.
 * Describe the use of volumes are used with Docker for persistent storage.
