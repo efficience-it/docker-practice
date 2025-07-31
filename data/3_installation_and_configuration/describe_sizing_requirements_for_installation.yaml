@@ -51,7 +51,7 @@ questions:
       - { value: "The number of CPUs available", correct: false }
       - { value: "The number of open ports", correct: false }
       - { value: "The amount of GPU RAM", correct: false }
-    help: https://docs.docker.com/config/containers/storage/
+    help: https://docs.docker.com/storage/
 
   - uuid: b47a5e44-6c70-4534-a689-5ac4486938db
     question: Which of the following is a supported Linux distribution for production Docker deployments?
