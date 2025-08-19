@@ -77,10 +77,10 @@
 * [Describe security administration and tasks.](data/5_Security/describe_security_administration_tasks.yaml)
 * [Describe the process of signing an image.](data/5_Security/describe_process_signing_image.yaml)
 * Describe default engine security.
-* Describe swarm default security.
+* [Describe swarm default security.](data/5_Security/swarm_default_security.yaml)
 * [Describe MTLS.](data/5_Security/describe_mtls.yaml)
 * Describe identity roles.
-* Compare and contrast UCP workers and managers.
+* [Compare and contrast UCP workers and managers.](data/5_Security/compare_contrast_ucp_workers_managers.yaml)
 * Describe the process to use external certificates with UCP and DTR.
 * Describe and demonstrate that an image passes a security scan.
 * [Describe and demonstrate how to enable Docker Content Trust.](data/5_Security/describe_demonstrate_how_enable_docker_content_trust.yaml)

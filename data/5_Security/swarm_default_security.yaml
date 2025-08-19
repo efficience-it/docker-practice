@@ -1,0 +1,72 @@
+questions:
+  - uuid: 1d85043d-622a-4ff7-bdbb-6a9d20790a4e
+    question: What type of security is enabled by default in Docker Swarm mode?
+    answers:
+      - { value: "Mutual TLS (mTLS) between nodes", correct: true }
+      - { value: "SSH tunnels for node communication", correct: false }
+      - { value: "GPG encryption of container images", correct: false }
+      - { value: "Open authentication with tokens", correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
+
+  - uuid: 98f53903-8bc4-4689-99bb-729b0b217c1c
+    question: What is the role of certificates in Docker Swarm?
+    answers:
+      - { value: "They authenticate and encrypt communication between nodes", correct: true }
+      - { value: "They store the container's configuration", correct: false }
+      - { value: "They replace container secrets", correct: false }
+      - { value: "They are used for publishing images", correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
+
+  - uuid: 3ef672a6-236f-4f7e-914c-b3c3cc626295
+    question: What happens when a worker joins a Swarm cluster?
+    answers:
+      - { value: "It is issued a certificate signed by the Swarm CA", correct: true }
+      - { value: "It generates its own self-signed certificate", correct: false }
+      - { value: "It inherits the manager's privileges", correct: false }
+      - { value: "It does not require authentication", correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
+
+  - uuid: 66b4b6e5-f739-4936-98f1-9b9d9b294b5d
+    question: What type of encryption is used for control plane traffic in Docker Swarm?
+    answers:
+      - { value: "Mutual TLS", correct: true }
+      - { value: "AES-128", correct: false }
+      - { value: "SHA-256", correct: false }
+      - { value: "JWT Tokens", correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
+
+  - uuid: 4ac92b8d-b5b1-4b5b-9378-5d3654c89794
+    question: Can node certificates in a Swarm cluster expire?
+    answers:
+      - { value: "Yes, they have a configurable expiration and are automatically renewed", correct: true }
+      - { value: "No, once issued they last forever", correct: false }
+      - { value: "Only manager node certificates expire", correct: false }
+      - { value: "Only revoked tokens cause expiration", correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
+
+  - uuid: e1b4a932-2f2b-446e-a1e4-fc1e3c1d25ff
+    question: Which security feature ensures only authorized nodes can join a Swarm cluster?
+    answers:
+      - { value: "Join tokens with automatic rotation", correct: true }
+      - { value: "Docker Content Trust", correct: false }
+      - { value: "UCP RBAC policies", correct: false }
+      - { value: "Firewalls on overlay networks", correct: false }
+    help: https://docs.docker.com/engine/swarm/swarm_manager_locking/#join-tokens
+
+  - uuid: f6d2a9e6-bbe3-4f6a-90eb-0b91c4a3eec5
+    question: What happens if the Swarm root certificate authority (CA) is compromised?
+    answers:
+      - { value: "All node certificates must be rotated", correct: true }
+      - { value: "The Swarm cluster auto-recovers", correct: false }
+      - { value: "Only worker nodes are affected", correct: false }
+      - { value: "The ingress network stops functioning", correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
+
+  - uuid: 12d74de5-d6d2-4a88-9e9b-20f9ab76efbe
+    question: How is the trust between nodes enforced in a Docker Swarm cluster?
+    answers:
+      - { value: "Using certificates signed by the Swarm CA", correct: true }
+      - { value: "With password-based authentication", correct: false }
+      - { value: "Through a central OAuth provider", correct: false }
+      - { value: "Via Kubernetes secrets", correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/

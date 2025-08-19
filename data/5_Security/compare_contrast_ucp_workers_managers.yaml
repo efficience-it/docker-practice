@@ -1,0 +1,81 @@
+questions:
+  - uuid: 38211d9e-34f3-4b3f-9015-c837acc741f7
+    question: What is the main role of a UCP manager node?
+    answers:
+      - { value: "To manage the cluster state and orchestrate services", correct: true }
+      - { value: "To run user containers only", correct: false }
+      - { value: "To provide storage to the cluster", correct: false }
+      - { value: "To replicate volumes across nodes", correct: false }
+    help: https://docs.docker.com/datacenter/ucp/2.2/guides/architecture/
+
+  - uuid: d2133e4b-8121-4b96-8b6c-e3b01e26913c
+    question: What is the purpose of a UCP worker node?
+    answers:
+      - { value: "To run containers and services scheduled by managers", correct: true }
+      - { value: "To manage user access and RBAC", correct: false }
+      - { value: "To encrypt node communication", correct: false }
+      - { value: "To configure TLS certificates", correct: false }
+    help: https://docs.docker.com/datacenter/ucp/2.2/guides/architecture/
+
+  - uuid: 1bb29ae7-3c69-4f5e-a899-b3f2312a69cf
+    question: Which nodes in UCP can access the control plane?
+    answers:
+      - { value: "Manager nodes only", correct: true }
+      - { value: "Worker nodes only", correct: false }
+      - { value: "All nodes equally", correct: false }
+      - { value: "Only nodes with secrets", correct: false }
+    help: https://docs.docker.com/datacenter/ucp/2.2/guides/architecture/
+
+  - uuid: e8ed4b37-4703-4f82-9471-ec42be7e217e
+    question: What happens if all UCP manager nodes fail?
+    answers:
+      - { value: "The cluster loses control plane access and cannot schedule new tasks", correct: true }
+      - { value: "Worker nodes promote themselves automatically", correct: false }
+      - { value: "Containers stop immediately", correct: false }
+      - { value: "Managers are recreated from backups automatically", correct: false }
+    help: https://docs.docker.com/datacenter/ucp/2.2/guides/architecture/
+
+  - uuid: 54244b0b-b9fc-4b3f-887a-c75889ffbe2f
+    question: Which of the following best describes a UCP worker node?
+    answers:
+      - { value: "It executes tasks assigned by the manager", correct: true }
+      - { value: "It manages access control policies", correct: false }
+      - { value: "It handles volume plugins", correct: false }
+      - { value: "It controls certificate rotation", correct: false }
+    help: https://docs.docker.com/datacenter/ucp/2.2/guides/architecture/
+
+  - uuid: 5e73fd94-128d-4b2d-bd25-4bc9dcbe914f
+    question: How can you ensure high availability for UCP manager nodes?
+    answers:
+      - { value: "Run an odd number of managers distributed across hosts", correct: true }
+      - { value: "Use only one powerful manager node", correct: false }
+      - { value: "Deploy all managers on the same host", correct: false }
+      - { value: "Use only worker nodes and promote them as needed", correct: false }
+    help: https://docs.docker.com/datacenter/ucp/2.2/guides/architecture/
+
+  - uuid: 56b99163-baf8-4c3f-8a4b-5a31352f150c
+    question: Can UCP worker nodes be promoted to manager roles?
+    answers:
+      - { value: "Yes, using Docker CLI or UI", correct: true }
+      - { value: "No, workers are static roles", correct: false }
+      - { value: "Only if they store persistent data", correct: false }
+      - { value: "Only on Kubernetes clusters", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/node_promote/
+
+  - uuid: 6a314420-c878-4d32-9472-91c287c8eeed
+    question: Why should the number of UCP managers be odd?
+    answers:
+      - { value: "To maintain quorum for Raft consensus", correct: true }
+      - { value: "To save RAM", correct: false }
+      - { value: "To reduce TLS overhead", correct: false }
+      - { value: "To reduce network hops", correct: false }
+    help: https://docs.docker.com/engine/swarm/raft/
+
+  - uuid: a00efea0-78b0-4f68-82aa-85993f13d2d4
+    question: Which type of node has access to UCP's RBAC enforcement and API?
+    answers:
+      - { value: "Manager nodes", correct: true }
+      - { value: "Worker nodes", correct: false }
+      - { value: "Only Linux hosts", correct: false }
+      - { value: "All overlay networks", correct: false }
+    help: https://docs.docker.com/datacenter/ucp/2.2/guides/access-control/overview/
