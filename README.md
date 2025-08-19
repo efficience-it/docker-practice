@@ -61,7 +61,7 @@
 * [Describe the different types and use cases for the built-in network drivers.](data/4_Networking/describe_different_types_use_cases_built_in_network_drivers.yaml)
 * Describe the types of traffic that flow between the Docker engine, registry and UCP controllers.
 * Describe and demonstrate how to create a Docker bridge network for developers to use for their containers.
-* Describe and demonstrate how to publish a port so that an application is accessible externally.
+* [Describe and demonstrate how to publish a port so that an application is accessible externally.](data/4_Networking/describe_demonstrate_publish_port_application_accessible_externally.yaml)
 * Identify which IP and port a container is externally accessible on.
 * Compare and contrast “host” and “ingress” publishing modes.
 * Describe and demonstrate how to configure Docker to use external DNS.
