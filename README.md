@@ -63,7 +63,7 @@
 * Describe and demonstrate how to create a Docker bridge network for developers to use for their containers.
 * [Describe and demonstrate how to publish a port so that an application is accessible externally.](data/4_Networking/describe_demonstrate_publish_port_application_accessible_externally.yaml)
 * Identify which IP and port a container is externally accessible on.
-* Compare and contrast “host” and “ingress” publishing modes.
+* [Compare and contrast “host” and “ingress” publishing modes.](data/4_Networking/compare_contrats_host_ingress_publishing_modes.yaml)
 * Describe and demonstrate how to configure Docker to use external DNS.
 * Describe and demonstrate how to use Docker to load balance HTTP/HTTPs traffic to an application (Configure L7 load balancing with Docker EE).
 * Understand and describe the types of traffic that flow between the Docker engine, registry, and UCP controllers

@@ -1,0 +1,90 @@
+questions:
+  - uuid: bff4381e-95b8-4dc7-9731-8b2a64d76ff7
+    question: In Docker Swarm, what is the "ingress" publishing mode used for?
+    answers:
+      - { value: "To allow any node in the swarm to route traffic to the service", correct: true }
+      - { value: "To bind container ports directly to the host", correct: false }
+      - { value: "To expose the service only internally", correct: false }
+      - { value: "To run services in bridge mode", correct: false }
+    help: https://docs.docker.com/network/overlay/#ingress-network
+
+  - uuid: a6fd5d85-d040-4bd0-8048-9eb5c8270f1e
+    question: What is a key characteristic of "host" publishing mode in Swarm?
+    answers:
+      - { value: "The port is bound only to the node running the task", correct: true }
+      - { value: "Any node can receive and forward traffic to the task", correct: false }
+      - { value: "It uses round-robin DNS internally", correct: false }
+      - { value: "It uses ingress routing mesh", correct: false }
+    help: https://docs.docker.com/network/host/
+
+  - uuid: 99d4b88a-efb0-45c2-9332-90be28ef5194
+    question: Which publishing mode is required for using the routing mesh in Swarm?
+    answers:
+      - { value: "Ingress", correct: true }
+      - { value: "Host", correct: false }
+      - { value: "Bridge", correct: false }
+      - { value: "Overlay", correct: false }
+    help: https://docs.docker.com/engine/swarm/ingress/
+
+  - uuid: 3a98e2d0-47be-47da-9c1f-9c35aee3f21b
+    question: What is a potential downside of using "host" publishing mode?
+    answers:
+      - { value: "You must manually manage which node receives traffic", correct: true }
+      - { value: "There is no support for load balancing", correct: false }
+      - { value: "It prevents access to container logs", correct: false }
+      - { value: "You can't scale the service", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#host-publishing-mode
+
+  - uuid: e1e64096-37e7-4e1f-8222-bfa410c0d64a
+    question: Which publishing mode should you use for direct control over port bindings per node?
+    answers:
+      - { value: "Host", correct: true }
+      - { value: "Ingress", correct: false }
+      - { value: "Overlay", correct: false }
+      - { value: "Bridge", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#host-publishing-mode
+
+  - uuid: d007edcf-c1cd-40dc-b674-ded07f5fa134
+    question: How does ingress mode route traffic to services?
+    answers:
+      - { value: "Through a routing mesh that forwards requests to tasks on any node", correct: true }
+      - { value: "Directly to a single manager node", correct: false }
+      - { value: "Using IP tables NAT rules per container", correct: false }
+      - { value: "Only on the node where the service was deployed", correct: false }
+    help: https://docs.docker.com/engine/swarm/ingress/
+
+  - uuid: b40a8605-2857-471c-bcca-2b87aa72791c
+    question: When using ingress mode, what must be enabled on all nodes?
+    answers:
+      - { value: "The ingress network", correct: true }
+      - { value: "The host network driver", correct: false }
+      - { value: "The internal DNS server", correct: false }
+      - { value: "The logging driver", correct: false }
+    help: https://docs.docker.com/network/overlay/#ingress-network
+
+  - uuid: 1840b31d-e964-406e-910c-4fc90236c37b
+    question: In what scenario would you prefer using host mode over ingress?
+    answers:
+      - { value: "When you need predictable port binding on specific nodes", correct: true }
+      - { value: "When you want to balance traffic across all nodes", correct: false }
+      - { value: "When deploying global services", correct: false }
+      - { value: "When using bridge network", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#host-publishing-mode
+
+  - uuid: cfb362ad-6dc3-4bc5-803b-c43a3c5a91c2
+    question: Can you use both "host" and "ingress" modes for the same service?
+    answers:
+      - { value: "No, only one publishing mode can be defined per port", correct: true }
+      - { value: "Yes, they are applied in parallel", correct: false }
+      - { value: "Yes, with the `--dual-mode` flag", correct: false }
+      - { value: "Only if using bridge network", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#host-publishing-mode
+
+  - uuid: 1a61e66f-df92-4411-86b0-764f2a4466e5
+    question: Which mode is **more suitable** for internal load balancing across replicas?
+    answers:
+      - { value: "Ingress", correct: true }
+      - { value: "Host", correct: false }
+      - { value: "Bridge", correct: false }
+      - { value: "Macvlan", correct: false }
+    help: https://docs.docker.com/engine/swarm/ingress/
