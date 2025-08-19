@@ -1,0 +1,171 @@
+questions:
+  - uuid: e437d86b-19f1-4b36-b23d-cb502e2fdbe7
+    question: What is the purpose of the `-p` or `--publish` flag in `docker run`?
+    answers:
+      - { value: "To map a container port to a host port", correct: true }
+      - { value: "To expose ports to other containers only", correct: false }
+      - { value: "To publish logs to the host", correct: false }
+      - { value: "To install required dependencies", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#published-ports
+
+  - uuid: 70ff09b1-3dd4-442a-b1c7-f54c6c1cbcc4
+    question: Which command exposes port 80 from a container to port 8080 on the host?
+    answers:
+      - { value: "docker run -p 8080:80 nginx", correct: true }
+      - { value: "docker run -p 80:8080 nginx", correct: false }
+      - { value: "docker expose 8080:80 nginx", correct: false }
+      - { value: "docker run expose=80 nginx", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#published-ports
+
+  - uuid: 50ef01ff-7bb3-49f5-874d-d54b0db8cd95
+    question: What happens if you publish the same host port for two containers?
+    answers:
+      - { value: "The second container will fail to start", correct: true }
+      - { value: "Both containers share the port", correct: false }
+      - { value: "Docker balances the traffic", correct: false }
+      - { value: "Docker creates a virtual network", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#published-ports
+
+  - uuid: 1b6c46c8-c8d7-48eb-9b7e-2f8e324efb5a
+    question: What is the default behavior if you do not publish any ports with `docker run`?
+    answers:
+      - { value: "The container is only accessible internally", correct: true }
+      - { value: "All ports are automatically published", correct: false }
+      - { value: "The container fails to start", correct: false }
+      - { value: "Ports are assigned dynamically", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#published-ports
+
+  - uuid: 6eafdf52-525c-4b93-9fa0-e5ed2c567a61
+    question: How do you restrict a published port to localhost only?
+    answers:
+      - { value: "Use IP:hostPort:containerPort format, e.g. `-p 127.0.0.1:8080:80`", correct: true }
+      - { value: "Use `--internal` flag", correct: false }
+      - { value: "Use `--network bridge`", correct: false }
+      - { value: "Set `EXPOSE` in the Dockerfile", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#published-ports
+
+  - uuid: 2448faed-62e1-4ea2-bdf8-39eb1b252d11
+    question: What is the function of the `EXPOSE` instruction in a Dockerfile?
+    answers:
+      - { value: "It documents which ports the container will listen on", correct: true }
+      - { value: "It automatically publishes the port on run", correct: false }
+      - { value: "It maps the port to the host", correct: false }
+      - { value: "It restricts access to the port", correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#expose
+
+  - uuid: 390f8e88-dc9a-4c1e-acc1-c8b4e8770fbd
+    question: Can a container with a published port be accessed from outside the host by default?
+    answers:
+      - { value: "Yes, if `-p` is used without IP restriction", correct: true }
+      - { value: "No, unless `--network host` is used", correct: false }
+      - { value: "Only via Docker Desktop", correct: false }
+      - { value: "Only with an `EXPOSE` instruction", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#accessing-external-ports
+
+  - uuid: 95f83280-e1f5-4f2e-86e7-cac021cce1d9
+    question: How do you publish all ports defined with `EXPOSE` in the image?
+    answers:
+      - { value: "Use `-P` (uppercase)", correct: true }
+      - { value: "Use `-p` without arguments", correct: false }
+      - { value: "Use `--all-ports` flag", correct: false }
+      - { value: "Set `EXPOSE_ALL=true` in Dockerfile", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#exposing-incoming-ports
+
+  - uuid: d11c1453-2d17-41a4-a45a-5ae17c7e9847
+    question: What is the effect of publishing a port on a container?
+    answers:
+      - { value: "It binds the port to a host port, allowing external access", correct: true }
+      - { value: "It makes the port internal-only", correct: false }
+      - { value: "It prevents the port from being used", correct: false }
+      - { value: "It encrypts container traffic", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#accessing-external-ports
+
+  - uuid: 170920af-1a99-44df-8728-d54fdb41c993
+    question: What happens if you omit the host port in `-p :80`?
+    answers:
+      - { value: "Docker assigns a random high-numbered host port", correct: true }
+      - { value: "Docker refuses to start the container", correct: false }
+      - { value: "Docker publishes the port only inside the container", correct: false }
+      - { value: "Docker uses port 80 on the host by default", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#accessing-external-ports
+
+  - uuid: 2e7a8e4f-19f2-442c-9cb2-0667b52ed2d1
+    question: How can you inspect which ports are published for a running container?
+    answers:
+      - { value: "Use `docker port <container>`", correct: true }
+      - { value: "Use `docker network ls`", correct: false }
+      - { value: "Check the `EXPOSE` command", correct: false }
+      - { value: "Run `docker inspect` with `--ports`", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/port/
+
+  - uuid: 5b2717e3-82d2-44d5-8f92-cd9bc17b487c
+    question: What flag is required to publish a port using Docker Compose?
+    answers:
+      - { value: "`ports` key under the service definition", correct: true }
+      - { value: "`expose` key at root", correct: false }
+      - { value: "`publish` under `networks:`", correct: false }
+      - { value: "`-p` in the `command:`", correct: false }
+    help: https://docs.docker.com/compose/compose-file/compose-file-v3/#ports
+
+  - uuid: 7994dfeb-ecf2-40a3-96b9-9b0e4fbbd9d3
+    question: In Docker Compose, how do you restrict a published port to localhost?
+    answers:
+      - { value: "Use `'127.0.0.1:8080:80'` as the port mapping", correct: true }
+      - { value: "Use `bind: localhost`", correct: false }
+      - { value: "Add `internal: true`", correct: false }
+      - { value: "Use `host: 127.0.0.1` under network", correct: false }
+    help: https://docs.docker.com/compose/compose-file/compose-file-v3/#ports
+
+  - uuid: 7c252d25-b89d-4d80-bfc6-62b4f3955f9c
+    question: Can the same container port be published to multiple host ports?
+    answers:
+      - { value: "Yes, by running multiple containers using the same image", correct: true }
+      - { value: "No, Docker blocks duplicate mappings", correct: false }
+      - { value: "Only in Swarm mode", correct: false }
+      - { value: "Only with `--network host`", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#published-ports
+
+  - uuid: 5c6a89de-df23-4ff3-a5b1-836be317fbea
+    question: Why should you avoid publishing unnecessary ports in production?
+    answers:
+      - { value: "To reduce the attack surface", correct: true }
+      - { value: "It increases container memory usage", correct: false }
+      - { value: "Docker doesn’t support it", correct: false }
+      - { value: "It blocks log collection", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#security-considerations
+
+  - uuid: 0a602e7d-5fa0-4a82-9824-c5cd1b60447f
+    question: What is the effect of `--network host` on port publishing?
+    answers:
+      - { value: "The container shares the host’s network stack", correct: true }
+      - { value: "The container gets a new IP address", correct: false }
+      - { value: "Ports must still be published manually", correct: false }
+      - { value: "Port mapping is handled by Swarm", correct: false }
+    help: https://docs.docker.com/network/host/
+
+  - uuid: b16eaec2-6072-4661-97c6-f4bc3e8aa3c3
+    question: Which flag ensures Docker binds a port on both IPv4 and IPv6?
+    answers:
+      - { value: "Use `[::]:8080:80` as the bind address", correct: true }
+      - { value: "`--dual-stack`", correct: false }
+      - { value: "`--ip6`", correct: false }
+      - { value: "`--multi-ip`", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#ipv6-and-published-ports
+
+  - uuid: 9493f53f-1a53-48df-a4cb-dc2c55a438fc
+    question: What does the `--expose` flag do when running a container?
+    answers:
+      - { value: "It documents the port but doesn’t publish it", correct: true }
+      - { value: "It makes the port available externally", correct: false }
+      - { value: "It opens the port in the firewall", correct: false }
+      - { value: "It maps the port to 0.0.0.0", correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#exposing-incoming-ports
+
+  - uuid: ef967cdc-7b6f-4b8a-a152-158720d9cd89
+    question: What tool can you use to see which container is listening on a specific host port?
+    answers:
+      - { value: "`docker ps` or `docker port`", correct: true }
+      - { value: "`docker logs`", correct: false }
+      - { value: "`docker compose config`", correct: false }
+      - { value: "`docker attach`", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/port/

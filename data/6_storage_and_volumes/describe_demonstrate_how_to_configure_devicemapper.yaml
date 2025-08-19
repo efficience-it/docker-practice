@@ -1,0 +1,81 @@
+questions:
+  - uuid: 43b0ae9e-ff77-4cc3-96dc-b7988e6949ed
+    question: What is the devicemapper storage driver primarily used for in Docker?
+    answers:
+      - { value: "Managing block-level storage using device-mapped thin provisioning", correct: true }
+      - { value: "Compressing Docker images for faster pull", correct: false }
+      - { value: "Encrypting volumes at runtime", correct: false }
+      - { value: "Mapping containers to specific network interfaces", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/
+
+  - uuid: ef79a161-b4fc-4971-b0e4-daddbce4ad46
+    question: Which two devicemapper modes are available in Docker?
+    answers:
+      - { value: "Loop-lvm mode and Direct-lvm mode", correct: true }
+      - { value: "Thin mode and Thick mode", correct: false }
+      - { value: "Direct-io and Cached mode", correct: false }
+      - { value: "RAID and JBOD", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/#modes
+
+  - uuid: 0d5f3f8c-5c31-4b44-a479-0ce07fc79244
+    question: Why is direct-lvm mode preferred over loop-lvm mode for devicemapper?
+    answers:
+      - { value: "It offers better performance and is suitable for production", correct: true }
+      - { value: "It supports encrypted volumes by default", correct: false }
+      - { value: "It uses less disk space", correct: false }
+      - { value: "It doesn't require a restart of the Docker daemon", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/#modes
+
+  - uuid: 9ff98ff7-f9b5-4e95-89db-4f9f18012b6c
+    question: What must be done before enabling direct-lvm mode on a fresh Docker installation?
+    answers:
+      - { value: "Provision dedicated block devices and configure them in /etc/docker/daemon.json", correct: true }
+      - { value: "Install the thin-pool kernel module", correct: false }
+      - { value: "Format the root filesystem with ext3", correct: false }
+      - { value: "Enable overlayfs manually", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/#configure-direct-lvm-mode-for-production
+
+  - uuid: 7f67e4b7-c7b3-4818-9888-d8a357b04e63
+    question: Where is the devicemapper configuration typically defined in Docker?
+    answers:
+      - { value: "/etc/docker/daemon.json", correct: true }
+      - { value: "/etc/devicemapper.conf", correct: false }
+      - { value: "/var/lib/docker/mounts", correct: false }
+      - { value: "/usr/local/docker/storage.conf", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/#configure-docker-with-the-devicemapper-storage-driver
+
+  - uuid: 8e408728-2f57-4c71-a789-09fd0481c598
+    question: How can you verify which storage driver Docker is currently using?
+    answers:
+      - { value: "docker info", correct: true }
+      - { value: "docker storage inspect", correct: false }
+      - { value: "docker system storage", correct: false }
+      - { value: "docker volume list --drivers", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/select-storage-driver/
+
+  - uuid: 137af3b3-e1e0-4c7c-a594-b9ffb1d52fd7
+    question: What is the purpose of a "thin pool" in the context of devicemapper?
+    answers:
+      - { value: "It allows efficient storage allocation by sharing space between multiple containers", correct: true }
+      - { value: "It compresses logs to reduce disk usage", correct: false }
+      - { value: "It assigns fixed storage quotas per container", correct: false }
+      - { value: "It tracks container IP addresses", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/#configure-direct-lvm-mode-for-production
+
+  - uuid: acd1bc16-6ae2-4c9b-8131-9bcbbd5d5a85
+    question: What is a critical risk of using loop-lvm mode in production?
+    answers:
+      - { value: "Poor performance and potential for running out of disk space", correct: true }
+      - { value: "Containers cannot start without root privileges", correct: false }
+      - { value: "Loop devices disable caching", correct: false }
+      - { value: "It prevents volume mounting", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/#modes
+
+  - uuid: ebc457f5-4b7a-4641-80b6-b792245cb0a0
+    question: Which tool is commonly used to create and manage LVM volumes for devicemapper?
+    answers:
+      - { value: "lvcreate", correct: true }
+      - { value: "mkfs.ext4", correct: false }
+      - { value: "fsck", correct: false }
+      - { value: "btrfsctl", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/#configure-direct-lvm-mode-for-production
