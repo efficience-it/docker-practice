@@ -2,19 +2,19 @@
 
 ### Domain 1: Orchestration (25% of exam)
 
-* [Complete the setup of a swarm mode cluster, with managers and worker nodes](data/1.Orchestration/complete_setup_swarm_mode_cluster_managers_worker_nodes.yaml)
+* [Complete the setup of a swarm mode cluster, with managers and worker nodes](data/1_Orchestration/complete_setup_swarm_mode_cluster_managers_worker_nodes.yaml)
 * Describe and demonstrate how to extend the instructions to run individual containers into running services under swarm.
 * [Describe the importance of quorum in a swarm cluster.](data/1.Orchestration/describe_importance_quorum_swarm_cluster.yaml)
 * [Describe the difference between running a container and running a service.](data/1_Orchestration/describe_difference_between_running_container_and_service.yaml)
 * [Interpret the output of “docker inspect” commands.](data/1_Orchestration/interpret_output_docker_inspect_commend.yaml)
 * Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy"
-* Manipulate a running stack of services.
+* [Manipulate a running stack of services.](data/1_Orchestration/manipulate_stacks.yaml)
 * Describe and demonstrate orchestration activities.
 * [Increase the number of replicas.](data/1_Orchestration/increase_the_number_of_replicas.yaml)
 * [Add networks, publish ports.](data/1_Orchestration/add_networks_publish_ports.yaml)
 * [Mount volumes.](data/1_Orchestration/mount_volumes.yaml)
 * Describe and demonstrate how to run replicated and global services.
-* Apply node labels to demonstrate placement of tasks.
+* [Apply node labels to demonstrate placement of tasks.](data/1_Orchestration/apply_node_labels_placement_tasks.yaml)
 * Describe and demonstrate how to use templates with “docker service create”.
 * Identify the steps needed to troubleshoot a service not deploying.
 * Describe how a Dockerized application communicates with legacy systems.

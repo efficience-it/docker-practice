@@ -1,0 +1,116 @@
+questions:
+  - uuid: 6cc6a97c-52dc-40c7-9cd3-7ef57709a38c
+    question: What command adds a label to a Docker Swarm node?
+    answers:
+      - { value: "docker node update --label-add", correct: true }
+      - { value: "docker service create --label", correct: false }
+      - { value: "docker swarm label add", correct: false }
+      - { value: "docker label node", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/node_update/
+
+  - uuid: b0633cfc-51d0-4b00-a97f-0882b2689f08
+    question: How can you inspect the labels of a node?
+    answers:
+      - { value: "docker node inspect <node> --pretty", correct: true }
+      - { value: "docker node list --labels", correct: false }
+      - { value: "docker inspect --labels", correct: false }
+      - { value: "docker node info", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/node_inspect/
+
+  - uuid: a372b99d-0e1e-4e58-80ed-818e948c0e30
+    question: What placement constraint ensures a service runs only on nodes with a specific label?
+    answers:
+      - { value: "--constraint 'node.labels.key == value'", correct: true }
+      - { value: "--label 'key=value'", correct: false }
+      - { value: "--affinity key=value", correct: false }
+      - { value: "--require-label key=value", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#placement-constraints
+
+  - uuid: e187c71b-dbf3-4488-b1d5-009d5ff3a383
+    question: What is the purpose of node labels in a Swarm cluster?
+    answers:
+      - { value: "To control where services are deployed using constraints", correct: true }
+      - { value: "To identify the container logs per node", correct: false }
+      - { value: "To enforce security policies", correct: false }
+      - { value: "To prioritize CPU resource allocation", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#placement-constraints
+
+  - uuid: c8db2350-5126-43f4-bf6b-dfddf71a3c15
+    question: What happens if no node satisfies the placement constraint?
+    answers:
+      - { value: "The service is not deployed", correct: true }
+      - { value: "The service is deployed on all nodes", correct: false }
+      - { value: "The service is ignored", correct: false }
+      - { value: "Docker overrides the constraint", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#placement-constraints
+
+  - uuid: 63a88ed9-7ba3-4a9d-b0ae-76e54e6fa8a0
+    question: How do you deploy a service to nodes labeled `env=production`?
+    answers:
+      - { value: "docker service create --constraint 'node.labels.env == production'", correct: true }
+      - { value: "docker service create --label 'env=production'", correct: false }
+      - { value: "docker run --env production", correct: false }
+      - { value: "docker node create --label 'env=production'", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#placement-constraints
+
+  - uuid: b85fcb9d-9936-4a41-bc64-c54084ac0b36
+    question: Can node labels be used to filter nodes when scaling services?
+    answers:
+      - { value: "Yes, placement constraints apply during scaling", correct: true }
+      - { value: "No, scaling ignores node labels", correct: false }
+      - { value: "Only for global services", correct: false }
+      - { value: "Only for daemon sets", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#placement-constraints
+
+  - uuid: 2a6e9114-8717-498e-8f65-7052ac28c3c6
+    question: How do you remove a label from a node?
+    answers:
+      - { value: "docker node update --label-rm <label>", correct: true }
+      - { value: "docker node label remove", correct: false }
+      - { value: "docker node delete label", correct: false }
+      - { value: "docker label rm", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/node_update/
+
+  - uuid: 45fc67df-81be-4b4b-a96f-4de88ac5856f
+    question: Can a service have multiple placement constraints?
+    answers:
+      - { value: "Yes, use multiple --constraint flags", correct: true }
+      - { value: "No, only one is allowed", correct: false }
+      - { value: "Only if --mode=global", correct: false }
+      - { value: "Only with node affinity enabled", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#placement-constraints
+  - uuid: f08f5a14-376a-4f56-a5d5-6b9ed18f82c5
+    question: Where are node labels stored in a Docker Swarm cluster?
+    answers:
+      - { value: "In the Raft log replicated across all managers", correct: true }
+      - { value: "Only in the local node's filesystem", correct: false }
+      - { value: "In container metadata", correct: false }
+      - { value: "In the image layer", correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/state/
+
+  - uuid: 7a233b58-f90a-4692-bfa2-2466c86b6303
+    question: What happens if a node with a required label is removed from the cluster?
+    answers:
+      - { value: "Tasks using that constraint are rescheduled only if another node has the label", correct: true }
+      - { value: "The cluster auto-applies the label to another node", correct: false }
+      - { value: "The label is ignored and the task is rescheduled anywhere", correct: false }
+      - { value: "The service is stopped entirely", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#placement-constraints
+
+  - uuid: b2e91bbf-21fa-4fd9-8c83-e4a64676e750
+    question: Which file can define placement constraints when using docker stack deploy?
+    answers:
+      - { value: "docker-compose.yml with 'deploy.placement.constraints'", correct: true }
+      - { value: "Dockerfile", correct: false }
+      - { value: "swarm-config.json", correct: false }
+      - { value: "service.conf", correct: false }
+    help: https://docs.docker.com/compose/compose-file/compose-file-v3/#placement
+
+  - uuid: 6eb90544-0bdf-49ea-b6ed-4fcad88fc7b7
+    question: Which command shows all nodes with their labels?
+    answers:
+      - { value: "docker node ls && docker node inspect <node>", correct: true }
+      - { value: "docker service inspect --labels", correct: false }
+      - { value: "docker inspect --type node", correct: false }
+      - { value: "docker node show-labels", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/node_inspect/
