@@ -6,7 +6,7 @@ questions:
       - { value: "dockeruser", correct: false }
       - { value: "nobody", correct: false }
       - { value: "host user", correct: false }
-    help: "https://docs.docker.com/develop/security/#linux-kernel-capabilities"
+    help: "https://docs.docker.com/engine/security/"
 
   - uuid: 8fc6a769-0a3b-476e-9059-d9bfc03a5295
     question: Which Linux kernel feature provides namespace isolation in Docker?
@@ -51,7 +51,7 @@ questions:
       - { value: "They cannot access environment variables", correct: false }
       - { value: "They are unable to use bind mounts", correct: false }
       - { value: "They won't be able to start properly", correct: false }
-    help: "https://docs.docker.com/develop/security/"
+    help: "https://docs.docker.com/engine/security/"
 
   - uuid: b3a49195-c560-42b2-981f-d987279adf6f
     question: What default capability is removed when running a container with --cap-drop=ALL?
@@ -60,7 +60,7 @@ questions:
       - { value: "Networking", correct: false }
       - { value: "Filesystem access", correct: false }
       - { value: "Namespace support", correct: false }
-    help: "https://docs.docker.com/engine/security/capabilities/"
+    help: "https://docs.docker.com/engine/security/"
 
   - uuid: 6c826387-1b40-4214-8a16-35c2f56f49c2
     question: What does Docker's user namespace remapping feature do?
