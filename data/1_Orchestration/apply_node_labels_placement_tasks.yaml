@@ -6,7 +6,7 @@ questions:
       - { value: "docker service create --label", correct: false }
       - { value: "docker swarm label add", correct: false }
       - { value: "docker label node", correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/node_update/
+    help: https://docs.docker.com/reference/cli/docker/node/update/
 
   - uuid: b0633cfc-51d0-4b00-a97f-0882b2689f08
     question: How can you inspect the labels of a node?
@@ -15,7 +15,7 @@ questions:
       - { value: "docker node list --labels", correct: false }
       - { value: "docker inspect --labels", correct: false }
       - { value: "docker node info", correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/node_inspect/
+    help: https://docs.docker.com/reference/cli/docker/node/inspect/
 
   - uuid: a372b99d-0e1e-4e58-80ed-818e948c0e30
     question: What placement constraint ensures a service runs only on nodes with a specific label?
@@ -69,7 +69,7 @@ questions:
       - { value: "docker node label remove", correct: false }
       - { value: "docker node delete label", correct: false }
       - { value: "docker label rm", correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/node_update/
+    help: https://docs.docker.com/reference/cli/docker/node/update/
 
   - uuid: 45fc67df-81be-4b4b-a96f-4de88ac5856f
     question: Can a service have multiple placement constraints?
@@ -113,4 +113,4 @@ questions:
       - { value: "docker service inspect --labels", correct: false }
       - { value: "docker inspect --type node", correct: false }
       - { value: "docker node show-labels", correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/node_inspect/
+    help: https://docs.docker.com/reference/cli/docker/node/inspect/

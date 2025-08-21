@@ -6,7 +6,7 @@ questions:
       - { value: "Quay.io", correct: false }
       - { value: "GitHub Container Registry", correct: false }
       - { value: "Google Container Registry", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/pull/"
+    help: "https://docs.docker.com/reference/cli/docker/image/pull/"
 
   - uuid: b45f85d1-e45e-4e77-9a7e-fce06b165b9a
     question: Which command is used to pull an image from a private registry?
@@ -15,7 +15,7 @@ questions:
       - { value: "docker fetch myregistry.example.com/myimage", correct: false }
       - { value: "docker clone myimage", correct: false }
       - { value: "docker get myimage", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/pull/"
+    help: "https://docs.docker.com/reference/cli/docker/image/pull/"
 
   - uuid: 7a061937-e373-4f3e-8c90-3d2c0ce28c61
     question: What happens if you run `docker pull nginx` twice?
@@ -24,7 +24,7 @@ questions:
       - { value: "Docker downloads the image again regardless", correct: false }
       - { value: "Docker throws an error", correct: false }
       - { value: "Docker deletes the local image and replaces it", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/pull/"
+    help: "https://docs.docker.com/reference/cli/docker/image/pull/"
 
   - uuid: a2efcb95-f9ce-49c5-bf79-5b3e58ef50e6
     question: Which command removes an image from your local machine?
@@ -33,7 +33,7 @@ questions:
       - { value: "docker delete myimage", correct: false }
       - { value: "docker image delete myimage", correct: false }
       - { value: "docker rmi --remote myimage", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/image_rm/"
+    help: "https://docs.docker.com/reference/cli/docker/image/rm/"
 
   - uuid: f4df88a0-c1f7-4c9d-bd0e-e2ad3ad66aa7
     question: Can `docker rmi` delete an image that is currently being used by a running container?
@@ -42,7 +42,7 @@ questions:
       - { value: "Yes, but the container will crash", correct: false }
       - { value: "Yes, the image will be removed anyway", correct: false }
       - { value: "Only if using the `--force` flag", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/image_rm/"
+    help: "https://docs.docker.com/reference/cli/docker/image/rm/"
 
   - uuid: 9d9e87cc-69ed-4ad5-93c7-9e4d78a26a2f
     question: Which command pulls all tags of an image?
@@ -51,7 +51,7 @@ questions:
       - { value: "docker pull nginx --all", correct: false }
       - { value: "docker pull -a nginx", correct: false }
       - { value: "docker image pull-all nginx", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/pull/#options"
+    help: "https://docs.docker.com/reference/cli/docker/image/pull/#options"
 
   - uuid: 79c7dc5e-2878-4b61-9e32-9c7f7ff9694a
     question: What does `docker image prune` do?
@@ -60,7 +60,7 @@ questions:
       - { value: "Deletes all images", correct: false }
       - { value: "Pulls latest images from the registry", correct: false }
       - { value: "Removes only dangling images used by stopped containers", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/image_prune/"
+    help: "https://docs.docker.com/reference/cli/docker/image/prune/"
 
   - uuid: d50edb41-90f3-4bcd-86c2-1443fd9989e0
     question: What error occurs if you try to pull from a private registry without being logged in?
@@ -69,7 +69,7 @@ questions:
       - { value: "Image not found", correct: false }
       - { value: "Access denied by firewall", correct: false }
       - { value: "Unable to resolve registry DNS", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/login/"
+    help: "https://docs.docker.com/reference/cli/docker/login/"
 
   - uuid: 19bb913c-1123-499a-bf1d-9f5c6c6a9447
     question: What is the purpose of `docker logout`?
@@ -78,7 +78,7 @@ questions:
       - { value: "Deletes remote registry images", correct: false }
       - { value: "Stops access to Docker CLI", correct: false }
       - { value: "Logs out of the Docker daemon", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/logout/"
+    help: "https://docs.docker.com/reference/cli/docker/logout/"
 
   - uuid: 648e6ce6-b215-45fd-91f0-909c79d8bba2
     question: Which command lists all locally available images?
@@ -87,4 +87,4 @@ questions:
       - { value: "docker image list-all", correct: false }
       - { value: "docker ps --images", correct: false }
       - { value: "docker list images", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/images/"
+    help: "https://docs.docker.com/reference/cli/docker/image/ls/"

@@ -105,4 +105,4 @@ questions:
       - { value: '--unsigned', correct: false }
       - { value: '--skip-sign', correct: false }
       - { value: '--no-sign', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/push/#options
+    help: https://docs.docker.com/reference/cli/docker/image/push/#options

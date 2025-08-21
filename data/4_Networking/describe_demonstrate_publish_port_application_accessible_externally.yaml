@@ -96,7 +96,7 @@ questions:
       - { value: "Use `docker network ls`", correct: false }
       - { value: "Check the `EXPOSE` command", correct: false }
       - { value: "Run `docker inspect` with `--ports`", correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/port/
+    help: https://docs.docker.com/reference/cli/docker/container/port/
 
   - uuid: 5b2717e3-82d2-44d5-8f92-cd9bc17b487c
     question: What flag is required to publish a port using Docker Compose?
@@ -168,4 +168,4 @@ questions:
       - { value: "`docker logs`", correct: false }
       - { value: "`docker compose config`", correct: false }
       - { value: "`docker attach`", correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/port/
+    help: https://docs.docker.com/reference/cli/docker/container/port/

@@ -132,7 +132,7 @@ questions:
       - { value: 'docker volume clean', correct: false }
       - { value: 'docker volume gc', correct: false }
       - { value: 'docker volume rm --unused', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/volume_prune/
+    help: https://docs.docker.com/reference/cli/docker/volume/prune/
   - uuid: 19bdc9ba-d6b5-46f4-b8d9-9244ae7d3df7
     question: What happens when an empty volume is mounted into a container directory that contains files?
     answers:

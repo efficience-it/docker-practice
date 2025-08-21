@@ -1,0 +1,90 @@
+questions:
+  - uuid: 1917f6e3-7a64-4a67-81e2-9f42a708cd4b
+    question: What is the primary purpose of Linux namespaces in Docker?
+    answers:
+      - { value: "To provide process and resource isolation for containers", correct: true }
+      - { value: "To assign IP addresses to containers", correct: false }
+      - { value: "To encrypt container data at rest", correct: false }
+      - { value: "To manage container user roles", correct: false }
+    help: https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/
+
+  - uuid: 9735f77f-77e4-49a2-a3aa-3fc1585a412f
+    question: Which namespace is used to isolate network resources in Docker?
+    answers:
+      - { value: "net", correct: true }
+      - { value: "mnt", correct: false }
+      - { value: "pid", correct: false }
+      - { value: "uts", correct: false }
+    help: https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/
+
+  - uuid: 00e37740-5f91-4fc7-9b01-063c1e26e426
+    question: What does the "pid" namespace isolate in Docker?
+    answers:
+      - { value: "Process IDs between containers", correct: true }
+      - { value: "Network connections between containers", correct: false }
+      - { value: "User IDs for file permissions", correct: false }
+      - { value: "Mount points between containers", correct: false }
+    help: https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/
+
+  - uuid: 5e2b7025-35e4-499e-9372-3d62297bdbfa
+    question: What is the purpose of cgroups in Docker?
+    answers:
+      - { value: "To limit and monitor container resource usage", correct: true }
+      - { value: "To configure volume mounts", correct: false }
+      - { value: "To define user permissions in containers", correct: false }
+      - { value: "To isolate system calls", correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: 96b74db1-3736-4d0a-b1f6-12c258a5cb91
+    question: Which of the following resources can be limited using cgroups?
+    answers:
+      - { value: "CPU, memory, and I/O", correct: true }
+      - { value: "Shell access", correct: false }
+      - { value: "File permissions", correct: false }
+      - { value: "Network encryption", correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: afdc1dc0-e24d-47ff-9252-991fa4e16b4b
+    question: Which Docker flags configure cgroup limits for memory and CPU?
+    answers:
+      - { value: "--memory and --cpus", correct: true }
+      - { value: "--limit and --priority", correct: false }
+      - { value: "--quota and --shares", correct: false }
+      - { value: "--isolate and --ns", correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: 8ae69b41-06f0-44d2-b7ee-16a4e05bc758
+    question: What is the role of certificates in Docker Engine TLS configuration?
+    answers:
+      - { value: "To authenticate and encrypt communication between clients and daemons", correct: true }
+      - { value: "To generate Dockerfile builds", correct: false }
+      - { value: "To set resource limits", correct: false }
+      - { value: "To define swarm services", correct: false }
+    help: https://docs.docker.com/engine/security/https/
+
+  - uuid: 7627588e-c546-43d1-b8d4-5d38371981c7
+    question: What command-line options are used to enable TLS on the Docker daemon?
+    answers:
+      - { value: "--tlsverify --tlscacert --tlscert --tlskey", correct: true }
+      - { value: "--tlsauth --certpath --keyfile", correct: false }
+      - { value: "--enable-https --auth-cert --auth-key", correct: false }
+      - { value: "--secure --keychain --trust", correct: false }
+    help: https://docs.docker.com/engine/security/https/
+
+  - uuid: d3c65bc2-15db-474e-b16e-1850d5888499
+    question: Which certificate file is used to verify the client identity?
+    answers:
+      - { value: "client-cert.pem", correct: true }
+      - { value: "ca.pem", correct: false }
+      - { value: "server-key.pem", correct: false }
+      - { value: "docker-trust.pem", correct: false }
+    help: https://docs.docker.com/engine/security/https/
+
+  - uuid: 1cc17ed0-2f0d-4a6a-9270-913415ef2b49
+    question: What happens if a client connects without a valid certificate and TLS is enabled?
+    answers:
+      - { value: "The connection is refused", correct: true }
+      - { value: "The connection is downgraded to HTTP", correct: false }
+      - { value: "Docker prompts for manual approval", correct: false }
+      - { value: "Docker logs a warning but allows access", correct: false }
+    help: https://docs.docker.com/engine/security/https/

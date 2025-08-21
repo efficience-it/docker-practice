@@ -60,7 +60,7 @@ questions:
       - { value: "No, workers are static roles", correct: false }
       - { value: "Only if they store persistent data", correct: false }
       - { value: "Only on Kubernetes clusters", correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/node_promote/
+    help: https://docs.docker.com/reference/cli/docker/node/promote/
 
   - uuid: 6a314420-c878-4d32-9472-91c287c8eeed
     question: Why should the number of UCP managers be odd?

@@ -1,0 +1,90 @@
+questions:
+  - uuid: 2099f768-7f9f-4f47-9e77-846cb4ea41f2
+    question: What is the main purpose of using "docker stack deploy"?
+    answers:
+      - { value: "To deploy a multi-service application to a Swarm cluster", correct: true }
+      - { value: "To create a single container from a Dockerfile", correct: false }
+      - { value: "To restart a failed container manually", correct: false }
+      - { value: "To load images from Docker Hub", correct: false }
+    help: "https://docs.docker.com/reference/cli/docker/stack/deploy/"
+
+  - uuid: d16be146-7391-421f-9c6a-2f1789a18054
+    question: Which file is typically used with "docker stack deploy"?
+    answers:
+      - { value: "A Docker Compose file in YAML format", correct: true }
+      - { value: "A JSON file defining container specs", correct: false }
+      - { value: "A Dockerfile", correct: false }
+      - { value: "A shell script with container commands", correct: false }
+    help: "https://docs.docker.com/reference/cli/docker/stack/deploy/"
+
+  - uuid: 9b4f31db-8a1d-49df-ae4c-43d7a3df76c3
+    question: What option must be specified with "docker stack deploy" to define the Compose file?
+    answers:
+      - { value: "--compose-file", correct: true }
+      - { value: "--dockerfile", correct: false }
+      - { value: "--config", correct: false }
+      - { value: "--stack-yaml", correct: false }
+    help: "https://docs.docker.com/reference/cli/docker/stack/deploy/"
+
+  - uuid: 90b36888-fd98-4ec0-9ee0-700ee91f19b0
+    question: What must be true before using "docker stack deploy"?
+    answers:
+      - { value: "Docker must be in Swarm mode", correct: true }
+      - { value: "The image must be local only", correct: false }
+      - { value: "The registry must be private", correct: false }
+      - { value: "A container must be running", correct: false }
+    help: "https://docs.docker.com/engine/swarm/stack-deploy/"
+
+  - uuid: c08c4bfc-48d5-4639-9be4-9b2077f1372a
+    question: What happens if you use "docker stack deploy" with an invalid YAML file?
+    answers:
+      - { value: "The deployment fails with an error", correct: true }
+      - { value: "The stack is created but services are missing", correct: false }
+      - { value: "Docker ignores the invalid lines", correct: false }
+      - { value: "It runs in legacy mode", correct: false }
+    help: "https://docs.docker.com/reference/cli/docker/stack/deploy/"
+
+  - uuid: 222d6b17-8a6e-49a4-8023-8e4ae265abeb
+    question: Which command can be used to remove a stack deployed via Compose?
+    answers:
+      - { value: "docker stack rm <stack-name>", correct: true }
+      - { value: "docker service rm <stack-name>", correct: false }
+      - { value: "docker compose down", correct: false }
+      - { value: "docker container prune", correct: false }
+    help: "https://docs.docker.com/reference/cli/docker/stack/rm/"
+
+  - uuid: 4178ab3b-79d1-4c43-84a9-d48648a0a4ec
+    question: How do you deploy a stack named "myapp" using a file called "docker-compose.yml"?
+    answers:
+      - { value: "docker stack deploy -c docker-compose.yml myapp", correct: true }
+      - { value: "docker deploy -f docker-compose.yml myapp", correct: false }
+      - { value: "docker-compose deploy myapp", correct: false }
+      - { value: "docker stack up myapp", correct: false }
+    help: "https://docs.docker.com/reference/cli/docker/stack/deploy/"
+
+  - uuid: c0fded31-f244-4dd9-b146-4d3fcf2bba38
+    question: What is a key limitation of "docker stack deploy" compared to "docker-compose up"?
+    answers:
+      - { value: "It only works with Swarm", correct: true }
+      - { value: "It cannot run on Linux", correct: false }
+      - { value: "It uses JSON instead of YAML", correct: false }
+      - { value: "It does not support volumes", correct: false }
+    help: "https://docs.docker.com/compose/compose-file/compose-versioning/"
+
+  - uuid: 964ecf03-812b-45fd-873c-9d758b5cb429
+    question: Which instruction is ignored when using a Compose file with docker stack deploy?
+    answers:
+      - { value: "build", correct: true }
+      - { value: "image", correct: false }
+      - { value: "deploy", correct: false }
+      - { value: "ports", correct: false }
+    help: "https://docs.docker.com/reference/cli/docker/stack/deploy/#deploying-services-with-build"
+
+  - uuid: 6c8653a6-df41-4393-a15a-d70b3fbb5202
+    question: What Docker Compose file version is required to use "deploy" keys like replicas or update_config?
+    answers:
+      - { value: "version '3.x'", correct: true }
+      - { value: "version '2'", correct: false }
+      - { value: "version '1'", correct: false }
+      - { value: "Any version", correct: false }
+    help: "https://docs.docker.com/compose/compose-file/compose-versioning/"
