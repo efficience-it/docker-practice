@@ -24,7 +24,7 @@ questions:
       - { value: "docker stack config mystack", correct: false }
       - { value: "docker inspect mystack", correct: false }
       - { value: "docker stack show mystack", correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/stack_inspect/
+    help: https://docs.docker.com/reference/cli/docker/stack/
 
   - uuid: fda1bca2-2594-45c6-9fd3-9648b2850bd7
     question: Which command shows tasks running as part of a stack?
@@ -33,7 +33,7 @@ questions:
       - { value: "docker ps mystack", correct: false }
       - { value: "docker stack tasks mystack", correct: false }
       - { value: "docker service ps mystack", correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/stack_ps/
+    help: https://docs.docker.com/reference/cli/docker/stack/ps/
 
   - uuid: 4096e176-d8d6-4a57-b816-16348c9dd82f
     question: What command scales a service within a stack?

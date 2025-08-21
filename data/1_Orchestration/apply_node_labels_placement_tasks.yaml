@@ -86,7 +86,7 @@ questions:
       - { value: "Only in the local node's filesystem", correct: false }
       - { value: "In container metadata", correct: false }
       - { value: "In the image layer", correct: false }
-    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/state/
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/nodes/
 
   - uuid: 7a233b58-f90a-4692-bfa2-2466c86b6303
     question: What happens if a node with a required label is removed from the cluster?

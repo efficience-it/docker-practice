@@ -34,7 +34,7 @@
 * Describe and demonstrate how to display layers of a Docker image
 * Describe and demonstrate how to modify an image to a single layer.
 * Describe and demonstrate registry functions.
-* Deploy a registry.
+* [Deploy a registry.](data/2_Image_creation_management_registry/deploy_registry.yaml)
 * [Log into a registry.](data/2_Image_creation_management_registry/log_into_a_registry.yaml)
 * [Utilize search in a registry.](data/2_Image_creation_management_registry/utilize_search_in_a_registry.yaml)
 * [Push an image to a registry.](data/2_Image_creation_management_registry/push_an_image_to_a_registry.yaml)
@@ -99,3 +99,4 @@
 * Describe and demonstrate how storage can be used across cluster nodes.
 * Describe how to provision persistent storage to a Kubernetes pod using persistentVolumes.
 * Describe the relationship between container storage interface drivers, storageClass, persistentVolumeClaim and volume objects in Kubernetes.
+
