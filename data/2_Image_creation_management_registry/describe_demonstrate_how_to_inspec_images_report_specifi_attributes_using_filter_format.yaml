@@ -6,7 +6,7 @@ questions:
       - { value: 'docker image history', correct: false }
       - { value: 'docker inspect', correct: false }
       - { value: 'docker ls', correct: false }
-    help: https://docs.docker.com/engine/reference/cli/image/ls/
+    help: https://docs.docker.com/reference/cli/docker/image/ls/
 
   - uuid: 24020e62-804b-4bb8-9992-908a3c7e090c
     question: Which option would you use to list all images, including intermediate ones?
@@ -15,7 +15,7 @@ questions:
       - { value: '--digests', correct: false }
       - { value: '--no-trunc', correct: false }
       - { value: '--verbose', correct: false }
-    help: https://docs.docker.com/engine/reference/cli/image/ls/
+    help: https://docs.docker.com/reference/cli/docker/image/ls/
 
   - uuid: 9a2b6c0c-3f82-4fcf-92b4-7f3b3241b78d
     question: What does the `--digests` flag show when used with `docker image ls`?
@@ -24,7 +24,7 @@ questions:
       - { value: 'Total image size on disk', correct: false }
       - { value: 'Layer count per image', correct: false }
       - { value: 'Image build logs', correct: false }
-    help: https://docs.docker.com/engine/reference/cli/image/ls/
+    help: https://docs.docker.com/reference/cli/docker/image/ls/
 
   - uuid: c4dcd1a3-2e52-41f2-b1b1-b2eb20861a5e
     question: What placeholder should you use with `--format` to display the image repository?
@@ -33,7 +33,7 @@ questions:
       - { value: '.Tag', correct: false }
       - { value: '.Image', correct: false }
       - { value: '.Name', correct: false }
-    help: https://docs.docker.com/engine/reference/cli/image/ls/
+    help: https://docs.docker.com/reference/cli/docker/image/ls/
 
   - uuid: b0a18a67-7c4e-44cf-869d-393f6aa3a239
     question: Which of the following would show image IDs and repositories using Go templates?
