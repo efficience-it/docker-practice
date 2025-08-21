@@ -1,0 +1,90 @@
+questions:
+  - uuid: a961e16e-1660-4a6d-8a3c-01391d8a109b
+    question: What is the command to deploy an official Docker registry container?
+    answers:
+      - { value: "docker run -d -p 5000:5000 --name registry registry:2", correct: true }
+      - { value: "docker start registry:2", correct: false }
+      - { value: "docker image push registry:2", correct: false }
+      - { value: "docker deploy registry", correct: false }
+    help: "https://docs.docker.com/registry/deploying/"
+
+  - uuid: 1ae849c1-286f-419b-a6df-7931a5f650e5
+    question: Which port is exposed by default in the official Docker registry image?
+    answers:
+      - { value: "5000", correct: true }
+      - { value: "443", correct: false }
+      - { value: "80", correct: false }
+      - { value: "2375", correct: false }
+    help: "https://docs.docker.com/registry/"
+
+  - uuid: b34b189f-1d12-452e-ae42-88c531cf9b26
+    question: What is the purpose of setting the environment variable `REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY` in the registry container?
+    answers:
+      - { value: "To configure the path for storing image data", correct: true }
+      - { value: "To define registry authentication", correct: false }
+      - { value: "To expose a custom port", correct: false }
+      - { value: "To connect to Docker Hub", correct: false }
+    help: "https://docs.docker.com/registry/configuration/"
+
+  - uuid: 51a93188-2a87-4fd5-b1c4-c6373ce3e57a
+    question: What storage backend is used by default in the official registry image?
+    answers:
+      - { value: "Filesystem", correct: true }
+      - { value: "S3", correct: false }
+      - { value: "Azure Blob Storage", correct: false }
+      - { value: "Google Cloud Storage", correct: false }
+    help: "https://docs.docker.com/registry/storage-drivers/"
+
+  - uuid: 6f15f3b7-0323-45f3-8cbf-9f546d5d49c6
+    question: What should you do to make a local registry accessible from Docker clients on the same host?
+    answers:
+      - { value: "Add it to the list of insecure registries in the daemon config", correct: true }
+      - { value: "Create a volume named registry", correct: false }
+      - { value: "Disable port forwarding", correct: false }
+      - { value: "Use the --tlsverify flag in all client commands", correct: false }
+    help: "https://docs.docker.com/registry/insecure/"
+
+  - uuid: d37b4247-0e18-4a6d-bdbb-f87938cf408e
+    question: Where should you configure an insecure registry on a Linux system?
+    answers:
+      - { value: "/etc/docker/daemon.json", correct: true }
+      - { value: "~/.docker/config.json", correct: false }
+      - { value: "/etc/registry/config.yml", correct: false }
+      - { value: "/usr/bin/dockerd", correct: false }
+    help: "https://docs.docker.com/registry/insecure/"
+
+  - uuid: b7e4c63d-dde0-4063-9f1a-507a98cb0b11
+    question: Which of the following is required to make a private registry production-ready?
+    answers:
+      - { value: "Enable TLS using a valid certificate", correct: true }
+      - { value: "Run in host network mode", correct: false }
+      - { value: "Run on a non-standard port", correct: false }
+      - { value: "Use the Alpine base image", correct: false }
+    help: "https://docs.docker.com/registry/deploying/#running-a-domain-registry"
+
+  - uuid: 287ba12b-8638-4bcb-9fbd-34f5360a062c
+    question: What is the risk of exposing a registry without TLS in production?
+    answers:
+      - { value: "Credentials and images can be intercepted", correct: true }
+      - { value: "The container might crash", correct: false }
+      - { value: "It will be slower to push images", correct: false }
+      - { value: "The registry will become read-only", correct: false }
+    help: "https://docs.docker.com/registry/insecure/"
+
+  - uuid: 8a2a97f2-5ff2-408e-bcc3-3fcdf5e2024f
+    question: Which of the following mounts would persist registry image data?
+    answers:
+      - { value: "docker run -v /opt/registry:/var/lib/registry registry:2", correct: true }
+      - { value: "docker run --tmpfs /var/lib/registry registry:2", correct: false }
+      - { value: "docker run --mount type=bind,target=/var/run/docker.sock registry:2", correct: false }
+      - { value: "docker run -d registry:2", correct: false }
+    help: "https://docs.docker.com/registry/storage-drivers/filesystem/"
+
+  - uuid: f5d7dc60-c003-41e3-9058-381b2b0dd5c5
+    question: Which configuration file allows customizing a registry with authentication, storage, and logging options?
+    answers:
+      - { value: "config.yml", correct: true }
+      - { value: "registry.conf", correct: false }
+      - { value: "daemon.json", correct: false }
+      - { value: "docker-compose.yml", correct: false }
+    help: "https://docs.docker.com/registry/configuration/"

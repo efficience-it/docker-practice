@@ -1,0 +1,108 @@
+questions:
+  - uuid: 81d03a71-4ff6-40f2-9a4a-324a5e6d4069
+    question: Which command lists all active stacks?
+    answers:
+      - { value: "docker stack ls", correct: true }
+      - { value: "docker stack list", correct: false }
+      - { value: "docker service ls", correct: false }
+      - { value: "docker stack show", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/stack_ls/
+
+  - uuid: e9887051-36fc-44aa-b85f-6f72647c1b3c
+    question: Which command shows all services for a given stack?
+    answers:
+      - { value: "docker stack services mystack", correct: true }
+      - { value: "docker service list mystack", correct: false }
+      - { value: "docker service ps mystack", correct: false }
+      - { value: "docker stack show mystack", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/stack_services/
+
+  - uuid: d120fbbe-7610-4a7c-888a-bebcb4cfbd37
+    question: Which command displays detailed configuration of a stack?
+    answers:
+      - { value: "docker stack inspect mystack", correct: true }
+      - { value: "docker stack config mystack", correct: false }
+      - { value: "docker inspect mystack", correct: false }
+      - { value: "docker stack show mystack", correct: false }
+    help: https://docs.docker.com/reference/cli/docker/stack/
+
+  - uuid: fda1bca2-2594-45c6-9fd3-9648b2850bd7
+    question: Which command shows tasks running as part of a stack?
+    answers:
+      - { value: "docker stack ps mystack", correct: true }
+      - { value: "docker ps mystack", correct: false }
+      - { value: "docker stack tasks mystack", correct: false }
+      - { value: "docker service ps mystack", correct: false }
+    help: https://docs.docker.com/reference/cli/docker/stack/ps/
+
+  - uuid: 4096e176-d8d6-4a57-b816-16348c9dd82f
+    question: What command scales a service within a stack?
+    answers:
+      - { value: "docker service scale mystack_web=5", correct: true }
+      - { value: "docker stack scale web=5", correct: false }
+      - { value: "docker stack update web --replicas=5", correct: false }
+      - { value: "docker scale mystack_web 5", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/service_scale/
+
+  - uuid: 648d5a32-b9df-4a02-8c79-d51a52fa3617
+    question: How can you update the image of a running service in a stack?
+    answers:
+      - { value: "docker service update --image nginx:latest mystack_web", correct: true }
+      - { value: "docker stack update mystack --image nginx:latest", correct: false }
+      - { value: "docker service patch nginx:latest mystack_web", correct: false }
+      - { value: "docker stack redeploy mystack_web nginx:latest", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/service_update/
+
+  - uuid: a101ab82-91bc-42c0-bc8f-2f1b8c8e36e7
+    question: What is the purpose of 'docker stack rm'?
+    answers:
+      - { value: "To remove a deployed stack and its services", correct: true }
+      - { value: "To stop the swarm mode", correct: false }
+      - { value: "To delete unused Docker volumes", correct: false }
+      - { value: "To remove a container", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/stack_rm/
+
+  - uuid: 822c755b-f871-4f35-90fb-93a5605983f8
+    question: How can you update a stack after modifying docker-compose.yml?
+    answers:
+      - { value: "docker stack deploy -c docker-compose.yml mystack", correct: true }
+      - { value: "docker compose up -d mystack", correct: false }
+      - { value: "docker stack update -f docker-compose.yml mystack", correct: false }
+      - { value: "docker service reload mystack", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/stack_deploy/
+
+  - uuid: 39f281e1-ef96-40b7-b7b2-6930ee64e06a
+    question: What happens to volumes when a stack is removed?
+    answers:
+      - { value: "Volumes are preserved unless explicitly removed", correct: true }
+      - { value: "Volumes are automatically deleted", correct: false }
+      - { value: "Volumes are backed up to /var/lib/docker", correct: false }
+      - { value: "Volumes are converted into tmpfs", correct: false }
+    help: https://docs.docker.com/engine/swarm/stack-deploy/#prerequisites
+
+  - uuid: 62b94c89-d7a0-43ec-8515-1898a8d7b2b1
+    question: What command shows the image used by a service in a stack?
+    answers:
+      - { value: "docker service inspect mystack_web --format '{{.Spec.TaskTemplate.ContainerSpec.Image}}'", correct: true }
+      - { value: "docker stack inspect mystack_web --image", correct: false }
+      - { value: "docker service info mystack_web", correct: false }
+      - { value: "docker stack image mystack_web", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/service_inspect/
+
+  - uuid: 6d1f6883-f92d-4690-9de1-c1df9a8a1044
+    question: Which of these commands is invalid for managing stacks?
+    answers:
+      - { value: "docker stack update mystack", correct: true }
+      - { value: "docker stack ps mystack", correct: false }
+      - { value: "docker stack deploy -c docker-compose.yml mystack", correct: false }
+      - { value: "docker stack services mystack", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/stack_deploy/
+
+  - uuid: e63599f1-2a42-40ee-9ac6-df7a01f6f3fb
+    question: Why should you not use 'docker compose' instead of 'docker stack deploy' in swarm mode?
+    answers:
+      - { value: "'docker compose' does not deploy services in Swarm mode", correct: true }
+      - { value: "'docker compose' requires a manager token", correct: false }
+      - { value: "'docker compose' overwrites volumes", correct: false }
+      - { value: "'docker compose' disables networking", correct: false }
+    help: https://docs.docker.com/engine/swarm/stack-deploy/

@@ -1,0 +1,90 @@
+questions:
+  - uuid: e95854cd-9b19-4e15-8dc8-e3f5ad2539f1
+    question: What user does a Docker container run as by default?
+    answers:
+      - { value: "root", correct: true }
+      - { value: "dockeruser", correct: false }
+      - { value: "nobody", correct: false }
+      - { value: "host user", correct: false }
+    help: "https://docs.docker.com/engine/security/"
+
+  - uuid: 8fc6a769-0a3b-476e-9059-d9bfc03a5295
+    question: Which Linux kernel feature provides namespace isolation in Docker?
+    answers:
+      - { value: "Namespaces", correct: true }
+      - { value: "Systemd", correct: false }
+      - { value: "iptables", correct: false }
+      - { value: "rsyslog", correct: false }
+    help: "https://docs.docker.com/engine/security/#docker-daemon-attack-surface"
+
+  - uuid: 845267c4-d3b4-4e8c-b9d3-f07ed7c5d8ea
+    question: What does Docker's default seccomp profile do?
+    answers:
+      - { value: "Blocks system calls known to be unsafe", correct: true }
+      - { value: "Blocks access to the host file system", correct: false }
+      - { value: "Prevents container from binding to ports", correct: false }
+      - { value: "Removes all Linux capabilities", correct: false }
+    help: "https://docs.docker.com/engine/security/seccomp/"
+
+  - uuid: fdc98716-2cf6-4526-9f9b-7590f1b3d7d7
+    question: What is the default AppArmor profile used by Docker on supported systems?
+    answers:
+      - { value: "docker-default", correct: true }
+      - { value: "unconfined", correct: false }
+      - { value: "apparmor-deny-all", correct: false }
+      - { value: "custom-docker", correct: false }
+    help: "https://docs.docker.com/engine/security/apparmor/"
+
+  - uuid: dfa9e658-6d90-4f91-9e56-bf24589a9d71
+    question: What is the default behavior for container networking in Docker?
+    answers:
+      - { value: "Containers are placed on a bridge network", correct: true }
+      - { value: "Containers are isolated with no networking", correct: false }
+      - { value: "Containers share the host's network namespace", correct: false }
+      - { value: "Containers use overlay networks by default", correct: false }
+    help: "https://docs.docker.com/network/bridge/"
+
+  - uuid: 6f42fdd9-d1e6-4c8b-944f-54200937a180
+    question: Which of the following is a risk of running containers as root (the default)?
+    answers:
+      - { value: "They may access host resources if misconfigured", correct: true }
+      - { value: "They cannot access environment variables", correct: false }
+      - { value: "They are unable to use bind mounts", correct: false }
+      - { value: "They won't be able to start properly", correct: false }
+    help: "https://docs.docker.com/engine/security/"
+
+  - uuid: b3a49195-c560-42b2-981f-d987279adf6f
+    question: What default capability is removed when running a container with --cap-drop=ALL?
+    answers:
+      - { value: "All Linux capabilities", correct: true }
+      - { value: "Networking", correct: false }
+      - { value: "Filesystem access", correct: false }
+      - { value: "Namespace support", correct: false }
+    help: "https://docs.docker.com/engine/security/"
+
+  - uuid: 6c826387-1b40-4214-8a16-35c2f56f49c2
+    question: What does Docker's user namespace remapping feature do?
+    answers:
+      - { value: "Maps container root to a non-root host user", correct: true }
+      - { value: "Disables networking between containers", correct: false }
+      - { value: "Forces all containers to use AppArmor", correct: false }
+      - { value: "Enables MTLS on containers", correct: false }
+    help: "https://docs.docker.com/engine/security/userns-remap/"
+
+  - uuid: e88dfcb6-3a48-49f7-85f8-1a190fa1f0c1
+    question: By default, can Docker containers read host files?
+    answers:
+      - { value: "No, unless volumes are explicitly mounted", correct: true }
+      - { value: "Yes, they can read /etc and /var", correct: false }
+      - { value: "Only if running as non-root", correct: false }
+      - { value: "Yes, always", correct: false }
+    help: "https://docs.docker.com/storage/volumes/"
+
+  - uuid: 206cefb9-73b3-4d99-b209-6d6b36f5154c
+    question: What isolation model is used by Docker on Linux by default?
+    answers:
+      - { value: "Process-based isolation using namespaces and cgroups", correct: true }
+      - { value: "Virtual machine-based isolation", correct: false }
+      - { value: "ContainerD secure enclave", correct: false }
+      - { value: "Hypervisor-level sandboxing", correct: false }
+    help: "https://docs.docker.com/engine/security/#docker-daemon-attack-surface"

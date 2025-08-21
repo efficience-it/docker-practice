@@ -2,19 +2,19 @@
 
 ### Domain 1: Orchestration (25% of exam)
 
-* [Complete the setup of a swarm mode cluster, with managers and worker nodes](data/1.Orchestration/complete_setup_swarm_mode_cluster_managers_worker_nodes.yaml)
+* [Complete the setup of a swarm mode cluster, with managers and worker nodes](data/1_Orchestration/complete_setup_swarm_mode_cluster_managers_worker_nodes.yaml)
 * Describe and demonstrate how to extend the instructions to run individual containers into running services under swarm.
 * [Describe the importance of quorum in a swarm cluster.](data/1.Orchestration/describe_importance_quorum_swarm_cluster.yaml)
 * [Describe the difference between running a container and running a service.](data/1_Orchestration/describe_difference_between_running_container_and_service.yaml)
 * [Interpret the output of “docker inspect” commands.](data/1_Orchestration/interpret_output_docker_inspect_commend.yaml)
 * Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy"
-* Manipulate a running stack of services.
+* [Manipulate a running stack of services.](data/1_Orchestration/manipulate_stacks.yaml)
 * Describe and demonstrate orchestration activities.
 * [Increase the number of replicas.](data/1_Orchestration/increase_the_number_of_replicas.yaml)
 * [Add networks, publish ports.](data/1_Orchestration/add_networks_publish_ports.yaml)
 * [Mount volumes.](data/1_Orchestration/mount_volumes.yaml)
 * Describe and demonstrate how to run replicated and global services.
-* Apply node labels to demonstrate placement of tasks.
+* [Apply node labels to demonstrate placement of tasks.](data/1_Orchestration/apply_node_labels_placement_tasks.yaml)
 * Describe and demonstrate how to use templates with “docker service create”.
 * Identify the steps needed to troubleshoot a service not deploying.
 * Describe how a Dockerized application communicates with legacy systems.
@@ -34,12 +34,12 @@
 * Describe and demonstrate how to display layers of a Docker image
 * Describe and demonstrate how to modify an image to a single layer.
 * Describe and demonstrate registry functions.
-* Deploy a registry.
+* [Deploy a registry.](data/2_Image_creation_management_registry/deploy_registry.yaml)
 * [Log into a registry.](data/2_Image_creation_management_registry/log_into_a_registry.yaml)
 * [Utilize search in a registry.](data/2_Image_creation_management_registry/utilize_search_in_a_registry.yaml)
 * [Push an image to a registry.](data/2_Image_creation_management_registry/push_an_image_to_a_registry.yaml)
 * [Sign an image in a registry.](data/2_Image_creation_management_registry/sign_an_image_in_a_registry.yaml)
-* Pull and delete images from a registry.
+* [Pull and delete images from a registry.](data/2_Image_creation_management_registry/pull_delete_images_registry.yaml)
 
 ### Domain 3: Installation and Configuration (15% of exam)
 
@@ -76,11 +76,11 @@
 
 * [Describe security administration and tasks.](data/5_Security/describe_security_administration_tasks.yaml)
 * [Describe the process of signing an image.](data/5_Security/describe_process_signing_image.yaml)
-* Describe default engine security.
-* Describe swarm default security.
+* [Describe default engine security.](data/5_Security/describe_default_engine_security.yaml)
+* [Describe swarm default security.](data/5_Security/swarm_default_security.yaml)
 * [Describe MTLS.](data/5_Security/describe_mtls.yaml)
 * Describe identity roles.
-* Compare and contrast UCP workers and managers.
+* [Compare and contrast UCP workers and managers.](data/5_Security/compare_contrast_ucp_workers_managers.yaml)
 * Describe the process to use external certificates with UCP and DTR.
 * Describe and demonstrate that an image passes a security scan.
 * [Describe and demonstrate how to enable Docker Content Trust.](data/5_Security/describe_demonstrate_how_enable_docker_content_trust.yaml)
@@ -99,3 +99,4 @@
 * Describe and demonstrate how storage can be used across cluster nodes.
 * Describe how to provision persistent storage to a Kubernetes pod using persistentVolumes.
 * Describe the relationship between container storage interface drivers, storageClass, persistentVolumeClaim and volume objects in Kubernetes.
+
