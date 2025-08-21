@@ -13,7 +13,7 @@
 * [Increase the number of replicas.](data/1_Orchestration/increase_the_number_of_replicas.yaml)
 * [Add networks, publish ports.](data/1_Orchestration/add_networks_publish_ports.yaml)
 * [Mount volumes.](data/1_Orchestration/mount_volumes.yaml)
-* Describe and demonstrate how to run replicated and global services.
+* [Describe and demonstrate how to run replicated and global services.](data/1_Orchestration/replicated_vs_global_services.yaml)
 * [Apply node labels to demonstrate placement of tasks.](data/1_Orchestration/apply_node_labels_placement_tasks.yaml)
 * Describe and demonstrate how to use templates with “docker service create”.
 * Identify the steps needed to troubleshoot a service not deploying.

@@ -1,0 +1,90 @@
+questions:
+  - uuid: f197a91f-59d9-4a7e-a91e-1945058f0a77
+    question: What is the difference between a replicated and a global service in Docker Swarm?
+    answers:
+      - { value: "Replicated services run a specified number of tasks; global services run one task per node", correct: true }
+      - { value: "Replicated services run only on managers; global on workers", correct: false }
+      - { value: "Replicated services restart on failure; global services do not", correct: false }
+      - { value: "Replicated services run with constraints; global services do not", correct: false }
+    help: "https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#replicated-and-global-services"
+
+  - uuid: 3df89c8c-7ab0-41bc-bcb3-b611f10a86bc
+    question: Which command deploys a replicated service with 3 replicas?
+    answers:
+      - { value: "docker service create --replicas 3 nginx", correct: true }
+      - { value: "docker run -d --replicas 3 nginx", correct: false }
+      - { value: "docker stack deploy -n nginx --replicas 3", correct: false }
+      - { value: "docker swarm create --replicas 3 nginx", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/service/create/"
+
+  - uuid: b61bfa3e-b383-4ac7-8e2e-9c9563ff401c
+    question: How do you deploy a global service across all Swarm nodes?
+    answers:
+      - { value: "docker service create --mode global alpine top", correct: true }
+      - { value: "docker run --global alpine top", correct: false }
+      - { value: "docker deploy --mode=global alpine", correct: false }
+      - { value: "docker service global create alpine", correct: false }
+    help: "https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#global-services"
+
+  - uuid: f5f03d17-3809-4ae1-b5d1-11b7586e36e6
+    question: What happens if a new node joins a Swarm with a global service running?
+    answers:
+      - { value: "A task is automatically started on the new node", correct: true }
+      - { value: "The service is redeployed from scratch", correct: false }
+      - { value: "The service is limited to existing nodes", correct: false }
+      - { value: "Only manager nodes get the new task", correct: false }
+    help: "https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#global-services"
+
+  - uuid: 1c731cfd-0520-46e4-a0cd-0b1f6a61c92c
+    question: Which service mode is preferred for infrastructure services like logging or monitoring agents?
+    answers:
+      - { value: "Global", correct: true }
+      - { value: "Replicated", correct: false }
+      - { value: "DaemonSet", correct: false }
+      - { value: "Init", correct: false }
+    help: "https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#global-services"
+
+  - uuid: 60c09d86-e0fd-4553-9a47-7b29b20d3c7b
+    question: How do you verify if a service is running in global mode?
+    answers:
+      - { value: "docker service inspect --pretty <service-name>", correct: true }
+      - { value: "docker service ls --global", correct: false }
+      - { value: "docker ps --mode global", correct: false }
+      - { value: "docker node ls", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/service/inspect/"
+
+  - uuid: 1c90c1b5-1b8b-42ef-97f2-1cc254c9ea1b
+    question: Can you scale a global service with --replicas?
+    answers:
+      - { value: "No, scaling applies only to replicated services", correct: true }
+      - { value: "Yes, but only once", correct: false }
+      - { value: "Yes, with constraints", correct: false }
+      - { value: "Yes, with --global-replicas", correct: false }
+    help: "https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#replicated-and-global-services"
+
+  - uuid: 96e4b032-1a7a-4f9b-b7bc-3c9edda96a7a
+    question: What is the default mode when creating a Docker Swarm service?
+    answers:
+      - { value: "Replicated", correct: true }
+      - { value: "Global", correct: false }
+      - { value: "Host", correct: false }
+      - { value: "Bridge", correct: false }
+    help: "https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/"
+
+  - uuid: 0ce3ce95-ec45-47fc-891e-6cce5378104e
+    question: Which of the following can only be used with replicated services?
+    answers:
+      - { value: "Scaling using docker service scale", correct: true }
+      - { value: "Constraints", correct: false }
+      - { value: "Secrets", correct: false }
+      - { value: "Networks", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/service/scale/"
+
+  - uuid: f9c82f46-9c42-44d3-b3bb-4c5a0d1153f6
+    question: Which command would show the number of tasks of a global service?
+    answers:
+      - { value: "docker service ps <service>", correct: true }
+      - { value: "docker inspect <service>", correct: false }
+      - { value: "docker ps -a", correct: false }
+      - { value: "docker node inspect", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/service/ps/"
