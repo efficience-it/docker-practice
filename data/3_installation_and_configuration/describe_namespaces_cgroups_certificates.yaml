@@ -6,7 +6,7 @@ questions:
       - { value: "To assign IP addresses to containers", correct: false }
       - { value: "To encrypt container data at rest", correct: false }
       - { value: "To manage container user roles", correct: false }
-    help: https://docs.docker.com/engine/security/isolation/
+    help: https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/
 
   - uuid: 9735f77f-77e4-49a2-a3aa-3fc1585a412f
     question: Which namespace is used to isolate network resources in Docker?
@@ -15,7 +15,7 @@ questions:
       - { value: "mnt", correct: false }
       - { value: "pid", correct: false }
       - { value: "uts", correct: false }
-    help: https://docs.docker.com/engine/security/isolation/
+    help: https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/
 
   - uuid: 00e37740-5f91-4fc7-9b01-063c1e26e426
     question: What does the "pid" namespace isolate in Docker?
@@ -24,7 +24,7 @@ questions:
       - { value: "Network connections between containers", correct: false }
       - { value: "User IDs for file permissions", correct: false }
       - { value: "Mount points between containers", correct: false }
-    help: https://docs.docker.com/engine/security/isolation/
+    help: https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/
 
   - uuid: 5e2b7025-35e4-499e-9372-3d62297bdbfa
     question: What is the purpose of cgroups in Docker?
