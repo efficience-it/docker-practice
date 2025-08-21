@@ -76,7 +76,7 @@
 
 * [Describe security administration and tasks.](data/5_Security/describe_security_administration_tasks.yaml)
 * [Describe the process of signing an image.](data/5_Security/describe_process_signing_image.yaml)
-* Describe default engine security.
+* [Describe default engine security.](data/5_Security/describe_default_engine_security.yaml)
 * [Describe swarm default security.](data/5_Security/swarm_default_security.yaml)
 * [Describe MTLS.](data/5_Security/describe_mtls.yaml)
 * Describe identity roles.
