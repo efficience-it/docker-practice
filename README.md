@@ -39,7 +39,7 @@
 * [Utilize search in a registry.](data/2_Image_creation_management_registry/utilize_search_in_a_registry.yaml)
 * [Push an image to a registry.](data/2_Image_creation_management_registry/push_an_image_to_a_registry.yaml)
 * [Sign an image in a registry.](data/2_Image_creation_management_registry/sign_an_image_in_a_registry.yaml)
-* Pull and delete images from a registry.
+* [Pull and delete images from a registry.](data/2_Image_creation_management_registry/pull_delete_images_registry.yaml)
 
 ### Domain 3: Installation and Configuration (15% of exam)
 
