@@ -19,7 +19,7 @@ questions:
       - { value: 'docker upload myimage', correct: false }
       - { value: 'docker publish myimage', correct: false }
       - { value: 'docker send myimage', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/push/
+    help: https://docs.docker.com/reference/cli/docker/image/push/
 
   - uuid: b3c10a9a-12d5-41c4-8a13-bbe3ea61a3ea
     question: What must you do before pushing an image to Docker Hub?
@@ -28,7 +28,7 @@ questions:
       - { value: 'Delete all containers', correct: false }
       - { value: 'Restart the Docker daemon', correct: false }
       - { value: 'Change network mode', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/tag/
+    help: https://docs.docker.com/reference/cli/docker/image/tag/
 
   - uuid: 2b1f0f25-1c4a-4347-8e88-01d7e832b963
     question: What does the `docker login` command do?
@@ -37,7 +37,7 @@ questions:
       - { value: 'Publishes a container port', correct: false }
       - { value: 'Logs into a running container', correct: false }
       - { value: 'Launches a container with credentials', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/login/
+    help: https://docs.docker.com/reference/cli/docker/login/
 
   - uuid: f1b239f2-5354-4995-a21e-b6f3d5c59a63
     question: What is the default registry used when pushing an unqualified image name?
@@ -46,7 +46,7 @@ questions:
       - { value: 'Quay', correct: false }
       - { value: 'GitHub Container Registry', correct: false }
       - { value: 'Your local registry', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/push/#default-behavior
+    help: https://docs.docker.com/reference/cli/docker/image/push/#default-behavior
 
   - uuid: 27efca82-7d3a-4be0-a60d-dc4979c31f58
     question: How can you search for an image on Docker Hub from the CLI?
@@ -55,7 +55,7 @@ questions:
       - { value: 'docker list nginx', correct: false }
       - { value: 'docker discover nginx', correct: false }
       - { value: 'docker query nginx', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/search/
+    help: https://docs.docker.com/reference/cli/docker/search/
 
   - uuid: 60cb93f5-188e-4cf4-9e7b-04293062f019
     question: What file allows you to run your own Docker registry locally?
@@ -73,7 +73,7 @@ questions:
       - { value: 'DOCKER_AUTH_TOKEN', correct: false }
       - { value: 'REGISTRY_SECRET', correct: false }
       - { value: 'AUTH_PASSWORD', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+    help: https://docs.docker.com/reference/cli/docker/login/#credentials-store
 
   - uuid: 7dc77e83-04f6-48df-9313-91b857d0e5c7
     question: What is the role of a registry namespace (like `username/imagename`)?
@@ -100,4 +100,4 @@ questions:
       - { value: 'docker search', correct: false }
       - { value: 'docker ps -a', correct: false }
       - { value: 'docker rmi', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/images/
+    help: https://docs.docker.com/reference/cli/docker/image/ls/

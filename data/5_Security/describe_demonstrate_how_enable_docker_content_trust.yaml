@@ -51,7 +51,7 @@ questions:
       - { value: 'docker inspect-trust <image>', correct: false }
       - { value: 'docker image trust show <image>', correct: false }
       - { value: 'docker trust status <image>', correct: false }
-    help: 'https://docs.docker.com/engine/reference/commandline/trust_inspect/'
+    help: 'https://docs.docker.com/reference/cli/docker/trust/inspect/'
 
   - uuid: 2131a4fd-42ec-4265-b36e-96055d5cb14e
     question: Which command initializes a repository for signing with DCT?
@@ -60,7 +60,7 @@ questions:
       - { value: 'docker trust init', correct: false }
       - { value: 'docker sign create', correct: false }
       - { value: 'docker trust enable', correct: false }
-    help: 'https://docs.docker.com/engine/reference/commandline/trust_signer_add/'
+    help: 'https://docs.docker.com/reference/cli/docker/trust/signer/add/'
 
   - uuid: 9333d417-5d61-4e69-90ac-6096603cf85d
     question: How does Docker Content Trust verify image integrity?

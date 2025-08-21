@@ -33,7 +33,7 @@ questions:
       - { value: 'docker image sign IMAGE[:TAG]', correct: false }
       - { value: 'docker image verify IMAGE[:TAG]', correct: false }
       - { value: 'docker trust enable IMAGE[:TAG]', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/trust_sign/
+    help: https://docs.docker.com/reference/cli/docker/trust/sign/
 
   - uuid: 91d5b8a5-c18c-4fcf-977f-4e92c1ef26cf
     question: What does enabling Docker Content Trust prevent?
@@ -78,7 +78,7 @@ questions:
       - { value: 'Layer history of an image', correct: false }
       - { value: 'Build logs of the image', correct: false }
       - { value: 'Container memory limits', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/trust_inspect/
+    help: https://docs.docker.com/reference/cli/docker/trust/inspect/
 
   - uuid: 2a3c763f-1c1e-4bc3-a116-0fc8818a808c
     question: When using DCT, what happens if you try to pull an image without a valid signature?

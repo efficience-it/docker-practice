@@ -6,7 +6,7 @@ questions:
       - { value: 'Container logs in real time', correct: false }
       - { value: 'A summary of Docker system resource usage', correct: false }
       - { value: 'All running containers grouped by image', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/
+    help: https://docs.docker.com/reference/cli/docker/inspect/
 
   - uuid: 9e05fa39-6be3-4b4e-a054-3cc2344e1f9b
     question: What type of data is returned by “docker inspect” by default?
@@ -15,7 +15,7 @@ questions:
       - { value: 'Human-readable summary tables', correct: false }
       - { value: 'Binary-encoded runtime state', correct: false }
       - { value: 'Formatted logs with timestamps', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/
+    help: https://docs.docker.com/reference/cli/docker/inspect/
 
   - uuid: 5f2b3e77-b221-4cb8-a405-3aeb8a947d30
     question: Which docker inspect property shows whether a container has mounted volumes?
@@ -33,7 +33,7 @@ questions:
       - { value: '.HostConfig.TtyEnabled', correct: false }
       - { value: '.Config.Tty', correct: true }
       - { value: '.Flags.tty', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/
+    help: https://docs.docker.com/reference/cli/docker/inspect/
 
   - uuid: 5ac5561d-0802-4fc2-88d7-bec37cb8a4df
     question: How can you filter `docker inspect` output to only display the IP address of a container?
@@ -42,7 +42,7 @@ questions:
       - { value: 'docker info --network <container>', correct: false }
       - { value: "docker inspect -f '{{ .NetworkSettings.IPAddress }}' <container>", correct: true }
       - { value: 'docker logs --network-info <container>', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/
+    help: https://docs.docker.com/reference/cli/docker/inspect/
 
   - uuid: 5e7f3841-bd3f-4e3e-b63b-73f4b7b9482e
     question: How can you display the container's MAC address using 'docker inspect'?
@@ -51,7 +51,7 @@ questions:
       - { value: "Using the format '{{.MAC}}'", correct: false }
       - { value: 'docker inspect --mac', correct: false }
       - { value: "Using the format '{{.Network.Mac}}'", correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/#get-an-instances-mac-address
+    help: https://docs.docker.com/reference/cli/docker/inspect/#get-an-instances-mac-address
 
   - uuid: 292be32d-6601-4b64-889a-78ed87a6d593
     question: Which field reveals the container's log file location?
@@ -60,7 +60,7 @@ questions:
       - { value: 'LogFile', correct: false }
       - { value: 'LoggingPath', correct: false }
       - { value: 'ContainerLog', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/#get-an-instances-log-path
+    help: https://docs.docker.com/reference/cli/docker/inspect/#get-an-instances-log-path
 
   - uuid: 71ae206c-7b39-4b37-97f4-b597310d0b2c
     question: How do you retrieve the image name used by a container?
@@ -69,7 +69,7 @@ questions:
       - { value: 'Using the field .Image.Name', correct: false }
       - { value: 'With `docker image inspect`', correct: false }
       - { value: 'From .Metadata.Image', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/#get-an-instances-image-name
+    help: https://docs.docker.com/reference/cli/docker/inspect/#get-an-instances-image-name
 
   - uuid: 9db23e15-e12d-49f8-a429-dfcbd9f9b8f5
     question: What does the 'SizeRw' field represent in a container's inspect output?
@@ -78,7 +78,7 @@ questions:
       - { value: 'The total size of all image layers', correct: false }
       - { value: 'The memory consumed by the container', correct: false }
       - { value: 'The root filesystem size', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/#inspect-the-size-of-a-container
+    help: https://docs.docker.com/reference/cli/docker/inspect/#inspect-the-size-of-a-container
 
   - uuid: 6afcb090-45c7-45ef-9817-f1049d6536b0
     question: Which command shows volume details specifically?
@@ -87,7 +87,7 @@ questions:
       - { value: 'docker inspect myvolume --only-volume', correct: false }
       - { value: 'docker volume inspect --details', correct: false }
       - { value: 'docker info --volumes', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/#specify-target-type---type
+    help: https://docs.docker.com/reference/cli/docker/inspect/#specify-target-type---type
 
   - uuid: 6ad0d3f8-0834-4011-a942-9be3d30fc17a
     question: What is the result of using the '--type' flag incorrectly?
@@ -96,7 +96,7 @@ questions:
       - { value: 'It crashes the Docker daemon', correct: false }
       - { value: 'It lists only containers', correct: false }
       - { value: 'It disables network inspection', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/#specify-target-type---type
+    help: https://docs.docker.com/reference/cli/docker/inspect/#specify-target-type---type
 
   - uuid: d50e1c3d-1f36-4b7b-a8ae-94f00ef1168f
     question: What happens if you inspect multiple objects at once?
@@ -105,7 +105,7 @@ questions:
       - { value: 'Docker throws an error', correct: false }
       - { value: 'Only the first object is returned', correct: false }
       - { value: 'Only container types are shown', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/
+    help: https://docs.docker.com/reference/cli/docker/inspect/
 
   - uuid: 3f0b5099-9cc6-4144-bb5f-82064c5e373b
     question: What does 'SizeRootFs' represent in inspect output?
@@ -114,7 +114,7 @@ questions:
       - { value: 'The base image size', correct: false }
       - { value: 'The combined memory and disk usage', correct: false }
       - { value: 'Only the changed files', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/#inspect-the-size-of-a-container
+    help: https://docs.docker.com/reference/cli/docker/inspect/#inspect-the-size-of-a-container
 
   - uuid: 7827e2be-77e1-4380-a173-9f64dba7c5d9
     question: How do you list all port bindings using 'docker inspect'?
@@ -123,7 +123,7 @@ questions:
       - { value: 'Using `{{.PortMap}}`', correct: false }
       - { value: 'With `--list-ports`', correct: false }
       - { value: 'Via docker network inspect', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/#list-all-port-bindings
+    help: https://docs.docker.com/reference/cli/docker/inspect/#list-all-port-bindings
 
   - uuid: d7c4dcd3-2542-4e5e-a0cf-01fd640fa73f
     question: Can 'docker inspect' be used on stopped containers?
@@ -132,7 +132,7 @@ questions:
       - { value: 'No, only running containers are supported', correct: false }
       - { value: 'Only images can be inspected', correct: false }
       - { value: 'It returns null data for stopped containers', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/
+    help: https://docs.docker.com/reference/cli/docker/inspect/
 
   - uuid: b0e1a41f-b260-4090-91e4-9df6f1909c83
     question: What does the --size flag add to the output of 'docker inspect'?
@@ -141,7 +141,7 @@ questions:
       - { value: 'It adds memory and CPU usage statistics', correct: false }
       - { value: 'It enables verbose logging output', correct: false }
       - { value: 'It shows the image size in MB', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/#inspect-the-size-of-a-container
+    help: https://docs.docker.com/reference/cli/docker/inspect/#inspect-the-size-of-a-container
 
   - uuid: f08b0930-7c4f-43a6-85b0-312ef6b7e8cc
     question: Which inspect field tells you if a container is currently running?
@@ -168,7 +168,7 @@ questions:
       - { value: 'It filters only the container ID', correct: false }
       - { value: 'It converts all fields to base64', correct: false }
       - { value: 'It disables structured output', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/#get-a-subsection-in-json-format
+    help: https://docs.docker.com/reference/cli/docker/inspect/#get-a-subsection-in-json-format
 
   - uuid: 4b758c3e-2b67-4fa4-8db4-8e2e45c220d7
     question: Why would you use the --type flag with docker inspect?
@@ -177,4 +177,4 @@ questions:
       - { value: 'To limit the inspect result to container IDs only', correct: false }
       - { value: 'To trigger recursive inspection', correct: false }
       - { value: 'To enable secure inspect mode', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/inspect/#specify-target-type---type
+    help: https://docs.docker.com/reference/cli/docker/inspect/#specify-target-type---type

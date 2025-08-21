@@ -15,7 +15,7 @@ questions:
       - { value: "docker run -d --replicas 3 nginx", correct: false }
       - { value: "docker stack deploy -n nginx --replicas 3", correct: false }
       - { value: "docker swarm create --replicas 3 nginx", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/service/create/"
+    help: "https://docs.docker.com/reference/cli/docker/service/create/"
 
   - uuid: b61bfa3e-b383-4ac7-8e2e-9c9563ff401c
     question: How do you deploy a global service across all Swarm nodes?
@@ -51,7 +51,7 @@ questions:
       - { value: "docker service ls --global", correct: false }
       - { value: "docker ps --mode global", correct: false }
       - { value: "docker node ls", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/service/inspect/"
+    help: "https://docs.docker.com/reference/cli/docker/inspect/"
 
   - uuid: 1c90c1b5-1b8b-42ef-97f2-1cc254c9ea1b
     question: Can you scale a global service with --replicas?
@@ -78,7 +78,7 @@ questions:
       - { value: "Constraints", correct: false }
       - { value: "Secrets", correct: false }
       - { value: "Networks", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/service/scale/"
+    help: "https://docs.docker.com/reference/cli/docker/service/scale/"
 
   - uuid: f9c82f46-9c42-44d3-b3bb-4c5a0d1153f6
     question: Which command would show the number of tasks of a global service?
@@ -87,4 +87,4 @@ questions:
       - { value: "docker inspect <service>", correct: false }
       - { value: "docker ps -a", correct: false }
       - { value: "docker node inspect", correct: false }
-    help: "https://docs.docker.com/engine/reference/commandline/service/ps/"
+    help: "https://docs.docker.com/reference/cli/docker/service/ps/"
