@@ -7,7 +7,7 @@
 * [Describe the importance of quorum in a swarm cluster.](data/1.Orchestration/describe_importance_quorum_swarm_cluster.yaml)
 * [Describe the difference between running a container and running a service.](data/1_Orchestration/describe_difference_between_running_container_and_service.yaml)
 * [Interpret the output of “docker inspect” commands.](data/1_Orchestration/interpret_output_docker_inspect_commend.yaml)
-* Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy"
+* [Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy"](data/1_Orchestration/convert_to_stack_file.yaml)
 * [Manipulate a running stack of services.](data/1_Orchestration/manipulate_stacks.yaml)
 * Describe and demonstrate orchestration activities.
 * [Increase the number of replicas.](data/1_Orchestration/increase_the_number_of_replicas.yaml)
