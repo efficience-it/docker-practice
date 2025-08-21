@@ -30,7 +30,7 @@
 * [Describe and demonstrate how to use CLI commands to manage images, such as list, delete, prune, rmi.](data/2_Image_creation_management_registry/describe_demonstrate_how_use_cli_command_manage_images_list_delete_prune_rmi.yaml)
 * [Describe and demonstrate how to inspect images and report specific attributes using filter and format](data/2_Image_creation_management_registry/describe_demonstrate_how_to_inspec_images_report_specifi_attributes_using_filter_format.yaml)
 * [Describe and demonstrate how to tag an image.](data/2_Image_creation_management_registry/describe_demonstrate_how_to_tag_image.yaml)
-* Describe and demonstrate how to apply a file to create a Docker image.
+* [Describe and demonstrate how to apply a file to create a Docker image.](data/2_Image_creation_management_registry/apply_file_create_image.yaml)
 * Describe and demonstrate how to display layers of a Docker image
 * Describe and demonstrate how to modify an image to a single layer.
 * Describe and demonstrate registry functions.

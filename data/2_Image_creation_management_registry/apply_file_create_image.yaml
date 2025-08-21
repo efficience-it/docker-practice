@@ -1,0 +1,81 @@
+questions:
+  - uuid: e2cf6c76-d515-4fc1-8e65-d5370d237b3f
+    question: Which Dockerfile instruction is used to copy a file into an image?
+    answers:
+      - { value: "COPY", correct: true }
+      - { value: "ADD", correct: false }
+      - { value: "RUN", correct: false }
+      - { value: "EXPOSE", correct: false }
+    help: "https://docs.docker.com/reference/dockerfile/#copy"
+
+  - uuid: 51e63025-cab4-4082-a274-f16135581d9d
+    question: Which command builds a Docker image using a Dockerfile in the current directory?
+    answers:
+      - { value: "docker build -t my-image .", correct: true }
+      - { value: "docker image create -f Dockerfile", correct: false }
+      - { value: "docker run -f Dockerfile .", correct: false }
+      - { value: "docker compile -t my-image", correct: false }
+    help: "https://docs.docker.com/reference/cli/docker/buildx/build/"
+
+  - uuid: b651ccf6-2036-447a-a28a-4bde2c5e9315
+    question: What is the difference between ADD and COPY in a Dockerfile?
+    answers:
+      - { value: "ADD supports remote URLs and extraction of archives", correct: true }
+      - { value: "COPY supports extracting archives", correct: false }
+      - { value: "ADD is deprecated", correct: false }
+      - { value: "COPY is slower than ADD", correct: false }
+    help: "https://docs.docker.com/build/building/best-practices/#add-or-copy"
+
+  - uuid: 0bd9629e-51e1-4071-a175-6e6a250d6b8b
+    question: Which best practice is recommended when copying files into an image?
+    answers:
+      - { value: "Minimize the number of COPY layers", correct: true }
+      - { value: "Use ADD for all file operations", correct: false }
+      - { value: "Always copy the entire context", correct: false }
+      - { value: "Copy sensitive files and delete them later", correct: false }
+    help: "https://docs.docker.com/build/building/best-practices/#leverage-build-cache"
+
+  - uuid: 2a5cf0b6-13d1-4a8b-8f34-0d7b56e35820
+    question: In Docker, what does the build context refer to?
+    answers:
+      - { value: "The directory sent to the Docker daemon during build", correct: true }
+      - { value: "The contents of the base image", correct: false }
+      - { value: "The internal state of a container", correct: false }
+      - { value: "The Dockerfile instructions", correct: false }
+    help: "https://docs.docker.com/build/concepts/context/"
+
+  - uuid: b40b2bb8-f5b3-4e97-bff9-bf19593f6d02
+    question: What happens if you try to COPY a file not included in the build context?
+    answers:
+      - { value: "The build will fail", correct: true }
+      - { value: "Docker fetches it from the host root", correct: false }
+      - { value: "Docker downloads it from Docker Hub", correct: false }
+      - { value: "It will be ignored silently", correct: false }
+    help: "https://docs.docker.com/reference/dockerfile/#copy"
+
+  - uuid: e453cd2a-2a9e-4648-a9f8-891987c7eb15
+    question: Where should the Dockerfile be located in relation to the files it needs to copy?
+    answers:
+      - { value: "In the same or a parent directory of the build context", correct: true }
+      - { value: "In /usr/local/bin", correct: false }
+      - { value: "In a different directory outside the context", correct: false }
+      - { value: "In the same directory as the Docker daemon", correct: false }
+    help: "https://docs.docker.com/reference/cli/docker/buildx/build/#dockerignore-file"
+
+  - uuid: 6ae4b58f-d5bb-4706-95df-53d7b2c03e1a
+    question: How can you exclude files from being sent to the Docker daemon during a build?
+    answers:
+      - { value: "Use a .dockerignore file", correct: true }
+      - { value: "Use the --exclude flag", correct: false }
+      - { value: "Use an EXCLUDE instruction in the Dockerfile", correct: false }
+      - { value: "Files are automatically excluded by Docker", correct: false }
+    help: "https://docs.docker.com/reference/dockerfile/#dockerignore-file"
+
+  - uuid: 6c02d847-f098-49b7-8547-08dfd53ef3b1
+    question: Which of the following instructions is preferred for copying local files into an image when no archive extraction is needed?
+    answers:
+      - { value: "COPY", correct: true }
+      - { value: "ADD", correct: false }
+      - { value: "RUN", correct: false }
+      - { value: "INCLUDE", correct: false }
+    help: "https://docs.docker.com/build/building/best-practices/#add-or-copy"
