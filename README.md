@@ -15,7 +15,7 @@
 * [Mount volumes.](data/1_Orchestration/mount_volumes.yaml)
 * [Describe and demonstrate how to run replicated and global services.](data/1_Orchestration/replicated_vs_global_services.yaml)
 * [Apply node labels to demonstrate placement of tasks.](data/1_Orchestration/apply_node_labels_placement_tasks.yaml)
-* Describe and demonstrate how to use templates with “docker service create”.
+* [Describe and demonstrate how to use templates with “docker service create”.](data/1_Orchestration/use_templates_with_service_create.yaml)
 * Identify the steps needed to troubleshoot a service not deploying.
 * Describe how a Dockerized application communicates with legacy systems.
 * Describe how to deploy containerized workloads as Kubernetes pods and deployments.
