@@ -93,7 +93,7 @@ questions:
     question: What does the `docker trust inspect` command do?
     answers:
       - { value: "It displays signature metadata for a Docker image", correct: true }
-      - { value: "It validates the Docker daemon"s TLS settings", correct: false }
+      - { value: "It validates the Docker daemon's TLS settings", correct: false }
       - { value: "It signs an image using a trusted GPG key", correct: false }
       - { value: "It encrypts layers before pushing to a registry", correct: false }
     help: https://docs.docker.com/reference/cli/docker/trust/inspect/
