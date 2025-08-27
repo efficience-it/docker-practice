@@ -1,0 +1,91 @@
+questions:
+  - uuid: 3db9c2fe-5d3d-4717-842b-8fcfdb7a7753
+    question: Which of the following is a common method for a Dockerized application to communicate with a legacy database?
+    answers:
+      - { value: "Expose the legacy database on the network and configure connection settings in the container", correct: true }
+      - { value: "Copy the legacy database files into the container", correct: false }
+      - { value: "Mount the database server into the container", correct: false }
+      - { value: "Run the legacy database inside the container", correct: false }
+    help: https://docs.docker.com/network/
+
+  - uuid: 52be37c5-3737-44b8-8dd7-2b4f64bfc2a7
+    question: What is the best way to ensure secure communication between a containerized app and a legacy HTTP service?
+    answers:
+      - { value: "Use an encrypted network or VPN between the container and legacy system", correct: true }
+      - { value: "Run the legacy service in the same container", correct: false }
+      - { value: "Use host networking to bypass firewalls", correct: false }
+      - { value: "Use Docker secrets to store IP addresses", correct: false }
+    help: https://docs.docker.com/network/overlay/
+
+  - uuid: 645f6f53-5365-4a65-bbe8-1fd6ea91fc25
+    question: When connecting a Docker container to a legacy system on the host network, which network mode should be considered?
+    answers:
+      - { value: "host", correct: true }
+      - { value: "none", correct: false }
+      - { value: "bridge", correct: false }
+      - { value: "overlay", correct: false }
+    help: https://docs.docker.com/network/host/
+
+  - uuid: 0977cf2d-6097-45d3-82fa-85432f5e33b0
+    question: What is a limitation of using host networking for communication with legacy systems?
+    answers:
+      - { value: "Port conflicts with other containers or host services", correct: true }
+      - { value: "It prevents access to Docker volumes", correct: false }
+      - { value: "The container loses access to environment variables", correct: false }
+      - { value: "It disables DNS resolution", correct: false }
+    help: https://docs.docker.com/network/host/
+
+  - uuid: b2f33b64-c880-4a58-b5c0-67ee3d2cc186
+    question: Which of the following allows a container to resolve hostnames of legacy services running outside of Docker?
+    answers:
+      - { value: "--add-host flag when starting the container", correct: true }
+      - { value: "Using the `--dns` flag with the container’s IP", correct: false }
+      - { value: "Creating a user-defined overlay network", correct: false }
+      - { value: "Using a shared volume", correct: false }
+    help: https://docs.docker.com/network/bridge/#use--add-host-or--dns
+
+  - uuid: 98fdc4f6-2753-49b3-a33e-5f4dc4227b71
+    question: What is the role of a reverse proxy in connecting containerized apps to legacy systems?
+    answers:
+      - { value: "It routes requests between containers and legacy services, handling protocols or authentication if needed", correct: true }
+      - { value: "It stores container logs securely", correct: false }
+      - { value: "It exposes Docker secrets externally", correct: false }
+      - { value: "It handles Swarm failover events", correct: false }
+    help: https://docs.docker.com/network/proxy/
+
+  - uuid: e74094a3-32f2-4dcf-a89d-84d5891d2c3f
+    question: How can you allow a container to communicate with a legacy system that only allows specific IP ranges?
+    answers:
+      - { value: "Use a static IP assignment or run the container with host networking", correct: true }
+      - { value: "Use dynamic IP allocation via overlay network", correct: false }
+      - { value: "Expose the container on port 80", correct: false }
+      - { value: "Mount a volume from the legacy system", correct: false }
+    help: https://docs.docker.com/network/network-tutorial-host/
+
+  - uuid: 36efbf34-91e6-49fd-9398-3948ae194c2c
+    question: Which practice helps decouple Dockerized applications from legacy systems during a migration process?
+    answers:
+      - { value: "Use API gateways or adapters between the container and the legacy system", correct: true }
+      - { value: "Run the legacy system as a container", correct: false }
+      - { value: "Move the legacy system to the same subnet", correct: false }
+      - { value: "Write data to a shared disk", correct: false }
+    help: https://12factor.net/backing-services
+
+  - uuid: 53eb6a6f-4a6b-4f9d-b7aa-3fc2ce8862a5
+    question: Which of the following would allow two-way communication between a Docker container and a legacy service on the host?
+    answers:
+      - { value: "Use the special hostname `host.docker.internal`", correct: true }
+      - { value: "Enable privileged mode", correct: false }
+      - { value: "Use the --dns flag", correct: false }
+      - { value: "Run both in a shared volume", correct: false }
+    help: https://docs.docker.com/network/host/#use-cases
+
+  - uuid: f71fc1f0-2634-439f-98e3-cd59a3e92fc1
+    question: What Docker networking feature allows secure, encrypted communication between containers and legacy systems across nodes?
+    answers:
+      - { value: "Overlay networks with encryption enabled", correct: true }
+      - { value: "Bridge networks with --expose", correct: false }
+      - { value: "Bind mounts with host-only flag", correct: false }
+      - { value: "Loopback routing", correct: false }
+    help: https://docs.docker.com/network/overlay/#encryption
+
