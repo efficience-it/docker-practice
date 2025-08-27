@@ -1,0 +1,90 @@
+questions:
+  - uuid: a1e6df9b-1307-41ad-84e1-6e1dc4d306fb
+    question: What is the main difference between a container and a service in Docker?
+    answers:
+      - { value: "A container is a single instance, a service manages one or more replicas", correct: true }
+      - { value: "Services can only run on Windows", correct: false }
+      - { value: "Containers are used only in Swarm mode", correct: false }
+      - { value: "Containers require YAML configuration, services do not", correct: false }
+    help: "https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/"
+
+  - uuid: b01525b0-dfd8-48e1-9fd7-0b6fefb27cf2
+    question: Which command converts a standalone container into a replicated service?
+    answers:
+      - { value: "docker service create", correct: true }
+      - { value: "docker container update", correct: false }
+      - { value: "docker stack deploy", correct: false }
+      - { value: "docker swarm init", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/service_create/"
+
+  - uuid: c321f8b2-b45b-4fa4-a61c-17e1d2b5d6a5
+    question: Which option is used with 'docker service create' to specify the number of container replicas?
+    answers:
+      - { value: "--replicas", correct: true }
+      - { value: "--scale", correct: false }
+      - { value: "--instances", correct: false }
+      - { value: "--count", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/service_create/"
+
+  - uuid: 0d9c4864-5c62-4b84-a3a3-0e78dd66d0f6
+    question: What is a reason to prefer a service over a standalone container?
+    answers:
+      - { value: "Services offer automatic recovery and rescheduling", correct: true }
+      - { value: "Containers can only run on a single host", correct: false }
+      - { value: "Only services support environment variables", correct: false }
+      - { value: "Containers require manual networking", correct: false }
+    help: "https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/"
+
+  - uuid: ab9dc9e2-7df4-42b6-b09d-3188f52c3b3a
+    question: Which command would you use to scale a service named 'web' to 4 replicas?
+    answers:
+      - { value: "docker service scale web=4", correct: true }
+      - { value: "docker container scale web=4", correct: false }
+      - { value: "docker run --replicas 4 web", correct: false }
+      - { value: "docker service replicate web 4", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/service_scale/"
+
+  - uuid: 0b7266e1-b44e-41b3-b1b0-91a0e4ed0a7f
+    question: What must be initialized before creating services in Swarm mode?
+    answers:
+      - { value: "The swarm must be initialized with 'docker swarm init'", correct: true }
+      - { value: "The image must be signed", correct: false }
+      - { value: "A YAML file must be created", correct: false }
+      - { value: "Docker Content Trust must be disabled", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/swarm_init/"
+
+  - uuid: 98030582-4b3e-4e89-9911-bfb9e25376e4
+    question: Which of the following is true when comparing `docker run` and `docker service create`?
+    answers:
+      - { value: "`docker run` starts a single container, `docker service create` can start multiple replicas", correct: true }
+      - { value: "`docker service create` supports interactive mode (-it)", correct: false }
+      - { value: "`docker run` is only used for Windows containers", correct: false }
+      - { value: "`docker service create` requires a YAML file", correct: false }
+    help: "https://docs.docker.com/engine/swarm/services/"
+
+  - uuid: ef7fd5a5-34f5-4eec-b255-5bb1b32c0626
+    question: Why would you use a `docker-compose.yml` file with `docker stack deploy` instead of `docker service create`?
+    answers:
+      - { value: "To manage multiple services and configuration in one file", correct: true }
+      - { value: "Because it is required to publish ports", correct: false }
+      - { value: "Because `service create` does not support environment variables", correct: false }
+      - { value: "Because stacks run outside of Swarm mode", correct: false }
+    help: "https://docs.docker.com/engine/reference/commandline/stack_deploy/"
+
+  - uuid: d3fd9b08-74a5-4d8c-967e-c846be63edcf
+    question: What happens if a container created with `docker run` crashes?
+    answers:
+      - { value: "It must be restarted manually unless `--restart` is set", correct: true }
+      - { value: "Swarm will automatically reschedule it", correct: false }
+      - { value: "It automatically becomes a service", correct: false }
+      - { value: "The container will reboot the node", correct: false }
+    help: "https://docs.docker.com/config/containers/start-containers-automatically/"
+
+  - uuid: b95bb72f-54cf-4c3e-b3f5-bdff5f9b3790
+    question: What happens when a task (container in a service) fails in Swarm mode?
+    answers:
+      - { value: "Swarm automatically replaces the failed task", correct: true }
+      - { value: "The service stops permanently", correct: false }
+      - { value: "The node is removed from the swarm", correct: false }
+      - { value: "The service must be restarted manually", correct: false }
+    help: "https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#replicated-and-global-services"

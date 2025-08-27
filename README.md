@@ -3,7 +3,7 @@
 ### Domain 1: Orchestration (25% of exam)
 
 * [Complete the setup of a swarm mode cluster, with managers and worker nodes](data/1_Orchestration/complete_setup_swarm_mode_cluster_managers_worker_nodes.yaml)
-* Describe and demonstrate how to extend the instructions to run individual containers into running services under swarm.
+* [Describe and demonstrate how to extend the instructions to run individual containers into running services under swarm.](data/1_Orchestration/extend_run_containers_to_services.yaml)
 * [Describe the importance of quorum in a swarm cluster.](data/1_Orchestration/describe_importance_quorum_swarm_cluster.yaml)
 * [Describe the difference between running a container and running a service.](data/1_Orchestration/describe_difference_between_running_container_and_service.yaml)
 * [Interpret the output of “docker inspect” commands.](data/1_Orchestration/interpret_output_docker_inspect_commend.yaml)
