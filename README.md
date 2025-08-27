@@ -18,7 +18,7 @@
 * [Describe and demonstrate how to use templates with “docker service create”.](data/1_Orchestration/use_templates_with_service_create.yaml)
 * [Identify the steps needed to troubleshoot a service not deploying.](data/1_Orchestration/troubleshoot_service.yaml)
 * [Describe how a Dockerized application communicates with legacy systems.](data/1_Orchestration/legacy_communication.yaml)
-* Describe how to deploy containerized workloads as Kubernetes pods and deployments.
+* [Describe how to deploy containerized workloads as Kubernetes pods and deployments.](data/1_Orchestration/k8s_pods_deployments.yaml)
 * Describe how to provide configuration to Kubernetes pods using configMaps and secrets.
 
 ### Domain 2: Image Creation, Management, and Registry (20% of exam)
