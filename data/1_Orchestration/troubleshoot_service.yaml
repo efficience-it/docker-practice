@@ -1,0 +1,90 @@
+questions:
+  - uuid: 1c31a263-f738-474c-9d80-847b4ff980b3
+    question: What command can you use to check the state of a service’s tasks?
+    answers:
+      - { value: "docker service ps <service_name>", correct: true }
+      - { value: "docker ps", correct: false }
+      - { value: "docker service inspect", correct: false }
+      - { value: "docker swarm status", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/service_ps/
+
+  - uuid: 52b46d0d-cc6b-4c45-b96f-4b208fd03013
+    question: If a service task shows “Rejected” state repeatedly, what should you check first?
+    answers:
+      - { value: "The container image name and its availability", correct: true }
+      - { value: "The Swarm join token", correct: false }
+      - { value: "The system time on the worker node", correct: false }
+      - { value: "Whether MTLS is enabled", correct: false }
+    help: https://docs.docker.com/engine/swarm/troubleshoot/#troubleshoot-service-issues
+
+  - uuid: 3fbd7e3e-b5ee-4cf4-90ef-26483087f29a
+    question: Which command provides detailed information including environment and mounts for a service?
+    answers:
+      - { value: "docker service inspect <service_name>", correct: true }
+      - { value: "docker container inspect <service_name>", correct: false }
+      - { value: "docker service logs", correct: false }
+      - { value: "docker inspect <task_id>", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/service_inspect/
+
+  - uuid: 0d33b399-00a3-4d7e-aee7-54b60aa5c51c
+    question: Which command helps to view runtime logs of a failing service?
+    answers:
+      - { value: "docker service logs <service_name>", correct: true }
+      - { value: "docker logs <service_name>", correct: false }
+      - { value: "docker stack logs <service_name>", correct: false }
+      - { value: "journalctl -u docker", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/service_logs/
+
+  - uuid: c3f47e65-daa5-48fd-bf2a-4e7fa8778082
+    question: Which status in `docker service ps` indicates the task never started due to a configuration error?
+    answers:
+      - { value: "Rejected", correct: true }
+      - { value: "Shutdown", correct: false }
+      - { value: "Preparing", correct: false }
+      - { value: "Running", correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/#task-states
+
+  - uuid: 60f15284-214c-4d5c-9210-c420ca5f4696
+    question: What should you check if a service is stuck in “Pending” state?
+    answers:
+      - { value: "Node availability or placement constraints", correct: true }
+      - { value: "Image size", correct: false }
+      - { value: "Replica count", correct: false }
+      - { value: "Swarm quorum", correct: false }
+    help: https://docs.docker.com/engine/swarm/troubleshoot/
+
+  - uuid: b23cfc7d-cfd6-4c64-bc6b-7711e20a9517
+    question: Which of the following is NOT helpful in diagnosing why a service isn’t running?
+    answers:
+      - { value: "Checking the Docker Hub stars for the image", correct: true }
+      - { value: "Reviewing `docker service ps` output", correct: false }
+      - { value: "Inspecting the service definition", correct: false }
+      - { value: "Viewing service logs", correct: false }
+    help: https://docs.docker.com/engine/swarm/troubleshoot/
+
+  - uuid: 5ff79c36-92a2-4d00-b3bc-cdf2d8ee43ae
+    question: What option can you add to `docker service create` to avoid issues with unavailable nodes?
+    answers:
+      - { value: "--constraint 'node.role == worker'", correct: true }
+      - { value: "--name unique_service", correct: false }
+      - { value: "--replicas 0", correct: false }
+      - { value: "--network bridge", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/service_create/#--constraint
+
+  - uuid: d7d789a1-e374-4d4f-a0ee-83a0a1e63380
+    question: What can be a cause if a task keeps restarting and failing in a loop?
+    answers:
+      - { value: "CrashLoop due to entrypoint failure or healthcheck failure", correct: true }
+      - { value: "Missing TLS certificates", correct: false }
+      - { value: "Swarm leader is unavailable", correct: false }
+      - { value: "The network driver is set to overlay", correct: false }
+    help: https://docs.docker.com/engine/swarm/troubleshoot/#debug-service-failures
+
+  - uuid: fcf13d7b-418e-498b-8577-3a62be443adb
+    question: What environment setting can help prevent log flooding during service failures?
+    answers:
+      - { value: "Use restart-delay in deploy configuration", correct: true }
+      - { value: "Use log-driver=json-file", correct: false }
+      - { value: "Disable the entrypoint", correct: false }
+      - { value: "Reduce replicas to 0", correct: false }
+    help: https://docs.docker.com/compose/compose-file/compose-file-v3/#restart_policy
