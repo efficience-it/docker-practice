@@ -15,7 +15,7 @@ questions:
       - { value: "The Swarm join token", correct: false }
       - { value: "The system time on the worker node", correct: false }
       - { value: "Whether MTLS is enabled", correct: false }
-    help: https://docs.docker.com/engine/swarm/troubleshoot/#troubleshoot-service-issues
+    help: https://docs.docker.com/engine/daemon/troubleshoot/#troubleshoot-service-issues
 
   - uuid: 3fbd7e3e-b5ee-4cf4-90ef-26483087f29a
     question: Which command provides detailed information including environment and mounts for a service?
@@ -51,7 +51,7 @@ questions:
       - { value: "Image size", correct: false }
       - { value: "Replica count", correct: false }
       - { value: "Swarm quorum", correct: false }
-    help: https://docs.docker.com/engine/swarm/troubleshoot/
+    help: https://docs.docker.com/engine/daemon/troubleshoot/
 
   - uuid: b23cfc7d-cfd6-4c64-bc6b-7711e20a9517
     question: Which of the following is NOT helpful in diagnosing why a service isn’t running?
@@ -60,7 +60,7 @@ questions:
       - { value: "Reviewing `docker service ps` output", correct: false }
       - { value: "Inspecting the service definition", correct: false }
       - { value: "Viewing service logs", correct: false }
-    help: https://docs.docker.com/engine/swarm/troubleshoot/
+    help: https://docs.docker.com/engine/daemon/troubleshoot/
 
   - uuid: 5ff79c36-92a2-4d00-b3bc-cdf2d8ee43ae
     question: What option can you add to `docker service create` to avoid issues with unavailable nodes?
@@ -78,7 +78,7 @@ questions:
       - { value: "Missing TLS certificates", correct: false }
       - { value: "Swarm leader is unavailable", correct: false }
       - { value: "The network driver is set to overlay", correct: false }
-    help: https://docs.docker.com/engine/swarm/troubleshoot/#debug-service-failures
+    help: https://docs.docker.com/engine/daemon/troubleshoot/#debug-service-failures
 
   - uuid: fcf13d7b-418e-498b-8577-3a62be443adb
     question: What environment setting can help prevent log flooding during service failures?
