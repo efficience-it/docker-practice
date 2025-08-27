@@ -2,97 +2,97 @@ questions:
   - uuid: e3c6e221-6230-49c6-8c96-c626313df321
     question: Which Dockerfile instruction allows conditional execution by leveraging build arguments?
     answers:
-      - { value: 'ARG', correct: true }
-      - { value: 'ENV', correct: false }
-      - { value: 'CMD', correct: false }
-      - { value: 'LABEL', correct: false }
+      - { value: "ARG", correct: true }
+      - { value: "ENV", correct: false }
+      - { value: "CMD", correct: false }
+      - { value: "LABEL", correct: false }
     help: https://docs.docker.com/engine/reference/builder/#arg
 
   - uuid: 3dc09cd3-1a31-4bd4-8267-b4fcdd7a96e1
     question: What happens when multiple ENV instructions are used in a Dockerfile?
     answers:
-      - { value: 'Each ENV instruction creates a new layer and persists environment variables', correct: true }
-      - { value: 'Only the last ENV instruction is preserved', correct: false }
-      - { value: 'ENV cannot be used more than once', correct: false }
-      - { value: 'Variables set earlier are reset', correct: false }
+      - { value: "Each ENV instruction creates a new layer and persists environment variables", correct: true }
+      - { value: "Only the last ENV instruction is preserved", correct: false }
+      - { value: "ENV cannot be used more than once", correct: false }
+      - { value: "Variables set earlier are reset", correct: false }
     help: https://docs.docker.com/engine/reference/builder/#env
 
   - uuid: ccc29520-d0aa-4f97-982e-2095cb9794dc
     question: What is the function of the SHELL instruction in a Dockerfile?
     answers:
-      - { value: 'It defines the default shell to use for RUN instructions', correct: true }
-      - { value: 'It launches a shell session inside the container', correct: false }
-      - { value: 'It is used to execute CMD commands', correct: false }
-      - { value: 'It changes the base image shell', correct: false }
+      - { value: "It defines the default shell to use for RUN instructions", correct: true }
+      - { value: "It launches a shell session inside the container", correct: false }
+      - { value: "It is used to execute CMD commands", correct: false }
+      - { value: "It changes the base image shell", correct: false }
     help: https://docs.docker.com/engine/reference/builder/#shell
 
   - uuid: a6633557-3d18-4a80-8c6c-2ce3f4101d58
     question: Which instruction is used to document metadata about the image?
     answers:
-      - { value: 'LABEL', correct: true }
-      - { value: 'ENV', correct: false }
-      - { value: 'EXPOSE', correct: false }
-      - { value: 'ARG', correct: false }
+      - { value: "LABEL", correct: true }
+      - { value: "ENV", correct: false }
+      - { value: "EXPOSE", correct: false }
+      - { value: "ARG", correct: false }
     help: https://docs.docker.com/engine/reference/builder/#label
 
   - uuid: 67c13770-2fa6-4fc5-bf10-8dd7f0719f1f
     question: In which Dockerfile instruction would you define a non-cached value during build time?
     answers:
-      - { value: 'ARG', correct: true }
-      - { value: 'ENV', correct: false }
-      - { value: 'RUN', correct: false }
-      - { value: 'VOLUME', correct: false }
+      - { value: "ARG", correct: true }
+      - { value: "ENV", correct: false }
+      - { value: "RUN", correct: false }
+      - { value: "VOLUME", correct: false }
     help: https://docs.docker.com/engine/reference/builder/#arg
 
   - uuid: 58f30ff7-8005-4eb2-98f2-207a37d8c9f1
     question: Which instruction in a Dockerfile does not produce a layer in the image?
     answers:
-      - { value: 'ARG', correct: true }
-      - { value: 'RUN', correct: false }
-      - { value: 'ENV', correct: false }
-      - { value: 'COPY', correct: false }
+      - { value: "ARG", correct: true }
+      - { value: "RUN", correct: false }
+      - { value: "ENV", correct: false }
+      - { value: "COPY", correct: false }
     help: https://docs.docker.com/engine/reference/builder/#arg
 
   - uuid: 80b7a1d5-bd9b-4ae7-9bd4-b77aeb314eb1
     question: What is the impact of layer ordering in Dockerfile instructions?
     answers:
-      - { value: 'Changing earlier instructions invalidates all subsequent layers', correct: true }
-      - { value: 'Docker always rebuilds from scratch regardless of changes', correct: false }
-      - { value: 'Only COPY and ADD affect layer cache', correct: false }
-      - { value: 'The order of layers is optimized automatically', correct: false }
+      - { value: "Changing earlier instructions invalidates all subsequent layers", correct: true }
+      - { value: "Docker always rebuilds from scratch regardless of changes", correct: false }
+      - { value: "Only COPY and ADD affect layer cache", correct: false }
+      - { value: "The order of layers is optimized automatically", correct: false }
     help: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#leverage-build-cache
 
   - uuid: 4e3dc9c7-d59f-4291-925f-31823c4988b0
     question: What does VOLUME in a Dockerfile do?
     answers:
-      - { value: 'Informs Docker that the specified path should be persisted and possibly shared', correct: true }
-      - { value: 'Mounts the host directory into the image at build time', correct: false }
-      - { value: 'Creates a read-only directory', correct: false }
-      - { value: 'Automatically mounts the volume on all containers', correct: false }
+      - { value: "Informs Docker that the specified path should be persisted and possibly shared", correct: true }
+      - { value: "Mounts the host directory into the image at build time", correct: false }
+      - { value: "Creates a read-only directory", correct: false }
+      - { value: "Automatically mounts the volume on all containers", correct: false }
     help: https://docs.docker.com/engine/reference/builder/#volume
 
   - uuid: ae0e5e55-4745-47c5-b6b8-feb2726d1d13
     question: What happens if multiple WORKDIR instructions are used?
     answers:
-      - { value: 'Each subsequent WORKDIR is relative to the previous one if not absolute', correct: true }
-      - { value: 'Only the last WORKDIR is used during the build', correct: false }
-      - { value: 'WORKDIR must be unique in the Dockerfile', correct: false }
-      - { value: 'Docker throws an error if WORKDIR is redefined', correct: false }
+      - { value: "Each subsequent WORKDIR is relative to the previous one if not absolute", correct: true }
+      - { value: "Only the last WORKDIR is used during the build", correct: false }
+      - { value: "WORKDIR must be unique in the Dockerfile", correct: false }
+      - { value: "Docker throws an error if WORKDIR is redefined", correct: false }
     help: https://docs.docker.com/engine/reference/builder/#workdir
 
   - uuid: 65d7644f-e2b5-4602-bf08-25f4df38e34f
     question: What is a best practice when writing RUN instructions?
     answers:
-      - { value: 'Chain commands using && to minimize layers', correct: true }
-      - { value: 'Use multiple RUN instructions for clarity', correct: false }
-      - { value: 'RUN should be avoided in favor of CMD', correct: false }
-      - { value: 'Each RUN should install only one package', correct: false }
+      - { value: "Chain commands using && to minimize layers", correct: true }
+      - { value: "Use multiple RUN instructions for clarity", correct: false }
+      - { value: "RUN should be avoided in favor of CMD", correct: false }
+      - { value: "Each RUN should install only one package", correct: false }
     help: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
   - uuid: 9e553a15-41f6-4f91-a930-58cf52d1a0a6
     question: What is the main role of the `.dockerignore` file during a Docker build?
     answers:
-      - { value: 'To exclude files from the build context before sending it to the Docker daemon', correct: true }
-      - { value: 'To prevent Docker from caching image layers', correct: false }
-      - { value: 'To configure environment variables used in the Dockerfile', correct: false }
-      - { value: 'To define multi-stage build targets', correct: false }
+      - { value: "To exclude files from the build context before sending it to the Docker daemon", correct: true }
+      - { value: "To prevent Docker from caching image layers", correct: false }
+      - { value: "To configure environment variables used in the Dockerfile", correct: false }
+      - { value: "To define multi-stage build targets", correct: false }
     help: https://docs.docker.com/engine/reference/builder/#dockerignore-file

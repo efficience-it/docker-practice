@@ -2,37 +2,37 @@ questions:
   - uuid: 0e51f02d-00e1-47dc-9184-c07b73e9e0b6
     question: Which Docker command lists all images along with their size and creation time?
     answers:
-      - { value: 'docker images', correct: true }
-      - { value: 'docker image history', correct: false }
-      - { value: 'docker inspect', correct: false }
-      - { value: 'docker ls', correct: false }
+      - { value: "docker images", correct: true }
+      - { value: "docker image history", correct: false }
+      - { value: "docker inspect", correct: false }
+      - { value: "docker ls", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/
 
   - uuid: 24020e62-804b-4bb8-9992-908a3c7e090c
     question: Which option would you use to list all images, including intermediate ones?
     answers:
-      - { value: '--all', correct: true }
-      - { value: '--digests', correct: false }
-      - { value: '--no-trunc', correct: false }
-      - { value: '--verbose', correct: false }
+      - { value: "--all", correct: true }
+      - { value: "--digests", correct: false }
+      - { value: "--no-trunc", correct: false }
+      - { value: "--verbose", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/
 
   - uuid: 9a2b6c0c-3f82-4fcf-92b4-7f3b3241b78d
     question: What does the `--digests` flag show when used with `docker image ls`?
     answers:
-      - { value: 'Content-addressable identifiers (SHA digests)', correct: true }
-      - { value: 'Total image size on disk', correct: false }
-      - { value: 'Layer count per image', correct: false }
-      - { value: 'Image build logs', correct: false }
+      - { value: "Content-addressable identifiers (SHA digests)", correct: true }
+      - { value: "Total image size on disk", correct: false }
+      - { value: "Layer count per image", correct: false }
+      - { value: "Image build logs", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/
 
   - uuid: c4dcd1a3-2e52-41f2-b1b1-b2eb20861a5e
     question: What placeholder should you use with `--format` to display the image repository?
     answers:
-      - { value: '.Repository', correct: true }
-      - { value: '.Tag', correct: false }
-      - { value: '.Image', correct: false }
-      - { value: '.Name', correct: false }
+      - { value: ".Repository", correct: true }
+      - { value: ".Tag", correct: false }
+      - { value: ".Image", correct: false }
+      - { value: ".Name", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/
 
   - uuid: b0a18a67-7c4e-44cf-869d-393f6aa3a239
@@ -45,89 +45,89 @@ questions:
   - uuid: e54ad2de-5be4-4385-944b-d0c991d3f88e
     question: What does the `--format` flag allow in `docker images`?
     answers:
-        - { value: 'Custom output using Go templates', correct: true }
-        - { value: 'Binary output for API usage', correct: false }
-        - { value: 'Compression of image layers', correct: false }
-        - { value: 'Filtering by tag', correct: false }
+        - { value: "Custom output using Go templates", correct: true }
+        - { value: "Binary output for API usage", correct: false }
+        - { value: "Compression of image layers", correct: false }
+        - { value: "Filtering by tag", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/#format-the-output---format
 
   - uuid: d9e7e73c-c8f3-46cc-b6c0-734a53b939fc
     question: Which Go template variable shows the image’s tag?
     answers:
-      - { value: '.Tag', correct: true }
-      - { value: '.Tags', correct: false }
-      - { value: '.RepositoryTag', correct: false }
-      - { value: '.Label', correct: false }
+      - { value: ".Tag", correct: true }
+      - { value: ".Tags", correct: false }
+      - { value: ".RepositoryTag", correct: false }
+      - { value: ".Label", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/#format-the-output---format
 
   - uuid: 67917938-64c5-4a76-9152-871db7e60db8
     question: What does the `--digests` flag show in `docker images`?
     answers:
-      - { value: 'Content-addressable image identifiers', correct: true }
-      - { value: 'All intermediate layers', correct: false }
-      - { value: 'Image file system structure', correct: false }
-      - { value: 'Untagged containers', correct: false }
+      - { value: "Content-addressable image identifiers", correct: true }
+      - { value: "All intermediate layers", correct: false }
+      - { value: "Image file system structure", correct: false }
+      - { value: "Untagged containers", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/#list-image-digests---digests
 
   - uuid: 4622a734-8c7e-4f91-bd8a-55e7fd31c43e
     question: How can you list untagged (dangling) images?
     answers:
-      - { value: 'docker images --filter dangling=true', correct: true }
-      - { value: 'docker images --no-tag', correct: false }
-      - { value: 'docker list --untagged', correct: false }
-      - { value: 'docker image ls --null-tags', correct: false }
+      - { value: "docker images --filter dangling=true", correct: true }
+      - { value: "docker images --no-tag", correct: false }
+      - { value: "docker list --untagged", correct: false }
+      - { value: "docker image ls --null-tags", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/#show-untagged-images-dangling
 
   - uuid: 1d489cd9-31c5-4264-93cd-0b300d2bfa92
     question: How can you output `docker images` results in JSON format?
     answers:
-      - { value: 'docker images --format json', correct: true }
-      - { value: 'docker images --output=json', correct: false }
-      - { value: 'docker inspect --json images', correct: false }
-      - { value: 'docker image ls --json', correct: false }
+      - { value: "docker images --format json", correct: true }
+      - { value: "docker images --output=json", correct: false }
+      - { value: "docker inspect --json images", correct: false }
+      - { value: "docker image ls --json", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/#format-the-output---format
 
   - uuid: 87721cd7-d13a-40c2-b4a3-1c21e962f1cf
     question: Which flag in `docker images` prevents shortening of image IDs?
     answers:
-      - { value: '--no-trunc', correct: true }
-      - { value: '--full-id', correct: false }
-      - { value: '--verbose', correct: false }
-      - { value: '--extended', correct: false }
+      - { value: "--no-trunc", correct: true }
+      - { value: "--full-id", correct: false }
+      - { value: "--verbose", correct: false }
+      - { value: "--extended", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/#list-the-full-length-image-ids---no-trunc
 
   - uuid: 1fe9c007-5c7e-4f2f-9c55-9a942d74efec
     question: What is the result of `docker images alpine:latest`?
     answers:
-      - { value: 'Lists only the alpine image with tag latest', correct: true }
-      - { value: 'Lists all alpine tags', correct: false }
-      - { value: 'Displays all images created after alpine', correct: false }
-      - { value: 'Shows untagged alpine images', correct: false }
+      - { value: "Lists only the alpine image with tag latest", correct: true }
+      - { value: "Lists all alpine tags", correct: false }
+      - { value: "Displays all images created after alpine", correct: false }
+      - { value: "Shows untagged alpine images", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/#list-images-by-name-and-tag
 
   - uuid: b963e979-9975-4de0-bf3b-3ac93d537029
     question: What filter lists only images created before `ubuntu:20.04`?
     answers:
-      - { value: '--filter before=ubuntu:20.04', correct: true }
-      - { value: '--filter created<ubuntu:20.04', correct: false }
-      - { value: '--filter earlier=ubuntu:20.04', correct: false }
-      - { value: '--before ubuntu:20.04', correct: false }
+      - { value: "--filter before=ubuntu:20.04", correct: true }
+      - { value: "--filter created<ubuntu:20.04", correct: false }
+      - { value: "--filter earlier=ubuntu:20.04", correct: false }
+      - { value: "--before ubuntu:20.04", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/#filter-images-by-time
 
   - uuid: 85c92a25-fdb0-4f47-8f08-09975e05aeef
     question: Which filter will select images with label `env=prod`?
     answers:
-      - { value: '--filter label=env=prod', correct: true }
-      - { value: '--label filter=env=prod', correct: false }
-      - { value: '--env prod', correct: false }
-      - { value: '--filter env=prod', correct: false }
+      - { value: "--filter label=env=prod", correct: true }
+      - { value: "--label filter=env=prod", correct: false }
+      - { value: "--env prod", correct: false }
+      - { value: "--filter env=prod", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/#show-images-with-a-given-label
 
   - uuid: 34e63460-e69c-4e71-961f-726a42a1e4e2
     question: Which `--format` template displays repository and tag as a table?
     answers:
-      - { value: 'table {{.Repository}}\t{{.Tag}}', correct: true }
-      - { value: 'table {{.Name}}\t{{.Tag}}', correct: false }
-      - { value: 'table {{.Tag}}\t{{.Repository}}', correct: false }
-      - { value: '{{.Repository}}:{{.Tag}}', correct: false }
+      - { value: "table {{.Repository}}\t{{.Tag}}", correct: true }
+      - { value: "table {{.Name}}\t{{.Tag}}", correct: false }
+      - { value: "table {{.Tag}}\t{{.Repository}}", correct: false }
+      - { value: "{{.Repository}}:{{.Tag}}", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/#format-the-output---format

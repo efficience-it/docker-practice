@@ -1,103 +1,99 @@
-# Domaine 2: Image Creation, Management, and Registry
-# Sujet : Describe and demonstrate registry functions
-# Source(s) vérifiées au 25 juillet 2025
-
 questions:
   - uuid: 4f4b2dfc-9c32-4fc3-a377-efc45d2b0121
     question: What is the purpose of a container registry?
     answers:
-      - { value: 'To store and distribute Docker images', correct: true }
-      - { value: 'To schedule services across a Swarm cluster', correct: false }
-      - { value: 'To provide metrics for containers', correct: false }
-      - { value: 'To run CI pipelines', correct: false }
+      - { value: "To store and distribute Docker images", correct: true }
+      - { value: "To schedule services across a Swarm cluster", correct: false }
+      - { value: "To provide metrics for containers", correct: false }
+      - { value: "To run CI pipelines", correct: false }
     help: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-registry/
 
   - uuid: 6bb2bb6f-650e-4f13-b7b7-35f2a7e5dc96
     question: Which command pushes an image to a registry?
     answers:
-      - { value: 'docker push myimage:latest', correct: true }
-      - { value: 'docker upload myimage', correct: false }
-      - { value: 'docker publish myimage', correct: false }
-      - { value: 'docker send myimage', correct: false }
+      - { value: "docker push myimage:latest", correct: true }
+      - { value: "docker upload myimage", correct: false }
+      - { value: "docker publish myimage", correct: false }
+      - { value: "docker send myimage", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/
 
   - uuid: b3c10a9a-12d5-41c4-8a13-bbe3ea61a3ea
     question: What must you do before pushing an image to Docker Hub?
     answers:
-      - { value: 'Tag the image with the registry and repository name', correct: true }
-      - { value: 'Delete all containers', correct: false }
-      - { value: 'Restart the Docker daemon', correct: false }
-      - { value: 'Change network mode', correct: false }
+      - { value: "Tag the image with the registry and repository name", correct: true }
+      - { value: "Delete all containers", correct: false }
+      - { value: "Restart the Docker daemon", correct: false }
+      - { value: "Change network mode", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/tag/
 
   - uuid: 2b1f0f25-1c4a-4347-8e88-01d7e832b963
     question: What does the `docker login` command do?
     answers:
-      - { value: 'Authenticates to a registry', correct: true }
-      - { value: 'Publishes a container port', correct: false }
-      - { value: 'Logs into a running container', correct: false }
-      - { value: 'Launches a container with credentials', correct: false }
+      - { value: "Authenticates to a registry", correct: true }
+      - { value: "Publishes a container port", correct: false }
+      - { value: "Logs into a running container", correct: false }
+      - { value: "Launches a container with credentials", correct: false }
     help: https://docs.docker.com/reference/cli/docker/login/
 
   - uuid: f1b239f2-5354-4995-a21e-b6f3d5c59a63
     question: What is the default registry used when pushing an unqualified image name?
     answers:
-      - { value: 'Docker Hub (docker.io)', correct: true }
-      - { value: 'Quay', correct: false }
-      - { value: 'GitHub Container Registry', correct: false }
-      - { value: 'Your local registry', correct: false }
+      - { value: "Docker Hub (docker.io)", correct: true }
+      - { value: "Quay", correct: false }
+      - { value: "GitHub Container Registry", correct: false }
+      - { value: "Your local registry", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#default-behavior
 
   - uuid: 27efca82-7d3a-4be0-a60d-dc4979c31f58
     question: How can you search for an image on Docker Hub from the CLI?
     answers:
-      - { value: 'docker search nginx', correct: true }
-      - { value: 'docker list nginx', correct: false }
-      - { value: 'docker discover nginx', correct: false }
-      - { value: 'docker query nginx', correct: false }
+      - { value: "docker search nginx", correct: true }
+      - { value: "docker list nginx", correct: false }
+      - { value: "docker discover nginx", correct: false }
+      - { value: "docker query nginx", correct: false }
     help: https://docs.docker.com/reference/cli/docker/search/
 
   - uuid: 60cb93f5-188e-4cf4-9e7b-04293062f019
     question: What file allows you to run your own Docker registry locally?
     answers:
-      - { value: 'registry:2 image in a docker-compose file', correct: true }
-      - { value: 'A Dockerfile with `FROM registry`', correct: false }
-      - { value: 'A YAML Compose with alpine', correct: false }
-      - { value: 'A config.json in ~/.docker', correct: false }
+      - { value: "registry:2 image in a docker-compose file", correct: true }
+      - { value: "A Dockerfile with `FROM registry`", correct: false }
+      - { value: "A YAML Compose with alpine", correct: false }
+      - { value: "A config.json in ~/.docker", correct: false }
     help: https://docs.docker.com/registry/deploying/
 
   - uuid: d6ebc119-9334-44e0-b49f-76a0ee29f2fa
     question: What environment variable can be used to set a registry credential for non-interactive login?
     answers:
-      - { value: 'DOCKER_PASSWORD', correct: true }
-      - { value: 'DOCKER_AUTH_TOKEN', correct: false }
-      - { value: 'REGISTRY_SECRET', correct: false }
-      - { value: 'AUTH_PASSWORD', correct: false }
+      - { value: "DOCKER_PASSWORD", correct: true }
+      - { value: "DOCKER_AUTH_TOKEN", correct: false }
+      - { value: "REGISTRY_SECRET", correct: false }
+      - { value: "AUTH_PASSWORD", correct: false }
     help: https://docs.docker.com/reference/cli/docker/login/#credentials-store
 
   - uuid: 7dc77e83-04f6-48df-9313-91b857d0e5c7
     question: What is the role of a registry namespace (like `username/imagename`)?
     answers:
-      - { value: 'It scopes images per user or org in the registry', correct: true }
-      - { value: 'It encrypts image layers', correct: false }
-      - { value: 'It defines port mapping', correct: false }
-      - { value: 'It stores image logs', correct: false }
+      - { value: "It scopes images per user or org in the registry", correct: true }
+      - { value: "It encrypts image layers", correct: false }
+      - { value: "It defines port mapping", correct: false }
+      - { value: "It stores image logs", correct: false }
     help: https://docs.docker.com/docker-hub/repos/#repository-namespaces-and-repository-visibility
 
   - uuid: 34719f42-0321-4d5f-b5c2-0b1d676eb3f7
     question: Which of the following can be used to deploy a private registry securely?
     answers:
-      - { value: 'Enable TLS and use authentication plugins', correct: true }
-      - { value: 'Disable login requirements', correct: false }
-      - { value: 'Bind to 0.0.0.0 without TLS', correct: false }
-      - { value: 'Share image metadata publicly', correct: false }
+      - { value: "Enable TLS and use authentication plugins", correct: true }
+      - { value: "Disable login requirements", correct: false }
+      - { value: "Bind to 0.0.0.0 without TLS", correct: false }
+      - { value: "Share image metadata publicly", correct: false }
     help: https://docs.docker.com/registry/deploying/#run-a-local-registry
 
   - uuid: 5a74cb47-217b-4a87-83b7-00d57a21aaf9
     question: What command shows the list of image repositories in your local Docker engine?
     answers:
-      - { value: 'docker images', correct: true }
-      - { value: 'docker search', correct: false }
-      - { value: 'docker ps -a', correct: false }
-      - { value: 'docker rmi', correct: false }
+      - { value: "docker images", correct: true }
+      - { value: "docker search", correct: false }
+      - { value: "docker ps -a", correct: false }
+      - { value: "docker rmi", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/

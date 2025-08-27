@@ -2,107 +2,107 @@ questions:
   - uuid: 30b80d87-1cd4-48b7-8260-2f6f9f22806f
     question: What is the purpose of signing a Docker image?
     answers:
-      - { value: 'To verify the authenticity and integrity of the image', correct: true }
-      - { value: 'To compress the image layers before pushing', correct: false }
-      - { value: 'To encrypt the image before upload', correct: false }
-      - { value: 'To store the image in an offline registry', correct: false }
+      - { value: "To verify the authenticity and integrity of the image", correct: true }
+      - { value: "To compress the image layers before pushing", correct: false }
+      - { value: "To encrypt the image before upload", correct: false }
+      - { value: "To store the image in an offline registry", correct: false }
     help: https://docs.docker.com/engine/security/trust/
 
   - uuid: ffa6b401-d9f7-497e-b170-1cdd78e2d2e1
     question: Which Docker feature enables image signing?
     answers:
-      - { value: 'Docker Content Trust (DCT)', correct: true }
-      - { value: 'Docker Safe Mode', correct: false }
-      - { value: 'Docker TLS Encryption', correct: false }
-      - { value: 'Docker Daemon Lock', correct: false }
+      - { value: "Docker Content Trust (DCT)", correct: true }
+      - { value: "Docker Safe Mode", correct: false }
+      - { value: "Docker TLS Encryption", correct: false }
+      - { value: "Docker Daemon Lock", correct: false }
     help: https://docs.docker.com/engine/security/trust/
 
   - uuid: 2a8aa1e9-3c91-48f2-9643-9791bbeb58e6
     question: Which environment variable must be set to enable Docker Content Trust?
     answers:
-      - { value: 'DOCKER_CONTENT_TRUST=1', correct: true }
-      - { value: 'DOCKER_SIGN_IMAGES=true', correct: false }
-      - { value: 'ENABLE_IMAGE_SIGNATURES=1', correct: false }
-      - { value: 'DCT_ENABLE=true', correct: false }
+      - { value: "DOCKER_CONTENT_TRUST=1", correct: true }
+      - { value: "DOCKER_SIGN_IMAGES=true", correct: false }
+      - { value: "ENABLE_IMAGE_SIGNATURES=1", correct: false }
+      - { value: "DCT_ENABLE=true", correct: false }
     help: https://docs.docker.com/engine/security/trust/content_trust/
 
   - uuid: dcf2b2e3-2e45-440c-bec3-5e51be6a2112
     question: What happens when `DOCKER_CONTENT_TRUST=1` is enabled?
     answers:
-      - { value: 'Push and pull operations will only succeed if the image is signed', correct: true }
-      - { value: 'Docker will generate a checksum for each image', correct: false }
-      - { value: 'All images will be pushed to a Notary registry', correct: false }
-      - { value: 'The daemon stores credentials in plaintext', correct: false }
+      - { value: "Push and pull operations will only succeed if the image is signed", correct: true }
+      - { value: "Docker will generate a checksum for each image", correct: false }
+      - { value: "All images will be pushed to a Notary registry", correct: false }
+      - { value: "The daemon stores credentials in plaintext", correct: false }
     help: https://docs.docker.com/engine/security/trust/content_trust/
 
   - uuid: 5906c6a5-94c0-4dc3-b287-81b72f96a6e7
     question: What tool is used behind the scenes by Docker to manage image signatures?
     answers:
-      - { value: 'Notary', correct: true }
-      - { value: 'Vault', correct: false }
-      - { value: 'GPG', correct: false }
-      - { value: 'HashiSign', correct: false }
+      - { value: "Notary", correct: true }
+      - { value: "Vault", correct: false }
+      - { value: "GPG", correct: false }
+      - { value: "HashiSign", correct: false }
     help: https://github.com/notaryproject/notary#using-notary
 
   - uuid: 741a8e0a-d685-464a-a678-57d571c3d2cc
     question: Which keys are involved in the Docker Content Trust system?
     answers:
-      - { value: 'Root key and repository key', correct: true }
-      - { value: 'TLS key and encryption key', correct: false }
-      - { value: 'Public key and token key', correct: false }
-      - { value: 'Docker Hub key and system key', correct: false }
+      - { value: "Root key and repository key", correct: true }
+      - { value: "TLS key and encryption key", correct: false }
+      - { value: "Public key and token key", correct: false }
+      - { value: "Docker Hub key and system key", correct: false }
     help: https://docs.docker.com/engine/security/trust/trust_delegation/
 
   - uuid: 87920cd7-34f4-49a8-92bc-1270a49fa2df
     question: Which command pushes a signed image to a registry?
     answers:
-      - { value: 'docker push imagename', correct: true }
-      - { value: 'docker push --sign imagename', correct: false }
-      - { value: 'docker push --secure imagename', correct: false }
-      - { value: 'docker push --trust imagename', correct: false }
+      - { value: "docker push imagename", correct: true }
+      - { value: "docker push --sign imagename", correct: false }
+      - { value: "docker push --secure imagename", correct: false }
+      - { value: "docker push --trust imagename", correct: false }
     help: https://docs.docker.com/engine/security/trust/content_trust/#push-trusted-content
 
   - uuid: 32573e45-26c1-4a8b-b90e-3dc0679fe62a
     question: What happens if you try to pull an unsigned image with DCT enabled?
     answers:
-      - { value: 'The pull fails with an error', correct: true }
-      - { value: 'Docker signs the image automatically', correct: false }
-      - { value: 'The image is pulled in read-only mode', correct: false }
-      - { value: 'Docker ignores the trust setting', correct: false }
+      - { value: "The pull fails with an error", correct: true }
+      - { value: "Docker signs the image automatically", correct: false }
+      - { value: "The image is pulled in read-only mode", correct: false }
+      - { value: "Docker ignores the trust setting", correct: false }
     help: https://docs.docker.com/engine/security/trust/content_trust/#pull-trusted-content
 
   - uuid: efafc192-788f-43f2-9ae6-540ae9d07cf8
     question: What is the best practice for managing root keys in Docker Content Trust?
     answers:
-      - { value: 'Store them offline', correct: true }
-      - { value: 'Push them to Docker Hub', correct: false }
-      - { value: 'Share with your team', correct: false }
-      - { value: 'Encrypt them using base64', correct: false }
+      - { value: "Store them offline", correct: true }
+      - { value: "Push them to Docker Hub", correct: false }
+      - { value: "Share with your team", correct: false }
+      - { value: "Encrypt them using base64", correct: false }
     help: https://docs.docker.com/engine/security/trust/trust_delegation/
 
   - uuid: 3493871e-6fc6-4f14-91aa-99b48b4f4cf2
     question: Which command can be used to list signed tags?
     answers:
-      - { value: 'docker trust inspect --pretty imagename', correct: true }
-      - { value: 'docker image inspect imagename --signatures', correct: false }
-      - { value: 'docker trust list imagename', correct: false }
-      - { value: 'docker tag --trusted imagename', correct: false }
+      - { value: "docker trust inspect --pretty imagename", correct: true }
+      - { value: "docker image inspect imagename --signatures", correct: false }
+      - { value: "docker trust list imagename", correct: false }
+      - { value: "docker tag --trusted imagename", correct: false }
     help: https://docs.docker.com/engine/security/trust/trust_delegation/#view-signed-images
 
   - uuid: 97f8f65a-3df1-4ab5-95c9-c5d146dfbd91
     question: What is the purpose of delegating signing responsibilities in Docker Content Trust?
     answers:
-      - { value: 'To allow other team members to sign images without access to the root key', correct: true }
-      - { value: 'To allow image scanning before signing', correct: false }
-      - { value: 'To rotate TLS certificates', correct: false }
-      - { value: 'To publish to multiple registries', correct: false }
+      - { value: "To allow other team members to sign images without access to the root key", correct: true }
+      - { value: "To allow image scanning before signing", correct: false }
+      - { value: "To rotate TLS certificates", correct: false }
+      - { value: "To publish to multiple registries", correct: false }
     help: https://docs.docker.com/engine/security/trust/trust_delegation/
 
   - uuid: 5d5d9700-80c2-4ab1-814c-6542eaad50cb
     question: Which flag disables image signing temporarily for a push?
     answers:
-      - { value: '--disable-content-trust', correct: true }
-      - { value: '--unsigned', correct: false }
-      - { value: '--skip-sign', correct: false }
-      - { value: '--no-sign', correct: false }
+      - { value: "--disable-content-trust", correct: true }
+      - { value: "--unsigned", correct: false }
+      - { value: "--skip-sign", correct: false }
+      - { value: "--no-sign", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#options
