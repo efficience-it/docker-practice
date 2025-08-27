@@ -2,89 +2,89 @@ questions:
   - uuid: e83db8f3-44c6-46df-b963-16c74b9e0e2e
     question: What is the purpose of Docker Content Trust (DCT)?
     answers:
-      - { value: 'To ensure that images are signed and verified before being used', correct: true }
-      - { value: 'To scan images for malware', correct: false }
-      - { value: 'To encrypt Docker images', correct: false }
-      - { value: 'To enforce runtime security profiles', correct: false }
-    help: 'https://docs.docker.com/engine/security/trust/content_trust/'
+      - { value: "To ensure that images are signed and verified before being used", correct: true }
+      - { value: "To scan images for malware", correct: false }
+      - { value: "To encrypt Docker images", correct: false }
+      - { value: "To enforce runtime security profiles", correct: false }
+    help: "https://docs.docker.com/engine/security/trust/content_trust/"
 
   - uuid: c3b9b71e-133f-4d5d-85b5-800dd3281bd2
     question: How do you enable Docker Content Trust for a single command?
     answers:
-      - { value: 'Set the DCT environment variable: `DOCKER_CONTENT_TRUST=1`', correct: true }
-      - { value: 'Add --secure=true to the Docker CLI', correct: false }
-      - { value: 'Enable it from the Docker Dashboard', correct: false }
-      - { value: 'Run `docker trust enable`', correct: false }
-    help: 'https://docs.docker.com/engine/security/trust/content_trust/#enabling-docker-content-trust'
+      - { value: "Set the DCT environment variable: `DOCKER_CONTENT_TRUST=1`", correct: true }
+      - { value: "Add --secure=true to the Docker CLI", correct: false }
+      - { value: "Enable it from the Docker Dashboard", correct: false }
+      - { value: "Run `docker trust enable`", correct: false }
+    help: "https://docs.docker.com/engine/security/trust/content_trust/#enabling-docker-content-trust"
 
   - uuid: 5a78b346-c49e-40a4-a682-5a7f5fbd49e2
     question: What happens when Docker Content Trust is enabled and you try to pull an unsigned image?
     answers:
-      - { value: 'The pull is blocked and an error is returned', correct: true }
-      - { value: 'The image is pulled but marked as unverified', correct: false }
-      - { value: 'The image is signed automatically', correct: false }
-      - { value: 'The image is pulled in read-only mode', correct: false }
-    help: 'https://docs.docker.com/engine/security/trust/content_trust/#pulling-signed-images'
+      - { value: "The pull is blocked and an error is returned", correct: true }
+      - { value: "The image is pulled but marked as unverified", correct: false }
+      - { value: "The image is signed automatically", correct: false }
+      - { value: "The image is pulled in read-only mode", correct: false }
+    help: "https://docs.docker.com/engine/security/trust/content_trust/#pulling-signed-images"
 
   - uuid: 3a392593-9ae8-4b14-9264-b6f6db06d0b1
     question: Which environment variable must be set to enforce Docker Content Trust globally?
     answers:
-      - { value: 'DOCKER_CONTENT_TRUST=1', correct: true }
-      - { value: 'ENABLE_TRUST=1', correct: false }
-      - { value: 'DOCKER_TRUSTED=1', correct: false }
-      - { value: 'DCT_ENABLED=true', correct: false }
-    help: 'https://docs.docker.com/engine/security/trust/content_trust/#enabling-docker-content-trust'
+      - { value: "DOCKER_CONTENT_TRUST=1", correct: true }
+      - { value: "ENABLE_TRUST=1", correct: false }
+      - { value: "DOCKER_TRUSTED=1", correct: false }
+      - { value: "DCT_ENABLED=true", correct: false }
+    help: "https://docs.docker.com/engine/security/trust/content_trust/#enabling-docker-content-trust"
 
   - uuid: e2a0b3e3-bcb8-45b2-a1b6-7e77d28f85eb
     question: What is required to sign an image with Docker Content Trust?
     answers:
-      - { value: 'A root key and a repository key', correct: true }
-      - { value: 'TLS certificate and key', correct: false }
-      - { value: 'Access to Docker EE license', correct: false }
-      - { value: 'UCP admin privileges', correct: false }
-    help: 'https://docs.docker.com/engine/security/trust/'
+      - { value: "A root key and a repository key", correct: true }
+      - { value: "TLS certificate and key", correct: false }
+      - { value: "Access to Docker EE license", correct: false }
+      - { value: "UCP admin privileges", correct: false }
+    help: "https://docs.docker.com/engine/security/trust/"
 
   - uuid: 02eb5f4a-8f6b-4c3a-8a63-d8b6b3b7faba
     question: Which Docker CLI command can be used to view trusted image signatures?
     answers:
-      - { value: 'docker trust inspect --pretty <image>', correct: true }
-      - { value: 'docker inspect-trust <image>', correct: false }
-      - { value: 'docker image trust show <image>', correct: false }
-      - { value: 'docker trust status <image>', correct: false }
-    help: 'https://docs.docker.com/reference/cli/docker/trust/inspect/'
+      - { value: "docker trust inspect --pretty <image>", correct: true }
+      - { value: "docker inspect-trust <image>", correct: false }
+      - { value: "docker image trust show <image>", correct: false }
+      - { value: "docker trust status <image>", correct: false }
+    help: "https://docs.docker.com/reference/cli/docker/trust/inspect/"
 
   - uuid: 2131a4fd-42ec-4265-b36e-96055d5cb14e
     question: Which command initializes a repository for signing with DCT?
     answers:
-      - { value: 'docker trust signer add', correct: true }
-      - { value: 'docker trust init', correct: false }
-      - { value: 'docker sign create', correct: false }
-      - { value: 'docker trust enable', correct: false }
-    help: 'https://docs.docker.com/reference/cli/docker/trust/signer/add/'
+      - { value: "docker trust signer add", correct: true }
+      - { value: "docker trust init", correct: false }
+      - { value: "docker sign create", correct: false }
+      - { value: "docker trust enable", correct: false }
+    help: "https://docs.docker.com/reference/cli/docker/trust/signer/add/"
 
   - uuid: 9333d417-5d61-4e69-90ac-6096603cf85d
     question: How does Docker Content Trust verify image integrity?
     answers:
-      - { value: 'By verifying cryptographic signatures', correct: true }
-      - { value: 'By validating image digests against SHA1 hashes', correct: false }
-      - { value: 'By scanning for vulnerabilities', correct: false }
-      - { value: 'By comparing the size of image layers', correct: false }
-    help: 'https://docs.docker.com/engine/security/trust/content_trust/#how-content-trust-works'
+      - { value: "By verifying cryptographic signatures", correct: true }
+      - { value: "By validating image digests against SHA1 hashes", correct: false }
+      - { value: "By scanning for vulnerabilities", correct: false }
+      - { value: "By comparing the size of image layers", correct: false }
+    help: "https://docs.docker.com/engine/security/trust/content_trust/#how-content-trust-works"
 
   - uuid: 420c14f1-000d-4216-8b08-3ab8c8dc2e6a
     question: What is the behavior of the `docker push` command when DCT is enabled?
     answers:
-      - { value: 'The image is signed before being pushed', correct: true }
-      - { value: 'The image is encrypted', correct: false }
-      - { value: 'The push command is blocked', correct: false }
-      - { value: 'Nothing changes from regular push', correct: false }
-    help: 'https://docs.docker.com/engine/security/trust/content_trust/#pushing-signed-images'
+      - { value: "The image is signed before being pushed", correct: true }
+      - { value: "The image is encrypted", correct: false }
+      - { value: "The push command is blocked", correct: false }
+      - { value: "Nothing changes from regular push", correct: false }
+    help: "https://docs.docker.com/engine/security/trust/content_trust/#pushing-signed-images"
 
   - uuid: b27e9637-57a8-4626-9aa5-0fbb3bcfe254
     question: Which of the following commands will fail if DCT is enabled and the image is unsigned?
     answers:
-      - { value: 'docker pull', correct: true }
-      - { value: 'docker image ls', correct: false }
-      - { value: 'docker run', correct: false }
-      - { value: 'docker ps', correct: false }
-    help: 'https://docs.docker.com/engine/security/trust/content_trust/#pulling-signed-images'
+      - { value: "docker pull", correct: true }
+      - { value: "docker image ls", correct: false }
+      - { value: "docker run", correct: false }
+      - { value: "docker ps", correct: false }
+    help: "https://docs.docker.com/engine/security/trust/content_trust/#pulling-signed-images"

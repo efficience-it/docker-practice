@@ -2,89 +2,89 @@ questions:
   - uuid: 1a6fcd49-0bd6-49a3-9df2-2f4c05fc6ba6
     question: What is the primary purpose of Mutual TLS (mTLS) in Docker environments?
     answers:
-      - { value: 'To encrypt container images during transit', correct: false }
-      - { value: 'To ensure that both the client and server authenticate each other', correct: true }
-      - { value: 'To enable non-root containers to access host volumes', correct: false }
-      - { value: 'To perform image signature verification at runtime', correct: false }
+      - { value: "To encrypt container images during transit", correct: false }
+      - { value: "To ensure that both the client and server authenticate each other", correct: true }
+      - { value: "To enable non-root containers to access host volumes", correct: false }
+      - { value: "To perform image signature verification at runtime", correct: false }
     help: https://docs.docker.com/engine/security/https/
 
   - uuid: 694d999f-d855-44ef-9630-23d0bb61eb79
     question: In a Docker Swarm cluster, what component uses mTLS by default?
     answers:
-      - { value: 'Container-to-container HTTP traffic', correct: false }
-      - { value: 'Registry push/pull operations', correct: false }
-      - { value: 'Inter-container DNS resolution', correct: false }
-      - { value: 'The communication between manager and worker nodes', correct: true }
+      - { value: "Container-to-container HTTP traffic", correct: false }
+      - { value: "Registry push/pull operations", correct: false }
+      - { value: "Inter-container DNS resolution", correct: false }
+      - { value: "The communication between manager and worker nodes", correct: true }
     help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
 
   - uuid: 30f22cfa-20eb-4726-a7e1-4f3f317aa008
     question: What happens in mTLS when the server cannot verify the client certificate?
     answers:
-      - { value: 'The connection is rejected', correct: true }
-      - { value: 'The server allows the connection but disables encryption', correct: false }
-      - { value: 'Only unidirectional TLS is used', correct: false }
-      - { value: 'The server requests a new certificate from the client', correct: false }
+      - { value: "The connection is rejected", correct: true }
+      - { value: "The server allows the connection but disables encryption", correct: false }
+      - { value: "Only unidirectional TLS is used", correct: false }
+      - { value: "The server requests a new certificate from the client", correct: false }
     help: https://docs.docker.com/engine/security/https/
 
   - uuid: 3bdc6a4e-d8fd-4c8c-a56e-b8eaa36a9695
     question: Which files must be present on the client side to establish a successful mTLS connection with the Docker daemon?
     answers:
-      - { value: 'Client certificate, client key, and CA certificate', correct: true }
-      - { value: 'Client token and Docker Hub credentials', correct: false }
-      - { value: 'Docker config.json and access policy', correct: false }
-      - { value: 'Server certificate and private registry password', correct: false }
+      - { value: "Client certificate, client key, and CA certificate", correct: true }
+      - { value: "Client token and Docker Hub credentials", correct: false }
+      - { value: "Docker config.json and access policy", correct: false }
+      - { value: "Server certificate and private registry password", correct: false }
     help: https://docs.docker.com/engine/security/https/
 
   - uuid: 8e62f013-5a35-4d43-a32d-02b9cbd837d2
     question: Why is mTLS considered more secure than standard TLS?
     answers:
-      - { value: 'Because it uses symmetric encryption', correct: false }
-      - { value: 'Because it relies solely on API keys for access control', correct: false }
-      - { value: 'Because both parties authenticate each other, not just the server', correct: true }
-      - { value: 'Because it uses DNS over HTTPS internally', correct: false }
+      - { value: "Because it uses symmetric encryption", correct: false }
+      - { value: "Because it relies solely on API keys for access control", correct: false }
+      - { value: "Because both parties authenticate each other, not just the server", correct: true }
+      - { value: "Because it uses DNS over HTTPS internally", correct: false }
     help: https://docs.docker.com/engine/security/https/
 
   - uuid: 6e417ffc-617e-4e88-8f5c-9e88b758ac65
     question: How often does Docker Swarm automatically rotate node certificates?
     answers:
-      - { value: 'Only when manually triggered by the administrator', correct: false }
-      - { value: 'Every 90 days by default', correct: true }
-      - { value: 'Every 24 hours', correct: false }
-      - { value: 'Every 30 days', correct: false }
+      - { value: "Only when manually triggered by the administrator", correct: false }
+      - { value: "Every 90 days by default", correct: true }
+      - { value: "Every 24 hours", correct: false }
+      - { value: "Every 30 days", correct: false }
     help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
 
   - uuid: 7bdc04f1-38c4-4992-9f21-90c4a607fcf3
     question: Which Docker command can be used to rotate the Swarm CA certificate manually?
     answers:
-      - { value: 'docker swarm update-ca', correct: false }
-      - { value: 'docker node rotate-cert', correct: false }
-      - { value: 'docker swarm ca --rotate', correct: true }
-      - { value: 'docker swarm cert-rotate', correct: false }
+      - { value: "docker swarm update-ca", correct: false }
+      - { value: "docker node rotate-cert", correct: false }
+      - { value: "docker swarm ca --rotate", correct: true }
+      - { value: "docker swarm cert-rotate", correct: false }
     help: https://docs.docker.com/reference/cli/docker/swarm/ca/
 
   - uuid: 6cb6716c-46d9-4301-877e-4c559fc1736f
     question: What does the --opt encrypted flag do when creating a Docker overlay network?
     answers:
-      - { value: 'It enables encryption for all container traffic on that network', correct: true }
-      - { value: 'It encrypts only inter-manager communication in the swarm', correct: false }
-      - { value: 'It enables encryption for Docker Compose volumes', correct: false }
-      - { value: 'It encrypts data during docker pull operations', correct: false }
+      - { value: "It enables encryption for all container traffic on that network", correct: true }
+      - { value: "It encrypts only inter-manager communication in the swarm", correct: false }
+      - { value: "It enables encryption for Docker Compose volumes", correct: false }
+      - { value: "It encrypts data during docker pull operations", correct: false }
     help: https://docs.docker.com/engine/swarm/networking/
 
   - uuid: 4e17c86e-1d1c-48b6-a1dc-5e05d1e3a03e
     question: Is mTLS enabled by default when you initialize a Docker Swarm?
     answers:
-      - { value: 'Yes, mTLS is enabled by default for all swarm node communications', correct: true }
-      - { value: 'No, it must be enabled using docker swarm update', correct: false }
-      - { value: 'Only if the CA is provided during init', correct: false }
-      - { value: 'No, it requires setting a --secure flag', correct: false }
+      - { value: "Yes, mTLS is enabled by default for all swarm node communications", correct: true }
+      - { value: "No, it must be enabled using docker swarm update", correct: false }
+      - { value: "Only if the CA is provided during init", correct: false }
+      - { value: "No, it requires setting a --secure flag", correct: false }
     help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
 
   - uuid: 3f7409ec-14f1-4c38-9c6e-768cfe9f7c43
     question: What do the letters in 'mTLS' stand for?
     answers:
-      - { value: 'Mutual Transport Layer Security', correct: true }
-      - { value: 'Managed TLS Security', correct: false }
-      - { value: 'Modular Transport Layer Standard', correct: false }
-      - { value: 'Multipath TLS', correct: false }
+      - { value: "Mutual Transport Layer Security", correct: true }
+      - { value: "Managed TLS Security", correct: false }
+      - { value: "Modular Transport Layer Standard", correct: false }
+      - { value: "Multipath TLS", correct: false }
     help: https://docs.docker.com/engine/security/https/

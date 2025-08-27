@@ -2,125 +2,125 @@ questions:
   - uuid: f14c478e-9251-4b8d-b96d-e50767ac6d56
     question: What is the main purpose of the `docker image push` command?
     answers:
-      - { value: 'To upload a local image to a container registry', correct: true }
-      - { value: 'To start a container from an image', correct: false }
-      - { value: 'To remove an image from local storage', correct: false }
-      - { value: 'To compress an image', correct: false }
+      - { value: "To upload a local image to a container registry", correct: true }
+      - { value: "To start a container from an image", correct: false }
+      - { value: "To remove an image from local storage", correct: false }
+      - { value: "To compress an image", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/
 
   - uuid: 84754c3f-b5fc-474e-afe5-90fbd5d92471
     question: Before pushing an image to a registry, what must be done?
     answers:
-      - { value: 'Tag the image with the registry hostname', correct: true }
-      - { value: 'Export the image', correct: false }
-      - { value: 'Run the container once', correct: false }
-      - { value: 'Rename the image using docker rename', correct: false }
+      - { value: "Tag the image with the registry hostname", correct: true }
+      - { value: "Export the image", correct: false }
+      - { value: "Run the container once", correct: false }
+      - { value: "Rename the image using docker rename", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#push-a-new-image-to-a-registry
 
   - uuid: ab875d15-8d62-4ff3-9d6f-c42a93e1b2e7
     question: What does the `--all-tags` (`-a`) flag do when using `docker image push`?
     answers:
-      - { value: 'Pushes all tags associated with the image to the registry', correct: true }
-      - { value: 'Pushes the latest tag only', correct: false }
-      - { value: 'Removes unused image tags', correct: false }
-      - { value: 'Displays tags without pushing', correct: false }
+      - { value: "Pushes all tags associated with the image to the registry", correct: true }
+      - { value: "Pushes the latest tag only", correct: false }
+      - { value: "Removes unused image tags", correct: false }
+      - { value: "Displays tags without pushing", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#push-all-tags-of-an-image--a---all-tags
 
   - uuid: a1e36033-4ed3-495b-b5cd-e34fe3a4d2d4
     question: What is the default behavior regarding image signing when pushing an image?
     answers:
-      - { value: 'Docker Content Trust is enabled unless explicitly disabled', correct: true }
-      - { value: 'Docker always signs images', correct: false }
-      - { value: 'Image signing is not supported', correct: false }
-      - { value: 'Signing is enabled only with Docker EE', correct: false }
+      - { value: "Docker Content Trust is enabled unless explicitly disabled", correct: true }
+      - { value: "Docker always signs images", correct: false }
+      - { value: "Image signing is not supported", correct: false }
+      - { value: "Signing is enabled only with Docker EE", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#options
 
   - uuid: cb4190c0-dad0-4e15-b028-92f7e5be63e1
     question: What happens when you press `CTRL-C` during a `docker image push`?
     answers:
-      - { value: 'The push operation is terminated', correct: true }
-      - { value: 'Docker retries automatically', correct: false }
-      - { value: 'The push is paused', correct: false }
-      - { value: 'Only metadata is pushed', correct: false }
+      - { value: "The push operation is terminated", correct: true }
+      - { value: "Docker retries automatically", correct: false }
+      - { value: "The push is paused", correct: false }
+      - { value: "Only metadata is pushed", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#description
 
   - uuid: 059a9cf0-6219-4f5c-9c2f-e3515a42cdbc
     question: What does the progress bar shown during `docker image push` represent?
     answers:
-      - { value: 'The uncompressed size of the layers', correct: true }
-      - { value: 'The compressed size of the layers', correct: false }
-      - { value: 'The size of the manifest only', correct: false }
-      - { value: 'Time remaining for push', correct: false }
+      - { value: "The uncompressed size of the layers", correct: true }
+      - { value: "The compressed size of the layers", correct: false }
+      - { value: "The size of the manifest only", correct: false }
+      - { value: "Time remaining for push", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#description
 
   - uuid: 4a6eaa8e-9a94-4c0f-93a0-ef6cb7e660b9
     question: What is the purpose of the `--platform` flag?
     answers:
-      - { value: 'To push a platform-specific image to the registry', correct: true }
-      - { value: 'To switch Docker client OS', correct: false }
-      - { value: 'To test multi-arch builds locally', correct: false }
-      - { value: 'To select a tag automatically', correct: false }
+      - { value: "To push a platform-specific image to the registry", correct: true }
+      - { value: "To switch Docker client OS", correct: false }
+      - { value: "To test multi-arch builds locally", correct: false }
+      - { value: "To select a tag automatically", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#options
 
   - uuid: e4b39587-9b8b-43d7-9bd6-0e66a4ae06c5
     question: What is the default number of concurrent layer uploads during a `docker push`?
     answers:
-      - { value: '5', correct: true }
-      - { value: '3', correct: false }
-      - { value: '1', correct: false }
-      - { value: '10', correct: false }
+      - { value: "5", correct: true }
+      - { value: "3", correct: false }
+      - { value: "1", correct: false }
+      - { value: "10", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#concurrent-uploads
 
   - uuid: 1ac0384f-e5f0-45bb-9fa4-1bb07c57db4c
     question: How can you reduce timeouts on slow connections when pushing images?
     answers:
-      - { value: 'Set `--max-concurrent-uploads` in the Docker daemon config', correct: true }
-      - { value: 'Use `--quiet` mode', correct: false }
-      - { value: 'Set `--compress` to false', correct: false }
-      - { value: 'Use only the `latest` tag', correct: false }
+      - { value: "Set `--max-concurrent-uploads` in the Docker daemon config", correct: true }
+      - { value: "Use `--quiet` mode", correct: false }
+      - { value: "Set `--compress` to false", correct: false }
+      - { value: "Use only the `latest` tag", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#concurrent-uploads
 
   - uuid: 8e2cc1b8-2922-4fd4-a6a1-9ae55aaf35e8
     question: What is a required step before pushing an image to a private registry?
     answers:
-      - { value: 'Authenticate with `docker login`', correct: true }
-      - { value: 'Run the image at least once', correct: false }
-      - { value: 'Sign the image', correct: false }
-      - { value: 'Disable content trust', correct: false }
+      - { value: "Authenticate with `docker login`", correct: true }
+      - { value: "Run the image at least once", correct: false }
+      - { value: "Sign the image", correct: false }
+      - { value: "Disable content trust", correct: false }
     help: https://docs.docker.com/reference/cli/docker/login/
 
   - uuid: d85a620c-f4b8-4bc5-a1ff-9b5edb620eda
     question: Which command pushes all tags of a local image to a registry?
     answers:
-      - { value: 'docker image push -a myimage', correct: true }
-      - { value: 'docker image push-all myimage', correct: false }
-      - { value: 'docker image tag -a myimage', correct: false }
-      - { value: 'docker tag --push-all myimage', correct: false }
+      - { value: "docker image push -a myimage", correct: true }
+      - { value: "docker image push-all myimage", correct: false }
+      - { value: "docker image tag -a myimage", correct: false }
+      - { value: "docker tag --push-all myimage", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#push-all-tags-of-an-image--a---all-tags
 
   - uuid: a144fc27-c20f-4577-8d1d-0cf4de8bfb12
     question: Which characters are allowed in image names when pushing to a registry?
     answers:
-      - { value: 'a-z, 0-9, hyphen (-), underscore (_) and dot (.)', correct: true }
-      - { value: 'Any Unicode character', correct: false }
-      - { value: 'Only lowercase letters', correct: false }
-      - { value: 'Letters and slashes only', correct: false }
+      - { value: "a-z, 0-9, hyphen (-), underscore (_) and dot (.)", correct: true }
+      - { value: "Any Unicode character", correct: false }
+      - { value: "Only lowercase letters", correct: false }
+      - { value: "Letters and slashes only", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/tag/#extended-description
 
   - uuid: 0f93a32d-eac8-4ed6-8856-b2f5bcfc8e9b
     question: What does `--disable-content-trust` do?
     answers:
-      - { value: 'Disables signing of images when pushing', correct: true }
-      - { value: 'Disables pushing to private registries', correct: false }
-      - { value: 'Prevents tag propagation', correct: false }
-      - { value: 'Enables compressed layer upload', correct: false }
+      - { value: "Disables signing of images when pushing", correct: true }
+      - { value: "Disables pushing to private registries", correct: false }
+      - { value: "Prevents tag propagation", correct: false }
+      - { value: "Enables compressed layer upload", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#options
 
   - uuid: f3cf7e1f-947a-4878-92fc-04e96a7762ed
     question: What does `docker image push -q` do?
     answers:
-      - { value: 'Suppress verbose output', correct: true }
-      - { value: 'Only validate push without executing it', correct: false }
-      - { value: 'Compress layers before push', correct: false }
-      - { value: 'Upload quietly and delete local image', correct: false }
+      - { value: "Suppress verbose output", correct: true }
+      - { value: "Only validate push without executing it", correct: false }
+      - { value: "Compress layers before push", correct: false }
+      - { value: "Upload quietly and delete local image", correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/push/#options
