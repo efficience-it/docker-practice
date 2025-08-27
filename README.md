@@ -3,7 +3,7 @@
 ### Domain 1: Orchestration (25% of exam)
 
 * [Complete the setup of a swarm mode cluster, with managers and worker nodes](data/1_Orchestration/complete_setup_swarm_mode_cluster_managers_worker_nodes.yaml)
-* Describe and demonstrate how to extend the instructions to run individual containers into running services under swarm.
+* [Describe and demonstrate how to extend the instructions to run individual containers into running services under swarm.](data/1_Orchestration/extend_run_containers_to_services.yaml)
 * [Describe the importance of quorum in a swarm cluster.](data/1_Orchestration/describe_importance_quorum_swarm_cluster.yaml)
 * [Describe the difference between running a container and running a service.](data/1_Orchestration/describe_difference_between_running_container_and_service.yaml)
 * [Interpret the output of “docker inspect” commands.](data/1_Orchestration/interpret_output_docker_inspect_commend.yaml)
@@ -15,11 +15,11 @@
 * [Mount volumes.](data/1_Orchestration/mount_volumes.yaml)
 * [Describe and demonstrate how to run replicated and global services.](data/1_Orchestration/replicated_vs_global_services.yaml)
 * [Apply node labels to demonstrate placement of tasks.](data/1_Orchestration/apply_node_labels_placement_tasks.yaml)
-* Describe and demonstrate how to use templates with “docker service create”.
-* Identify the steps needed to troubleshoot a service not deploying.
-* Describe how a Dockerized application communicates with legacy systems.
-* Describe how to deploy containerized workloads as Kubernetes pods and deployments.
-* Describe how to provide configuration to Kubernetes pods using configMaps and secrets.
+* [Describe and demonstrate how to use templates with “docker service create”.](data/1_Orchestration/use_templates_with_service_create.yaml)
+* [Identify the steps needed to troubleshoot a service not deploying.](data/1_Orchestration/troubleshoot_service.yaml)
+* [Describe how a Dockerized application communicates with legacy systems.](data/1_Orchestration/legacy_communication.yaml)
+* [Describe how to deploy containerized workloads as Kubernetes pods and deployments.](data/1_Orchestration/k8s_pods_deployments.yaml)
+* [Describe how to provide configuration to Kubernetes pods using configMaps and secrets.](data/1_Orchestration/k8s_configmap_secret.yaml)
 
 ### Domain 2: Image Creation, Management, and Registry (20% of exam)
 

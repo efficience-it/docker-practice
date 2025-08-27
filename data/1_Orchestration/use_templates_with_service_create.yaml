@@ -1,0 +1,72 @@
+questions:
+  - uuid: 95c3a6ef-631a-46de-ae3d-05ad066401b3
+    question: What is the purpose of using templates in `docker service create`?
+    answers:
+      - { value: "To inject dynamic values like node hostname or ID into service definitions", correct: true }
+      - { value: "To install dependencies before a container runs", correct: false }
+      - { value: "To modify container logs at runtime", correct: false }
+      - { value: "To manage DNS entries for overlay networks", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#using-templates-for-service-configuration
+
+  - uuid: 16be6c18-40b5-490e-81e6-d122e49a74f3
+    question: Which of the following template variables can be used in a Swarm service?
+    answers:
+      - { value: "{{.Node.Hostname}}", correct: true }
+      - { value: "{{.Service.Labels}}", correct: true }
+      - { value: "{{.Container.Name}}", correct: false }
+      - { value: "{{.Task.Name}}", correct: true }
+    help: https://docs.docker.com/engine/reference/commandline/service_create/#templating
+
+  - uuid: 2ff277f7-8590-4d4a-b402-fbc255ed48e4
+    question: What happens if you use an invalid template variable in `docker service create`?
+    answers:
+      - { value: "The service will fail to deploy", correct: true }
+      - { value: "The value is ignored and replaced with a default", correct: false }
+      - { value: "Docker silently replaces it with null", correct: false }
+      - { value: "It disables the templating system for that field", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#using-templates-for-service-configuration
+
+  - uuid: 0112b58a-4bc4-4439-a3db-b3b92c4c6920
+    question: Which option supports templates in `docker service create`?
+    answers:
+      - { value: "--hostname", correct: true }
+      - { value: "--limit-cpu", correct: false }
+      - { value: "--network", correct: false }
+      - { value: "--replicas", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#using-templates-for-service-configuration
+
+  - uuid: 2c326b2d-c3d1-466e-89b1-ea623f22171f
+    question: How can you create a service where each task writes its hostname to a log file?
+    answers:
+      - { value: "Use `--env LOG_FILE=/var/log/{{.Node.Hostname}}.log`", correct: true }
+      - { value: "Use `--mount type=log,source={{.Task.ID}}`", correct: false }
+      - { value: "Set the hostname with `docker run`", correct: false }
+      - { value: "Use `docker-compose` with environment variables only", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#using-templates-for-service-configuration
+
+  - uuid: edb263d2-12c5-4484-8915-7c1f5d4022a1
+    question: Which of the following is a valid use of a template in `--mount`?
+    answers:
+      - { value: "--mount type=volume,source=mydata_{{.Task.Slot}},target=/data", correct: true }
+      - { value: "--mount type=bind,source=/tmp/{{.Node.IP}},target=/cache", correct: false }
+      - { value: "--mount source=host,template=true,target=/host", correct: false }
+      - { value: "--mount slot={{.Task.Slot}},target=/data", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/service_create/#templating
+
+  - uuid: 1baf354e-3af0-4b44-bb8d-0a181021e33a
+    question: What is a common use case for `{{.Task.Slot}}` in Swarm service templates?
+    answers:
+      - { value: "To create unique volume names for each replica", correct: true }
+      - { value: "To limit the number of replicas", correct: false }
+      - { value: "To scale tasks across nodes", correct: false }
+      - { value: "To change the default network driver", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/service_create/#templating
+
+  - uuid: 8ed09c02-1e30-4b52-aab4-31992ea87236
+    question: Why is it important to test Go template expressions before using them in production?
+    answers:
+      - { value: "A malformed template can cause the service deployment to fail", correct: true }
+      - { value: "Templates automatically escalate privileges", correct: false }
+      - { value: "Go templates consume high memory", correct: false }
+      - { value: "They are only supported in Docker EE", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#using-templates-for-service-configuration

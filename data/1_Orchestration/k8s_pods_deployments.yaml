@@ -1,0 +1,90 @@
+questions:
+  - uuid: d0d87db1-2fe0-426c-a49f-0c2c60c472b1
+    question: What is the minimum required field in a Kubernetes Pod manifest?
+    answers:
+      - { value: "spec", correct: true }
+      - { value: "metadata", correct: false }
+      - { value: "containers", correct: false }
+      - { value: "labels", correct: false }
+    help: https://kubernetes.io/docs/concepts/workloads/pods/
+
+  - uuid: a99b73b1-09d1-4cb6-b3a0-593a2910a789
+    question: Which object in Kubernetes is used to manage the lifecycle and scaling of Pods?
+    answers:
+      - { value: "Deployment", correct: true }
+      - { value: "Pod", correct: false }
+      - { value: "Service", correct: false }
+      - { value: "ReplicaSet", correct: false }
+    help: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+
+  - uuid: f7d8e74e-47e4-48aa-bf17-f20be1f3a9c0
+    question: What is the primary benefit of using a Deployment instead of a standalone Pod?
+    answers:
+      - { value: "Automatic rollout and scaling", correct: true }
+      - { value: "Pod affinity rules", correct: false }
+      - { value: "Faster startup", correct: false }
+      - { value: "Simplified volume configuration", correct: false }
+    help: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+
+  - uuid: 3596ef84-30ef-4cf1-8362-79cba4ee9fd5
+    question: What command creates a Deployment from a container image?
+    answers:
+      - { value: "kubectl create deployment myapp --image=nginx", correct: true }
+      - { value: "kubectl apply -f pod.yaml", correct: false }
+      - { value: "kubectl run pod nginx", correct: false }
+      - { value: "kubectl deploy image nginx", correct: false }
+    help: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create
+
+  - uuid: 9f52d7fb-17d9-4ab1-b9b6-6dd5f41e0f0e
+    question: Which Kubernetes resource ensures a specified number of Pods are always running?
+    answers:
+      - { value: "Deployment", correct: true }
+      - { value: "ConfigMap", correct: false }
+      - { value: "Secret", correct: false }
+      - { value: "Service", correct: false }
+    help: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+
+  - uuid: b8e3c3a2-77a4-4d90-bd1f-1eab94f377c1
+    question: How can you declaratively deploy a Pod in Kubernetes?
+    answers:
+      - { value: "Using a YAML manifest with 'kubectl apply -f'", correct: true }
+      - { value: "Using Docker Compose", correct: false }
+      - { value: "Using docker run", correct: false }
+      - { value: "Using 'kubectl exec'", correct: false }
+    help: https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/
+
+  - uuid: 5bb4c3dc-9428-4938-8c3e-9e0ee1e4200f
+    question: Which field in a Deployment manifest specifies the container image to run?
+    answers:
+      - { value: "spec.template.spec.containers.image", correct: true }
+      - { value: "metadata.image", correct: false }
+      - { value: "spec.selector.image", correct: false }
+      - { value: "spec.imagePullPolicy", correct: false }
+    help: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+
+  - uuid: 4cd9971a-932f-4e12-94e9-832e33e19d10
+    question: What happens when you change the image in a Deployment spec and reapply the manifest?
+    answers:
+      - { value: "Kubernetes performs a rolling update of the Pods", correct: true }
+      - { value: "All Pods are stopped and restarted at once", correct: false }
+      - { value: "The deployment fails", correct: false }
+      - { value: "Nothing happens", correct: false }
+    help: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#updating-a-deployment
+
+  - uuid: 4abf4c56-d6ea-48c2-beb3-b29d486b1e7e
+    question: Which field in a Deployment manifest allows you to set the number of Pods?
+    answers:
+      - { value: "spec.replicas", correct: true }
+      - { value: "spec.count", correct: false }
+      - { value: "metadata.replicas", correct: false }
+      - { value: "containers.replicas", correct: false }
+    help: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+
+  - uuid: 9e922c82-f3f3-499b-9cc5-8a4f21e9c3b9
+    question: How do you expose a Deployment so it can be accessed outside the cluster?
+    answers:
+      - { value: "Create a Service of type NodePort or LoadBalancer", correct: true }
+      - { value: "Add port mapping in the deployment manifest", correct: false }
+      - { value: "Use kubectl expose with type=internal", correct: false }
+      - { value: "Use pod-level IP forwarding", correct: false }
+    help: https://kubernetes.io/docs/concepts/services-networking/service/
