@@ -1,7 +1,3 @@
-# Domaine 2: Image Creation, Management, and Registry
-# Sujet : Describe and demonstrate registry functions
-# Source(s) vérifiées au 25 juillet 2025
-
 questions:
   - uuid: 4f4b2dfc-9c32-4fc3-a377-efc45d2b0121
     question: What is the purpose of a container registry?
