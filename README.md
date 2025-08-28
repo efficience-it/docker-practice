@@ -84,7 +84,7 @@
 * [Describe the process to use external certificates with UCP and DTR.](data/5_Security/external_certs_ucp_dtr.yaml)
 * [Describe and demonstrate that an image passes a security scan.](data/5_Security/image_security_scan.yaml)
 * [Describe and demonstrate how to enable Docker Content Trust.](data/5_Security/describe_demonstrate_how_enable_docker_content_trust.yaml)
-* Describe and demonstrate how to configure RBAC with UCP.
+* [Describe and demonstrate how to configure RBAC with UCP.](data/5_Security/ucp_rbac_config.yaml)
 * Describe and demonstrate how to integrate UCP with LDAP/AD.
 * Describe and demonstrate how to create UCP client bundles.
 

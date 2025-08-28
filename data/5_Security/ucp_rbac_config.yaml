@@ -1,0 +1,90 @@
+questions:
+  - uuid: 0fc6d4e7-0179-48bb-b7e8-2a391d0c57f3
+    question: Que signifie RBAC dans le contexte de Docker UCP ?
+    answers:
+      - { value: 'Role-Based Access Control', correct: true }
+      - { value: 'Remote Backup Admin Console', correct: false }
+      - { value: 'Registry-Based Access Configuration', correct: false }
+      - { value: 'Read-Before-Access Confirmation', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
+
+  - uuid: e271c7fd-2315-4d19-a08c-5bd614746847
+    question: Quel composant UCP permet de définir des rôles et permissions ?
+    answers:
+      - { value: 'RBAC', correct: true }
+      - { value: 'SwarmKit', correct: false }
+      - { value: 'Compose CLI', correct: false }
+      - { value: 'Registry v2', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
+
+  - uuid: 80129f0d-e8de-4034-97b0-96178b39b2e6
+    question: Quelle entité peut recevoir un rôle RBAC dans UCP ?
+    answers:
+      - { value: 'Un utilisateur ou une équipe', correct: true }
+      - { value: 'Un conteneur', correct: false }
+      - { value: 'Un volume', correct: false }
+      - { value: 'Un port publié', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
+
+  - uuid: c4c84f21-5d8d-4e1d-8ab2-0ef03c88b9b7
+    question: Quelle est la portée possible d’un rôle dans UCP ?
+    answers:
+      - { value: 'Service, namespace, container, node', correct: true }
+      - { value: 'Nom de domaine, DNS, logs', correct: false }
+      - { value: 'Registry externe', correct: false }
+      - { value: 'Dockerfile uniquement', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
+
+  - uuid: 8e352f44-30f3-42b4-b503-4c99ec93e764
+    question: Quel rôle RBAC autorise uniquement la visualisation des ressources dans UCP ?
+    answers:
+      - { value: 'ViewOnly', correct: true }
+      - { value: 'RestrictedControl', correct: false }
+      - { value: 'AdminAccess', correct: false }
+      - { value: 'Operator', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/default-roles.html
+
+  - uuid: 546b2712-0f45-4f15-bd77-731f19e3ef5a
+    question: Quelle est une bonne pratique lors de la configuration de RBAC ?
+    answers:
+      - { value: 'Attribuer les rôles aux équipes plutôt qu’aux utilisateurs seuls', correct: true }
+      - { value: 'Donner FullControl par défaut', correct: false }
+      - { value: 'Désactiver RBAC si non utilisé', correct: false }
+      - { value: 'Utiliser uniquement des rôles personnalisés', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
+
+  - uuid: c1a99418-b50c-4e5a-9186-e28eb8d46f86
+    question: Où peut-on gérer les rôles RBAC dans UCP ?
+    answers:
+      - { value: 'Dans l’interface web UCP ou via API', correct: true }
+      - { value: 'Dans le fichier Dockerfile', correct: false }
+      - { value: 'Dans le fichier /etc/docker/daemon.json', correct: false }
+      - { value: 'Uniquement avec kubectl', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
+
+  - uuid: f4960718-c05b-4f09-85ee-2e21a3fdde2d
+    question: Peut-on créer ses propres rôles RBAC dans UCP ?
+    answers:
+      - { value: 'Oui, avec des permissions personnalisées sur des scopes définis', correct: true }
+      - { value: 'Non, uniquement les rôles par défaut sont disponibles', correct: false }
+      - { value: 'Oui, mais uniquement pour les registres', correct: false }
+      - { value: 'Non, cela requiert Docker Hub Pro', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/custom-roles.html
+
+  - uuid: a56ae8b1-7054-4c41-8461-2d89c35c4f0a
+    question: Quelle API permet d’automatiser la configuration RBAC dans UCP ?
+    answers:
+      - { value: 'UCP RBAC HTTP API', correct: true }
+      - { value: 'Docker Swarm REST API', correct: false }
+      - { value: 'Kubernetes RBAC CRDs', correct: false }
+      - { value: 'Docker CLI scan API', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/api/
+
+  - uuid: 1093124d-1d68-4d33-b188-e72b090fb48e
+    question: Quel rôle permet de redémarrer des services sans les modifier ?
+    answers:
+      - { value: 'RestrictedControl', correct: true }
+      - { value: 'ViewOnly', correct: false }
+      - { value: 'FullControl', correct: false }
+      - { value: 'None', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/default-roles.html
