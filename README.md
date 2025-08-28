@@ -79,7 +79,7 @@
 * [Describe default engine security.](data/5_Security/describe_default_engine_security.yaml)
 * [Describe swarm default security.](data/5_Security/swarm_default_security.yaml)
 * [Describe MTLS.](data/5_Security/describe_mtls.yaml)
-* Describe identity roles.
+* [Describe identity roles.](data/5_Security/security_identity_roles.yaml)
 * [Compare and contrast UCP workers and managers.](data/5_Security/compare_contrast_ucp_workers_managers.yaml)
 * Describe the process to use external certificates with UCP and DTR.
 * Describe and demonstrate that an image passes a security scan.
