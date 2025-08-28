@@ -87,4 +87,4 @@ questions:
       - { value: 'null', correct: false }
       - { value: 'disabled', correct: false }
       - { value: 'off', correct: false }
-    help: https://docs.docker.com/config/containers/logging/none/
+    help: https://docs.docker.com/engine/logging/configure/#configure-the-logging-driver-for-a-container

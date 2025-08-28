@@ -1,0 +1,90 @@
+questions:
+  - uuid: 5e6219e4-9f2b-44a6-a2d6-b45b63b4bb8e
+    question: Quel protocole permet une authentification mutuelle entre un client Docker et un registre privé ?
+    answers:
+      - { value: 'TLS (Transport Layer Security)', correct: true }
+      - { value: 'SSH', correct: false }
+      - { value: 'Kerberos', correct: false }
+      - { value: 'JWT', correct: false }
+    help: https://docs.docker.com/engine/security/certificates/
+
+  - uuid: 12362d39-0461-4e47-a58e-9e1667b9e41d
+    question: Où doivent être placés les certificats client pour un registre privé nommé `myregistry.com` ?
+    answers:
+      - { value: '/etc/docker/certs.d/myregistry.com/', correct: true }
+      - { value: '/etc/docker/certs/', correct: false }
+      - { value: '/root/.docker/certs/myregistry.com/', correct: false }
+      - { value: '/etc/ssl/certs/docker/', correct: false }
+    help: https://docs.docker.com/engine/security/certificates/#create-a-ca-signed-cert-for-client-authentication
+
+  - uuid: 0ac063d7-3380-46f5-bde3-d7f859a92e3e
+    question: Quels fichiers doivent être présents côté client pour une authentification TLS avec certificat ?
+    answers:
+      - { value: 'ca.crt, client.cert, client.key', correct: true }
+      - { value: 'id_rsa, authorized_keys', correct: false }
+      - { value: 'ca.key, docker.pem, docker.key', correct: false }
+      - { value: 'server.crt, server.key', correct: false }
+    help: https://docs.docker.com/engine/security/certificates/#configure-the-docker-daemon-for-tls-authentication
+
+  - uuid: e242fa73-7f21-47c4-a42e-dc23e20a69fd
+    question: Que fait Docker si le registre distant requiert un certificat client mais que le client n’en fournit pas ?
+    answers:
+      - { value: 'La connexion est refusée avec une erreur TLS', correct: true }
+      - { value: 'Docker utilise un token par défaut', correct: false }
+      - { value: 'Docker autorise le pull en lecture seule', correct: false }
+      - { value: 'Docker tente de se reconnecter via HTTP', correct: false }
+    help: https://docs.docker.com/engine/security/certificates/
+
+  - uuid: b70cfe3a-eebc-4a82-9c86-5f0839e40bc4
+    question: Quelle configuration côté serveur permet de forcer l’authentification par certificat client ?
+    answers:
+      - { value: 'Le registre doit être configuré avec `clientca` dans la section `http.tls`', correct: true }
+      - { value: 'Le registre doit exposer le port 2376', correct: false }
+      - { value: 'Il faut activer le plugin docker-authz', correct: false }
+      - { value: 'C’est automatique si TLS est activé', correct: false }
+    help: https://docs.docker.com/registry/deploying/
+
+  - uuid: 7d146e2c-b1f2-4397-a3ee-10f55b90c404
+    question: Quel port sécurisé est utilisé par défaut pour les registres Docker privés avec TLS ?
+    answers:
+      - { value: '443', correct: true }
+      - { value: '5000', correct: false }
+      - { value: '2376', correct: false }
+      - { value: '22', correct: false }
+    help: https://docs.docker.com/registry/insecure/
+
+  - uuid: 1765e25a-12d3-4f61-993a-4d39487fd6a6
+    question: Une fois les certificats correctement configurés, que permet `docker pull myregistry.com/myimage` ?
+    answers:
+      - { value: 'Effectuer un téléchargement sécurisé authentifié', correct: true }
+      - { value: 'Contourner la sécurité TLS', correct: false }
+      - { value: 'Désactiver la vérification de l’image', correct: false }
+      - { value: 'Accéder à tous les registres publics', correct: false }
+    help: https://docs.docker.com/engine/security/certificates/
+
+  - uuid: ffbf24d4-6b67-41f8-8531-dc8f2db9b7dc
+    question: Que permet la présence du fichier `ca.crt` dans `/etc/docker/certs.d/<registry>/` ?
+    answers:
+      - { value: 'Docker peut vérifier l’identité du registre via TLS', correct: true }
+      - { value: 'Docker accède automatiquement en mode admin', correct: false }
+      - { value: 'Ce certificat est utilisé pour signer les images', correct: false }
+      - { value: 'Il désactive le Content Trust', correct: false }
+    help: https://docs.docker.com/engine/security/certificates/
+
+  - uuid: a1f82607-d729-4760-9616-2cf39c64a6d0
+    question: Quelle commande permet de tester rapidement une connexion TLS avec un registre privé ?
+    answers:
+      - { value: 'curl -v https://myregistry.com/v2/', correct: true }
+      - { value: 'docker tls check myregistry.com', correct: false }
+      - { value: 'openssl cert validate myregistry.com', correct: false }
+      - { value: 'nc -tls myregistry.com 443', correct: false }
+    help: https://docs.docker.com/registry/deploying/#verify-using-curl
+
+  - uuid: 33c15c25-2a1d-4b29-91e7-bb0a1aa730e6
+    question: Faut-il redémarrer le démon Docker après avoir ajouté des certificats ?
+    answers:
+      - { value: 'Oui, pour qu’il recharge les certificats et établir la connexion sécurisée', correct: true }
+      - { value: 'Non, Docker les recharge dynamiquement', correct: false }
+      - { value: 'Non, sauf sur Windows', correct: false }
+      - { value: 'Seulement si on utilise docker-compose', correct: false }
+    help: https://docs.docker.com/engine/security/certificates/
