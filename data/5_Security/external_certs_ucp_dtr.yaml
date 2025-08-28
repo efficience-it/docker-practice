@@ -1,0 +1,81 @@
+questions:
+  - uuid: b61f1b5e-d74e-432e-bc14-d1d8f58ab8c1
+    question: Quel est le but d’utiliser des certificats externes dans UCP/DTR ?
+    answers:
+      - { value: 'Authentifier les connexions avec des certificats émis par une autorité reconnue', correct: true }
+      - { value: 'Remplacer Docker Hub comme source d’images', correct: false }
+      - { value: 'Activer l’accès SSH aux conteneurs', correct: false }
+      - { value: 'Accélérer les transferts entre nœuds', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/external-ca.html
+
+  - uuid: 72e2c462-56b4-44e9-9e88-9fa63129a548
+    question: Quel fichier est requis pour utiliser un certificat externe dans UCP ?
+    answers:
+      - { value: 'Un certificat serveur, une clé privée et une chaîne CA', correct: true }
+      - { value: 'Un certificat TLS et un token JWT', correct: false }
+      - { value: 'Une image signée', correct: false }
+      - { value: 'Un fichier YAML de configuration', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/external-ca.html#prerequisites
+
+  - uuid: 61c27520-172b-457f-8727-b709c4f81b99
+    question: Quelle commande est utilisée pour remplacer les certificats UCP existants ?
+    answers:
+      - { value: 'docker container run --rm -v $(pwd):/certs docker/ucp replace-certs', correct: true }
+      - { value: 'docker ucp certs import', correct: false }
+      - { value: 'docker swarm tls renew', correct: false }
+      - { value: 'docker tls apply', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/rotate-ca.html
+
+  - uuid: 2833a6f3-d478-48c3-874b-8f47dc59a1fa
+    question: Quelle commande permet de configurer DTR avec une CA externe après l’installation ?
+    answers:
+      - { value: 'docker run -it docker/dtr reconfigure --external-ca', correct: true }
+      - { value: 'docker dtr certs reload', correct: false }
+      - { value: 'docker container exec dtr set-cert', correct: false }
+      - { value: 'docker registry update-cert', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/install/use-external-ca.html
+
+  - uuid: 3c0d3b9e-77e2-4ef9-bf2f-b607c12666da
+    question: À quel moment peut-on fournir les certificats externes lors de l’installation d’UCP ?
+    answers:
+      - { value: 'Directement avec l’option --external-server-cert', correct: true }
+      - { value: 'Uniquement après l’installation', correct: false }
+      - { value: 'En modifiant le Dockerfile de UCP', correct: false }
+      - { value: 'En copiant les fichiers dans /etc/ssl', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/external-ca.html#during-installation
+
+  - uuid: 9c88f204-cb01-49b1-9c14-1202b765d08a
+    question: Que se passe-t-il si les certificats UCP expirent et ne sont pas renouvelés à temps ?
+    answers:
+      - { value: 'Le tableau de bord UCP devient inaccessible via HTTPS', correct: true }
+      - { value: 'Les conteneurs sont supprimés', correct: false }
+      - { value: 'DTR passe en mode lecture seule', correct: false }
+      - { value: 'Swarm est automatiquement recréé', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/rotate-ca.html
+
+  - uuid: 6ac7dc55-ff07-4190-aed5-10c8ef730ec8
+    question: Pourquoi est-il important de fournir la "chaîne complète" de certificats (CA bundle) ?
+    answers:
+      - { value: 'Pour que les clients puissent valider toute la chaîne de confiance jusqu’à la CA racine', correct: true }
+      - { value: 'Pour activer les volumes persistants', correct: false }
+      - { value: 'Pour activer le clustering UCP', correct: false }
+      - { value: 'Pour se connecter à Docker Hub', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/external-ca.html#prerequisites
+
+  - uuid: 4d9e2259-c0d5-4062-91b5-0a3dbbeffcb8
+    question: Peut-on remplacer les certificats TLS de DTR sans interruption ?
+    answers:
+      - { value: 'Oui, avec reconfigure en mode rolling', correct: true }
+      - { value: 'Non, il faut réinstaller DTR', correct: false }
+      - { value: 'Oui, mais uniquement avec Docker Desktop', correct: false }
+      - { value: 'Non, car les certificats sont immuables', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/install/use-external-ca.html#replace-existing-certificates
+
+  - uuid: b7d019c6-7c9b-464c-ae0e-ec64927a0149
+    question: Quel format doivent respecter les certificats et clés fournis à UCP/DTR ?
+    answers:
+      - { value: 'PEM (base64 encodé)', correct: true }
+      - { value: 'DER (binaire brut)', correct: false }
+      - { value: 'PFX (Windows format)', correct: false }
+      - { value: 'PKCS#11 token', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/external-ca.html
