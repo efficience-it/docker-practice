@@ -1,0 +1,90 @@
+questions:
+  - uuid: 153dc1e3-f5be-4d8f-a4b3-498b8378fd52
+    question: Que signifie l’erreur 'Cannot connect to the Docker daemon. Is the docker daemon running?' ?
+    answers:
+      - { value: 'Le service Docker n’est pas démarré ou l’utilisateur n’a pas les droits', correct: true }
+      - { value: 'L’image demandée n’existe pas', correct: false }
+      - { value: 'Une commande Docker a été mal orthographiée', correct: false }
+      - { value: 'Le démon Docker utilise un port non standard', correct: false }
+    help: https://docs.docker.com/config/daemon/#start-the-daemon
+
+  - uuid: 238c3d02-c1c4-4f77-97a0-146d472928e7
+    question: Quelle commande permet de vérifier si le service Docker est actif sur une machine Linux ?
+    answers:
+      - { value: 'sudo systemctl status docker', correct: true }
+      - { value: 'docker check daemon', correct: false }
+      - { value: 'docker is-alive', correct: false }
+      - { value: 'docker status all', correct: false }
+    help: https://docs.docker.com/config/daemon/#start-the-daemon
+
+  - uuid: c2c92cc6-e8d0-43f5-a44a-ea3e64f0f63e
+    question: Comment résoudre une erreur "permission denied" lors d’un `docker run` par un utilisateur non root ?
+    answers:
+      - { value: 'Ajouter l’utilisateur au groupe docker', correct: true }
+      - { value: 'Redémarrer le conteneur en mode debug', correct: false }
+      - { value: 'Réinstaller Docker complètement', correct: false }
+      - { value: 'Changer le storage driver', correct: false }
+    help: https://docs.docker.com/engine/install/linux-postinstall/
+
+  - uuid: 7cb30853-d97b-4fd0-a6e9-70950dc42e2d
+    question: Quelle commande affiche les informations système et de configuration du démon Docker ?
+    answers:
+      - { value: 'docker info', correct: true }
+      - { value: 'docker version --all', correct: false }
+      - { value: 'docker config', correct: false }
+      - { value: 'docker engine show', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/info/
+
+  - uuid: 3cf6a598-85c2-43b4-b7c7-91a51283c3db
+    question: "Si `docker build` échoue avec 'unsupported driver: aufs', que faut-il faire ?"
+    answers:
+      - { value: 'Changer le driver vers overlay2', correct: true }
+      - { value: 'Réinstaller les volumes', correct: false }
+      - { value: 'Redémarrer le conteneur', correct: false }
+      - { value: 'Mettre à jour docker-compose', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/select-storage-driver/
+
+  - uuid: f4e1cb0c-2e15-4f09-a06d-2aa84383f05e
+    question: Quelle commande permet de consulter les logs du service Docker sur une distribution utilisant systemd ?
+    answers:
+      - { value: 'journalctl -u docker', correct: true }
+      - { value: 'docker logs docker', correct: false }
+      - { value: 'systemctl logs docker', correct: false }
+      - { value: 'docker show-log', correct: false }
+    help: https://docs.docker.com/config/daemon/#troubleshoot-the-daemon
+
+  - uuid: 610ff302-cb2e-4d94-a4f2-9a0d2df460cf
+    question: Que faire si l'installation de Docker échoue à cause de dépôts non trouvés sur Ubuntu ?
+    answers:
+      - { value: 'Vérifier que le dépôt officiel Docker est bien ajouté avec la bonne clé GPG', correct: true }
+      - { value: 'Changer le noyau Linux', correct: false }
+      - { value: 'Désinstaller tous les paquets système', correct: false }
+      - { value: 'Passer à une autre distribution', correct: false }
+    help: https://docs.docker.com/engine/install/ubuntu/
+
+  - uuid: e688309b-9bde-4437-8f5c-0d5a3a9fbd79
+    question: Quelle erreur se produit si Docker est installé sur un système de fichiers non compatible avec overlay2 ?
+    answers:
+      - { value: 'Error starting daemon: overlay2 not supported', correct: true }
+      - { value: 'TLS handshake failed', correct: false }
+      - { value: 'daemon.json malformed', correct: false }
+      - { value: 'No route to host', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/#prerequisites
+
+  - uuid: 58b58043-18f8-44cd-8328-fbb91a92d65c
+    question: Quelle est une cause fréquente de l’erreur "Got permission denied while trying to connect to the Docker daemon socket" ?
+    answers:
+      - { value: 'L’utilisateur n’est pas dans le groupe docker', correct: true }
+      - { value: 'Le réseau est mal configuré', correct: false }
+      - { value: 'L’image est corrompue', correct: false }
+      - { value: 'Docker est mal installé sur Windows', correct: false }
+    help: https://docs.docker.com/engine/install/linux-postinstall/
+
+  - uuid: 7ed640e0-d2e6-4209-83de-3c3ef3ce19f1
+    question: Si Docker ne démarre pas avec une erreur dans le fichier `daemon.json`, que faut-il vérifier ?
+    answers:
+      - { value: 'La syntaxe JSON du fichier (ex: virgules, crochets, guillemets)', correct: true }
+      - { value: 'Le nombre d’images présentes', correct: false }
+      - { value: 'L’espace disque disponible', correct: false }
+      - { value: 'Le niveau de log dans les conteneurs', correct: false }
+    help: https://docs.docker.com/config/daemon/#troubleshoot-the-daemon
