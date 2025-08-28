@@ -1,0 +1,90 @@
+questions:
+  - uuid: 8fdbfa8e-244d-46b8-9041-c74d649bca78
+    question: Quelle commande permet d’installer UCP sur un nœud Docker existant ?
+    answers:
+      - { value: 'docker container run --rm -it --name ucp docker/ucp install', correct: true }
+      - { value: 'docker swarm ucp init', correct: false }
+      - { value: 'docker install ucp', correct: false }
+      - { value: 'docker ucp deploy', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/install/
+
+  - uuid: 7b11b126-0b6a-4fdf-979c-2e2d413fc3fd
+    question: Combien de nœuds managers sont requis pour une configuration UCP en HA avec quorum ?
+    answers:
+      - { value: '3', correct: true }
+      - { value: '2', correct: false }
+      - { value: '1', correct: false }
+      - { value: '5', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/#high-availability
+
+  - uuid: 2aeebc5e-b670-42b1-a5ff-8fa7ccedfe9e
+    question: Quelle commande permet d’ajouter un nouveau nœud UCP manager à un cluster existant ?
+    answers:
+      - { value: 'docker container run --rm -it docker/ucp join --replica', correct: true }
+      - { value: 'docker swarm join --ucp-manager', correct: false }
+      - { value: 'docker ucp add-manager', correct: false }
+      - { value: 'docker node promote manager', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/install/join-linux-nodes.html
+
+  - uuid: 21ef8613-10b2-4e0f-a2f3-e2c1d1c8593f
+    question: Quelle est la commande recommandée pour installer DTR sur un nœud UCP ?
+    answers:
+      - { value: 'docker container run --rm docker/dtr install --ucp-url <URL> --ucp-username <user>', correct: true }
+      - { value: 'docker dtr deploy', correct: false }
+      - { value: 'docker registry install', correct: false }
+      - { value: 'docker swarm add dtr', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/install/
+
+  - uuid: a75e272c-7b0b-4437-a2a0-38cdd5446f38
+    question: Sur AWS, quelle option est couramment utilisée pour provisionner plusieurs nœuds Docker automatiquement ?
+    answers:
+      - { value: 'Cloud-init ou scripts via user-data EC2', correct: true }
+      - { value: 'Ansible uniquement', correct: false }
+      - { value: 'Terraform sans configuration', correct: false }
+      - { value: 'Docker Desktop avec mode swarm', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/ucp/on-aws/
+
+  - uuid: c41396d4-17f0-4a8a-9981-1b205728c9c5
+    question: Quelle exigence est nécessaire pour déployer DTR en HA ?
+    answers:
+      - { value: 'Un stockage persistant partagé ou répliqué', correct: true }
+      - { value: 'Un tag latest sur toutes les images', correct: false }
+      - { value: 'Un seul manager UCP', correct: false }
+      - { value: 'Accès root sur tous les workers', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/architecture/#high-availability
+
+  - uuid: 85e4de92-7298-4217-9c7c-f3e3ea8c2e84
+    question: Quelle commande permet de vérifier le statut des services UCP après installation ?
+    answers:
+      - { value: 'docker container ls', correct: true }
+      - { value: 'docker ucp status', correct: false }
+      - { value: 'docker info ucp', correct: false }
+      - { value: 'docker swarm status', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/troubleshoot/
+
+  - uuid: e65f1c8b-fba5-434a-a1bb-b8461c1d1b2e
+    question: Quelle est une bonne pratique pour équilibrer la charge entre nœuds UCP en HA ?
+    answers:
+      - { value: 'Utiliser un load balancer devant les managers UCP', correct: true }
+      - { value: 'Utiliser un node label', correct: false }
+      - { value: 'Activer le mode debug', correct: false }
+      - { value: 'Désactiver TLS', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/#ucp-high-availability
+
+  - uuid: e47cb7f3-ef17-4718-bbe1-6b13de8ae260
+    question: Peut-on déployer UCP et DTR sur les mêmes nœuds ?
+    answers:
+      - { value: 'Oui, mais c’est déconseillé en production', correct: true }
+      - { value: 'Non, ils doivent toujours être séparés', correct: false }
+      - { value: 'Oui, uniquement sur AWS', correct: false }
+      - { value: 'Non, sauf avec Docker Desktop', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/install/plan-your-installation.html
+
+  - uuid: cdb987f6-48b6-4f4c-9f2f-c34c1c36c837
+    question: Quelle option permet à un nœud DTR secondaire de se synchroniser avec un nœud principal ?
+    answers:
+      - { value: '--replica-id <value>', correct: true }
+      - { value: '--join-token', correct: false }
+      - { value: '--sync-mode', correct: false }
+      - { value: '--standby', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/install/add-replica.html
