@@ -1,4 +1,25 @@
-# docker-practice
+# Docker Practice – Unofficial DCA Certification Prep
+
+> ⚠️ **Disclaimer**: This project is **independent and unofficial**. It is **not affiliated**, **endorsed**, or **approved** by Docker Inc., Mirantis, or any of their affiliates.  
+> All quiz questions and content are **community-made** for educational and personal preparation purposes only.
+
+## 📘 About this project
+
+This repository offers a comprehensive collection of YAML-based quiz questions to help you prepare for the **Docker Certified Associate (DCA)** exam — based on the **Mirantis DCA Study Guide (2025)**.
+
+The goal is to help candidates:
+- Test their knowledge of Docker engine, networking, security, orchestration, image management, and more.
+- Practice with high-quality, realistic multiple-choice questions.
+- Navigate Docker and Mirantis documentation using provided links.
+
+## 🧩 What's inside
+
+- ✅ **YAML-formatted questions** with:
+    - `uuid`, `question`, `answers`, `correct` flag
+    - `help` field pointing to the official documentation when applicable
+- 🗂️ Organized by DCA topics:
+    - Installation, Configuration, Security, Orchestration, Images, Registry, Volumes, Networking, etc.
+- 🧠 Focused on **learning**, **not memorization**
 
 ### Domain 1: Orchestration (25% of exam)
 
@@ -100,3 +121,22 @@
 * Describe how to provision persistent storage to a Kubernetes pod using persistentVolumes.
 * Describe the relationship between container storage interface drivers, storageClass, persistentVolumeClaim and volume objects in Kubernetes.
 
+## Contributions
+
+Contributions are welcome! You can:
+
+* Add new YAML files for missing topics
+* Improve or correct existing questions
+* Suggest structural or content enhancements
+
+⚠️ Please do not copy any proprietary or official exam material. All contributions must remain original and educational.
+
+## Legal Notice
+
+* This is a community-driven, unofficial project.
+* It is not sponsored or endorsed by Docker Inc. or Mirantis.
+* All trademarks such as “Docker”, “Mirantis”, “DTR”, and “UCP” are used only as references and remain the property of their respective owners.
+* This repository contains only original content, created under fair use for educational purposes.
+
+## 📄 License
+This project is licensed under the MIT License
