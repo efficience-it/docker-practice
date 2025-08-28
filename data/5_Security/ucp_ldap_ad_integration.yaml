@@ -1,0 +1,81 @@
+questions:
+  - uuid: 15717e2b-bb77-46b7-b2aa-659e34d82a50
+    question: Quel est le but principal d’intégrer UCP avec LDAP ou Active Directory ?
+    answers:
+      - { value: 'Permettre une authentification centralisée des utilisateurs', correct: true }
+      - { value: 'Accélérer les transferts d’images', correct: false }
+      - { value: 'Activer le mode Swarm', correct: false }
+      - { value: 'Activer les volumes chiffrés', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/index.html
+
+  - uuid: 3a90c8f2-7f4d-4608-8e6d-bf1327384d3c
+    question: Quelle option UCP permet de mapper des groupes LDAP vers des équipes ?
+    answers:
+      - { value: 'Group Mapping', correct: true }
+      - { value: 'RBAC Sync', correct: false }
+      - { value: 'LDAP-to-RBAC Hook', correct: false }
+      - { value: 'Federated Login Sync', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/group-mapping.html
+
+  - uuid: 9497f5b9-b2e8-4c6f-a49e-4370c7427161
+    question: Quel champ doit être configuré pour identifier les utilisateurs dans LDAP ?
+    answers:
+      - { value: 'User Search Filter', correct: true }
+      - { value: 'Bind DN', correct: false }
+      - { value: 'TLS Certificate Path', correct: false }
+      - { value: 'Sync Token', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/index.html#required-settings
+
+  - uuid: 14f7ac14-41f4-41ec-b2a0-47d8eb0ff705
+    question: Quelle interface permet de configurer LDAP dans UCP ?
+    answers:
+      - { value: 'Interface Web Admin ou l’API UCP', correct: true }
+      - { value: 'docker config set --ldap', correct: false }
+      - { value: 'Fichier /etc/docker/ucp-ldap.conf', correct: false }
+      - { value: 'CLI kubectl', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/index.html#configure-authentication
+
+  - uuid: fbd028b4-832e-42cb-80b2-baa87d7353b9
+    question: Quel protocole sécurisé est recommandé pour la connexion entre UCP et LDAP ?
+    answers:
+      - { value: 'LDAPS (LDAP over SSL/TLS)', correct: true }
+      - { value: 'HTTP', correct: false }
+      - { value: 'FTP', correct: false }
+      - { value: 'SMTP', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/index.html#required-settings
+
+  - uuid: 44a75e71-464f-44d5-b7aa-1e59e35c02a0
+    question: Quel champ doit être rempli pour que UCP puisse interroger le serveur LDAP ?
+    answers:
+      - { value: 'Bind DN et mot de passe', correct: true }
+      - { value: 'Image Pull Secret', correct: false }
+      - { value: 'Node Token', correct: false }
+      - { value: 'Swarm Manager IP', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/index.html#required-settings
+
+  - uuid: 4207e0d3-dc14-4666-b245-68e6895f10d4
+    question: Une fois LDAP configuré, comment les utilisateurs sont-ils ajoutés dans UCP ?
+    answers:
+      - { value: 'Automatiquement à la première connexion réussie', correct: true }
+      - { value: 'Manuellement via un import CSV', correct: false }
+      - { value: 'Via un webhook externe', correct: false }
+      - { value: 'En modifiant le Dockerfile UCP', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/user-lifecycle.html
+
+  - uuid: 8105ef55-c6d0-4639-b037-c9d139050e6a
+    question: Peut-on utiliser plusieurs serveurs LDAP dans UCP ?
+    answers:
+      - { value: 'Oui, via un champ de serveurs séparés par des virgules', correct: true }
+      - { value: 'Non, un seul serveur est autorisé', correct: false }
+      - { value: 'Oui, mais uniquement en version UCP Community', correct: false }
+      - { value: 'Uniquement via Kubernetes', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/index.html#required-settings
+
+  - uuid: 3965e86e-397d-44e4-9d0a-d232e1f6b0e3
+    question: Quel message peut indiquer une erreur de configuration LDAP ?
+    answers:
+      - { value: 'Invalid credentials or cannot contact server', correct: true }
+      - { value: 'Image not found', correct: false }
+      - { value: 'Node not reachable', correct: false }
+      - { value: 'Daemon restart required', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/troubleshoot.html
