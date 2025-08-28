@@ -1,0 +1,81 @@
+questions:
+  - uuid: b36df24b-b1b6-47a2-b8c1-4d0b4c98f689
+    question: Quelle plateforme dans Docker Enterprise permet de scanner les images pour les vulnérabilités ?
+    answers:
+      - { value: 'DTR (Docker Trusted Registry)', correct: true }
+      - { value: 'UCP (Universal Control Plane)', correct: false }
+      - { value: 'Docker CLI', correct: false }
+      - { value: 'Docker Hub', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html
+
+  - uuid: 3d30c8d6-bfcb-4bb5-b066-0b31633c7a2b
+    question: Quand un scan de sécurité est-il lancé sur une image dans DTR ?
+    answers:
+      - { value: 'Immédiatement après le push de l’image', correct: true }
+      - { value: 'Toutes les 24 heures automatiquement', correct: false }
+      - { value: 'Uniquement manuellement depuis l’UI', correct: false }
+      - { value: 'Lors de la création de l’image avec Dockerfile', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html#image-scanning-flow
+
+  - uuid: 6e5297cf-98c5-4978-a5a2-d9b87f119038
+    question: Quel statut dans DTR indique qu'une image n’a pas de vulnérabilités critiques ?
+    answers:
+      - { value: 'Pass', correct: true }
+      - { value: 'ScanPending', correct: false }
+      - { value: 'Warning', correct: false }
+      - { value: 'Vulnerable', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html#scan-results
+
+  - uuid: 51bd227f-7df8-48b4-8f90-1e88100cf037
+    question: Où peut-on consulter les résultats de sécurité d’une image dans DTR ?
+    answers:
+      - { value: 'Dans l’interface web de DTR, sous l’image concernée', correct: true }
+      - { value: 'Sur Docker Hub dans l’onglet Security', correct: false }
+      - { value: 'Via docker scan <image>', correct: false }
+      - { value: 'Dans la configuration Swarm', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html#scan-results
+
+  - uuid: 4a4210c4-93dc-49f2-a00e-204660a0ccba
+    question: Quel type de vulnérabilités est détecté par le scanner DTR ?
+    answers:
+      - { value: 'CVE (Common Vulnerabilities and Exposures)', correct: true }
+      - { value: 'Erreurs de syntaxe Dockerfile', correct: false }
+      - { value: 'Fuites de secrets dans les logs', correct: false }
+      - { value: 'Failles dans les volumes', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html#image-scanning-flow
+
+  - uuid: 93143c7e-6826-43e2-bc70-39f390e99c3e
+    question: Quelle est une bonne pratique après avoir détecté un CVE critique dans une image ?
+    answers:
+      - { value: 'Mettre à jour les paquets et reconstruire l’image', correct: true }
+      - { value: 'Ignorer l’alerte si le conteneur fonctionne', correct: false }
+      - { value: 'Dépublier l’image du registry', correct: false }
+      - { value: 'Changer de registry', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html#mitigate
+
+  - uuid: 6c85d1e5-0106-4b0b-88b5-fd4079cfa01f
+    question: Est-il possible d’interdire l’exécution d’images vulnérables via des règles ?
+    answers:
+      - { value: 'Oui, avec des règles d’admission dans UCP', correct: true }
+      - { value: 'Non, Docker n’offre pas ce niveau de sécurité', correct: false }
+      - { value: 'Oui, mais uniquement sur Docker Desktop', correct: false }
+      - { value: 'Oui, mais seulement via Docker Hub Pro', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/admission-control.html
+
+  - uuid: a7e14311-5b38-4dd3-bf88-76d881e5e5bc
+    question: Quelle est la source de vulnérabilités utilisée par le scanner de DTR ?
+    answers:
+      - { value: 'La base CVE de NIST (National Vulnerability Database)', correct: true }
+      - { value: 'Des règles personnalisées définies par l’utilisateur', correct: false }
+      - { value: 'Les logs d’images précédentes', correct: false }
+      - { value: 'Dockerfile linting', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html#scanner
+
+  - uuid: 4dd21887-b9a0-41ae-b39e-0ef360f3c264
+    question: Que signifie le statut “ScanPending” pour une image dans DTR ?
+    answers:
+      - { value: 'Le scan est en cours ou planifié mais pas encore terminé', correct: true }
+      - { value: 'Aucun problème détecté', correct: false }
+      - { value: 'Image non valide', correct: false }
+      - { value: 'Scan désactivé', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html#scan-results

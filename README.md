@@ -79,14 +79,14 @@
 * [Describe default engine security.](data/5_Security/describe_default_engine_security.yaml)
 * [Describe swarm default security.](data/5_Security/swarm_default_security.yaml)
 * [Describe MTLS.](data/5_Security/describe_mtls.yaml)
-* Describe identity roles.
+* [Describe identity roles.](data/5_Security/security_identity_roles.yaml)
 * [Compare and contrast UCP workers and managers.](data/5_Security/compare_contrast_ucp_workers_managers.yaml)
-* Describe the process to use external certificates with UCP and DTR.
-* Describe and demonstrate that an image passes a security scan.
+* [Describe the process to use external certificates with UCP and DTR.](data/5_Security/external_certs_ucp_dtr.yaml)
+* [Describe and demonstrate that an image passes a security scan.](data/5_Security/image_security_scan.yaml)
 * [Describe and demonstrate how to enable Docker Content Trust.](data/5_Security/describe_demonstrate_how_enable_docker_content_trust.yaml)
-* Describe and demonstrate how to configure RBAC with UCP.
-* Describe and demonstrate how to integrate UCP with LDAP/AD.
-* Describe and demonstrate how to create UCP client bundles.
+* [Describe and demonstrate how to configure RBAC with UCP.](data/5_Security/ucp_rbac_config.yaml)
+* [Describe and demonstrate how to integrate UCP with LDAP/AD.](data/5_Security/ucp_ldap_ad_integration.yaml)
+* [Describe and demonstrate how to create UCP client bundles.](data/5_Security/ucp_client_bundle.yaml)
 
 ### Domain 6: Storage and Volumes (10% of exam)
 
