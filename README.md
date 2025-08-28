@@ -53,7 +53,7 @@
 * [Describe the use of namespaces, cgroups, and certificate configuration.](data/3_installation_and_configuration/describe_namespaces_cgroups_certificates.yaml)
 * [Describe and interpret errors to troubleshoot installation issues without assistance.](data/3_installation_and_configuration/install_troubleshooting.yaml)
 * [Describe and demonstrate the steps to deploy the Docker engine, UCP, and DTR on AWS and on-premises in an HA configuration.](data/3_installation_and_configuration/deploy_ucp_dtr_ha.yaml)
-* Describe and demonstrate how to configure backups for UCP and DTR.
+* [Describe and demonstrate how to configure backups for UCP and DTR.](data/3_installation_and_configuration/backup_ucp_dtr.yaml)
 
 ### Domain 4: Networking (15% of exam)
 
