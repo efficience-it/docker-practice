@@ -1,0 +1,90 @@
+questions:
+  - uuid: 4973f403-8b26-4e44-b29f-169fbf9a0de1
+    question: Quelle commande permet d’initialiser un cluster Docker Swarm ?
+    answers:
+      - { value: 'docker swarm init', correct: true }
+      - { value: 'docker swarm create', correct: false }
+      - { value: 'docker cluster init', correct: false }
+      - { value: 'docker service init', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/swarm_init/
+
+  - uuid: e1cd0de6-6f4f-4e41-a0c6-63ce3e6e39fd
+    question: Quelle commande est utilisée pour qu’un autre nœud rejoigne un cluster Swarm en tant que worker ?
+    answers:
+      - { value: 'docker swarm join --token <worker-token> <manager-ip>:2377', correct: true }
+      - { value: 'docker node join worker', correct: false }
+      - { value: 'docker swarm attach', correct: false }
+      - { value: 'docker join swarm worker', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/swarm_join/
+
+  - uuid: 63a25dc4-0164-4c28-b4cf-139017a57939
+    question: Quelle commande permet de promouvoir un nœud worker en manager ?
+    answers:
+      - { value: 'docker node promote <node>', correct: true }
+      - { value: 'docker swarm promote <node>', correct: false }
+      - { value: 'docker manager add <node>', correct: false }
+      - { value: 'docker node add-manager <node>', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/node_promote/
+
+  - uuid: 2e9eeadd-14ea-4038-82cd-0192a25f8b6c
+    question: Quel rôle joue la commande `docker swarm join-token` ?
+    answers:
+      - { value: 'Afficher ou régénérer le token pour joindre un cluster Swarm', correct: true }
+      - { value: 'Créer un nouveau cluster', correct: false }
+      - { value: 'Configurer les ports d’écoute du cluster', correct: false }
+      - { value: 'Afficher les logs des services Swarm', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/swarm_join_token/
+
+  - uuid: 44c3eb41-e7c7-4a16-aee3-1ee5c5cf41cb
+    question: Quel est le nombre minimal de managers requis pour qu’un cluster Swarm conserve le quorum ?
+    answers:
+      - { value: 'La majorité des managers (N/2 + 1)', correct: true }
+      - { value: 'Tous les nœuds', correct: false }
+      - { value: 'Un seul manager suffit toujours', correct: false }
+      - { value: 'Deux managers minimum', correct: false }
+    help: https://docs.docker.com/engine/swarm/admin_guide/#maintain-quorum
+
+  - uuid: 1969a49a-ec30-486b-8960-62a4f80a77a2
+    question: Quel est le chemin contenant les métadonnées critiques du cluster Swarm ?
+    answers:
+      - { value: '/var/lib/docker/swarm', correct: true }
+      - { value: '/etc/docker/swarm', correct: false }
+      - { value: '/var/run/docker/swarm', correct: false }
+      - { value: '/opt/docker/swarm/raft', correct: false }
+    help: https://docs.docker.com/engine/swarm/admin_guide/#backup-and-recovery
+
+  - uuid: e7e05c8d-1786-48ee-a6a5-e96a94d93f17
+    question: Quelle méthode permet de sauvegarder manuellement un cluster Swarm ?
+    answers:
+      - { value: 'Arrêter Docker et copier /var/lib/docker/swarm', correct: true }
+      - { value: 'Exporter tous les services avec docker-compose', correct: false }
+      - { value: 'Lancer docker backup cluster', correct: false }
+      - { value: 'Faire un commit d’image sur chaque nœud', correct: false }
+    help: https://docs.docker.com/engine/swarm/admin_guide/#backup-and-recovery
+
+  - uuid: c4ae7fd3-8cf5-4b43-9dbb-944877e2b198
+    question: Que faut-il faire avant de restaurer une sauvegarde Swarm ?
+    answers:
+      - { value: 'S’assurer que Docker est arrêté sur le nœud concerné', correct: true }
+      - { value: 'Exécuter docker init --restore', correct: false }
+      - { value: 'Supprimer tous les conteneurs en cours', correct: false }
+      - { value: 'Lancer docker service pause', correct: false }
+    help: https://docs.docker.com/engine/swarm/admin_guide/#backup-and-recovery
+
+  - uuid: b1830b39-b7ce-49c8-9a0b-620fcb72855a
+    question: Que permet la commande `docker node ls` dans un cluster Swarm ?
+    answers:
+      - { value: 'Lister les nœuds et leurs rôles (manager/worker)', correct: true }
+      - { value: 'Lister tous les services actifs', correct: false }
+      - { value: 'Lister les volumes rattachés aux conteneurs', correct: false }
+      - { value: 'Lister les registres utilisés', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/node_ls/
+
+  - uuid: 70a10577-6ee7-456c-a77a-23c8e46f9c36
+    question: Est-ce qu’un nœud worker peut être utilisé pour planifier un service global dans Swarm ?
+    answers:
+      - { value: 'Oui, s’il est inclus dans les contraintes du service', correct: true }
+      - { value: 'Non, seuls les managers peuvent exécuter des services', correct: false }
+      - { value: 'Non, sauf si le service est défini comme replica', correct: false }
+      - { value: 'Oui, uniquement pour les conteneurs sans réseau', correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
