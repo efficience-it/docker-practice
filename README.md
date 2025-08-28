@@ -86,7 +86,7 @@
 * [Describe and demonstrate how to enable Docker Content Trust.](data/5_Security/describe_demonstrate_how_enable_docker_content_trust.yaml)
 * [Describe and demonstrate how to configure RBAC with UCP.](data/5_Security/ucp_rbac_config.yaml)
 * [Describe and demonstrate how to integrate UCP with LDAP/AD.](data/5_Security/ucp_ldap_ad_integration.yaml)
-* Describe and demonstrate how to create UCP client bundles.
+* [Describe and demonstrate how to create UCP client bundles.](data/5_Security/ucp_client_bundle.yaml)
 
 ### Domain 6: Storage and Volumes (10% of exam)
 
