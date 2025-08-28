@@ -47,7 +47,7 @@
 * [Describe and demonstrate the setup of repo, selection of a storage driver, and installation of the Docker engine on multiple platforms.](data/3_installation_and_configuration/install_storage_driver.yaml)
 * [Describe and demonstrate configuration of logging drivers (splunk, journald, etc.).](data/3_installation_and_configuration/logging_drivers.yaml)
 * [Describe and demonstrate how to set up swarm, configure managers, add nodes, and setup the backup schedule.](data/3_installation_and_configuration/swarm_setup_backup.yaml)
-* Describe and demonstrate how to create and manage user and teams.
+* [Describe and demonstrate how to create and manage user and teams.](data/3_installation_and_configuration/hub_users_teams.yaml)
 * [Describe and demonstrate how to configure the Docker daemon to start on boot.](data/3_installation_and_configuration/describe_demonstrate_how_configure_docker_daemon_start_boot.yaml)
 * Describe and demonstrate how to use certificate-based client-server authentication to ensure a Docker daemon has the rights to access images on a registry.
 * [Describe the use of namespaces, cgroups, and certificate configuration.](data/3_installation_and_configuration/describe_namespaces_cgroups_certificates.yaml)
