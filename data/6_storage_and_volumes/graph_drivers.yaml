@@ -15,7 +15,7 @@ questions:
       - { value: 'overlay2', correct: false }
       - { value: 'aufs', correct: false }
       - { value: 'zfs', correct: false }
-    help: https://docs.docker.com/storage/storagedriver/windowsfilter-driver/
+    help: https://docs.docker.com/engine/storage/drivers/windowsfilter-driver/
 
   - uuid: 3ad9ffb6-6b54-4f2b-b63c-8f4ed03d978c
     question: Which storage driver was historically used on Ubuntu but is now deprecated in favor of overlay2?
@@ -69,7 +69,7 @@ questions:
       - { value: 'overlay2', correct: false }
       - { value: 'aufs', correct: false }
       - { value: 'devicemapper', correct: false }
-    help: https://docs.docker.com/storage/storagedriver/windowsfilter-driver/
+    help: https://docs.docker.com/engine/storage/drivers/windowsfilter-driver/
 
   - uuid: 9d2f8347-0fa9-47d8-9cf1-1b82a7ef1cc8
     question: What is a key limitation of the devicemapper storage driver in loop-lvm mode?
