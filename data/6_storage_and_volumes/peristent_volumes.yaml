@@ -63,7 +63,7 @@ questions:
     help: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming
 
   - uuid: 4d8e2f42-6e6a-4c20-9d6a-1b2a6d2a8caa
-    question: What is the effect of setting StorageClass parameter 'volumeBindingMode: WaitForFirstConsumer'?
+    question: "What is the effect of setting StorageClass parameter 'volumeBindingMode: WaitForFirstConsumer'?"
     answers:
       - { value: "Delays PV provisioning and binding until a Pod is scheduled, enabling topology-aware placement", correct: true }
       - { value: "Forces immediate PV creation on all nodes", correct: false }
