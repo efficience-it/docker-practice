@@ -61,5 +61,3 @@ questions:
       - { value: 'Through an external webhook', correct: false }
       - { value: 'By modifying the UCP Dockerfile', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/user-lifecycle.html
-
-  - uuid: 8105ef55-c6d0-4639-b03
