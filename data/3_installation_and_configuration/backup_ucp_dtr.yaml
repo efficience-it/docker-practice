@@ -1,6 +1,6 @@
 questions:
   - uuid: 2fd05cc9-0e15-4ac4-ae3b-9a49ac0380f6
-    question: Quelle commande permet de sauvegarder les données d'UCP ?
+    question: Which command allows you to back up UCP data?
     answers:
       - { value: 'docker container exec ucp etcd backup > backup.tar', correct: true }
       - { value: 'docker backup ucp --output backup.tar', correct: false }
@@ -9,16 +9,16 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/backup-restore.html
 
   - uuid: 0b122010-4d64-44ff-8153-f33c3dc3e2f0
-    question: Que faut-il faire avant d’exécuter une restauration d’UCP ?
+    question: What must be done before performing a UCP restore?
     answers:
-      - { value: 'Arrêter le service Docker sur le nœud concerné', correct: true }
-      - { value: 'Redémarrer tous les conteneurs', correct: false }
-      - { value: 'Supprimer tous les volumes', correct: false }
-      - { value: 'Purger tous les logs', correct: false }
+      - { value: 'Stop the Docker service on the target node', correct: true }
+      - { value: 'Restart all containers', correct: false }
+      - { value: 'Delete all volumes', correct: false }
+      - { value: 'Purge all logs', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/backup-restore.html#restore
 
   - uuid: fdc31b03-3093-4638-a77f-ef7b11860d88
-    question: Quelle commande permet de sauvegarder une instance DTR ?
+    question: Which command allows you to back up a DTR instance?
     answers:
       - { value: 'docker run -it docker/dtr backup', correct: true }
       - { value: 'docker container exec dtr backup', correct: false }
@@ -27,7 +27,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/backup-restore.html
 
   - uuid: fdbb11c1-6f7c-4e93-b487-c4ecdb6f315c
-    question: Quelle commande est utilisée pour restaurer une sauvegarde DTR ?
+    question: Which command is used to restore a DTR backup?
     answers:
       - { value: 'docker run -i docker/dtr restore < backup.tar', correct: true }
       - { value: 'docker container exec dtr restore backup.tar', correct: false }
@@ -36,16 +36,16 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/backup-restore.html
 
   - uuid: 7b313274-0072-41a0-bd16-170c8672c845
-    question: Quel élément est essentiel pour que la restauration DTR fonctionne correctement ?
+    question: What is essential for a DTR restore to work correctly?
     answers:
-      - { value: 'Utiliser la même version de DTR que celle de la sauvegarde', correct: true }
-      - { value: 'Être connecté à Internet', correct: false }
-      - { value: 'Avoir Docker Desktop installé', correct: false }
-      - { value: 'Utiliser uniquement le port 2376', correct: false }
+      - { value: 'Use the same DTR version as the backup', correct: true }
+      - { value: 'Be connected to the Internet', correct: false }
+      - { value: 'Have Docker Desktop installed', correct: false }
+      - { value: 'Use only port 2376', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/backup-restore.html#restore-backup
 
   - uuid: 38f20494-3c31-4c83-9f39-b3e0b5c6db48
-    question: Où sont stockées les données critiques d’UCP à sauvegarder ?
+    question: Where are the critical UCP data stored that must be backed up?
     answers:
       - { value: '/var/lib/docker/ucp', correct: true }
       - { value: '/etc/docker/ucp', correct: false }
@@ -54,37 +54,37 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/backup-restore.html
 
   - uuid: 91f9d1ef-d40b-40fa-a45e-4cb95641727b
-    question: Quelle est la meilleure pratique pour planifier les sauvegardes d’UCP et DTR ?
+    question: What is the best practice for scheduling UCP and DTR backups?
     answers:
-      - { value: 'Automatiser la sauvegarde avec des scripts et la stocker à l’extérieur du cluster', correct: true }
-      - { value: 'Faire une sauvegarde manuelle mensuelle', correct: false }
-      - { value: 'Créer un commit d’image tous les soirs', correct: false }
-      - { value: 'Supprimer les logs et les volumes obsolètes', correct: false }
+      - { value: 'Automate the backup with scripts and store it outside the cluster', correct: true }
+      - { value: 'Perform a manual backup once a month', correct: false }
+      - { value: 'Create an image commit every night', correct: false }
+      - { value: 'Delete old logs and volumes', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/backup-restore.html#best-practices
 
   - uuid: 65ae1827-32ec-4d6f-84ed-f41fef47135e
-    question: Peut-on restaurer un cluster UCP complet à partir d’une seule sauvegarde ?
+    question: Can a full UCP cluster be restored from a single backup?
     answers:
-      - { value: 'Oui, si elle a été prise sur un manager UCP avec quorum', correct: true }
-      - { value: 'Non, il faut une sauvegarde de chaque nœud', correct: false }
-      - { value: 'Oui, mais uniquement si Swarm est désactivé', correct: false }
-      - { value: 'Non, UCP ne permet pas de restauration', correct: false }
+      - { value: 'Yes, if it was taken on a UCP manager with quorum', correct: true }
+      - { value: 'No, a backup of each node is required', correct: false }
+      - { value: 'Yes, but only if Swarm is disabled', correct: false }
+      - { value: 'No, UCP does not support restoration', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/backup-restore.html
 
   - uuid: 32590a06-2d90-4b13-8c20-6e06ac3d00e0
-    question: Quelle est une raison fréquente d’échec lors de la restauration d’un backup DTR ?
+    question: What is a common reason for failure when restoring a DTR backup?
     answers:
-      - { value: 'Incompatibilité de version entre la sauvegarde et DTR installé', correct: true }
-      - { value: 'Volume mal nommé', correct: false }
-      - { value: 'DTR déjà en mode HA', correct: false }
-      - { value: 'Manque d’accès à internet', correct: false }
+      - { value: 'Version incompatibility between the backup and the installed DTR', correct: true }
+      - { value: 'Incorrectly named volume', correct: false }
+      - { value: 'DTR already in HA mode', correct: false }
+      - { value: 'Lack of Internet access', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/backup-restore.html#restore-backup
 
   - uuid: 5cf798e7-d097-4992-8b7b-36b63329207d
-    question: Quelle bonne pratique doit accompagner les sauvegardes UCP/DTR ?
+    question: What best practice should accompany UCP/DTR backups?
     answers:
-      - { value: 'Tester régulièrement les restaurations', correct: true }
-      - { value: 'Désactiver TLS pour simplifier la restauration', correct: false }
-      - { value: 'Compresser les volumes Docker manuellement', correct: false }
-      - { value: 'Utiliser uniquement les sauvegardes locales', correct: false }
+      - { value: 'Regularly test restorations', correct: true }
+      - { value: 'Disable TLS to simplify restoration', correct: false }
+      - { value: 'Manually compress Docker volumes', correct: false }
+      - { value: 'Use only local backups', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/backup-restore.html#best-practices
