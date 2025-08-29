@@ -1,0 +1,90 @@
+questions:
+  - uuid: 1c2f6a9a-47cb-4fa6-97c2-dcb6723af1f0
+    question: What is the default and recommended storage (graph) driver for modern Linux distributions?
+    answers:
+      - { value: 'overlay2', correct: true }
+      - { value: 'aufs', correct: false }
+      - { value: 'btrfs', correct: false }
+      - { value: 'devicemapper', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/
+
+  - uuid: 2f1e3fb7-98d1-4cbe-9bb9-973a414ac39d
+    question: Which storage driver must be used on Docker Desktop for Windows?
+    answers:
+      - { value: 'windowsfilter', correct: true }
+      - { value: 'overlay2', correct: false }
+      - { value: 'aufs', correct: false }
+      - { value: 'zfs', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/windowsfilter-driver/
+
+  - uuid: 3ad9ffb6-6b54-4f2b-b63c-8f4ed03d978c
+    question: Which storage driver was historically used on Ubuntu but is now deprecated in favor of overlay2?
+    answers:
+      - { value: 'aufs', correct: true }
+      - { value: 'btrfs', correct: false }
+      - { value: 'zfs', correct: false }
+      - { value: 'windowsfilter', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/aufs-driver/
+
+  - uuid: 4fd89c32-993a-42c3-9b5f-0e10bc1183c2
+    question: On which file systems is overlay2 supported?
+    answers:
+      - { value: 'ext4 and xfs with d_type=true', correct: true }
+      - { value: 'NTFS and FAT32', correct: false }
+      - { value: 'btrfs only', correct: false }
+      - { value: 'zfs only', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/#prerequisites
+
+  - uuid: 5b2ac111-2b32-4a24-9a2c-7fefc851be18
+    question: Which storage driver provides advanced features such as snapshots and quotas but requires a dedicated filesystem?
+    answers:
+      - { value: 'btrfs', correct: true }
+      - { value: 'overlay2', correct: false }
+      - { value: 'aufs', correct: false }
+      - { value: 'windowsfilter', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/btrfs-driver/
+
+  - uuid: 6d88cc7a-b5db-4f34-bc42-dc8df46a297e
+    question: Which graph driver is mandatory when Docker runs on ZFS?
+    answers:
+      - { value: 'zfs', correct: true }
+      - { value: 'overlay2', correct: false }
+      - { value: 'aufs', correct: false }
+      - { value: 'devicemapper', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/zfs-driver/
+
+  - uuid: 7c2f5128-cf2a-4c1d-9183-5c92fb156188
+    question: What storage driver is the fallback on RHEL/CentOS when overlay2 is not available?
+    answers:
+      - { value: 'devicemapper (direct-lvm mode)', correct: true }
+      - { value: 'aufs', correct: false }
+      - { value: 'btrfs', correct: false }
+      - { value: 'windowsfilter', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/
+
+  - uuid: 8e92c0d3-bf23-48c3-b4df-148f2d515b67
+    question: Which Windows storage driver is used by default in Windows Server Containers?
+    answers:
+      - { value: 'windowsfilter', correct: true }
+      - { value: 'overlay2', correct: false }
+      - { value: 'aufs', correct: false }
+      - { value: 'devicemapper', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/windowsfilter-driver/
+
+  - uuid: 9d2f8347-0fa9-47d8-9cf1-1b82a7ef1cc8
+    question: What is a key limitation of the devicemapper storage driver in loop-lvm mode?
+    answers:
+      - { value: 'Poor performance, not recommended for production', correct: true }
+      - { value: 'Images cannot be shared across hosts', correct: false }
+      - { value: 'Does not support container restart', correct: false }
+      - { value: 'Only works on NTFS partitions', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/
+
+  - uuid: a473c98b-2c6f-498a-8cf4-b5ebaf3770a2
+    question: Which storage driver should you choose for Docker in production on Linux if no special filesystem requirements exist?
+    answers:
+      - { value: 'overlay2', correct: true }
+      - { value: 'aufs', correct: false }
+      - { value: 'zfs', correct: false }
+      - { value: 'btrfs', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/select-storage-driver/

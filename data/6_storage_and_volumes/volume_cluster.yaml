@@ -1,0 +1,72 @@
+questions:
+  - uuid: 4e528eb3-9cf5-448e-8b9c-b089f6971b82
+    question: In a Docker Swarm cluster, what is required for a container to access the same data across different nodes?
+    answers:
+      - { value: "A volume driver or shared storage accessible to all nodes", correct: true }
+      - { value: "The default local driver", correct: false }
+      - { value: "Manual copying of files between nodes", correct: false }
+      - { value: "Overlay networking", correct: false }
+    help: https://docs.docker.com/storage/volumes/
+
+  - uuid: 56f40f60-f787-4f72-b041-3a3c816dc171
+    question: What happens if a service using a `local` volume is rescheduled to another node in Swarm?
+    answers:
+      - { value: "The container starts, but the data will not be present on the new node", correct: true }
+      - { value: "Docker automatically migrates the data", correct: false }
+      - { value: "Swarm blocks the scheduling until storage syncs", correct: false }
+      - { value: "The volume becomes globally accessible via overlay", correct: false }
+    help: https://docs.docker.com/storage/volumes/#local
+
+  - uuid: 6a9c5c72-d9a1-42d0-b67b-f69a3cc38bb7
+    question: Which storage option is commonly used in Swarm to share data across nodes?
+    answers:
+      - { value: "NFS or other shared network storage", correct: true }
+      - { value: "Local tmpfs volumes", correct: false }
+      - { value: "Bind mounts from each node’s /var directory", correct: false }
+      - { value: "Cluster gossip protocol", correct: false }
+    help: https://docs.docker.com/storage/volumes/#volume-drivers
+
+  - uuid: 3d36c347-0f8e-43a5-96cb-fc90ebf4583b
+    question: Which command allows specifying a volume driver when creating a service in Swarm?
+    answers:
+      - { value: "docker service create --mount type=volume,source=data,target=/data,volume-driver=nfs", correct: true }
+      - { value: "docker swarm volume add", correct: false }
+      - { value: "docker volume create --service-only", correct: false }
+      - { value: "docker node storage attach", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#attach-services-to-volumes
+
+  - uuid: 1c39e967-10d5-41df-96ee-07a7cb09ee64
+    question: Which Swarm feature can ensure a service using local storage always runs on the same node?
+    answers:
+      - { value: "Placement constraints", correct: true }
+      - { value: "Overlay networks", correct: false }
+      - { value: "Ingress routing mesh", correct: false }
+      - { value: "Secrets management", correct: false }
+    help: https://docs.docker.com/engine/swarm/services/#placement-constraints
+
+  - uuid: 72c2b91f-97e7-45f7-b2b7-faadbbbc3d5f
+    question: What is the main drawback of using bind mounts in a multi-node cluster?
+    answers:
+      - { value: "Data is tied to a single node and not portable", correct: true }
+      - { value: "They are slower than volumes", correct: false }
+      - { value: "They cannot store persistent data", correct: false }
+      - { value: "They require Kubernetes", correct: false }
+    help: https://docs.docker.com/storage/bind-mounts/
+
+  - uuid: d79c6df3-64a5-41d8-9b73-67f6cf5de9d5
+    question: Which type of storage is best suited for databases running in a Swarm cluster?
+    answers:
+      - { value: "Shared block or network-attached storage with a supported driver", correct: true }
+      - { value: "Local temporary storage", correct: false }
+      - { value: "Anonymous tmpfs volumes", correct: false }
+      - { value: "Bind mounts to /tmp", correct: false }
+    help: https://docs.docker.com/storage/volumes/#volume-drivers
+
+  - uuid: 35c79892-11a0-4e40-92af-289ff9ee3d0a
+    question: How does Docker Swarm handle persistent volumes by default?
+    answers:
+      - { value: "They are node-specific and not replicated across the cluster", correct: true }
+      - { value: "They are replicated automatically to all nodes", correct: false }
+      - { value: "They are stored inside Raft logs", correct: false }
+      - { value: "They are backed up with service definitions", correct: false }
+    help: https://docs.docker.com/storage/volumes/

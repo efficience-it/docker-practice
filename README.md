@@ -111,15 +111,15 @@ The goal is to help candidates:
 
 ### Domain 6: Storage and Volumes (10% of exam)
 
-* Identify the correct graph drivers to uses with various operating systems.
+* [Identify the correct graph drivers to uses with various operating systems.](data/6_storage_and_volumes/graph_drivers.yaml)
 * [Describe and demonstrate how to configure devicemapper.](data/6_storage_and_volumes/describe_demonstrate_how_to_configure_devicemapper.yaml)
-* Compare and contrast object and block storage and when they should be used.
-* Describe how an application is composed of layers and where these layers reside on the filesystem.
-* Describe the use of volumes are used with Docker for persistent storage.
-* Identify the steps to take to clean up unused images on a filesystem and DTR.
-* Describe and demonstrate how storage can be used across cluster nodes.
-* Describe how to provision persistent storage to a Kubernetes pod using persistentVolumes.
-* Describe the relationship between container storage interface drivers, storageClass, persistentVolumeClaim and volume objects in Kubernetes.
+* [Compare and contrast object and block storage and when they should be used.](data/6_storage_and_volumes/contrast_object.yaml)
+* [Describe how an application is composed of layers and where these layers reside on the filesystem.](data/6_storage_and_volumes/layers_filesystem.yaml)
+* [Describe the use of volumes are used with Docker for persistent storage.](data/6_storage_and_volumes/persistent_storage.yaml)
+* [Identify the steps to take to clean up unused images on a filesystem and DTR.](data/6_storage_and_volumes/unused_images.yaml)
+* [Describe and demonstrate how storage can be used across cluster nodes.](data/6_storage_and_volumes/volume_cluster.yaml)
+* [Describe how to provision persistent storage to a Kubernetes pod using persistentVolumes.](data/6_storage_and_volumes/peristent_volumes.yaml)
+* [Describe the relationship between container storage interface drivers, storageClass, persistentVolumeClaim and volume objects in Kubernetes.](data/6_storage_and_volumes/relationship_storage_volume.yaml)
 
 ## Contributions
 

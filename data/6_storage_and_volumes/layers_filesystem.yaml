@@ -1,0 +1,90 @@
+questions:
+  - uuid: 0a5bc9a7-d1d3-4c2d-95c5-b93487206aaf
+    question: How is a Docker image structured internally?
+    answers:
+      - { value: "It is built from a series of read-only layers stacked together", correct: true }
+      - { value: "It is a single monolithic binary file", correct: false }
+      - { value: "It is a tarball extracted at runtime", correct: false }
+      - { value: "It is stored only in memory", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/
+
+  - uuid: 7882d43e-bb16-4ef8-a33d-efea870cf9f9
+    question: What happens when multiple images share the same base layer?
+    answers:
+      - { value: "They reuse the layer, saving disk space", correct: true }
+      - { value: "Each image duplicates the base layer", correct: false }
+      - { value: "The base layer is deleted automatically", correct: false }
+      - { value: "The images cannot run simultaneously", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/
+
+  - uuid: 4127e5aa-429f-4c58-a7c8-c80ab7a84a9a
+    question: Where are image and container layers stored on the host filesystem by default?
+    answers:
+      - { value: "/var/lib/docker", correct: true }
+      - { value: "/etc/docker", correct: false }
+      - { value: "/usr/local/lib/docker", correct: false }
+      - { value: "/opt/docker/layers", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/#docker-storage-drivers
+
+  - uuid: 92a49c67-7898-4b2c-86fb-4cc21ddf3b25
+    question: What is the role of the container’s writable layer?
+    answers:
+      - { value: "It stores changes such as logs, temporary files, or new data created by the container", correct: true }
+      - { value: "It replaces all read-only image layers", correct: false }
+      - { value: "It contains only the Dockerfile", correct: false }
+      - { value: "It is used only for networking", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/#the-copy-on-write-strategy
+
+  - uuid: 14f3a1a5-0fa5-49f8-aba3-dfd0b0b5c567
+    question: What happens to a container’s writable layer when the container is deleted?
+    answers:
+      - { value: "It is removed along with the container", correct: true }
+      - { value: "It is saved as a new image by default", correct: false }
+      - { value: "It is automatically mounted as a volume", correct: false }
+      - { value: "It persists until the Docker service is restarted", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/#container-layers
+
+  - uuid: 1f3ac09e-beb1-4b5b-9125-d8d0e05a70b7
+    question: Which Docker storage driver is recommended for modern Linux distributions to manage layers?
+    answers:
+      - { value: "overlay2", correct: true }
+      - { value: "aufs", correct: false }
+      - { value: "btrfs", correct: false }
+      - { value: "devicemapper", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/
+
+  - uuid: 10cc50f0-29a4-4f1a-bf95-8db83df0dbff
+    question: How does Docker implement the copy-on-write strategy with image layers?
+    answers:
+      - { value: "Files are only copied into the writable layer when modified", correct: true }
+      - { value: "All layers are fully copied into the container at start", correct: false }
+      - { value: "Each image has a unique copy of its base layers", correct: false }
+      - { value: "Files are merged permanently across layers", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/#the-copy-on-write-strategy
+
+  - uuid: 53b6b8d5-713d-4b46-8fb6-1b236d68dc1d
+    question: How can you view the layers of an image?
+    answers:
+      - { value: "docker history <image>", correct: true }
+      - { value: "docker layers <image>", correct: false }
+      - { value: "docker image tree <image>", correct: false }
+      - { value: "ls /var/lib/docker/layers/<image>", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/history/
+
+  - uuid: 02f5a5e6-3054-4f9d-b059-1bbf7a4ab92d
+    question: Which type of layer is shared across containers?
+    answers:
+      - { value: "Read-only image layers", correct: true }
+      - { value: "Writable container layer", correct: false }
+      - { value: "Volumes", correct: false }
+      - { value: "tmpfs mounts", correct: false }
+    help: https://docs.docker.com/storage/storagedriver/
+
+  - uuid: 5b819d9f-7a36-476a-b9aa-2d46df1dbf2b
+    question: Which command shows both image layers and their approximate size?
+    answers:
+      - { value: "docker history", correct: true }
+      - { value: "docker inspect --layers", correct: false }
+      - { value: "docker image show-layers", correct: false }
+      - { value: "docker layer ls", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/history/
