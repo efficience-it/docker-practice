@@ -1,0 +1,90 @@
+questions:
+  - uuid: 41f3b9ab-7a51-49b4-944c-6a7ad1987c2c
+    question: What is the primary purpose of Docker volumes?
+    answers:
+      - { value: "To provide persistent storage independent of container lifecycle", correct: true }
+      - { value: "To reduce image size", correct: false }
+      - { value: "To manage container networking", correct: false }
+      - { value: "To share environment variables", correct: false }
+    help: https://docs.docker.com/storage/volumes/
+
+  - uuid: 51c87d90-1c43-4027-bd45-7c1c682d3c91
+    question: Where are Docker volumes stored on the host by default?
+    answers:
+      - { value: "/var/lib/docker/volumes", correct: true }
+      - { value: "/etc/docker/volumes", correct: false }
+      - { value: "/usr/local/docker/storage", correct: false }
+      - { value: "/opt/docker/persistent", correct: false }
+    help: https://docs.docker.com/storage/volumes/#start-a-container-with-a-volume
+
+  - uuid: 87b8c5fc-0f87-4f97-8f13-478e16a8d74d
+    question: What happens to data in a volume when the container using it is removed?
+    answers:
+      - { value: "The data persists and can be reused by other containers", correct: true }
+      - { value: "The data is deleted automatically", correct: false }
+      - { value: "The data is moved into the image", correct: false }
+      - { value: "The data is encrypted", correct: false }
+    help: https://docs.docker.com/storage/volumes/#remove-volumes
+
+  - uuid: 8fcd4e6f-2c45-4a62-b018-25d3d20f1655
+    question: Which command is used to create a new named volume?
+    answers:
+      - { value: "docker volume create mydata", correct: true }
+      - { value: "docker storage create mydata", correct: false }
+      - { value: "docker volume add mydata", correct: false }
+      - { value: "docker persist create mydata", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_create/
+
+  - uuid: f3cbadf2-1080-4f9a-9e8e-b8dba88ad2f5
+    question: Which command lists all Docker volumes?
+    answers:
+      - { value: "docker volume ls", correct: true }
+      - { value: "docker volumes list", correct: false }
+      - { value: "docker storage ls", correct: false }
+      - { value: "docker volume show", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_ls/
+
+  - uuid: 94754b3b-2d17-4a82-90af-01e1a1987a91
+    question: What is the main difference between a volume and a bind mount?
+    answers:
+      - { value: "Volumes are managed by Docker, bind mounts map directly to a host path", correct: true }
+      - { value: "Bind mounts are encrypted, volumes are not", correct: false }
+      - { value: "Volumes can only be read-only", correct: false }
+      - { value: "Bind mounts persist after Docker uninstall, volumes do not", correct: false }
+    help: https://docs.docker.com/storage/volumes/#choose-the-right-type-of-mount
+
+  - uuid: eac5d5c6-fdd3-46a8-86bb-872af5d828b1
+    question: How can you mount a named volume into a container?
+    answers:
+      - { value: "docker run -v mydata:/data nginx", correct: true }
+      - { value: "docker run --volume-driver=mydata nginx", correct: false }
+      - { value: "docker mount --volume mydata nginx", correct: false }
+      - { value: "docker run --persist mydata:/data nginx", correct: false }
+    help: https://docs.docker.com/storage/volumes/#start-a-container-with-a-volume
+
+  - uuid: 6ad57a46-8c04-480d-a634-934d5de9ee8e
+    question: Which Docker feature allows using third-party storage backends (e.g., NFS, cloud storage)?
+    answers:
+      - { value: "Volume drivers", correct: true }
+      - { value: "Bind mounts", correct: false }
+      - { value: "Storage plugins only for Swarm", correct: false }
+      - { value: "Dockerfile COPY instruction", correct: false }
+    help: https://docs.docker.com/storage/volumes/#use-a-volume-driver
+
+  - uuid: 11bff894-bfa5-4c3e-8c9a-3b512c69d708
+    question: How do you remove an unused Docker volume?
+    answers:
+      - { value: "docker volume rm mydata", correct: true }
+      - { value: "docker storage delete mydata", correct: false }
+      - { value: "docker rm --volume mydata", correct: false }
+      - { value: "docker volume drop mydata", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_rm/
+
+  - uuid: a80202e2-82b5-4d2e-8b1f-b15e1ffdb9ae
+    question: What is the risk of using anonymous volumes (created without a name)?
+    answers:
+      - { value: "They can accumulate and consume disk space if not explicitly removed", correct: true }
+      - { value: "They are automatically shared between all containers", correct: false }
+      - { value: "They are deleted whenever a container restarts", correct: false }
+      - { value: "They cannot store application data", correct: false }
+    help: https://docs.docker.com/storage/volumes/#remove-anonymous-volumes

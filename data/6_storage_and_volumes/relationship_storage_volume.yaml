@@ -1,0 +1,81 @@
+questions:
+  - uuid: 4eac18b5-46df-46ce-b92b-1825d3c47c1f
+    question: What is the role of a CSI (Container Storage Interface) driver in Kubernetes?
+    answers:
+      - { value: "It provides the plugin implementation to provision and manage external storage systems", correct: true }
+      - { value: "It stores Pod logs in the node filesystem", correct: false }
+      - { value: "It configures Docker overlay2 drivers", correct: false }
+      - { value: "It handles network ingress rules", correct: false }
+    help: https://kubernetes.io/docs/concepts/storage/volumes/#csi
+
+  - uuid: 1b44b8f8-6d36-4f77-9d92-2c8573f0b87a
+    question: What is the relationship between a StorageClass and a CSI driver?
+    answers:
+      - { value: "A StorageClass defines parameters and policies for provisioning storage through a CSI driver", correct: true }
+      - { value: "A StorageClass directly mounts a volume into a Pod", correct: false }
+      - { value: "A CSI driver creates PVCs automatically", correct: false }
+      - { value: "They are unrelated objects in Kubernetes", correct: false }
+    help: https://kubernetes.io/docs/concepts/storage/storage-classes/
+
+  - uuid: 5d2a7a6d-2306-4474-88bc-75d5f4c0b0dd
+    question: What happens when a PersistentVolumeClaim (PVC) is created with a StorageClass?
+    answers:
+      - { value: "Kubernetes requests the CSI driver (through the StorageClass) to dynamically provision a PersistentVolume (PV)", correct: true }
+      - { value: "The PVC directly binds to the Pod without a PV", correct: false }
+      - { value: "The PVC replaces the CSI driver configuration", correct: false }
+      - { value: "The PVC creates a tmpfs volume", correct: false }
+    help: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#dynamic
+
+  - uuid: 64fa91c4-59fd-4c56-9b64-d0f1f1e38f50
+    question: What is the role of a PersistentVolume (PV) in Kubernetes?
+    answers:
+      - { value: "It is the actual representation of the storage resource provisioned by the CSI driver", correct: true }
+      - { value: "It is a Pod configuration file", correct: false }
+      - { value: "It only exists for in-memory storage", correct: false }
+      - { value: "It is used to manage node labels", correct: false }
+    help: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volumes
+
+  - uuid: 4a3c82e5-3f91-44ff-9b26-18638e62a8de
+    question: How does a Pod use storage provisioned by a CSI driver?
+    answers:
+      - { value: "The Pod spec defines a volume that references a PVC, which is bound to a PV provisioned by the CSI driver", correct: true }
+      - { value: "The Pod directly references the CSI driver", correct: false }
+      - { value: "The Pod mounts the StorageClass directly", correct: false }
+      - { value: "The Pod uses a ConfigMap to access the volume", correct: false }
+    help: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#claims-as-volumes
+
+  - uuid: 3cc8a6b3-dc94-42a2-9158-8c80f91f4aaf
+    question: Which Kubernetes object is responsible for defining volume access modes like ReadWriteOnce or ReadWriteMany?
+    answers:
+      - { value: "PersistentVolumeClaim (PVC)", correct: true }
+      - { value: "StorageClass", correct: false }
+      - { value: "CSI Driver", correct: false }
+      - { value: "Pod spec", correct: false }
+    help: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
+
+  - uuid: a9382b20-39a7-4ec3-bb6f-4a62e3b2f3ac
+    question: Which object connects user requests for storage to the actual provisioned volume?
+    answers:
+      - { value: "PersistentVolumeClaim (PVC)", correct: true }
+      - { value: "StorageClass", correct: false }
+      - { value: "CSI Driver directly", correct: false }
+      - { value: "kubectl create volume", correct: false }
+    help: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#binding
+
+  - uuid: e1f1f6e2-914c-4769-8510-56f1f7e9a3cc
+    question: What does 'WaitForFirstConsumer' volumeBindingMode in a StorageClass ensure?
+    answers:
+      - { value: "PV provisioning is delayed until a Pod using the PVC is scheduled, enabling topology-aware placement", correct: true }
+      - { value: "The PV is always provisioned immediately", correct: false }
+      - { value: "The PVC becomes read-only", correct: false }
+      - { value: "The PV is shared by all namespaces automatically", correct: false }
+    help: https://kubernetes.io/docs/concepts/storage/storage-classes/#volume-binding-mode
+
+  - uuid: 5e4f7a17-2d66-4f7a-87d6-5f1a66c7a48e
+    question: Which statement BEST describes the overall relationship of CSI, StorageClass, PVC, PV, and Pod volume?
+    answers:
+      - { value: "CSI driver implements storage, StorageClass defines how to provision it, PVC requests it, PV represents it, and Pod volume consumes it", correct: true }
+      - { value: "CSI driver provisions PVCs, StorageClass creates Pods, PV defines namespaces, and Pod uses CSI directly", correct: false }
+      - { value: "StorageClass and PVC are optional aliases for ConfigMaps", correct: false }
+      - { value: "PV and PVC are identical objects with different names", correct: false }
+    help: https://kubernetes.io/docs/concepts/storage/persistent-volumes/

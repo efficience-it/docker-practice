@@ -1,0 +1,108 @@
+questions:
+  - uuid: 7f18c49c-9de2-4d4b-bb7d-fc97e8ff4319
+    question: What happens to a named volume when the container using it is deleted?
+    answers:
+      - { value: "The volume persists until explicitly removed", correct: true }
+      - { value: "The volume is automatically deleted", correct: false }
+      - { value: "It is converted into a bind mount", correct: false }
+      - { value: "It becomes read-only", correct: false }
+    help: https://docs.docker.com/storage/volumes/#remove-volumes
+
+  - uuid: 30e47446-9a4a-4579-bb21-d8a1d05ffb6e
+    question: What happens to an anonymous volume when the container is removed?
+    answers:
+      - { value: "The volume is deleted by default unless explicitly retained", correct: true }
+      - { value: "The volume is kept forever", correct: false }
+      - { value: "The volume is automatically renamed into a named volume", correct: false }
+      - { value: "The volume is converted to a tmpfs mount", correct: false }
+    help: https://docs.docker.com/storage/volumes/#remove-volumes
+
+  - uuid: 2e4f528f-3621-409f-9304-cc0aafeb35a1
+    question: Which syntax provides better readability and advanced options for mounts?
+    answers:
+      - { value: "--mount", correct: true }
+      - { value: "-v", correct: false }
+      - { value: "--volume-driver", correct: false }
+      - { value: "--bind", correct: false }
+    help: https://docs.docker.com/storage/volumes/#choose-the--v-or---mount-flag
+
+  - uuid: 18d65029-36d3-4a8d-9e40-9174b43bdf26
+    question: Which syntax is shorter but less explicit for mounting volumes?
+    answers:
+      - { value: "-v", correct: true }
+      - { value: "--mount", correct: false }
+      - { value: "--volume", correct: false }
+      - { value: "--storage", correct: false }
+    help: https://docs.docker.com/storage/volumes/#choose-the--v-or---mount-flag
+
+  - uuid: 633d22bb-7f56-478d-8c6b-3436b5e122d1
+    question: Which mount type creates ephemeral storage that resides only in memory?
+    answers:
+      - { value: "tmpfs", correct: true }
+      - { value: "volume", correct: false }
+      - { value: "bind", correct: false }
+      - { value: "nfs", correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: f78492bb-34ec-47cb-9d6f-9e108969ee46
+    question: What happens to data stored in a tmpfs mount when the container stops?
+    answers:
+      - { value: "The data is lost because it only exists in memory", correct: true }
+      - { value: "The data persists in /var/lib/docker/tmpfs", correct: false }
+      - { value: "The data is synced to the host filesystem", correct: false }
+      - { value: "The data is stored in a named volume automatically", correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 8a4cc3f1-41ac-4a2f-a7a7-80df6e174872
+    question: Which mount propagation mode allows changes on one mount to be visible to others?
+    answers:
+      - { value: "rshared", correct: true }
+      - { value: "private", correct: false }
+      - { value: "rprivate", correct: false }
+      - { value: "exclusive", correct: false }
+    help: https://docs.docker.com/storage/bind-mounts/#configure-bind-propagation
+
+  - uuid: b8a33e5b-9225-4ff9-b2c4-69f5ea793a22
+    question: Which propagation mode ensures no mount events are shared with other mounts?
+    answers:
+      - { value: "rprivate", correct: true }
+      - { value: "rshared", correct: false }
+      - { value: "shared", correct: false }
+      - { value: "bidirectional", correct: false }
+    help: https://docs.docker.com/storage/bind-mounts/#configure-bind-propagation
+
+  - uuid: 927c3523-5591-40cf-a50b-562fa94ed71d
+    question: Which Docker volume driver is used by default?
+    answers:
+      - { value: "local", correct: true }
+      - { value: "nfs", correct: false }
+      - { value: "tmpfs", correct: false }
+      - { value: "gcp", correct: false }
+    help: https://docs.docker.com/storage/volumes/#driver-specific-options
+
+  - uuid: 97cc1b41-7057-4a16-9f09-28edc89c301a
+    question: Which cloud service provides a native volume driver for Docker?
+    answers:
+      - { value: "Amazon EBS", correct: true }
+      - { value: "Dropbox", correct: false }
+      - { value: "Google Drive", correct: false }
+      - { value: "Slack", correct: false }
+    help: https://docs.docker.com/engine/extend/legacy_plugins/#volume-plugins
+
+  - uuid: 5439c7b2-9cb7-474d-9a60-2d4d9c18455c
+    question: What is the main advantage of using bind mounts over named volumes?
+    answers:
+      - { value: "Direct access to the host filesystem", correct: true }
+      - { value: "Automatic backup and restore", correct: false }
+      - { value: "Independent lifecycle from the host", correct: false }
+      - { value: "Cross-host portability", correct: false }
+    help: https://docs.docker.com/storage/bind-mounts/
+
+  - uuid: 04ee5ff9-f7d3-40e2-a27e-469ec50b7ff0
+    question: What is the main advantage of using named volumes over bind mounts?
+    answers:
+      - { value: "Managed by Docker with better portability", correct: true }
+      - { value: "Automatic encryption", correct: false }
+      - { value: "Unlimited size", correct: false }
+      - { value: "Direct mapping to /tmp", correct: false }
+    help: https://docs.docker.com/storage/volumes/

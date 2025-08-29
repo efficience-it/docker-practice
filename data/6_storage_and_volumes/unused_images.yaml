@@ -1,0 +1,81 @@
+questions:
+  - uuid: 3c9a20b0-4de1-4784-8e25-65bb0d92fb64
+    question: Which command removes all dangling (untagged) images from the local filesystem?
+    answers:
+      - { value: "docker image prune", correct: true }
+      - { value: "docker image rm --all", correct: false }
+      - { value: "docker system reset", correct: false }
+      - { value: "docker rmi --dangling", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/image_prune/
+
+  - uuid: 1b68a1d9-9819-41df-b48e-d9cf1c3c6b7b
+    question: What option should be added to `docker image prune` to remove all unused images, not just dangling ones?
+    answers:
+      - { value: "--all", correct: true }
+      - { value: "--force", correct: false }
+      - { value: "--delete", correct: false }
+      - { value: "--prune-all", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/image_prune/
+
+  - uuid: 2cf1c324-1633-4d6f-99b0-5a56e055fc5a
+    question: Which command removes unused containers, networks, images, and optionally volumes in one step?
+    answers:
+      - { value: "docker system prune", correct: true }
+      - { value: "docker clean all", correct: false }
+      - { value: "docker gc", correct: false }
+      - { value: "docker reset --all", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/system_prune/
+
+  - uuid: 3c8562f2-5b8f-4664-8b52-6db36b5cc9d1
+    question: Which option must be added to `docker system prune` to also remove unused volumes?
+    answers:
+      - { value: "--volumes", correct: true }
+      - { value: "--all", correct: false }
+      - { value: "--delete-volumes", correct: false }
+      - { value: "--with-storage", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/system_prune/
+
+  - uuid: 9b1cb29e-dce3-4930-93b3-66d214af4b4f
+    question: In DTR, what is the purpose of the garbage collection process?
+    answers:
+      - { value: "To remove unreferenced image layers and free storage space", correct: true }
+      - { value: "To rebuild Docker images for efficiency", correct: false }
+      - { value: "To compress registry logs", correct: false }
+      - { value: "To migrate data to UCP", correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/admin/configure/garbage-collection.html
+
+  - uuid: 52a5249e-c17b-4a0c-a8cc-df01353f964f
+    question: How should garbage collection in DTR be executed to avoid service interruption?
+    answers:
+      - { value: "Run it during maintenance windows as it locks the registry", correct: true }
+      - { value: "Run it continuously in the background", correct: false }
+      - { value: "It runs automatically without admin control", correct: false }
+      - { value: "Enable the --live-clean flag for safe cleanup", correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/admin/configure/garbage-collection.html#scheduling-garbage-collection
+
+  - uuid: 07e4f8c0-bec7-496c-91b1-2190c06b7aa2
+    question: What happens to images that are still tagged in repositories when garbage collection is run in DTR?
+    answers:
+      - { value: "They are preserved, only unreferenced layers are deleted", correct: true }
+      - { value: "They are forcefully deleted", correct: false }
+      - { value: "They are archived", correct: false }
+      - { value: "They are migrated to Docker Hub", correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/admin/configure/garbage-collection.html
+
+  - uuid: 35ed2d8c-8e4f-4e8e-9e2e-54cfd318b3c0
+    question: Which command removes all images, containers, and volumes on a Docker host regardless of use?
+    answers:
+      - { value: "docker system prune -a --volumes", correct: true }
+      - { value: "docker clean all --force", correct: false }
+      - { value: "docker rm --everything", correct: false }
+      - { value: "docker reset system", correct: false }
+    help: https://docs.docker.com/config/pruning/
+
+  - uuid: c2566ec2-5dd2-4a6d-8268-97ed822a4238
+    question: What is a potential risk of running `docker system prune -a` in production?
+    answers:
+      - { value: "It may delete images that are not currently in use but are needed later", correct: true }
+      - { value: "It corrupts running containers", correct: false }
+      - { value: "It disables networking", correct: false }
+      - { value: "It removes Docker itself", correct: false }
+    help: https://docs.docker.com/config/pruning/
