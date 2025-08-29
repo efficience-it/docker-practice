@@ -1,6 +1,6 @@
 questions:
   - uuid: 8f6f353b-0c99-47df-ae3b-6e61864ec106
-    question: Quel paramètre permet de spécifier un driver de log au moment du lancement d’un conteneur ?
+    question: Which parameter specifies a log driver when launching a container?
     answers:
       - { value: '--log-driver', correct: true }
       - { value: '--driver-log', correct: false }
@@ -9,7 +9,7 @@ questions:
     help: https://docs.docker.com/config/containers/logging/configure/
 
   - uuid: 43fd04d9-df6b-4f17-b682-46429a24a537
-    question: Quel fichier permet de configurer globalement le driver de logs par défaut ?
+    question: Which file configures the default global log driver?
     answers:
       - { value: '/etc/docker/daemon.json', correct: true }
       - { value: '/etc/logging.conf', correct: false }
@@ -18,7 +18,7 @@ questions:
     help: https://docs.docker.com/config/containers/logging/configure/
 
   - uuid: a0629d6c-313c-4e3b-a2d2-e1122859c3f5
-    question: Quelle valeur permet d’utiliser `journald` comme driver de log pour un conteneur Docker ?
+    question: Which value sets `journald` as the log driver for a Docker container?
     answers:
       - { value: 'journald', correct: true }
       - { value: 'syslogd', correct: false }
@@ -27,7 +27,7 @@ questions:
     help: https://docs.docker.com/config/containers/logging/journald/
 
   - uuid: 50e888f9-d205-4de7-8054-bb7409d504d6
-    question: Quel est le driver de log par défaut de Docker ?
+    question: What is Docker’s default log driver?
     answers:
       - { value: 'json-file', correct: true }
       - { value: 'journald', correct: false }
@@ -36,7 +36,7 @@ questions:
     help: https://docs.docker.com/config/containers/logging/configure/
 
   - uuid: 5d3c3e90-0f03-4f2e-9d02-b8d52ed9f146
-    question: Quelle configuration JSON définit journald comme driver global de logs ?
+    question: Which JSON configuration sets journald as the global log driver?
     answers:
       - { value: '{ "log-driver": "journald" }', correct: true }
       - { value: '{ "logging-driver": "journald" }', correct: false }

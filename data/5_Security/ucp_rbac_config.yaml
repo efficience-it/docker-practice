@@ -1,6 +1,6 @@
 questions:
   - uuid: 0fc6d4e7-0179-48bb-b7e8-2a391d0c57f3
-    question: Que signifie RBAC dans le contexte de Docker UCP ?
+    question: What does RBAC mean in the context of Docker UCP?
     answers:
       - { value: 'Role-Based Access Control', correct: true }
       - { value: 'Remote Backup Admin Console', correct: false }
@@ -9,7 +9,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
 
   - uuid: e271c7fd-2315-4d19-a08c-5bd614746847
-    question: Quel composant UCP permet de définir des rôles et permissions ?
+    question: Which UCP component allows defining roles and permissions?
     answers:
       - { value: 'RBAC', correct: true }
       - { value: 'SwarmKit', correct: false }
@@ -18,25 +18,25 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
 
   - uuid: 80129f0d-e8de-4034-97b0-96178b39b2e6
-    question: Quelle entité peut recevoir un rôle RBAC dans UCP ?
+    question: Which entity can be assigned an RBAC role in UCP?
     answers:
-      - { value: 'Un utilisateur ou une équipe', correct: true }
-      - { value: 'Un conteneur', correct: false }
-      - { value: 'Un volume', correct: false }
-      - { value: 'Un port publié', correct: false }
+      - { value: 'A user or a team', correct: true }
+      - { value: 'A container', correct: false }
+      - { value: 'A volume', correct: false }
+      - { value: 'A published port', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
 
   - uuid: c4c84f21-5d8d-4e1d-8ab2-0ef03c88b9b7
-    question: Quelle est la portée possible d’un rôle dans UCP ?
+    question: What is the possible scope of a role in UCP?
     answers:
       - { value: 'Service, namespace, container, node', correct: true }
-      - { value: 'Nom de domaine, DNS, logs', correct: false }
-      - { value: 'Registry externe', correct: false }
-      - { value: 'Dockerfile uniquement', correct: false }
+      - { value: 'Domain name, DNS, logs', correct: false }
+      - { value: 'External registry', correct: false }
+      - { value: 'Dockerfile only', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
 
   - uuid: 8e352f44-30f3-42b4-b503-4c99ec93e764
-    question: Quel rôle RBAC autorise uniquement la visualisation des ressources dans UCP ?
+    question: Which RBAC role allows view-only access to resources in UCP?
     answers:
       - { value: 'ViewOnly', correct: true }
       - { value: 'RestrictedControl', correct: false }
@@ -45,34 +45,34 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/default-roles.html
 
   - uuid: 546b2712-0f45-4f15-bd77-731f19e3ef5a
-    question: Quelle est une bonne pratique lors de la configuration de RBAC ?
+    question: What is a best practice when configuring RBAC?
     answers:
-      - { value: 'Attribuer les rôles aux équipes plutôt qu’aux utilisateurs seuls', correct: true }
-      - { value: 'Donner FullControl par défaut', correct: false }
-      - { value: 'Désactiver RBAC si non utilisé', correct: false }
-      - { value: 'Utiliser uniquement des rôles personnalisés', correct: false }
+      - { value: 'Assign roles to teams rather than individual users', correct: true }
+      - { value: 'Give FullControl by default', correct: false }
+      - { value: 'Disable RBAC if not used', correct: false }
+      - { value: 'Use only custom roles', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
 
   - uuid: c1a99418-b50c-4e5a-9186-e28eb8d46f86
-    question: Où peut-on gérer les rôles RBAC dans UCP ?
+    question: Where can RBAC roles be managed in UCP?
     answers:
-      - { value: 'Dans l’interface web UCP ou via API', correct: true }
-      - { value: 'Dans le fichier Dockerfile', correct: false }
-      - { value: 'Dans le fichier /etc/docker/daemon.json', correct: false }
-      - { value: 'Uniquement avec kubectl', correct: false }
+      - { value: 'In the UCP web interface or via API', correct: true }
+      - { value: 'In the Dockerfile', correct: false }
+      - { value: 'In the /etc/docker/daemon.json file', correct: false }
+      - { value: 'Only with kubectl', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
 
   - uuid: f4960718-c05b-4f09-85ee-2e21a3fdde2d
-    question: Peut-on créer ses propres rôles RBAC dans UCP ?
+    question: Can custom RBAC roles be created in UCP?
     answers:
-      - { value: 'Oui, avec des permissions personnalisées sur des scopes définis', correct: true }
-      - { value: 'Non, uniquement les rôles par défaut sont disponibles', correct: false }
-      - { value: 'Oui, mais uniquement pour les registres', correct: false }
-      - { value: 'Non, cela requiert Docker Hub Pro', correct: false }
+      - { value: 'Yes, with custom permissions on defined scopes', correct: true }
+      - { value: 'No, only default roles are available', correct: false }
+      - { value: 'Yes, but only for registries', correct: false }
+      - { value: 'No, this requires Docker Hub Pro', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/custom-roles.html
 
   - uuid: a56ae8b1-7054-4c41-8461-2d89c35c4f0a
-    question: Quelle API permet d’automatiser la configuration RBAC dans UCP ?
+    question: Which API allows automating RBAC configuration in UCP?
     answers:
       - { value: 'UCP RBAC HTTP API', correct: true }
       - { value: 'Docker Swarm REST API', correct: false }
@@ -81,7 +81,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/api/
 
   - uuid: 1093124d-1d68-4d33-b188-e72b090fb48e
-    question: Quel rôle permet de redémarrer des services sans les modifier ?
+    question: Which role allows restarting services without modifying them?
     answers:
       - { value: 'RestrictedControl', correct: true }
       - { value: 'ViewOnly', correct: false }

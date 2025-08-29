@@ -1,6 +1,6 @@
 questions:
   - uuid: 3aeb8d79-c346-4f29-95c7-3245ac9c7cb6
-    question: Dans UCP, que signifie RBAC ?
+    question: In UCP, what does RBAC stand for?
     answers:
       - { value: 'Role-Based Access Control', correct: true }
       - { value: 'Registry-Based Access Control', correct: false }
@@ -9,7 +9,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
 
   - uuid: 6f0a6a9e-3e91-472c-bd1c-8bdf1b179c92
-    question: Quel rôle RBAC intégré accorde uniquement un accès en lecture aux ressources UCP ?
+    question: Which built-in RBAC role grants read-only access to UCP resources?
     answers:
       - { value: 'ViewOnly', correct: true }
       - { value: 'FullControl', correct: false }
@@ -18,7 +18,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/default-roles.html
 
   - uuid: 2fa7f0a6-3c4d-4f9c-9b7e-0871a5393b82
-    question: Quel rôle permet à un utilisateur de redémarrer un service sans modifier son contenu ?
+    question: Which role allows a user to restart a service without modifying its content?
     answers:
       - { value: 'RestrictedControl', correct: true }
       - { value: 'FullControl', correct: false }
@@ -27,7 +27,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/default-roles.html
 
   - uuid: 4b4ff307-79f0-4e5a-8c87-0ae4b21b1ef4
-    question: Quel rôle UCP accorde un accès complet aux actions sur les ressources ?
+    question: Which UCP role grants full access to resource actions?
     answers:
       - { value: 'FullControl', correct: true }
       - { value: 'RestrictedControl', correct: false }
@@ -36,25 +36,25 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/default-roles.html
 
   - uuid: 34781fc8-f57b-48e2-9b0e-4f2bbd54f5da
-    question: Quelle entité peut se voir attribuer un rôle RBAC dans UCP ?
+    question: Which entity can be assigned an RBAC role in UCP?
     answers:
-      - { value: 'Un utilisateur ou une équipe', correct: true }
-      - { value: 'Un conteneur', correct: false }
-      - { value: 'Un registre', correct: false }
-      - { value: 'Un volume', correct: false }
+      - { value: 'A user or a team', correct: true }
+      - { value: 'A container', correct: false }
+      - { value: 'A registry', correct: false }
+      - { value: 'A volume', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
 
   - uuid: 05818c2f-b3c5-4dbb-939f-0ad5f98112c1
-    question: Que signifie la portée d’un rôle dans UCP ?
+    question: What does the scope of a role in UCP define?
     answers:
-      - { value: 'Les types de ressources sur lesquels le rôle s’applique', correct: true }
-      - { value: 'Le niveau de priorité du rôle', correct: false }
-      - { value: 'Le nombre d’actions autorisées', correct: false }
-      - { value: 'Le délai d’expiration de l’accès', correct: false }
+      - { value: 'The types of resources the role applies to', correct: true }
+      - { value: 'The priority level of the role', correct: false }
+      - { value: 'The number of allowed actions', correct: false }
+      - { value: 'The access expiration time', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
 
   - uuid: 5b3ffcbf-13c5-4e01-b282-601e3a8ce1d3
-    question: Quel rôle serait le plus approprié pour un utilisateur en lecture seule sur un namespace ?
+    question: Which role is most appropriate for a read-only user on a namespace?
     answers:
       - { value: 'ViewOnly', correct: true }
       - { value: 'RestrictedControl', correct: false }
@@ -63,19 +63,19 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/use-cases.html
 
   - uuid: 2c5f55b4-83ef-4040-b7c8-1822b0cdad73
-    question: Quelle bonne pratique permet de faciliter la gestion des rôles ?
+    question: What is a best practice to simplify role management?
     answers:
-      - { value: 'Attribuer les rôles aux équipes plutôt qu’aux utilisateurs individuels', correct: true }
-      - { value: 'Donner FullControl à tout le monde', correct: false }
-      - { value: 'Créer un rôle par service', correct: false }
-      - { value: 'Éviter l’usage des rôles intégrés', correct: false }
+      - { value: 'Assign roles to teams rather than individual users', correct: true }
+      - { value: 'Give FullControl to everyone', correct: false }
+      - { value: 'Create one role per service', correct: false }
+      - { value: 'Avoid using built-in roles', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
 
   - uuid: 5a84f5f6-69ca-466b-80f2-d259fd387623
-    question: Quelle action est permise par le rôle `RestrictedControl` mais pas par `ViewOnly` ?
+    question: Which action is allowed by the `RestrictedControl` role but not by `ViewOnly`?
     answers:
-      - { value: 'Redémarrer un conteneur', correct: true }
-      - { value: 'Lire les logs d’un service', correct: false }
-      - { value: 'Lister les volumes', correct: false }
-      - { value: 'Afficher le statut du cluster', correct: false }
+      - { value: 'Restart a container', correct: true }
+      - { value: 'Read service logs', correct: false }
+      - { value: 'List volumes', correct: false }
+      - { value: 'View cluster status', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/default-roles.html
