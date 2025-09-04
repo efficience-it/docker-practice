@@ -20,7 +20,7 @@ questions:
   - uuid: 2f9eb6c5-921a-4d7d-8c39-0a6c0152c4f1
     question: Which command generates a client bundle via the CLI?
     answers:
-      - { value: 'curl -k -u USERNAME "https://UCP_URL/api/clientbundle" > bundle.zip', correct: true }
+      - { value: 'curl -k -u USERNAME 'https://UCP_URL/api/clientbundle' > bundle.zip', correct: true }
       - { value: 'docker ucp bundle create', correct: false }
       - { value: 'docker config export --tls', correct: false }
       - { value: 'docker login --generate-bundle', correct: false }
@@ -47,7 +47,7 @@ questions:
   - uuid: 74e6e693-d376-486e-8d9e-79d60ce0bb0a
     question: What condition must be met for a UCP user to download their client bundle?
     answers:
-      - { value: 'Have the "Generate Client Bundle" permission in their UCP role', correct: true }
+      - { value: 'Have the 'Generate Client Bundle' permission in their UCP role', correct: true }
       - { value: 'Be logged in as root', correct: false }
       - { value: 'Be a member of the Admin team only', correct: false }
       - { value: 'Have access to DTR', correct: false }

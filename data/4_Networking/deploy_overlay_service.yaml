@@ -56,7 +56,7 @@ questions:
   - uuid: b3797018-1800-460a-8a5b-95d2ebef6a59
     question: How can you verify that a service is connected to an overlay network?
     answers:
-      - { value: 'docker service inspect <service> --format "{{ .Spec.TaskTemplate.Networks }}"', correct: true }
+      - { value: 'docker service inspect <service> --format '{{ .Spec.TaskTemplate.Networks }}'', correct: true }
       - { value: 'docker service ls --networks', correct: false }
       - { value: 'docker network list <service>', correct: false }
       - { value: 'docker node inspect <network>', correct: false }

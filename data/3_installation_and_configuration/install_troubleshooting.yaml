@@ -18,7 +18,7 @@ questions:
     help: https://docs.docker.com/config/daemon/#start-the-daemon
 
   - uuid: c2c92cc6-e8d0-43f5-a44a-ea3e64f0f63e
-    question: How do you resolve a "permission denied" error when running `docker run` as a non-root user?
+    question: How do you resolve a 'permission denied' error when running `docker run` as a non-root user?
     answers:
       - { value: 'Add the user to the docker group', correct: true }
       - { value: 'Restart the container in debug mode', correct: false }
@@ -36,7 +36,7 @@ questions:
     help: https://docs.docker.com/engine/reference/commandline/info/
 
   - uuid: 3cf6a598-85c2-43b4-b7c7-91a51283c3db
-    question: "If `docker build` fails with 'unsupported driver: aufs', what should be done?"
+    question: 'If `docker build` fails with 'unsupported driver: aufs', what should be done?'
     answers:
       - { value: 'Switch the driver to overlay2', correct: true }
       - { value: 'Reinstall volumes', correct: false }
@@ -72,7 +72,7 @@ questions:
     help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/#prerequisites
 
   - uuid: 58b58043-18f8-44cd-8328-fbb91a92d65c
-    question: What is a common cause of the error "Got permission denied while trying to connect to the Docker daemon socket"?
+    question: What is a common cause of the error 'Got permission denied while trying to connect to the Docker daemon socket'?
     answers:
       - { value: 'The user is not in the docker group', correct: true }
       - { value: 'The network is misconfigured', correct: false }
