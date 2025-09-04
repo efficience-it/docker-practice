@@ -11,7 +11,7 @@ questions:
   - uuid: 3a69f8ce-d2d1-41d6-b3e3-80403064fdf5
     question: How do you configure Docker to always use a custom DNS server for all containers?
     answers:
-      - { value: 'Add "dns": ["8.8.8.8"] to /etc/docker/daemon.json and restart the daemon', correct: true }
+      - { value: 'Add `dns`: ['8.8.8.8'] to /etc/docker/daemon.json and restart the daemon', correct: true }
       - { value: 'Use docker network create with --dns-global', correct: false }
       - { value: 'Modify /etc/resolv.conf inside containers', correct: false }
       - { value: 'Add --dns to all docker ps commands', correct: false }

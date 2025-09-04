@@ -38,10 +38,10 @@ questions:
   - uuid: 5d3c3e90-0f03-4f2e-9d02-b8d52ed9f146
     question: Which JSON configuration sets journald as the global log driver?
     answers:
-      - { value: '{ "log-driver": "journald" }', correct: true }
-      - { value: '{ "logging-driver": "journald" }', correct: false }
-      - { value: '{ "logs": "journald" }', correct: false }
-      - { value: '{ "driver": "journald" }', correct: false }
+      - { value: '{ `log-driver`: `journald` }', correct: true }
+      - { value: '{ `logging-driver`: `journald` }', correct: false }
+      - { value: '{ `logs`: `journald` }', correct: false }
+      - { value: '{ `driver`: `journald` }', correct: false }
     help: https://docs.docker.com/config/containers/logging/configure/
 
   - uuid: 1ec259ae-b1f6-4a4d-91f2-697d63b37823
