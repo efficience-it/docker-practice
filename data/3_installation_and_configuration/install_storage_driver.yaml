@@ -56,10 +56,10 @@ questions:
   - uuid: 9b10cfa6-40f2-4be1-bcc2-fbd0b8e1ff7c
     question: Which JSON parameter sets the storage driver in the Docker daemon?
     answers:
-      - { value: ''storage-driver': 'overlay2'', correct: true }
-      - { value: ''driver': 'aufs'', correct: false }
-      - { value: ''volume-driver': 'zfs'', correct: false }
-      - { value: ''storage': 'devicemapper'', correct: false }
+      - { value: '`storage-driver`: `overlay2`', correct: true }
+      - { value: '`driver`: `aufs`', correct: false }
+      - { value: '`volume-driver`: `zfs`', correct: false }
+      - { value: '`storage`: `devicemapper`', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
 
   - uuid: 261f97d5-38fa-48fa-8365-58e8439b4495

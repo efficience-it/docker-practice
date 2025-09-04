@@ -36,7 +36,7 @@ questions:
     help: https://docs.docker.com/engine/reference/commandline/info/
 
   - uuid: 3cf6a598-85c2-43b4-b7c7-91a51283c3db
-    question: 'If `docker build` fails with 'unsupported driver: aufs', what should be done?'
+    question: 'If `docker build` fails with `unsupported driver: aufs`, what should be done?'
     answers:
       - { value: 'Switch the driver to overlay2', correct: true }
       - { value: 'Reinstall volumes', correct: false }

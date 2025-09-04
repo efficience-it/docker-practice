@@ -83,7 +83,7 @@ questions:
   - uuid: 62b94c89-d7a0-43ec-8515-1898a8d7b2b1
     question: What command shows the image used by a service in a stack?
     answers:
-      - { value: 'docker service inspect mystack_web --format '{{.Spec.TaskTemplate.ContainerSpec.Image}}'', correct: true }
+      - { value: 'docker service inspect mystack_web --format `{{.Spec.TaskTemplate.ContainerSpec.Image}}`', correct: true }
       - { value: 'docker stack inspect mystack_web --image', correct: false }
       - { value: 'docker service info mystack_web', correct: false }
       - { value: 'docker stack image mystack_web', correct: false }
