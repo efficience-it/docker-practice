@@ -1,0 +1,81 @@
+questions:
+  - uuid: 75a8e85a-e71e-4b5a-9e0f-2f9be75f51dc
+    question: What type of traffic is exchanged between a Docker engine and a Docker registry when pulling an image?
+    answers:
+      - { value: 'HTTPS requests using the Docker Registry HTTP API', correct: true }
+      - { value: 'gRPC over TCP', correct: false }
+      - { value: 'SSH tunnel to port 22', correct: false }
+      - { value: 'WebSocket over UDP', correct: false }
+    help: https://docs.docker.com/registry/spec/api/
+
+  - uuid: 016dfcd3-9d34-404c-b2f3-27aa7a27b5b5
+    question: Which port is typically used for communication between Docker engines and UCP controllers?
+    answers:
+      - { value: '443 (HTTPS)', correct: true }
+      - { value: '2377', correct: false }
+      - { value: '5000', correct: false }
+      - { value: '22 (SSH)', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/ucp-architecture.html
+
+  - uuid: 2abfb5ad-c0d3-4a4d-8de7-6cc5801e95f7
+    question: When a user accesses the UCP web UI, which protocol is primarily used?
+    answers:
+      - { value: 'HTTPS', correct: true }
+      - { value: 'gRPC', correct: false }
+      - { value: 'FTP', correct: false }
+      - { value: 'Telnet', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/admin/configure-ucp.html
+
+  - uuid: 536decd6-e924-42cb-b775-73d7f7a69a4a
+    question: What type of traffic occurs between UCP manager nodes to maintain consensus?
+    answers:
+      - { value: 'Raft protocol over TCP', correct: true }
+      - { value: 'ICMP multicast', correct: false }
+      - { value: 'DNS-based discovery', correct: false }
+      - { value: 'NAT traversal over UDP', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/ucp-architecture.html
+
+  - uuid: a4dc7fc4-6cf0-4dc0-83a5-4e85efad7e2d
+    question: What traffic is exchanged between UCP and DTR during image scan operations?
+    answers:
+      - { value: 'HTTPS API calls with signed JWT tokens', correct: true }
+      - { value: 'Raw TCP socket streams', correct: false }
+      - { value: 'MQTT messages', correct: false }
+      - { value: 'ICMP health checks only', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/architecture/dtr-architecture.html
+
+  - uuid: 805a4ff3-7cc6-4062-9f43-2a7e12c5536f
+    question: What kind of data is typically transferred from the Docker engine to UCP when a user deploys a service?
+    answers:
+      - { value: 'HTTPS POST request with service spec in JSON', correct: true }
+      - { value: 'Dockerfile content in base64', correct: false }
+      - { value: 'SSH key material', correct: false }
+      - { value: 'Encrypted binary blobs', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/cli-access.html
+
+  - uuid: e8aa3f02-6878-40f6-b7bb-178934fa7c9d
+    question: How does a UCP worker node communicate with the UCP manager?
+    answers:
+      - { value: 'Using mutual TLS over HTTPS', correct: true }
+      - { value: 'With plaintext HTTP requests', correct: false }
+      - { value: 'Through DNS SRV lookups only', correct: false }
+      - { value: 'By mounting a shared volume', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/ucp-architecture.html
+
+  - uuid: 80a7a30c-fd5f-4c2e-9a39-872a24c1688b
+    question: What kind of traffic is used between a Docker engine and DTR during image push?
+    answers:
+      - { value: 'HTTPS PUT and POST requests', correct: true }
+      - { value: 'NFS file sync', correct: false }
+      - { value: 'Syslog over TCP', correct: false }
+      - { value: 'SMTP packets', correct: false }
+    help: https://docs.docker.com/registry/spec/api/
+
+  - uuid: 7a24e5ae-bda5-4de7-93f4-5fd0f7c06d69
+    question: Which type of network is used by UCP to enable secure control traffic between nodes?
+    answers:
+      - { value: 'TLS-encrypted overlay network', correct: true }
+      - { value: 'Host network with port forwarding', correct: false }
+      - { value: 'Macvlan', correct: false }
+      - { value: 'Bridge with iptables', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/ucp-architecture.html

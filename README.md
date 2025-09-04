@@ -78,19 +78,19 @@ The goal is to help candidates:
 
 ### Domain 4: Networking (15% of exam)
 
-* Describe the Container Network Model and how it interfaces with the Docker engine and network and IPAM drivers.
+* [Describe the Container Network Model and how it interfaces with the Docker engine and network and IPAM drivers.](data/4_Networking/container_network_model.yaml)
 * [Describe the different types and use cases for the built-in network drivers.](data/4_Networking/describe_different_types_use_cases_built_in_network_drivers.yaml)
-* Describe the types of traffic that flow between the Docker engine, registry and UCP controllers.
-* Describe and demonstrate how to create a Docker bridge network for developers to use for their containers.
+* [Describe the types of traffic that flow between the Docker engine, registry and UCP controllers.](data/4_Networking/engine_registry_ucp_traffic.yaml)
+* [Describe and demonstrate how to create a Docker bridge network for developers to use for their containers.](data/4_Networking/bridge_network_create.yaml)
 * [Describe and demonstrate how to publish a port so that an application is accessible externally.](data/4_Networking/describe_demonstrate_publish_port_application_accessible_externally.yaml)
-* Identify which IP and port a container is externally accessible on.
+* [Identify which IP and port a container is externally accessible on.](data/4_Networking/identify_container_ip_port.yaml)
 * [Compare and contrast “host” and “ingress” publishing modes.](data/4_Networking/compare_contrats_host_ingress_publishing_modes.yaml)
-* Describe and demonstrate how to configure Docker to use external DNS.
-* Describe and demonstrate how to use Docker to load balance HTTP/HTTPs traffic to an application (Configure L7 load balancing with Docker EE).
-* Understand and describe the types of traffic that flow between the Docker engine, registry, and UCP controllers
-* Describe and demonstrate how to deploy a service on a Docker overlay network.
-* Describe and demonstrate how to troubleshoot container and engine logs to resolve connectivity issues between containers.
-* Describe how to route traffic to Kubernetes pods using ClusterIP and NodePort services.
+* [Describe and demonstrate how to configure Docker to use external DNS.](data/4_Networking/configure_external_dns.yaml)
+* [Describe and demonstrate how to use Docker to load balance HTTP/HTTPs traffic to an application (Configure L7 load balancing with Docker EE)](data/4_Networking/http_https_load_balancing.yaml).
+* [Understand and describe the types of traffic that flow between the Docker engine, registry, and UCP controllers](data/4_Networking/engine_registry_ucp_traffic_2.yaml)
+* [Describe and demonstrate how to deploy a service on a Docker overlay network.](data/4_Networking/deploy_overlay_service.yaml)
+* [Describe and demonstrate how to troubleshoot container and engine logs to resolve connectivity issues between containers.](data/4_Networking/troubleshoot_container_connectivity.yaml)
+* [Describe how to route traffic to Kubernetes pods using ClusterIP and NodePort services.](data/4_Networking/k8s_clusterip_nodeport.yaml)
 * [Describe the Kubertnetes’ container network model.](data/4_Networking/describe_kubernetes_container_network_model.yaml)
 
 ### Domain 5: Security (15% of exam)
