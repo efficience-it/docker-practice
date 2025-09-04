@@ -1,0 +1,81 @@
+questions:
+  - uuid: 09c6e9c3-bbd5-40dc-86a2-5f496e9d16ee
+    question: Which Docker command is used to create a user-defined bridge network?
+    answers:
+      - { value: 'docker network create --driver bridge dev-net', correct: true }
+      - { value: 'docker create network --bridge dev-net', correct: false }
+      - { value: 'docker network init dev-net --type=bridge', correct: false }
+      - { value: 'docker bridge create dev-net', correct: false }
+    help: https://docs.docker.com/network/bridge/
+
+  - uuid: 570665a5-cb54-4b5e-baa8-8181e2ab2a47
+    question: What is the benefit of creating a user-defined bridge network instead of using the default bridge?
+    answers:
+      - { value: 'Containers can resolve each other by name', correct: true }
+      - { value: 'It disables port publishing by default', correct: false }
+      - { value: 'It forces IPv6 mode', correct: false }
+      - { value: 'It automatically sets up TLS for container traffic', correct: false }
+    help: https://docs.docker.com/network/bridge/
+
+  - uuid: 2b060fd9-426e-4208-a97a-917cfc3a419d
+    question: What command allows you to list all available Docker networks?
+    answers:
+      - { value: 'docker network ls', correct: true }
+      - { value: 'docker ls network', correct: false }
+      - { value: 'docker network show', correct: false }
+      - { value: 'docker info network', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_ls/
+
+  - uuid: a690c420-2a02-44f2-aec5-4624a67b37e6
+    question: Which of the following is true about user-defined bridge networks?
+    answers:
+      - { value: 'They provide automatic DNS-based service discovery between containers', correct: true }
+      - { value: 'They require manual IP assignment', correct: false }
+      - { value: 'They only support one container per host', correct: false }
+      - { value: 'They are disabled in rootless mode', correct: false }
+    help: https://docs.docker.com/network/bridge/
+
+  - uuid: e67e560c-85df-44d5-8129-cf03aa0f26be
+    question: How do you connect a container to a specific bridge network when creating it?
+    answers:
+      - { value: 'docker run --network dev-net ...', correct: true }
+      - { value: 'docker network connect --bridge dev-net ...', correct: false }
+      - { value: 'docker start --attach-network dev-net ...', correct: false }
+      - { value: 'docker container add dev-net', correct: false }
+    help: https://docs.docker.com/network/bridge/
+
+  - uuid: c5d62de5-c94b-4cf2-b042-f47c6c417e5c
+    question: What happens if two containers are launched on the same user-defined bridge network?
+    answers:
+      - { value: 'They can communicate using container names as hostnames', correct: true }
+      - { value: 'They are isolated by default', correct: false }
+      - { value: 'They must use published ports to talk to each other', correct: false }
+      - { value: 'They are bridged to the host interface by default', correct: false }
+    help: https://docs.docker.com/network/bridge/
+
+  - uuid: 5f7fdbb2-997a-426e-8440-289f553c24aa
+    question: How can you inspect the configuration of a Docker bridge network?
+    answers:
+      - { value: 'docker network inspect dev-net', correct: true }
+      - { value: 'docker inspect network dev-net', correct: false }
+      - { value: 'docker network config dev-net', correct: false }
+      - { value: 'docker bridge show dev-net', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_inspect/
+
+  - uuid: 1a3586f5-bbe0-4dd6-842b-858ca7d0c28b
+    question: Which option allows you to specify a custom subnet when creating a bridge network?
+    answers:
+      - { value: '--subnet', correct: true }
+      - { value: '--dns', correct: false }
+      - { value: '--overlay-subnet', correct: false }
+      - { value: '--range', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_create/
+
+  - uuid: b1a89930-e29a-4b18-bd5e-94f76875b69b
+    question: Can multiple user-defined bridge networks coexist on the same Docker host?
+    answers:
+      - { value: 'Yes, and each can have its own IP subnet', correct: true }
+      - { value: 'No, only one bridge network is allowed', correct: false }
+      - { value: 'Only with overlay mode enabled', correct: false }
+      - { value: 'Yes, but only in swarm mode', correct: false }
+    help: https://docs.docker.com/network/bridge/

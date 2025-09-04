@@ -1,0 +1,81 @@
+questions:
+  - uuid: 4a1fc56e-2199-4a8a-a431-0b49966e1db2
+    question: What built-in Docker EE feature provides Layer 7 load balancing for HTTP/HTTPS?
+    answers:
+      - { value: 'Interlock', correct: true }
+      - { value: 'Ingress overlay driver', correct: false }
+      - { value: 'DNS round robin', correct: false }
+      - { value: 'IPVS', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/index.html
+
+  - uuid: 9189e0aa-8e84-4dcb-8d7b-4e1c87979c5e
+    question: Which Docker EE component is used to automatically route traffic to services based on host or path?
+    answers:
+      - { value: 'Interlock with NGINX', correct: true }
+      - { value: 'UCP routing mesh', correct: false }
+      - { value: 'Docker Daemon Proxy', correct: false }
+      - { value: 'Swarm Gossip Protocol', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/architecture.html
+
+  - uuid: 25aa1e52-5a0c-4b64-89d4-f9d7c0422c1d
+    question: In Interlock, what annotation is used to define the virtual host for a service?
+    answers:
+      - { value: 'com.docker.lb.hosts', correct: true }
+      - { value: 'com.docker.interlock.virtual', correct: false }
+      - { value: 'com.docker.routing.host', correct: false }
+      - { value: 'com.docker.proxy.domain', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/configuration/service-labels.html
+
+  - uuid: dbfb0283-ea8f-4326-8be5-12f5898d13aa
+    question: Which Docker command can be used to deploy a service with Interlock routing enabled?
+    answers:
+      - { value: 'docker service create --label com.docker.lb.hosts=app.example.com ...', correct: true }
+      - { value: 'docker container run --interlock ...', correct: false }
+      - { value: 'docker swarm deploy --l7=true ...', correct: false }
+      - { value: 'docker network create --driver=interlock ...', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/configuration/service-labels.html
+
+  - uuid: 9e42e5fc-3877-4e8f-84ee-22d4463d0cb4
+    question: What is required on the UCP node for Interlock to terminate HTTPS traffic?
+    answers:
+      - { value: 'A valid TLS certificate configured in Interlock', correct: true }
+      - { value: 'Swarm manager in leader mode only', correct: false }
+      - { value: 'Custom iptables rules', correct: false }
+      - { value: 'Bridge mode networking only', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/configuration/https.html
+
+  - uuid: 9d129bcf-7164-4e02-94f1-d107b9ac53ff
+    question: How does Interlock achieve high availability for L7 load balancing?
+    answers:
+      - { value: 'By running Interlock as a replicated service on Swarm', correct: true }
+      - { value: 'By binding Interlock to the host’s loopback interface', correct: false }
+      - { value: 'By using Consul for service discovery', correct: false }
+      - { value: 'Through kernel-level TCP balancing', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/architecture.html
+
+  - uuid: f86c6404-f70c-413c-82b5-68fd66be6971
+    question: Which of the following is a correct label to route traffic to a specific path?
+    answers:
+      - { value: 'com.docker.lb.rule=PathPrefix:/app', correct: true }
+      - { value: 'com.docker.lb.path=/app', correct: false }
+      - { value: 'com.docker.lb.location=app/*', correct: false }
+      - { value: 'com.docker.lb.url-path=/app', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/configuration/service-labels.html
+
+  - uuid: 51909358-21f3-4026-b1aa-e83a772ce0f1
+    question: What protocol does Interlock use to load balance HTTPS traffic?
+    answers:
+      - { value: 'TLS over TCP (Layer 7 termination)', correct: true }
+      - { value: 'QUIC with gRPC fallback', correct: false }
+      - { value: 'IP-in-IP encapsulation', correct: false }
+      - { value: 'Plain TCP round-robin', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/architecture.html
+
+  - uuid: d6e60e6d-f34d-4e29-aef4-35342db2f0a7
+    question: What happens if multiple services are deployed with the same virtual host annotation in Interlock?
+    answers:
+      - { value: 'They share the same load balancer endpoint and traffic is distributed between them', correct: true }
+      - { value: 'Only the first declared service receives traffic', correct: false }
+      - { value: 'Interlock will throw a routing conflict error', correct: false }
+      - { value: 'They will be placed on different Swarm networks', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/configuration/service-labels.html
