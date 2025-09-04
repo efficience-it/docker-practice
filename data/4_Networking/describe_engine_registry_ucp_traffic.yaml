@@ -1,0 +1,45 @@
+questions:
+  - uuid: 46cf7d2c-0a61-42ef-940d-38f91a34c85e
+    question: What protocol is used by the Docker engine to push images to a registry?
+    answers:
+      - { value: 'HTTPS with RESTful API calls', correct: true }
+      - { value: 'SSH over TCP port 22', correct: false }
+      - { value: 'gRPC over UDP', correct: false }
+      - { value: 'SCP with base64 encoding', correct: false }
+    help: https://docs.docker.com/registry/spec/api/
+
+  - uuid: d593dd0b-20d6-4c81-a4b4-63d234b99bce
+    question: Which port is typically used for secure traffic between UCP controllers and Docker engines?
+    answers:
+      - { value: '443', correct: true }
+      - { value: '2375', correct: false }
+      - { value: '22', correct: false }
+      - { value: '5000', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/ucp-architecture.html
+
+  - uuid: b2ea7eaf-813b-4e7f-a9ec-7819ff0f9695
+    question: What kind of internal communication occurs between UCP manager nodes?
+    answers:
+      - { value: 'Raft protocol for consensus', correct: true }
+      - { value: 'Syslog over UDP', correct: false }
+      - { value: 'ICMP for liveness', correct: false }
+      - { value: 'SSH command relays', correct: false }
+    help: https://docs.docker.com/engine/swarm/raft/
+
+  - uuid: 1cbf7d01-1bcd-49a4-a372-60bb524a1aa7
+    question: Which service uses mutual TLS to authenticate communications with UCP?
+    answers:
+      - { value: 'Docker engine', correct: true }
+      - { value: 'Docker CLI only', correct: false }
+      - { value: 'External load balancer', correct: false }
+      - { value: 'DTR only', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/ucp-architecture.html
+
+  - uuid: 061dcd8d-255a-4cf3-8cf3-d663c34e5897
+    question: How does UCP handle secure communications to its API?
+    answers:
+      - { value: 'By exposing a TLS-enabled HTTPS API on port 443', correct: true }
+      - { value: 'By requiring clients to SSH tunnel into manager nodes', correct: false }
+      - { value: 'Through an Ingress controller for TCP forwarding', correct: false }
+      - { value: 'Via kube-apiserver passthrough', correct: false }
+    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/admin/configure-ucp.html
