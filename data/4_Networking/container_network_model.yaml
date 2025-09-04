@@ -15,7 +15,7 @@ questions:
       - { value: 'Bridge, VLAN, Overlay, Host', correct: false }
       - { value: 'Veth pair, iptables, DNS, firewall', correct: false }
       - { value: 'Container, Image, Volume, IPAM', correct: false }
-    help: https://docs.docker.com/network/architecture/
+    help: https://docs.docker.com/engine/network/
 
   - uuid: d7bdb270-7399-4373-b0e4-e0a1f7a155f9
     question: What is a sandbox in the Docker Container Network Model?
@@ -24,7 +24,7 @@ questions:
       - { value: 'A Docker build environment used for image creation', correct: false }
       - { value: 'A test container used for staging deployments', correct: false }
       - { value: 'A layer in an image used for caching purposes', correct: false }
-    help: https://docs.docker.com/network/architecture/
+    help: https://docs.docker.com/engine/network/
 
   - uuid: f050a9a7-95e6-4b7d-bda4-1d7a29437679
     question: Which CNM component connects a container's sandbox to a Docker network?
@@ -33,7 +33,7 @@ questions:
       - { value: 'Bridge', correct: false }
       - { value: 'Overlay', correct: false }
       - { value: 'IPAM', correct: false }
-    help: https://docs.docker.com/network/architecture/
+    help: https://docs.docker.com/engine/network/
 
   - uuid: 9488080c-4b58-4a60-b94a-74db42b5f44a
     question: What is the role of an IPAM driver in Docker networking?
@@ -42,7 +42,7 @@ questions:
       - { value: 'To configure DNS resolution for containers', correct: false }
       - { value: 'To limit bandwidth between containers', correct: false }
       - { value: 'To authenticate access to a network', correct: false }
-    help: https://docs.docker.com/network/ipam/
+    help: https://docs.docker.com/reference/compose-file/networks/
 
   - uuid: 4d75b5b0-c8b7-42b6-9b26-76e212e3b982
     question: What is the function of a network driver in the CNM?
@@ -51,7 +51,7 @@ questions:
       - { value: 'Encrypts all container traffic by default', correct: false }
       - { value: 'Manages container logs over the network', correct: false }
       - { value: 'Creates certificates for TLS connections', correct: false }
-    help: https://docs.docker.com/network/architecture/
+    help: https://docs.docker.com/engine/network/
 
   - uuid: 3897a472-46ea-4c4b-809a-4a6f04dfd8b0
     question: How does the Docker engine interact with CNM components?
@@ -60,7 +60,7 @@ questions:
       - { value: 'It creates networks directly in the Linux kernel bypassing all abstraction layers', correct: false }
       - { value: 'It uses Dockerfiles to define networks', correct: false }
       - { value: 'It embeds all network logic inside the container runtime', correct: false }
-    help: https://docs.docker.com/network/architecture/
+    help: https://docs.docker.com/engine/network/
 
   - uuid: f8e6a607-8457-4b76-b17d-7117f3f9a6e4
     question: Which component handles IP address assignment when creating a user-defined network?
@@ -69,7 +69,7 @@ questions:
       - { value: 'Overlay driver', correct: false }
       - { value: 'Dockerfile', correct: false }
       - { value: 'Swarmkit', correct: false }
-    help: https://docs.docker.com/network/ipam/
+    help: https://docs.docker.com/reference/compose-file/networks/
 
   - uuid: b93937b0-85c2-4cb6-9006-5a9a6b3cbac2
     question: Can Docker use external IPAM plugins?
@@ -78,7 +78,7 @@ questions:
       - { value: 'No, only the default IPAM driver is supported', correct: false }
       - { value: 'Only in Kubernetes mode', correct: false }
       - { value: 'Only in rootless mode', correct: false }
-    help: https://docs.docker.com/network/ipam/
+    help: https://docs.docker.com/reference/compose-file/networks/
 
   - uuid: 8d77e847-4f3f-4a9e-a6ed-19c998169e62
     question: What does an endpoint represent in Docker networking?
@@ -87,4 +87,4 @@ questions:
       - { value: 'A CLI command to inspect container ports', correct: false }
       - { value: 'A DNS alias for a service', correct: false }
       - { value: 'A configuration template for UCP', correct: false }
-    help: https://docs.docker.com/network/architecture/
+    help: https://docs.docker.com/engine/network/
