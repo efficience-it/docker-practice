@@ -2,89 +2,89 @@ questions:
   - uuid: 26f0f3f7-8840-4b76-9137-2d18f4f4aa71
     question: Where can users and teams be managed in the official Docker environment?
     answers:
-      - { value: 'On Docker Hub (hub.docker.com)', correct: true }
-      - { value: 'With the docker user command', correct: false }
-      - { value: 'In the /etc/docker/teams.conf file', correct: false }
-      - { value: 'Via docker-compose.yml', correct: false }
+      - { value: "In the /etc/docker/teams.conf file", correct: false }
+      - { value: "On Docker Hub (hub.docker.com)", correct: true }
+      - { value: "With the docker user command", correct: false }
+      - { value: "Via docker-compose.yml", correct: false }
     help: https://docs.docker.com/docker-hub/orgs/
 
   - uuid: 6c5cb1df-4b49-4c4a-9cf9-2a1d2e53f726
     question: Which Docker Hub role allows managing teams, users, and repositories?
     answers:
-      - { value: 'Owner', correct: true }
-      - { value: 'Developer', correct: false }
-      - { value: 'Viewer', correct: false }
-      - { value: 'Operator', correct: false }
+      - { value: "Developer", correct: false }
+      - { value: "Operator", correct: false }
+      - { value: "Owner", correct: true }
+      - { value: "Viewer", correct: false }
     help: https://docs.docker.com/docker-hub/orgs/
 
   - uuid: f62a7754-9f5c-4a91-b5a0-1ea45b343624
     question: Can a Docker Hub user belong to multiple organizations?
     answers:
-      - { value: 'Yes', correct: true }
-      - { value: 'No, a user is tied to only one organization', correct: false }
-      - { value: 'Yes, but only with a paid account', correct: false }
-      - { value: 'No, except with Docker Enterprise', correct: false }
+      - { value: "Yes, but only with a paid account", correct: false }
+      - { value: "No, a user is tied to only one organization", correct: false }
+      - { value: "No, except with Docker Enterprise", correct: false }
+      - { value: "Yes", correct: true }
     help: https://docs.docker.com/docker-hub/orgs/
 
   - uuid: b1e32769-f6e6-49df-98ef-67ce6df7d8a9
     question: Which action creates a team in Docker Hub?
     answers:
-      - { value: 'Go to Organization > Teams > Create Team', correct: true }
-      - { value: 'Use docker team create', correct: false }
-      - { value: 'Edit the dockerhub.yaml file', correct: false }
-      - { value: 'Create a special tag in an image', correct: false }
+      - { value: "Create a special tag in an image", correct: false }
+      - { value: "Use docker team create", correct: false }
+      - { value: "Edit the dockerhub.yaml file", correct: false }
+      - { value: "Go to Organization > Teams > Create Team", correct: true }
     help: https://docs.docker.com/docker-hub/orgs/
 
   - uuid: 36276f44-008f-4b37-975c-e1c51ae9e0f0
     question: What is the primary purpose of teams in Docker Hub?
     answers:
-      - { value: 'Manage repository access permissions for multiple users', correct: true }
-      - { value: 'Create automatic Swarm clusters', correct: false }
-      - { value: 'Assign disk quotas', correct: false }
-      - { value: 'Enable automatic image updates', correct: false }
+      - { value: "Assign disk quotas", correct: false }
+      - { value: "Create automatic Swarm clusters", correct: false }
+      - { value: "Enable automatic image updates", correct: false }
+      - { value: "Manage repository access permissions for multiple users", correct: true }
     help: https://docs.docker.com/docker-hub/orgs/
 
   - uuid: a5ad3090-1b29-4c61-b08c-02839f19ef17
     question: What access levels are available on a Docker Hub repository?
     answers:
-      - { value: 'Read, Write, Admin', correct: true }
-      - { value: 'Guest, Developer, Owner', correct: false }
-      - { value: 'Public, Private, Restricted', correct: false }
-      - { value: 'Execute, Modify, Full', correct: false }
+      - { value: "Execute, Modify, Full", correct: false }
+      - { value: "Public, Private, Restricted", correct: false }
+      - { value: "Guest, Developer, Owner", correct: false }
+      - { value: "Read, Write, Admin", correct: true }
     help: https://docs.docker.com/docker-hub/repos/
 
   - uuid: 2e83b0c4-8a9d-49cd-9968-62d86f032173
     question: Can a Docker Hub team member with Read access push an image?
     answers:
-      - { value: 'No', correct: true }
-      - { value: 'Yes, if logged in with Docker CLI', correct: false }
-      - { value: 'Yes, but only once', correct: false }
-      - { value: 'Yes, if the image is public', correct: false }
+      - { value: "Yes, if logged in with Docker CLI", correct: false }
+      - { value: "No", correct: true }
+      - { value: "Yes, if the image is public", correct: false }
+      - { value: "Yes, but only once", correct: false }
     help: https://docs.docker.com/docker-hub/orgs/
 
   - uuid: 0db6c25b-4b1f-497e-8c2c-18a22d7d92aa
     question: Can a Docker user have a personal repository and also belong to an organization?
     answers:
-      - { value: 'Yes', correct: true }
-      - { value: 'No, it is exclusive', correct: false }
-      - { value: 'Only with Docker Desktop Pro', correct: false }
-      - { value: 'Only if the account is verified', correct: false }
+      - { value: "Yes", correct: true }
+      - { value: "Only if the account is verified", correct: false }
+      - { value: "Only with Docker Desktop Pro", correct: false }
+      - { value: "No, it is exclusive", correct: false }
     help: https://docs.docker.com/docker-hub/repos/
 
   - uuid: a8871731-8364-4db4-b41e-1dcd9f78e0c7
     question: Which command is used to log in to Docker Hub from the command line?
     answers:
-      - { value: 'docker login', correct: true }
-      - { value: 'docker auth', correct: false }
-      - { value: 'docker connect hub', correct: false }
-      - { value: 'docker user login', correct: false }
+      - { value: "docker login", correct: true }
+      - { value: "docker auth", correct: false }
+      - { value: "docker connect hub", correct: false }
+      - { value: "docker user login", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/login/
 
   - uuid: c4cbe3c6-77ef-4cb5-9f66-1e95cc167d50
     question: Can a user see all private repositories of a Docker Hub organization?
     answers:
-      - { value: 'Only if their team has explicit access', correct: true }
-      - { value: 'Yes, automatically', correct: false }
-      - { value: 'No, never', correct: false }
-      - { value: 'Yes, but only with read access', correct: false }
+      - { value: "Only if their team has explicit access", correct: true }
+      - { value: "No, never", correct: false }
+      - { value: "Yes, automatically", correct: false }
+      - { value: "Yes, but only with read access", correct: false }
     help: https://docs.docker.com/docker-hub/orgs/
