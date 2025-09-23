@@ -2,89 +2,89 @@ questions:
   - uuid: 4c2ef7b9-4e34-41cc-ae5f-d84b73d08e4d
     question: Which command is recommended to configure the official Docker repository on a Debian/Ubuntu machine?
     answers:
-      - { value: 'curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg', correct: true }
-      - { value: 'apt-add-repository docker', correct: false }
-      - { value: 'yum install docker', correct: false }
-      - { value: 'add-apt-repo docker', correct: false }
+      - { value: "apt-add-repository docker", correct: false }
+      - { value: "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg", correct: true }
+      - { value: "add-apt-repo docker", correct: false }
+      - { value: "yum install docker", correct: false }
     help: https://docs.docker.com/engine/install/ubuntu/
 
   - uuid: d08278d5-ef35-487a-b0b6-7e544bff2bb0
     question: Which package should be installed on Ubuntu after configuring the Docker repository?
     answers:
-      - { value: 'docker-ce', correct: true }
-      - { value: 'docker-engine', correct: false }
-      - { value: 'docker.io', correct: false }
-      - { value: 'docker-compose', correct: false }
+      - { value: "docker-engine", correct: false }
+      - { value: "docker-compose", correct: false }
+      - { value: "docker.io", correct: false }
+      - { value: "docker-ce", correct: true }
     help: https://docs.docker.com/engine/install/ubuntu/
 
   - uuid: 6c1d848e-7e13-4b3a-97ee-3772b251e749
     question: Which command configures the Docker repository on CentOS or RHEL?
     answers:
-      - { value: 'yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo', correct: true }
-      - { value: 'add-apt-repository docker-ce', correct: false }
-      - { value: 'docker setup', correct: false }
-      - { value: 'dnf enable docker', correct: false }
+      - { value: "docker setup", correct: false }
+      - { value: "add-apt-repository docker-ce", correct: false }
+      - { value: "yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo", correct: true }
+      - { value: "dnf enable docker", correct: false }
     help: https://docs.docker.com/engine/install/centos/
 
   - uuid: 18e5192f-0057-4f80-a681-882e199ad55d
     question: What is the default recommended storage driver on modern Linux distributions?
     answers:
-      - { value: 'overlay2', correct: true }
-      - { value: 'aufs', correct: false }
-      - { value: 'btrfs', correct: false }
-      - { value: 'devicemapper', correct: false }
+      - { value: "devicemapper", correct: false }
+      - { value: "overlay2", correct: true }
+      - { value: "aufs", correct: false }
+      - { value: "btrfs", correct: false }
     help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/
 
   - uuid: b8704b3c-d6fd-4a6b-810f-7b94b8a869be
     question: Which command shows the storage driver currently used by Docker?
     answers:
-      - { value: 'docker info', correct: true }
-      - { value: 'docker storage status', correct: false }
-      - { value: 'docker volume inspect', correct: false }
-      - { value: 'docker system inspect', correct: false }
+      - { value: "docker info", correct: true }
+      - { value: "docker volume inspect", correct: false }
+      - { value: "docker system inspect", correct: false }
+      - { value: "docker storage status", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/info/
 
   - uuid: 33dd5094-4211-4229-8459-0a75be296c37
     question: Which file can be edited to force Docker to use a specific storage driver?
     answers:
-      - { value: '/etc/docker/daemon.json', correct: true }
-      - { value: '/etc/docker/driver.conf', correct: false }
-      - { value: '/var/lib/docker/driver.config', correct: false }
-      - { value: '/etc/docker-engine.conf', correct: false }
+      - { value: "/etc/docker-engine.conf", correct: false }
+      - { value: "/etc/docker/daemon.json", correct: true }
+      - { value: "/var/lib/docker/driver.config", correct: false }
+      - { value: "/etc/docker/driver.conf", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
 
   - uuid: 9b10cfa6-40f2-4be1-bcc2-fbd0b8e1ff7c
     question: Which JSON parameter sets the storage driver in the Docker daemon?
     answers:
-      - { value: '`storage-driver`: `overlay2`', correct: true }
-      - { value: '`driver`: `aufs`', correct: false }
-      - { value: '`volume-driver`: `zfs`', correct: false }
-      - { value: '`storage`: `devicemapper`', correct: false }
+      - { value: "`volume-driver`: `zfs`", correct: false }
+      - { value: "`storage`: `devicemapper`", correct: false }
+      - { value: "`storage-driver`: `overlay2`", correct: true }
+      - { value: "`driver`: `aufs`", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
 
   - uuid: 261f97d5-38fa-48fa-8365-58e8439b4495
     question: What prerequisite is often required to use the `overlay2` driver?
     answers:
-      - { value: 'The filesystem must be `xfs` or `ext4` with d_type enabled', correct: true }
-      - { value: 'The kernel must be version 3.2 or lower', correct: false }
-      - { value: 'docker-compose must be installed', correct: false }
-      - { value: 'None, it always works', correct: false }
+      - { value: "docker-compose must be installed", correct: false }
+      - { value: "None, it always works", correct: false }
+      - { value: "The filesystem must be `xfs` or `ext4` with d_type enabled", correct: true }
+      - { value: "The kernel must be version 3.2 or lower", correct: false }
     help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/#prerequisites
 
   - uuid: 93f4b6d9-0e4f-4adf-9101-2a9fc6a1ea4c
     question: On Windows, how is Docker Desktop installed?
     answers:
-      - { value: 'Download the installer from the official website and run the graphical installation', correct: true }
-      - { value: 'Run apt install docker-desktop', correct: false }
-      - { value: 'Run choco install docker-ce', correct: false }
-      - { value: 'Run docker install --windows', correct: false }
+      - { value: "Run apt install docker-desktop", correct: false }
+      - { value: "Download the installer from the official website and run the graphical installation", correct: true }
+      - { value: "Run docker install --windows", correct: false }
+      - { value: "Run choco install docker-ce", correct: false }
     help: https://docs.docker.com/desktop/install/windows-install/
 
   - uuid: 50c16d73-0998-45d3-aef4-37e7168fdddb
     question: Which command is used to start Docker after installation on a Linux distribution?
     answers:
-      - { value: 'sudo systemctl start docker', correct: true }
-      - { value: 'docker start', correct: false }
-      - { value: 'sudo docker init', correct: false }
-      - { value: 'service docker launch', correct: false }
+      - { value: "docker start", correct: false }
+      - { value: "sudo docker init", correct: false }
+      - { value: "sudo systemctl start docker", correct: true }
+      - { value: "service docker launch", correct: false }
     help: https://docs.docker.com/engine/install/linux-postinstall/

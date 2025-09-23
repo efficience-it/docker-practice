@@ -2,62 +2,62 @@ questions:
   - uuid: 15717e2b-bb77-46b7-b2aa-659e34d82a50
     question: What is the main purpose of integrating UCP with LDAP or Active Directory?
     answers:
-      - { value: 'Enable centralized user authentication', correct: true }
-      - { value: 'Speed up image transfers', correct: false }
-      - { value: 'Enable Swarm mode', correct: false }
-      - { value: 'Enable encrypted volumes', correct: false }
+      - { value: "Speed up image transfers", correct: false }
+      - { value: "Enable centralized user authentication", correct: true }
+      - { value: "Enable Swarm mode", correct: false }
+      - { value: "Enable encrypted volumes", correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/index.html
 
   - uuid: 3a90c8f2-7f4d-4608-8e6d-bf1327384d3c
     question: Which UCP option allows mapping LDAP groups to teams?
     answers:
-      - { value: 'Group Mapping', correct: true }
-      - { value: 'RBAC Sync', correct: false }
-      - { value: 'LDAP-to-RBAC Hook', correct: false }
-      - { value: 'Federated Login Sync', correct: false }
+      - { value: "Federated Login Sync", correct: false }
+      - { value: "RBAC Sync", correct: false }
+      - { value: "LDAP-to-RBAC Hook", correct: false }
+      - { value: "Group Mapping", correct: true }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/group-mapping.html
 
   - uuid: 9497f5b9-b2e8-4c6f-a49e-4370c7427161
     question: Which field must be configured to identify users in LDAP?
     answers:
-      - { value: 'User Search Filter', correct: true }
-      - { value: 'Bind DN', correct: false }
-      - { value: 'TLS Certificate Path', correct: false }
-      - { value: 'Sync Token', correct: false }
+      - { value: "Bind DN", correct: false }
+      - { value: "TLS Certificate Path", correct: false }
+      - { value: "User Search Filter", correct: true }
+      - { value: "Sync Token", correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/index.html#required-settings
 
   - uuid: 14f7ac14-41f4-41ec-b2a0-47d8eb0ff705
     question: Which interface allows configuring LDAP in UCP?
     answers:
-      - { value: 'Web Admin interface or UCP API', correct: true }
-      - { value: 'docker config set --ldap', correct: false }
-      - { value: '/etc/docker/ucp-ldap.conf file', correct: false }
-      - { value: 'kubectl CLI', correct: false }
+      - { value: "/etc/docker/ucp-ldap.conf file", correct: false }
+      - { value: "Web Admin interface or UCP API", correct: true }
+      - { value: "docker config set --ldap", correct: false }
+      - { value: "kubectl CLI", correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/index.html#configure-authentication
 
   - uuid: fbd028b4-832e-42cb-80b2-baa87d7353b9
     question: Which secure protocol is recommended for the connection between UCP and LDAP?
     answers:
-      - { value: 'LDAPS (LDAP over SSL/TLS)', correct: true }
-      - { value: 'HTTP', correct: false }
-      - { value: 'FTP', correct: false }
-      - { value: 'SMTP', correct: false }
+      - { value: "LDAPS (LDAP over SSL/TLS)", correct: true }
+      - { value: "HTTP", correct: false }
+      - { value: "SMTP", correct: false }
+      - { value: "FTP", correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/index.html#required-settings
 
   - uuid: 44a75e71-464f-44d5-b7aa-1e59e35c02a0
     question: Which field must be filled in for UCP to query the LDAP server?
     answers:
-      - { value: 'Bind DN and password', correct: true }
-      - { value: 'Image Pull Secret', correct: false }
-      - { value: 'Node Token', correct: false }
-      - { value: 'Swarm Manager IP', correct: false }
+      - { value: "Node Token", correct: false }
+      - { value: "Image Pull Secret", correct: false }
+      - { value: "Bind DN and password", correct: true }
+      - { value: "Swarm Manager IP", correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/index.html#required-settings
 
   - uuid: 4207e0d3-dc14-4666-b245-68e6895f10d4
     question: Once LDAP is configured, how are users added in UCP?
     answers:
-      - { value: 'Automatically upon first successful login', correct: true }
-      - { value: 'Manually via CSV import', correct: false }
-      - { value: 'Through an external webhook', correct: false }
-      - { value: 'By modifying the UCP Dockerfile', correct: false }
+      - { value: "Manually via CSV import", correct: false }
+      - { value: "Automatically upon first successful login", correct: true }
+      - { value: "By modifying the UCP Dockerfile", correct: false }
+      - { value: "Through an external webhook", correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/idmgmt/external-auth/user-lifecycle.html

@@ -2,71 +2,71 @@ questions:
   - uuid: f2415a8f-98ff-4bde-b048-3b3e6c23dacf
     question: Which Docker CLI option allows you to set an external DNS server for a container at runtime?
     answers:
-      - { value: '--dns', correct: true }
-      - { value: '--resolve', correct: false }
-      - { value: '--add-host', correct: false }
-      - { value: '--hostname', correct: false }
+      - { value: "--add-host", correct: false }
+      - { value: "--resolve", correct: false }
+      - { value: "--hostname", correct: false }
+      - { value: "--dns", correct: true }
     help: https://docs.docker.com/config/containers/container-networking/#dns-services
 
   - uuid: 3a69f8ce-d2d1-41d6-b3e3-80403064fdf5
     question: How do you configure Docker to always use a custom DNS server for all containers?
     answers:
-      - { value: 'Add `dns`: ['8.8.8.8'] to /etc/docker/daemon.json and restart the daemon', correct: true }
-      - { value: 'Use docker network create with --dns-global', correct: false }
-      - { value: 'Modify /etc/resolv.conf inside containers', correct: false }
-      - { value: 'Add --dns to all docker ps commands', correct: false }
+      - { value: "Use docker network create with --dns-global", correct: false }
+      - { value: "Add `dns`: ['8.8.8.8'] to /etc/docker/daemon.json and restart the daemon", correct: true }
+      - { value: "Add --dns to all docker ps commands", correct: false }
+      - { value: "Modify /etc/resolv.conf inside containers", correct: false }
     help: https://docs.docker.com/config/daemon/#dns-servers
 
   - uuid: 7cb52d35-1f95-4a76-91d2-9cd3b13bdbbd
     question: Where should you define a global DNS server for Docker in a Linux environment?
     answers:
-      - { value: '/etc/docker/daemon.json', correct: true }
-      - { value: '/etc/resolv.conf', correct: false }
-      - { value: '/etc/network/interfaces', correct: false }
-      - { value: '~/.docker/config.json', correct: false }
+      - { value: "~/.docker/config.json", correct: false }
+      - { value: "/etc/docker/daemon.json", correct: true }
+      - { value: "/etc/network/interfaces", correct: false }
+      - { value: "/etc/resolv.conf", correct: false }
     help: https://docs.docker.com/config/daemon/
 
   - uuid: 9a0d050d-3821-4620-b19a-f2d2733f9cc1
     question: After modifying the Docker daemon configuration file to set DNS, what must you do for it to take effect?
     answers:
-      - { value: 'Restart the Docker service', correct: true }
-      - { value: 'Run docker system prune', correct: false }
-      - { value: 'Restart each container manually', correct: false }
-      - { value: 'Clear the Docker image cache', correct: false }
+      - { value: "Clear the Docker image cache", correct: false }
+      - { value: "Run docker system prune", correct: false }
+      - { value: "Restart the Docker service", correct: true }
+      - { value: "Restart each container manually", correct: false }
     help: https://docs.docker.com/config/daemon/
 
   - uuid: 1353ae30-9f02-4465-9286-f28cfb5f86fc
     question: Which of the following `docker run` commands sets a container to use Google's public DNS server?
     answers:
-      - { value: 'docker run --dns 8.8.8.8 alpine nslookup google.com', correct: true }
-      - { value: 'docker run --resolve 8.8.8.8 alpine', correct: false }
-      - { value: 'docker run --dns-server 8.8.8.8 alpine', correct: false }
-      - { value: 'docker run --set-dns 8.8.8.8 alpine', correct: false }
+      - { value: "docker run --set-dns 8.8.8.8 alpine", correct: false }
+      - { value: "docker run --resolve 8.8.8.8 alpine", correct: false }
+      - { value: "docker run --dns-server 8.8.8.8 alpine", correct: false }
+      - { value: "docker run --dns 8.8.8.8 alpine nslookup google.com", correct: true }
     help: https://docs.docker.com/config/containers/container-networking/#dns-services
 
   - uuid: d48d2f87-96e9-46b4-a7ff-b65799f6a9c1
     question: If no custom DNS is specified for a container, where does Docker get its DNS configuration from by default?
     answers:
-      - { value: '/etc/resolv.conf of the host', correct: true }
-      - { value: 'Docker Hub settings', correct: false }
-      - { value: 'UCP controller DNS settings', correct: false }
-      - { value: '/var/lib/docker/dns.conf', correct: false }
+      - { value: "/etc/resolv.conf of the host", correct: true }
+      - { value: "UCP controller DNS settings", correct: false }
+      - { value: "/var/lib/docker/dns.conf", correct: false }
+      - { value: "Docker Hub settings", correct: false }
     help: https://docs.docker.com/config/containers/container-networking/#dns-services
 
   - uuid: 5460551f-6d1a-4cc5-bdd2-4f1e3e60cb7d
     question: Can you use multiple DNS servers in a single `--dns` declaration?
     answers:
-      - { value: 'No, you must repeat --dns for each server', correct: true }
-      - { value: 'Yes, comma-separated', correct: false }
-      - { value: 'Only if using host network mode', correct: false }
-      - { value: 'Only when using docker-compose', correct: false }
+      - { value: "Only when using docker-compose", correct: false }
+      - { value: "Only if using host network mode", correct: false }
+      - { value: "Yes, comma-separated", correct: false }
+      - { value: "No, you must repeat --dns for each server", correct: true }
     help: https://docs.docker.com/config/containers/container-networking/#dns-services
 
   - uuid: 002f186e-1cfc-4b76-9e70-8998eec19fc1
     question: Which tool can you use inside a container to test DNS resolution?
     answers:
-      - { value: 'nslookup', correct: true }
-      - { value: 'ping -dns', correct: false }
-      - { value: 'docker network test', correct: false }
-      - { value: 'dnscheck', correct: false }
+      - { value: "nslookup", correct: true }
+      - { value: "dnscheck", correct: false }
+      - { value: "docker network test", correct: false }
+      - { value: "ping -dns", correct: false }
     help: https://docs.docker.com/config/containers/container-networking/#dns-services

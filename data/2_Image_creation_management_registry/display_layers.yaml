@@ -2,89 +2,89 @@ questions:
   - uuid: 4a7e2f3b-81d3-4fcf-b3d7-4cfe6b8f0421
     question: Which command displays the layers of a Docker image in a human-readable format?
     answers:
-      - { value: 'docker history nginx', correct: true }
-      - { value: 'docker image ls nginx', correct: false }
-      - { value: 'docker inspect nginx', correct: false }
-      - { value: 'docker layers nginx', correct: false }
+      - { value: "docker layers nginx", correct: false }
+      - { value: "docker history nginx", correct: true }
+      - { value: "docker inspect nginx", correct: false }
+      - { value: "docker image ls nginx", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/history/
 
   - uuid: 1dcb4a0f-1a58-4b25-9469-7c4c91480f9f
     question: Which 'docker history' option shows the cumulative size of image layers?
     answers:
-      - { value: '--human', correct: true }
-      - { value: '--no-trunc', correct: false }
-      - { value: '--format', correct: false }
-      - { value: '--quiet', correct: false }
+      - { value: "--quiet", correct: false }
+      - { value: "--format", correct: false }
+      - { value: "--human", correct: true }
+      - { value: "--no-trunc", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/history/
 
   - uuid: 85dd16f7-d749-4132-9359-30c61d9bcd45
     question: What is the typical output of the command 'docker history nginx'?
     answers:
-      - { value: 'A list of all containers using the image', correct: false }
-      - { value: 'The network dependency tree', correct: false }
-      - { value: 'The image layers with their sizes and instructions', correct: true }
-      - { value: 'The complete Dockerfile', correct: false }
+      - { value: "The network dependency tree", correct: false }
+      - { value: "The image layers with their sizes and instructions", correct: true }
+      - { value: "A list of all containers using the image", correct: false }
+      - { value: "The complete Dockerfile", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/history/
 
   - uuid: f5be1c84-0cb2-41ea-a37f-6d36e460c5d5
     question: Which JSON command can be used to extract the IDs of an image's layers?
     answers:
-      - { value: 'docker inspect --format=`{{json .RootFS.Layers}}` nginx', correct: true }
-      - { value: 'docker history --format=`{{.ID}}` nginx', correct: false }
-      - { value: 'docker image ls --format=`{{.Layers}}` nginx', correct: false }
-      - { value: 'docker image layers --json nginx', correct: false }
+      - { value: "docker image ls --format=`{{.Layers}}` nginx", correct: false }
+      - { value: "docker history --format=`{{.ID}}` nginx", correct: false }
+      - { value: "docker image layers --json nginx", correct: false }
+      - { value: "docker inspect --format=`{{json .RootFS.Layers}}` nginx", correct: true }
     help: https://docs.docker.com/engine/reference/commandline/inspect/
 
   - uuid: 4c92d4dc-9c2f-4081-a324-32a43a7f1ff9
     question: What is the purpose of the 'docker history' command in the context of a security investigation?
     answers:
-      - { value: 'To check the current memory usage of the container', correct: false }
-      - { value: 'To detect suspicious instructions in the image layers', correct: true }
-      - { value: 'To change permissions on volumes', correct: false }
-      - { value: 'To view container logs', correct: false }
+      - { value: "To view container logs", correct: false }
+      - { value: "To change permissions on volumes", correct: false }
+      - { value: "To detect suspicious instructions in the image layers", correct: true }
+      - { value: "To check the current memory usage of the container", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/history/
 
   - uuid: b3c3aabe-6844-4c0e-9015-35486d00d93f
     question: Which field returned by 'docker history' identifies the Dockerfile instruction associated with a layer?
     answers:
-      - { value: 'CREATED BY', correct: true }
-      - { value: 'SIZE', correct: false }
-      - { value: 'IMAGE', correct: false }
-      - { value: 'CONTAINER', correct: false }
+      - { value: "SIZE", correct: false }
+      - { value: "CREATED BY", correct: true }
+      - { value: "IMAGE", correct: false }
+      - { value: "CONTAINER", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/history/
 
   - uuid: c8ec2e1a-88bb-4f5f-a8c1-c3e978eb84da
     question: Why do some lines in 'docker history' show the SIZE column as 0B?
     answers:
-      - { value: 'The layer was not built', correct: false }
-      - { value: 'The image has not been pushed to a registry', correct: false }
-      - { value: 'The associated instruction does not modify the filesystem', correct: true }
-      - { value: 'The command failed', correct: false }
+      - { value: "The layer was not built", correct: false }
+      - { value: "The command failed", correct: false }
+      - { value: "The associated instruction does not modify the filesystem", correct: true }
+      - { value: "The image has not been pushed to a registry", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/history/
 
   - uuid: 1b82ad23-5f91-4e9d-9189-f503b1a2e156
     question: What is the best way to visualize the layers of an image with the exact commands used to generate them?
     answers:
-      - { value: 'docker diff', correct: false }
-      - { value: 'docker image inspect', correct: false }
-      - { value: 'docker history --no-trunc nginx', correct: true }
-      - { value: 'docker ps -a', correct: false }
+      - { value: "docker history --no-trunc nginx", correct: true }
+      - { value: "docker ps -a", correct: false }
+      - { value: "docker image inspect", correct: false }
+      - { value: "docker diff", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/history/
 
   - uuid: cdc2fd95-fb2b-4b6c-8352-b453327cf98e
     question: What is the main purpose of analyzing the layers of a Docker image?
     answers:
-      - { value: 'To restart the image with another UID', correct: false }
-      - { value: 'To understand how the image was built and optimize its size', correct: true }
-      - { value: 'To force the update of private registries', correct: false }
-      - { value: 'To create a new network interface', correct: false }
+      - { value: "To force the update of private registries", correct: false }
+      - { value: "To restart the image with another UID", correct: false }
+      - { value: "To understand how the image was built and optimize its size", correct: true }
+      - { value: "To create a new network interface", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/history/
 
   - uuid: 5bb4ad26-91f1-497a-b930-ec38f74aa244
     question: What happens if you run 'docker history' on an intermediate image?
     answers:
-      - { value: 'It returns an error', correct: false }
-      - { value: 'It only shows the final layer', correct: false }
-      - { value: 'It shows all the layers up to that intermediate image', correct: true }
-      - { value: 'It lists currently running containers', correct: false }
+      - { value: "It only shows the final layer", correct: false }
+      - { value: "It shows all the layers up to that intermediate image", correct: true }
+      - { value: "It returns an error", correct: false }
+      - { value: "It lists currently running containers", correct: false }
     help: https://docs.docker.com/engine/reference/commandline/history/
