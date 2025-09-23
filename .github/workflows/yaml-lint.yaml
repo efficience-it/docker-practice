@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Check out repository content
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Run YAML Lint
         uses: github/super-linter@v4
@@ -17,3 +19,4 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_YAML: true
           YAML_LINTER_RULES_PATH: .github/workflows/.yamllint
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
