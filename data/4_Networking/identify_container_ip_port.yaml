@@ -2,71 +2,71 @@ questions:
   - uuid: 7e92be6e-8892-4cb3-a0f3-2a4d32821497
     question: Which Docker command shows the external port mapped to a container's internal port?
     answers:
-      - { value: "docker port <container_id>", correct: true }
-      - { value: "docker ps --ip", correct: false }
-      - { value: "docker inspect --summary", correct: false }
-      - { value: "docker network ls", correct: false }
+      - { value: 'docker port <container_id>', correct: true }
+      - { value: 'docker ps --ip', correct: false }
+      - { value: 'docker inspect --summary', correct: false }
+      - { value: 'docker network ls', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/port/
 
   - uuid: 126dc3ab-2878-4ea3-933f-c8c280d71a9f
     question: What is the result of running `docker port mywebapp` when port 8080 is published as 0.0.0.0:49153?
     answers:
-      - { value: "0.0.0.0:49153/tcp -> 8080", correct: false }
-      - { value: "8080/tcp -> 0.0.0.0:49153", correct: true }
-      - { value: "Port 8080 is not published externally", correct: false }
-      - { value: "49153/tcp -> 0.0.0.0:8080", correct: false }
+      - { value: '0.0.0.0:49153/tcp -> 8080', correct: false }
+      - { value: '8080/tcp -> 0.0.0.0:49153', correct: true }
+      - { value: 'Port 8080 is not published externally', correct: false }
+      - { value: '49153/tcp -> 0.0.0.0:8080', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/port/
 
   - uuid: 236f0c46-725b-4ce8-bb59-e45d7ad5e158
     question: What command can you use to find both the IP and published ports of a running container?
     answers:
-      - { value: "docker logs <container_id>", correct: false }
-      - { value: "docker inspect <container_id>", correct: true }
-      - { value: "docker info", correct: false }
-      - { value: "docker port <container_id> --verbose", correct: false }
+      - { value: 'docker logs <container_id>', correct: false }
+      - { value: 'docker inspect <container_id>', correct: true }
+      - { value: 'docker info', correct: false }
+      - { value: 'docker port <container_id> --verbose', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/inspect/
 
   - uuid: 7d8a63c4-5b6a-4f6a-962f-9b0f0555aabc
     question: Where in `docker inspect` output can you find the container's host IP and port bindings?
     answers:
-      - { value: ".Mounts.Bindings", correct: false }
-      - { value: ".NetworkSettings.Ports", correct: true }
-      - { value: ".HostConfig.DNS", correct: false }
-      - { value: ".Config.ExposedPorts", correct: false }
+      - { value: '.Mounts.Bindings', correct: false }
+      - { value: '.NetworkSettings.Ports', correct: true }
+      - { value: '.HostConfig.DNS', correct: false }
+      - { value: '.Config.ExposedPorts', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/inspect/
 
   - uuid: 37e2a5ee-d5c3-4f37-a03c-01a632fdfeb5
     question: If a container is started with `-p 8080:80`, what port on the host will forward traffic to port 80 in the container?
     answers:
-      - { value: "80", correct: false }
-      - { value: "It depends on the container’s internal IP", correct: false }
-      - { value: "8080", correct: true }
-      - { value: "443", correct: false }
+      - { value: '80', correct: false }
+      - { value: 'It depends on the container’s internal IP', correct: false }
+      - { value: '8080', correct: true }
+      - { value: '443', correct: false }
     help: https://docs.docker.com/config/containers/container-networking/
 
   - uuid: 90d216c4-4582-4eb7-bc71-e176028de54d
     question: What does the IP 0.0.0.0 mean in Docker port bindings?
     answers:
-      - { value: "The container is running in host mode", correct: false }
-      - { value: "The port is exposed to all network interfaces on the host", correct: true }
-      - { value: "The container is not accessible externally", correct: false }
-      - { value: "The port is blocked by a firewall", correct: false }
+      - { value: 'The container is running in host mode', correct: false }
+      - { value: 'The port is exposed to all network interfaces on the host', correct: true }
+      - { value: 'The container is not accessible externally', correct: false }
+      - { value: 'The port is blocked by a firewall', correct: false }
     help: https://docs.docker.com/network/bridge/#accessing-container-ports
 
   - uuid: ed5bfa3d-c11c-4aa9-8c3a-feb71f5e4d58
     question: Which option of `docker run` allows you to publish a container’s port on a specific host IP?
     answers:
-      - { value: "--publish 192.168.1.100:8080:80", correct: true }
-      - { value: "--network 192.168.1.100 --port 80", correct: false }
-      - { value: "--bind 192.168.1.100:80", correct: false }
-      - { value: "--host-ip 192.168.1.100 --port 80", correct: false }
+      - { value: '--publish 192.168.1.100:8080:80', correct: true }
+      - { value: '--network 192.168.1.100 --port 80', correct: false }
+      - { value: '--bind 192.168.1.100:80', correct: false }
+      - { value: '--host-ip 192.168.1.100 --port 80', correct: false }
     help: https://docs.docker.com/config/containers/container-networking/#published-ports
 
   - uuid: c4e930c3-258f-40cd-94ef-21917a9c026d
     question: What does `docker ps` show about container networking?
     answers:
-      - { value: "Port bindings (host → container)", correct: true }
-      - { value: "Container MAC address", correct: false }
-      - { value: "Internal container IP address", correct: false }
-      - { value: "Full docker network topology", correct: false }
+      - { value: 'Port bindings (host → container)', correct: true }
+      - { value: 'Container MAC address', correct: false }
+      - { value: 'Internal container IP address', correct: false }
+      - { value: 'Full docker network topology', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/ps/

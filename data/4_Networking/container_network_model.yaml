@@ -2,89 +2,89 @@ questions:
   - uuid: 67b7c64e-89b1-4037-8123-b765be95b72e
     question: What is the purpose of Docker's Container Network Model (CNM)?
     answers:
-      - { value: "To provide a standardized framework for network driver plugins to interact with the Docker engine", correct: true }
-      - { value: "To configure the swarm routing mesh", correct: false }
-      - { value: "To define how containers share persistent storage volumes", correct: false }
-      - { value: "To manage container restart policies", correct: false }
+      - { value: 'To provide a standardized framework for network driver plugins to interact with the Docker engine', correct: true }
+      - { value: 'To configure the swarm routing mesh', correct: false }
+      - { value: 'To define how containers share persistent storage volumes', correct: false }
+      - { value: 'To manage container restart policies', correct: false }
     help: https://docs.docker.com/network/
 
   - uuid: 1cfb3917-2df8-442e-a066-65115a1d1e4a
     question: In the CNM, what are the core components involved in container networking?
     answers:
-      - { value: "Bridge, VLAN, Overlay, Host", correct: false }
-      - { value: "Sandbox, Endpoint, Network, Driver", correct: true }
-      - { value: "Veth pair, iptables, DNS, firewall", correct: false }
-      - { value: "Container, Image, Volume, IPAM", correct: false }
+      - { value: 'Bridge, VLAN, Overlay, Host', correct: false }
+      - { value: 'Sandbox, Endpoint, Network, Driver', correct: true }
+      - { value: 'Veth pair, iptables, DNS, firewall', correct: false }
+      - { value: 'Container, Image, Volume, IPAM', correct: false }
     help: https://docs.docker.com/engine/network/
 
   - uuid: d7bdb270-7399-4373-b0e4-e0a1f7a155f9
     question: What is a sandbox in the Docker Container Network Model?
     answers:
-      - { value: "A test container used for staging deployments", correct: false }
-      - { value: "A layer in an image used for caching purposes", correct: false }
-      - { value: "An isolated network stack (interfaces, routes, etc.) attached to a container", correct: true }
-      - { value: "A Docker build environment used for image creation", correct: false }
+      - { value: 'A test container used for staging deployments', correct: false }
+      - { value: 'A layer in an image used for caching purposes', correct: false }
+      - { value: 'An isolated network stack (interfaces, routes, etc.) attached to a container', correct: true }
+      - { value: 'A Docker build environment used for image creation', correct: false }
     help: https://docs.docker.com/engine/network/
 
   - uuid: f050a9a7-95e6-4b7d-bda4-1d7a29437679
     question: Which CNM component connects a container's sandbox to a Docker network?
     answers:
-      - { value: "Overlay", correct: false }
-      - { value: "IPAM", correct: false }
-      - { value: "Endpoint", correct: true }
-      - { value: "Bridge", correct: false }
+      - { value: 'Overlay', correct: false }
+      - { value: 'IPAM', correct: false }
+      - { value: 'Endpoint', correct: true }
+      - { value: 'Bridge', correct: false }
     help: https://docs.docker.com/engine/network/
 
   - uuid: 9488080c-4b58-4a60-b94a-74db42b5f44a
     question: What is the role of an IPAM driver in Docker networking?
     answers:
-      - { value: "To authenticate access to a network", correct: false }
-      - { value: "To assign IP addresses and manage IP pools for networks", correct: true }
-      - { value: "To configure DNS resolution for containers", correct: false }
-      - { value: "To limit bandwidth between containers", correct: false }
+      - { value: 'To authenticate access to a network', correct: false }
+      - { value: 'To assign IP addresses and manage IP pools for networks', correct: true }
+      - { value: 'To configure DNS resolution for containers', correct: false }
+      - { value: 'To limit bandwidth between containers', correct: false }
     help: https://docs.docker.com/reference/compose-file/networks/
 
   - uuid: 4d75b5b0-c8b7-42b6-9b26-76e212e3b982
     question: What is the function of a network driver in the CNM?
     answers:
-      - { value: "Encrypts all container traffic by default", correct: false }
-      - { value: "Manages container logs over the network", correct: false }
-      - { value: "Creates certificates for TLS connections", correct: false }
-      - { value: "Implements the actual network connectivity for containers in a network", correct: true }
+      - { value: 'Encrypts all container traffic by default', correct: false }
+      - { value: 'Manages container logs over the network', correct: false }
+      - { value: 'Creates certificates for TLS connections', correct: false }
+      - { value: 'Implements the actual network connectivity for containers in a network', correct: true }
     help: https://docs.docker.com/engine/network/
 
   - uuid: 3897a472-46ea-4c4b-809a-4a6f04dfd8b0
     question: How does the Docker engine interact with CNM components?
     answers:
-      - { value: "It creates networks directly in the Linux kernel bypassing all abstraction layers", correct: false }
-      - { value: "It embeds all network logic inside the container runtime", correct: false }
-      - { value: "It uses APIs to orchestrate sandbox creation, IPAM calls, and endpoint attachment via the driver", correct: true }
-      - { value: "It uses Dockerfiles to define networks", correct: false }
+      - { value: 'It creates networks directly in the Linux kernel bypassing all abstraction layers', correct: false }
+      - { value: 'It embeds all network logic inside the container runtime', correct: false }
+      - { value: 'It uses APIs to orchestrate sandbox creation, IPAM calls, and endpoint attachment via the driver', correct: true }
+      - { value: 'It uses Dockerfiles to define networks', correct: false }
     help: https://docs.docker.com/engine/network/
 
   - uuid: f8e6a607-8457-4b76-b17d-7117f3f9a6e4
     question: Which component handles IP address assignment when creating a user-defined network?
     answers:
-      - { value: "Dockerfile", correct: false }
-      - { value: "Swarmkit", correct: false }
-      - { value: "IPAM driver", correct: true }
-      - { value: "Overlay driver", correct: false }
+      - { value: 'Dockerfile', correct: false }
+      - { value: 'Swarmkit', correct: false }
+      - { value: 'IPAM driver', correct: true }
+      - { value: 'Overlay driver', correct: false }
     help: https://docs.docker.com/reference/compose-file/networks/
 
   - uuid: b93937b0-85c2-4cb6-9006-5a9a6b3cbac2
     question: Can Docker use external IPAM plugins?
     answers:
-      - { value: "No, only the default IPAM driver is supported", correct: false }
-      - { value: "Only in rootless mode", correct: false }
-      - { value: "Only in Kubernetes mode", correct: false }
-      - { value: "Yes, Docker supports third-party IPAM drivers via the CNM interface", correct: true }
+      - { value: 'No, only the default IPAM driver is supported', correct: false }
+      - { value: 'Only in rootless mode', correct: false }
+      - { value: 'Only in Kubernetes mode', correct: false }
+      - { value: 'Yes, Docker supports third-party IPAM drivers via the CNM interface', correct: true }
     help: https://docs.docker.com/reference/compose-file/networks/
 
   - uuid: 8d77e847-4f3f-4a9e-a6ed-19c998169e62
     question: What does an endpoint represent in Docker networking?
     answers:
-      - { value: "A connection point between a container’s sandbox and a network", correct: true }
-      - { value: "A configuration template for UCP", correct: false }
-      - { value: "A CLI command to inspect container ports", correct: false }
-      - { value: "A DNS alias for a service", correct: false }
+      - { value: 'A connection point between a container’s sandbox and a network', correct: true }
+      - { value: 'A configuration template for UCP', correct: false }
+      - { value: 'A CLI command to inspect container ports', correct: false }
+      - { value: 'A DNS alias for a service', correct: false }
     help: https://docs.docker.com/engine/network/

@@ -2,71 +2,71 @@ questions:
   - uuid: 2b30bb2a-07de-44ae-835c-6b9117ab05f9
     question: What is the primary purpose of a UCP client bundle?
     answers:
-      - { value: "Connect DTR to Docker Hub", correct: false }
-      - { value: "Back up Docker volumes", correct: false }
-      - { value: "Allow a user to connect to UCP via the Docker CLI with secure authentication", correct: true }
-      - { value: "Deploy a new UCP instance", correct: false }
+      - { value: 'Connect DTR to Docker Hub', correct: false }
+      - { value: 'Back up Docker volumes', correct: false }
+      - { value: 'Allow a user to connect to UCP via the Docker CLI with secure authentication', correct: true }
+      - { value: 'Deploy a new UCP instance', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html
 
   - uuid: a7c3c109-2b07-44b4-8418-7d171fc6fe95
     question: What does a UCP client bundle contain?
     answers:
-      - { value: "TLS certificates and Docker CLI configuration", correct: true }
-      - { value: "Log history", correct: false }
-      - { value: "Kubernetes manifests", correct: false }
-      - { value: "Docker images and volumes", correct: false }
+      - { value: 'TLS certificates and Docker CLI configuration', correct: true }
+      - { value: 'Log history', correct: false }
+      - { value: 'Kubernetes manifests', correct: false }
+      - { value: 'Docker images and volumes', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html#bundle-contents
 
   - uuid: 2f9eb6c5-921a-4d7d-8c39-0a6c0152c4f1
     question: Which command generates a client bundle via the CLI?
     answers:
-      - { value: "curl -k -u USERNAME 'https://UCP_URL/api/clientbundle' > bundle.zip", correct: true }
-      - { value: "docker config export --tls", correct: false }
-      - { value: "docker ucp bundle create", correct: false }
-      - { value: "docker login --generate-bundle", correct: false }
+      - { value: 'curl -k -u USERNAME "https://UCP_URL/api/clientbundle" > bundle.zip', correct: true }
+      - { value: 'docker config export --tls', correct: false }
+      - { value: 'docker ucp bundle create', correct: false }
+      - { value: 'docker login --generate-bundle', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html#download-using-api
 
   - uuid: 8b43a4a4-037a-4cf1-a9f1-0b92e6f51034
     question: Which script inside the client bundle automatically configures the Docker CLI?
     answers:
-      - { value: "setup-client.sh", correct: false }
-      - { value: "env.sh", correct: true }
-      - { value: "bundle-init.sh", correct: false }
-      - { value: "docker.rc", correct: false }
+      - { value: 'setup-client.sh', correct: false }
+      - { value: 'env.sh', correct: true }
+      - { value: 'bundle-init.sh', correct: false }
+      - { value: 'docker.rc', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html#use-client-bundle
 
   - uuid: 3d7e91bc-6c87-4474-80f2-155fddbc1732
     question: What is a correct way to use a client bundle with the Docker CLI?
     answers:
-      - { value: "docker run bundle.zip", correct: false }
-      - { value: "eval $(cat bundle.config)", correct: false }
-      - { value: "source env.sh", correct: true }
-      - { value: "docker login --tls", correct: false }
+      - { value: 'docker run bundle.zip', correct: false }
+      - { value: 'eval $(cat bundle.config)', correct: false }
+      - { value: 'source env.sh', correct: true }
+      - { value: 'docker login --tls', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html#use-client-bundle
 
   - uuid: 74e6e693-d376-486e-8d9e-79d60ce0bb0a
     question: What condition must be met for a UCP user to download their client bundle?
     answers:
-      - { value: "Have access to DTR", correct: false }
-      - { value: "Be logged in as root", correct: false }
-      - { value: "Be a member of the Admin team only", correct: false }
-      - { value: "Have the 'Generate Client Bundle' permission in their UCP role", correct: true }
+      - { value: 'Have access to DTR', correct: false }
+      - { value: 'Be logged in as root', correct: false }
+      - { value: 'Be a member of the Admin team only', correct: false }
+      - { value: 'Have the `Generate Client Bundle` permission in their UCP role', correct: true }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html#access-control
 
   - uuid: 2ea49720-6b0d-4391-b5f7-24fae88a07d5
     question: Why is it discouraged to share a client bundle between users?
     answers:
-      - { value: "Because it blocks port 443", correct: false }
-      - { value: "Because it contains private certificates and keys specific to a user", correct: true }
-      - { value: "Because it expires every 2 minutes", correct: false }
-      - { value: "Because it contains the UCP image", correct: false }
+      - { value: 'Because it blocks port 443', correct: false }
+      - { value: 'Because it contains private certificates and keys specific to a user', correct: true }
+      - { value: 'Because it expires every 2 minutes', correct: false }
+      - { value: 'Because it contains the UCP image', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html#security
 
   - uuid: c9390103-5a79-4a50-92d8-9a2b17804287
     question: Can the client bundle be used on a different machine than the one it was generated on?
     answers:
-      - { value: "Yes, as long as the files are copied and the certificates are still valid", correct: true }
-      - { value: "No, it is tied to the machine’s hash", correct: false }
-      - { value: "Only with an Admin account", correct: false }
-      - { value: "Only if the machine is on the same network", correct: false }
+      - { value: 'Yes, as long as the files are copied and the certificates are still valid', correct: true }
+      - { value: 'No, it is tied to the machine’s hash', correct: false }
+      - { value: 'Only with an Admin account', correct: false }
+      - { value: 'Only if the machine is on the same network', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html#security

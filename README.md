@@ -1,11 +1,11 @@
-# Docker Practice – Unofficial DCA Certification Prep
+# Docker Practice - Comprehension training
 
 > ⚠️ **Disclaimer**: This project is **independent and unofficial**. It is **not affiliated**, **endorsed**, or **approved** by Docker Inc., Mirantis, or any of their affiliates.  
 > All quiz questions and content are **community-made** for educational and personal preparation purposes only.
 
 ## 📘 About this project
 
-This repository offers a comprehensive collection of YAML-based quiz questions to help you prepare for the **Docker Certified Associate (DCA)** exam — based on the **Mirantis DCA Study Guide (2025)**.
+This repository offers a comprehensive collection of YAML-based quiz questions to help to train based on the **Mirantis DCA Study Guide (2025)**.
 
 The goal is to help candidates:
 - Test their knowledge of Docker engine, networking, security, orchestration, image management, and more.
@@ -17,7 +17,7 @@ The goal is to help candidates:
 - ✅ **YAML-formatted questions** with:
     - `uuid`, `question`, `answers`, `correct` flag
     - `help` field pointing to the official documentation when applicable
-- 🗂️ Organized by DCA topics:
+- 🗂️ Organized by topics:
     - Installation, Configuration, Security, Orchestration, Images, Registry, Volumes, Networking, etc.
 - 🧠 Focused on **learning**, **not memorization**
 
