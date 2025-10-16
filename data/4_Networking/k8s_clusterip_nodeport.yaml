@@ -2,71 +2,71 @@ questions:
   - uuid: 6237a39b-6ad2-4db3-a68b-41c10d7f4e8e
     question: What is the default Kubernetes service type for exposing a pod?
     answers:
-      - { value: "ClusterIP", correct: true }
-      - { value: "LoadBalancer", correct: false }
-      - { value: "Ingress", correct: false }
-      - { value: "NodePort", correct: false }
+      - { value: 'ClusterIP', correct: true }
+      - { value: 'LoadBalancer', correct: false }
+      - { value: 'Ingress', correct: false }
+      - { value: 'NodePort', correct: false }
     help: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
 
   - uuid: b23b2f0d-32da-47f6-92f0-53cb8b9991ea
     question: How does a ClusterIP service route traffic to a pod?
     answers:
-      - { value: "It creates an Ingress rule pointing to the pod", correct: false }
-      - { value: "It assigns a floating IP to each pod", correct: false }
-      - { value: "It exposes the pod directly on the public IP of the node", correct: false }
-      - { value: "It creates a virtual IP accessible only inside the cluster and forwards traffic to pod endpoints", correct: true }
+      - { value: 'It creates an Ingress rule pointing to the pod', correct: false }
+      - { value: 'It assigns a floating IP to each pod', correct: false }
+      - { value: 'It exposes the pod directly on the public IP of the node', correct: false }
+      - { value: 'It creates a virtual IP accessible only inside the cluster and forwards traffic to pod endpoints', correct: true }
     help: https://kubernetes.io/docs/concepts/services-networking/service/#clusterip
 
   - uuid: 8743182b-9834-4baf-a8b6-c292d7ee3b31
     question: Which statement about NodePort services is correct?
     answers:
-      - { value: "They assign an external IP to each pod", correct: false }
-      - { value: "They expose the service on a static port on each Node’s IP", correct: true }
-      - { value: "They are only available inside the cluster", correct: false }
-      - { value: "They allow external access through a Kubernetes Ingress only", correct: false }
+      - { value: 'They assign an external IP to each pod', correct: false }
+      - { value: 'They expose the service on a static port on each Node’s IP', correct: true }
+      - { value: 'They are only available inside the cluster', correct: false }
+      - { value: 'They allow external access through a Kubernetes Ingress only', correct: false }
     help: https://kubernetes.io/docs/concepts/services-networking/service/#nodeport
 
   - uuid: 17a00a80-246e-4723-8167-e42eb2c6dd7b
     question: What is the default port range used for NodePort services in Kubernetes?
     answers:
-      - { value: "1024–2048", correct: false }
-      - { value: "8080–8888", correct: false }
-      - { value: "30000–32767", correct: true }
-      - { value: "20000–24000", correct: false }
+      - { value: '1024–2048', correct: false }
+      - { value: '8080–8888', correct: false }
+      - { value: '30000–32767', correct: true }
+      - { value: '20000–24000', correct: false }
     help: https://kubernetes.io/docs/concepts/services-networking/service/#nodeport
 
   - uuid: b3ec8d85-b187-4d4e-b7bb-02d19464d816
     question: How can you access a pod exposed by a NodePort service?
     answers:
-      - { value: "Using kubectl proxy only", correct: false }
-      - { value: "Using the ClusterIP address over the internet", correct: false }
-      - { value: "Using the pod IP directly from outside the cluster", correct: false }
-      - { value: "Using <node-ip>:<nodeport>", correct: true }
+      - { value: 'Using kubectl proxy only', correct: false }
+      - { value: 'Using the ClusterIP address over the internet', correct: false }
+      - { value: 'Using the pod IP directly from outside the cluster', correct: false }
+      - { value: 'Using <node-ip>:<nodeport>', correct: true }
     help: https://kubernetes.io/docs/concepts/services-networking/service/#nodeport
 
   - uuid: e9c7fa91-f800-49b4-8fd9-8a84d93352c1
     question: What is a key limitation of ClusterIP services?
     answers:
-      - { value: "They can only expose UDP traffic", correct: false }
-      - { value: "They require a public IP for every pod", correct: false }
-      - { value: "They conflict with kube-dns", correct: false }
-      - { value: "They are not reachable from outside the Kubernetes cluster", correct: true }
+      - { value: 'They can only expose UDP traffic', correct: false }
+      - { value: 'They require a public IP for every pod', correct: false }
+      - { value: 'They conflict with kube-dns', correct: false }
+      - { value: 'They are not reachable from outside the Kubernetes cluster', correct: true }
     help: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
 
   - uuid: 307b1f11-4ee3-44d2-b6e5-1de9e55e9698
     question: What is the purpose of kube-proxy in the context of ClusterIP and NodePort services?
     answers:
-      - { value: "It manages the node firewall for secure access", correct: false }
-      - { value: "It runs Ingress controllers on each node", correct: false }
-      - { value: "It assigns DNS names to services", correct: false }
-      - { value: "It programs iptables/ipvs rules to route traffic to service endpoints", correct: true }
+      - { value: 'It manages the node firewall for secure access', correct: false }
+      - { value: 'It runs Ingress controllers on each node', correct: false }
+      - { value: 'It assigns DNS names to services', correct: false }
+      - { value: 'It programs iptables/ipvs rules to route traffic to service endpoints', correct: true }
     help: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
 
   - uuid: a8fa66b6-7028-4a11-b62b-342ba57d16aa
     question: What command can you use to expose a pod using a NodePort service?
     answers:
-      - { value: "kubectl expose pod mypod --port=80 --type=NodePort", correct: true }
-      - { value: "kubectl publish pod mypod --port=80", correct: false }
-      - { value: "kubectl run mypod --expose=NodePort", correct: false }
-      - { value: "kubectl port-forward mypod 80:80", correct: false }
+      - { value: 'kubectl expose pod mypod --port=80 --type=NodePort', correct: true }
+      - { value: 'kubectl publish pod mypod --port=80', correct: false }
+      - { value: 'kubectl run mypod --expose=NodePort', correct: false }
+      - { value: 'kubectl port-forward mypod 80:80', correct: false }
     help: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#expose

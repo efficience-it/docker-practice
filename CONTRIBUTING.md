@@ -1,7 +1,7 @@
 # Contributing to docker-practice
 
 👋 Thank you for considering contributing to **docker-practice**!  
-This project is a community-driven, unofficial repository designed to help people prepare for the **Docker Certified Associate (DCA)** certification exam.
+This project is a community-driven, unofficial repository designed to help people training on docker.
 
 ---
 
@@ -17,7 +17,7 @@ This project is a community-driven, unofficial repository designed to help peopl
 
 We welcome contributions such as:
 
-- ✅ New YAML quiz files for DCA topics
+- ✅ New YAML quiz files
 - ✅ Improvements to existing questions (clarity, accuracy, formatting)
 - ✅ Helpful links to official documentation (Docker or Mirantis)
 - ✅ Typos or syntax corrections

@@ -2,80 +2,80 @@ questions:
   - uuid: 5f3ac20f-5ae4-40e5-9fa7-bcb3eaac4ea2
     question: Which technique allows reducing a Docker image to a single final useful layer?
     answers:
-      - { value: "Use the --squash option by default", correct: false }
-      - { value: "Push the image to a private registry", correct: false }
-      - { value: "Use a multi-stage build", correct: true }
-      - { value: "Enable content trust", correct: false }
+      - { value: 'Use the --squash option by default', correct: false }
+      - { value: 'Push the image to a private registry', correct: false }
+      - { value: 'Use a multi-stage build', correct: true }
+      - { value: 'Enable content trust', correct: false }
     help: https://docs.docker.com/develop/develop-images/multistage-build/
 
   - uuid: f2cbe39d-8e84-46d2-9434-d6b00b40c517
     question: Which command creates an image with layers squashed (merged) together?
     answers:
-      - { value: "docker image squash myimage", correct: false }
-      - { value: "docker build --squash -t myimage .", correct: true }
-      - { value: "docker build --single-layer .", correct: false }
-      - { value: "docker prune --layers", correct: false }
+      - { value: 'docker image squash myimage', correct: false }
+      - { value: 'docker build --squash -t myimage .', correct: true }
+      - { value: 'docker build --single-layer .', correct: false }
+      - { value: 'docker prune --layers', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/build/#squash-an-image
 
   - uuid: 8ed57f28-4734-4ed1-88b8-55e0e5c747b4
     question: What is a possible consequence of using --squash?
     answers:
-      - { value: "Intermediate steps are no longer visible", correct: true }
-      - { value: "The build cache is improved", correct: false }
-      - { value: "It automatically creates a multi-architecture image", correct: false }
-      - { value: "Metadata from each step is preserved", correct: false }
+      - { value: 'Intermediate steps are no longer visible', correct: true }
+      - { value: 'The build cache is improved', correct: false }
+      - { value: 'It automatically creates a multi-architecture image', correct: false }
+      - { value: 'Metadata from each step is preserved', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/build/#squash-an-image
 
   - uuid: c1580b93-c89f-4c62-b5ee-0a0ad82cf5f6
     question: Which instruction is used to copy only the final artifacts from an intermediate build stage?
     answers:
-      - { value: "COPY --from=builder /app /app", correct: true }
-      - { value: "RUN mv /app /app", correct: false }
-      - { value: "INCLUDE /app FROM builder", correct: false }
-      - { value: "EXPORT /app TO /app", correct: false }
+      - { value: 'COPY --from=builder /app /app', correct: true }
+      - { value: 'RUN mv /app /app', correct: false }
+      - { value: 'INCLUDE /app FROM builder', correct: false }
+      - { value: 'EXPORT /app TO /app', correct: false }
     help: https://docs.docker.com/develop/develop-images/multistage-build/
 
   - uuid: b0caccf5-7c2d-4c2e-a058-d4bfc5acb2a9
     question: Why is a minimalist base image (like `scratch` or `alpine`) often used in an optimized build?
     answers:
-      - { value: "For aesthetic reasons", correct: false }
-      - { value: "To reduce the attack surface and final size", correct: true }
-      - { value: "To add more system dependencies", correct: false }
-      - { value: "To avoid the build cache", correct: false }
+      - { value: 'For aesthetic reasons', correct: false }
+      - { value: 'To reduce the attack surface and final size', correct: true }
+      - { value: 'To add more system dependencies', correct: false }
+      - { value: 'To avoid the build cache', correct: false }
     help: https://docs.docker.com/develop/develop-images/multistage-build/
 
   - uuid: 36f3ac3b-fde1-45e0-9e07-6a34b81db8d4
     question: Is the `--squash` flag enabled by default in `docker build`?
     answers:
-      - { value: "Yes", correct: false }
-      - { value: "No, it must be explicitly used", correct: true }
-      - { value: "Only on Windows", correct: false }
-      - { value: "Only with BuildKit", correct: false }
+      - { value: 'Yes', correct: false }
+      - { value: 'No, it must be explicitly used', correct: true }
+      - { value: 'Only on Windows', correct: false }
+      - { value: 'Only with BuildKit', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/build/#squash-an-image
 
   - uuid: c6d9fe91-bf3f-4954-b2a8-07f5f93cd74d
     question: Why does the `docker history` command still show multiple layers after a multi-stage build?
     answers:
-      - { value: "Multi-stage builds do not merge layers, they only keep the useful instructions", correct: true }
-      - { value: "It is a known Docker bug", correct: false }
-      - { value: "Metadata is not overwritten", correct: false }
-      - { value: "Because old images are not deleted", correct: false }
+      - { value: 'Multi-stage builds do not merge layers, they only keep the useful instructions', correct: true }
+      - { value: 'It is a known Docker bug', correct: false }
+      - { value: 'Metadata is not overwritten', correct: false }
+      - { value: 'Because old images are not deleted', correct: false }
     help: https://docs.docker.com/develop/develop-images/multistage-build/
 
   - uuid: 9d2fd17a-37e0-41f5-b5b1-8c5f62cdb063
     question: What is the best practice for creating a single-layer executable image?
     answers:
-      - { value: "Use `FROM scratch` and copy only the required binaries", correct: true }
-      - { value: "Stack multiple RUN instructions one after another", correct: false }
-      - { value: "Add all resources in a single `COPY`", correct: false }
-      - { value: "Use multiple layers for each dependency", correct: false }
+      - { value: 'Use `FROM scratch` and copy only the required binaries', correct: true }
+      - { value: 'Stack multiple RUN instructions one after another', correct: false }
+      - { value: 'Add all resources in a single `COPY`', correct: false }
+      - { value: 'Use multiple layers for each dependency', correct: false }
     help: https://docs.docker.com/develop/develop-images/multistage-build/
 
   - uuid: e3a6cdbc-56b3-4e89-93dc-990bd622c8b5
     question: Which native Docker tool allows combining the layers of an already existing image?
     answers:
-      - { value: "docker flatten", correct: false }
-      - { value: "docker merge-layers", correct: false }
-      - { value: "docker build --squash", correct: true }
-      - { value: "docker compact", correct: false }
+      - { value: 'docker flatten', correct: false }
+      - { value: 'docker merge-layers', correct: false }
+      - { value: 'docker build --squash', correct: true }
+      - { value: 'docker compact', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/build/#squash-an-image
