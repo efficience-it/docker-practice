@@ -76,6 +76,6 @@ questions:
     answers:
       - { value: 'docker search nginx --columns name,stars', correct: false }
       - { value: 'docker search nginx --output=name:stars', correct: false }
-      - { value: 'docker search --format '{{Name}}: {{StarCount}}' nginx', correct: false }
-      - { value: 'docker search --format '{{.Name}}: {{.StarCount}}' nginx', correct: true }
+      - { value: 'docker search --format "{{Name}}: {{StarCount}}" nginx', correct: false }
+      - { value: 'docker search --format "{{.Name}}: {{.StarCount}}" nginx', correct: true }
     help: https://docs.docker.com/reference/cli/docker/search/#format-the-output---format

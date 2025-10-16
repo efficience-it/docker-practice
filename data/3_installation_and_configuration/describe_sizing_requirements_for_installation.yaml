@@ -68,7 +68,7 @@ questions:
       - { value: 'To prevent Docker from consuming the entire root filesystem', correct: true }
       - { value: 'It causes slow container startup', correct: false }
       - { value: 'Root volumes do not support overlay drivers', correct: false }
-      - { value: 'Security scanners can't access root volumes', correct: false }
+      - { value: "Security scanners can't access root volumes", correct: false }
     help: https://docs.docker.com/storage/
 
   - uuid: 05176b68-5a8b-4814-8753-ffec40440f12

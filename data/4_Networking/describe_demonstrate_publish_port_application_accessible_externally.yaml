@@ -110,7 +110,7 @@ questions:
   - uuid: 7994dfeb-ecf2-40a3-96b9-9b0e4fbbd9d3
     question: In Docker Compose, how do you restrict a published port to localhost?
     answers:
-      - { value: 'Use `'127.0.0.1:8080:80'` as the port mapping', correct: true }
+      - { value: 'Use `127.0.0.1:8080:80` as the port mapping', correct: true }
       - { value: 'Use `host: 127.0.0.1` under network', correct: false }
       - { value: 'Add `internal: true`', correct: false }
       - { value: 'Use `bind: localhost`', correct: false }

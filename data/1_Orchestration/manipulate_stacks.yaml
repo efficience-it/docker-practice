@@ -101,8 +101,8 @@ questions:
   - uuid: e63599f1-2a42-40ee-9ac6-df7a01f6f3fb
     question: Why should you not use 'docker compose' instead of 'docker stack deploy' in swarm mode?
     answers:
-      - { value: ''docker compose' overwrites volumes', correct: false }
-      - { value: ''docker compose' does not deploy services in Swarm mode', correct: true }
-      - { value: ''docker compose' disables networking', correct: false }
-      - { value: ''docker compose' requires a manager token', correct: false }
+      - { value: 'docker compose overwrites volumes', correct: false }
+      - { value: 'docker compose does not deploy services in Swarm mode', correct: true }
+      - { value: 'docker compose disables networking', correct: false }
+      - { value: 'docker compose requires a manager token', correct: false }
     help: https://docs.docker.com/engine/swarm/stack-deploy/

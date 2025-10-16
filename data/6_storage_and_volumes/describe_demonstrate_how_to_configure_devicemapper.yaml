@@ -22,7 +22,7 @@ questions:
     answers:
       - { value: 'It offers better performance and is suitable for production', correct: true }
       - { value: 'It supports encrypted volumes by default', correct: false }
-      - { value: 'It doesn't require a restart of the Docker daemon', correct: false }
+      - { value: "It doesn't require a restart of the Docker daemon", correct: false }
       - { value: 'It uses less disk space', correct: false }
     help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/#modes
 

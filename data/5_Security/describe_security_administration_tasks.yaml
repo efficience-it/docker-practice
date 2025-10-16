@@ -31,7 +31,7 @@ questions:
     answers:
       - { value: 'Blocks access to external networks', correct: false }
       - { value: 'Makes host directories immutable', correct: false }
-      - { value: 'Mounts the container's root filesystem as read-only', correct: true }
+      - { value: "Mounts the container's root filesystem as read-only", correct: true }
       - { value: 'Disables user input', correct: false }
     help: https://docs.docker.com/engine/reference/run/#read-only
 

@@ -102,7 +102,7 @@ questions:
     question: What is the effect of deleting an image layer that is shared by multiple images?
     answers:
       - { value: 'The layer is compressed', correct: false }
-      - { value: 'The layer is kept as long as it's referenced by another image', correct: true }
+      - { value: "The layer is kept as long as it's referenced by another image", correct: true }
       - { value: 'The layer is deleted and all images become invalid', correct: false }
       - { value: 'Docker restarts all containers using that image', correct: false }
     help: 'https://docs.docker.com/storage/storagedriver/#container-and-layer-lifecycle'

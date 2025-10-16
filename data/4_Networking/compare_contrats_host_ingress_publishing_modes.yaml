@@ -30,7 +30,7 @@ questions:
     question: What is a potential downside of using 'host' publishing mode?
     answers:
       - { value: 'There is no support for load balancing', correct: false }
-      - { value: 'You can't scale the service', correct: false }
+      - { value: 'You can not scale the service', correct: false }
       - { value: 'It prevents access to container logs', correct: false }
       - { value: 'You must manually manage which node receives traffic', correct: true }
     help: https://docs.docker.com/engine/swarm/services/#host-publishing-mode

@@ -47,9 +47,9 @@ questions:
   - uuid: b8e3c3a2-77a4-4d90-bd1f-1eab94f377c1
     question: How can you declaratively deploy a Pod in Kubernetes?
     answers:
-      - { value: 'Using a YAML manifest with 'kubectl apply -f'', correct: true }
+      - { value: 'Using a YAML manifest with `kubectl apply -f`', correct: true }
       - { value: 'Using Docker Compose', correct: false }
-      - { value: 'Using 'kubectl exec'', correct: false }
+      - { value: 'Using `kubectl exec`', correct: false }
       - { value: 'Using docker run', correct: false }
     help: https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/
 

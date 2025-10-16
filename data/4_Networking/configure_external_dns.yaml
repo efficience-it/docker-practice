@@ -12,7 +12,7 @@ questions:
     question: How do you configure Docker to always use a custom DNS server for all containers?
     answers:
       - { value: 'Use docker network create with --dns-global', correct: false }
-      - { value: 'Add `dns`: ['8.8.8.8'] to /etc/docker/daemon.json and restart the daemon', correct: true }
+      - { value: 'Add `dns`: [8.8.8.8] to /etc/docker/daemon.json and restart the daemon', correct: true }
       - { value: 'Add --dns to all docker ps commands', correct: false }
       - { value: 'Modify /etc/resolv.conf inside containers', correct: false }
     help: https://docs.docker.com/config/daemon/#dns-servers

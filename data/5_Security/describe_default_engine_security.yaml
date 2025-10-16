@@ -40,7 +40,7 @@ questions:
     answers:
       - { value: 'Containers are placed on a bridge network', correct: true }
       - { value: 'Containers use overlay networks by default', correct: false }
-      - { value: 'Containers share the host's network namespace', correct: false }
+      - { value: "Containers share the host's network namespace", correct: false }
       - { value: 'Containers are isolated with no networking', correct: false }
     help: 'https://docs.docker.com/network/bridge/'
 
