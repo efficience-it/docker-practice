@@ -50,7 +50,7 @@ questions:
       - { value: 'They are unable to use bind mounts', correct: false }
       - { value: 'They may access host resources if misconfigured', correct: true }
       - { value: 'They cannot access environment variables', correct: false }
-      - { value: 'They won't be able to start properly', correct: false }
+      - { value: "They won't be able to start properly", correct: false }
     help: 'https://docs.docker.com/engine/security/'
 
   - uuid: b3a49195-c560-42b2-981f-d987279adf6f

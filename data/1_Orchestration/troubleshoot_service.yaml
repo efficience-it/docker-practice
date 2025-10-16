@@ -65,7 +65,7 @@ questions:
   - uuid: 5ff79c36-92a2-4d00-b3bc-cdf2d8ee43ae
     question: What option can you add to `docker service create` to avoid issues with unavailable nodes?
     answers:
-      - { value: '--constraint 'node.role == worker'', correct: true }
+      - { value: '--constraint node.role == worker', correct: true }
       - { value: '--replicas 0', correct: false }
       - { value: '--network bridge', correct: false }
       - { value: '--name unique_service', correct: false }

@@ -59,7 +59,7 @@ questions:
       - { value: 'Use `docker login --autostart`', correct: false }
       - { value: 'Edit systemd unit', correct: false }
       - { value: 'Enable via Group Policy Editor', correct: false }
-      - { value: 'Enable 'Start Docker Desktop when you log in' in settings', correct: true }
+      - { value: 'Enable `Start Docker Desktop when you log in` in settings', correct: true }
     help: https://docs.docker.com/desktop/settings/windows/
 
   - uuid: 53efb6e0-2a6d-4a96-89e9-6317f03bb11c

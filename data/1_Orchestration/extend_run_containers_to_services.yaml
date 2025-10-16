@@ -47,7 +47,7 @@ questions:
   - uuid: 0b7266e1-b44e-41b3-b1b0-91a0e4ed0a7f
     question: What must be initialized before creating services in Swarm mode?
     answers:
-      - { value: 'The swarm must be initialized with 'docker swarm init'', correct: true }
+      - { value: 'The swarm must be initialized with `docker swarm init`', correct: true }
       - { value: 'A YAML file must be created', correct: false }
       - { value: 'Docker Content Trust must be disabled', correct: false }
       - { value: 'The image must be signed', correct: false }

@@ -21,9 +21,9 @@ questions:
     question: What placement constraint ensures a service runs only on nodes with a specific label?
     answers:
       - { value: '--require-label key=value', correct: false }
-      - { value: '--constraint 'node.labels.key == value'', correct: true }
+      - { value: '--constraint node.labels.key == value', correct: true }
       - { value: '--affinity key=value', correct: false }
-      - { value: '--label 'key=value'', correct: false }
+      - { value: '--label key=value', correct: false }
     help: https://docs.docker.com/engine/swarm/services/#placement-constraints
 
   - uuid: e187c71b-dbf3-4488-b1d5-009d5ff3a383

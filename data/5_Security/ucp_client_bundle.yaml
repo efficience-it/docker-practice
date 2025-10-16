@@ -50,7 +50,7 @@ questions:
       - { value: 'Have access to DTR', correct: false }
       - { value: 'Be logged in as root', correct: false }
       - { value: 'Be a member of the Admin team only', correct: false }
-      - { value: 'Have the 'Generate Client Bundle' permission in their UCP role', correct: true }
+      - { value: 'Have the `Generate Client Bundle` permission in their UCP role', correct: true }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html#access-control
 
   - uuid: 2ea49720-6b0d-4391-b5f7-24fae88a07d5

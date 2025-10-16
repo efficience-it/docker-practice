@@ -12,7 +12,7 @@ questions:
     question: What is the role of certificates in Docker Swarm?
     answers:
       - { value: 'They authenticate and encrypt communication between nodes', correct: true }
-      - { value: 'They store the container's configuration', correct: false }
+      - { value: "They store the container's configuration", correct: false }
       - { value: 'They are used for publishing images', correct: false }
       - { value: 'They replace container secrets', correct: false }
     help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/

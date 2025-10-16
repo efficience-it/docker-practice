@@ -41,7 +41,7 @@ questions:
       - { value: 'docker inspect --ip-only <container>', correct: false }
       - { value: 'docker info --network <container>', correct: false }
       - { value: 'docker logs --network-info <container>', correct: false }
-      - { value: 'docker inspect -f '{{ .NetworkSettings.IPAddress }}' <container>', correct: true }
+      - { value: 'docker inspect -f `{{ .NetworkSettings.IPAddress }}` <container>', correct: true }
     help: https://docs.docker.com/reference/cli/docker/inspect/
 
   - uuid: 5e7f3841-bd3f-4e3e-b63b-73f4b7b9482e
