@@ -47,9 +47,9 @@ questions:
   - uuid: 63a88ed9-7ba3-4a9d-b0ae-76e54e6fa8a0
     question: How do you deploy a service to nodes labeled `env=production`?
     answers:
-      - { value: 'docker node create --label 'env=production'', correct: false }
-      - { value: 'docker service create --constraint 'node.labels.env == production'', correct: true }
-      - { value: 'docker service create --label 'env=production'', correct: false }
+      - { value: 'docker node create --label env=production', correct: false }
+      - { value: 'docker service create --constraint node.labels.env == production', correct: true }
+      - { value: 'docker service create --label env=production', correct: false }
       - { value: 'docker run --env production', correct: false }
     help: https://docs.docker.com/engine/swarm/services/#placement-constraints
 

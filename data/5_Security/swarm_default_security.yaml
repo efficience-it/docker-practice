@@ -21,7 +21,7 @@ questions:
     question: What happens when a worker joins a Swarm cluster?
     answers:
       - { value: 'It is issued a certificate signed by the Swarm CA', correct: true }
-      - { value: 'It inherits the manager's privileges', correct: false }
+      - { value: "It inherits the manager's privileges", correct: false }
       - { value: 'It generates its own self-signed certificate', correct: false }
       - { value: 'It does not require authentication', correct: false }
     help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
