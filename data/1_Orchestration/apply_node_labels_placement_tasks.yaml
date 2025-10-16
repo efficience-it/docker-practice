@@ -103,7 +103,7 @@ questions:
       - { value: 'swarm-config.json', correct: false }
       - { value: 'Dockerfile', correct: false }
       - { value: 'service.conf', correct: false }
-      - { value: 'docker-compose.yml with 'deploy.placement.constraints'', correct: true }
+      - { value: 'docker-compose.yml with deploy.placement.constraints', correct: true }
     help: https://docs.docker.com/compose/compose-file/compose-file-v3/#placement
 
   - uuid: 6eb90544-0bdf-49ea-b6ed-4fcad88fc7b7
