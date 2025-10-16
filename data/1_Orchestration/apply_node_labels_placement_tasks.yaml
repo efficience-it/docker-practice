@@ -84,7 +84,7 @@ questions:
     answers:
       - { value: 'In the image layer', correct: false }
       - { value: 'In the Raft log replicated across all managers', correct: true }
-      - { value: 'Only in the local node's filesystem', correct: false }
+      - { value: "Only in the local node's filesystem", correct: false }
       - { value: 'In container metadata', correct: false }
     help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/nodes/
 
