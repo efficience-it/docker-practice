@@ -2,71 +2,71 @@ questions:
   - uuid: 979fc821-1d0f-4375-bbc3-9dd2f72885a8
     question: What is the main use case of an overlay network in Docker Swarm?
     answers:
-      - { value: "Enabling container-to-container communication across different hosts", correct: true }
-      - { value: "Creating user-defined bridge networks", correct: false }
-      - { value: "Isolating containers from the Docker daemon", correct: false }
-      - { value: "Connecting containers to host services", correct: false }
+      - { value: 'Enabling container-to-container communication across different hosts', correct: true }
+      - { value: 'Creating user-defined bridge networks', correct: false }
+      - { value: 'Isolating containers from the Docker daemon', correct: false }
+      - { value: 'Connecting containers to host services', correct: false }
     help: https://docs.docker.com/network/overlay/
 
   - uuid: 2e7a3bcd-b799-464f-82ce-9470e67852b5
     question: What command creates an overlay network usable by swarm services?
     answers:
-      - { value: "docker swarm network create my-net", correct: false }
-      - { value: "docker network create --driver overlay my-net", correct: true }
-      - { value: "docker network init --swarm my-net", correct: false }
-      - { value: "docker service create --network overlay", correct: false }
+      - { value: 'docker swarm network create my-net', correct: false }
+      - { value: 'docker network create --driver overlay my-net', correct: true }
+      - { value: 'docker network init --swarm my-net', correct: false }
+      - { value: 'docker service create --network overlay', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/
 
   - uuid: 49d1fdd7-6500-43c1-ae03-b8f6b9b1a9de
     question: Which Docker command deploys a service attached to an overlay network?
     answers:
-      - { value: "docker overlay create nginx", correct: false }
-      - { value: "docker run --network overlay nginx", correct: false }
-      - { value: "docker stack create --bridge nginx", correct: false }
-      - { value: "docker service create --name web --network my-net nginx", correct: true }
+      - { value: 'docker overlay create nginx', correct: false }
+      - { value: 'docker run --network overlay nginx', correct: false }
+      - { value: 'docker stack create --bridge nginx', correct: false }
+      - { value: 'docker service create --name web --network my-net nginx', correct: true }
     help: https://docs.docker.com/engine/reference/commandline/service_create/
 
   - uuid: ecb6d0db-e55b-4a68-90c2-d89d1c906cbd
     question: What requirement must be met before creating an overlay network?
     answers:
-      - { value: "IP forwarding must be manually disabled", correct: false }
-      - { value: "Docker Swarm mode must be initialized", correct: true }
-      - { value: "A local DNS resolver must be active", correct: false }
-      - { value: "Bridge mode must be enabled", correct: false }
+      - { value: 'IP forwarding must be manually disabled', correct: false }
+      - { value: 'Docker Swarm mode must be initialized', correct: true }
+      - { value: 'A local DNS resolver must be active', correct: false }
+      - { value: 'Bridge mode must be enabled', correct: false }
     help: https://docs.docker.com/network/overlay/
 
   - uuid: f0a4d576-4466-491a-93f6-fb0b6f24ef0b
     question: What happens when two services are connected to the same overlay network?
     answers:
-      - { value: "They cannot communicate unless TLS is disabled", correct: false }
-      - { value: "They can communicate by service name across all nodes", correct: true }
-      - { value: "They must be colocated on the same node", correct: false }
-      - { value: "They are isolated unless published ports are used", correct: false }
+      - { value: 'They cannot communicate unless TLS is disabled', correct: false }
+      - { value: 'They can communicate by service name across all nodes', correct: true }
+      - { value: 'They must be colocated on the same node', correct: false }
+      - { value: 'They are isolated unless published ports are used', correct: false }
     help: https://docs.docker.com/network/overlay/
 
   - uuid: 409afde2-d8b2-41dc-b9cd-d63fd3244206
     question: Which network scope is automatically assigned to overlay networks?
     answers:
-      - { value: "global", correct: false }
-      - { value: "host", correct: false }
-      - { value: "swarm", correct: true }
-      - { value: "local", correct: false }
+      - { value: 'global', correct: false }
+      - { value: 'host', correct: false }
+      - { value: 'swarm', correct: true }
+      - { value: 'local', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/#scope
 
   - uuid: b3797018-1800-460a-8a5b-95d2ebef6a59
     question: How can you verify that a service is connected to an overlay network?
     answers:
-      - { value: "docker service inspect <service> --format '{{ .Spec.TaskTemplate.Networks }}'", correct: true }
-      - { value: "docker service ls --networks", correct: false }
-      - { value: "docker network list <service>", correct: false }
-      - { value: "docker node inspect <network>", correct: false }
+      - { value: 'docker service inspect <service> --format "{{ .Spec.TaskTemplate.Networks }}"', correct: true }
+      - { value: 'docker service ls --networks', correct: false }
+      - { value: 'docker network list <service>', correct: false }
+      - { value: 'docker node inspect <network>', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/service_inspect/
 
   - uuid: 64558b90-cd64-41b8-8c5f-e761a7624ab0
     question: What networking component secures overlay communication in Docker Swarm?
     answers:
-      - { value: "Ingress firewall mode", correct: false }
-      - { value: "Encrypted bridge mode", correct: false }
-      - { value: "IPSec encryption by default", correct: true }
-      - { value: "TLS with NAT traversal", correct: false }
+      - { value: 'Ingress firewall mode', correct: false }
+      - { value: 'Encrypted bridge mode', correct: false }
+      - { value: 'IPSec encryption by default', correct: true }
+      - { value: 'TLS with NAT traversal', correct: false }
     help: https://docs.docker.com/network/overlay/#secure-by-default

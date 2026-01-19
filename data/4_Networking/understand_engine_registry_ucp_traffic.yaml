@@ -2,44 +2,44 @@ questions:
   - uuid: ed1fc470-c68e-4bc2-a370-d3ad456c6b29
     question: What traffic is used between Docker engine and DTR when pulling signed images?
     answers:
-      - { value: "SSH with verified fingerprints", correct: false }
-      - { value: "DNS-over-HTTPS", correct: false }
-      - { value: "HTTPS using Docker Content Trust (Notary)", correct: true }
-      - { value: "QUIC + gRPC", correct: false }
+      - { value: 'SSH with verified fingerprints', correct: false }
+      - { value: 'DNS-over-HTTPS', correct: false }
+      - { value: 'HTTPS using Docker Content Trust (Notary)', correct: true }
+      - { value: 'QUIC + gRPC', correct: false }
     help: https://docs.docker.com/engine/security/trust/
 
   - uuid: 36802f55-cf02-4267-b5c2-40f98988292f
     question: What is the main role of TLS in communications between UCP components?
     answers:
-      - { value: "To enable NAT between subnets", correct: false }
-      - { value: "To encrypt and authenticate API and control traffic", correct: true }
-      - { value: "To scan images before they are deployed", correct: false }
-      - { value: "To compress traffic between nodes", correct: false }
+      - { value: 'To enable NAT between subnets', correct: false }
+      - { value: 'To encrypt and authenticate API and control traffic', correct: true }
+      - { value: 'To scan images before they are deployed', correct: false }
+      - { value: 'To compress traffic between nodes', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/ucp-architecture.html
 
   - uuid: 81e2853a-d116-4bce-a352-623ed2a0a3f2
     question: How is traffic from the Docker CLI to UCP authenticated?
     answers:
-      - { value: "By using bearer tokens stored in secrets.json", correct: false }
-      - { value: "Using a client bundle with certificates and keys", correct: true }
-      - { value: "With a GitHub token", correct: false }
-      - { value: "Through SSH with a known_hosts file", correct: false }
+      - { value: 'By using bearer tokens stored in secrets.json', correct: false }
+      - { value: 'Using a client bundle with certificates and keys', correct: true }
+      - { value: 'With a GitHub token', correct: false }
+      - { value: 'Through SSH with a known_hosts file', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/cli-access.html
 
   - uuid: f68d7f5f-cd49-4639-bf56-d504f36a4423
     question: Which type of overlay network does UCP use for internal control traffic?
     answers:
-      - { value: "Plain IP forwarding", correct: false }
-      - { value: "Host networking with NAT", correct: false }
-      - { value: "Bridge networks with exposed ports", correct: false }
-      - { value: "TLS-encrypted overlay networks", correct: true }
+      - { value: 'Plain IP forwarding', correct: false }
+      - { value: 'Host networking with NAT', correct: false }
+      - { value: 'Bridge networks with exposed ports', correct: false }
+      - { value: 'TLS-encrypted overlay networks', correct: true }
     help: https://docs.docker.com/network/overlay/#secure-by-default
 
   - uuid: e0a650de-b008-470b-915f-98a40386ea66
     question: Which port must be open for a Docker engine to join a Swarm cluster?
     answers:
-      - { value: "5000 (HTTP)", correct: false }
-      - { value: "443 (UDP)", correct: false }
-      - { value: "2377 (TCP)", correct: true }
-      - { value: "7946 (UDP)", correct: false }
+      - { value: '5000 (HTTP)', correct: false }
+      - { value: '443 (UDP)', correct: false }
+      - { value: '2377 (TCP)', correct: true }
+      - { value: '7946 (UDP)', correct: false }
     help: https://docs.docker.com/engine/swarm/swarm-tutorial/#open-protocols-between-nodes
