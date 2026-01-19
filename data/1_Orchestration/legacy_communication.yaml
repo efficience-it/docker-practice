@@ -60,7 +60,7 @@ questions:
       - { value: 'Mount a volume from the legacy system', correct: false }
       - { value: 'Use a static IP assignment or run the container with host networking', correct: true }
       - { value: 'Use dynamic IP allocation via overlay network', correct: false }
-    help: https://docs.docker.com/network/network-tutorial-host/
+    help: https://docs.docker.com/engine/network/drivers/host/
 
   - uuid: 36efbf34-91e6-49fd-9398-3948ae194c2c
     question: Which practice helps decouple Dockerized applications from legacy systems during a migration process?
