@@ -45,7 +45,7 @@ questions:
     help: https://docs.docker.com/config/containers/logging/configure/
 
   - uuid: 1ec259ae-b1f6-4a4d-91f2-697d63b37823
-    question: Quel driver de logs est utilisé pour envoyer les logs vers une instance Splunk ?
+    question: Which log driver is used to send logs to a Splunk instance?
     answers:
       - { value: 'logstash', correct: false }
       - { value: 'splunk', correct: true }
@@ -54,7 +54,7 @@ questions:
     help: https://docs.docker.com/config/containers/logging/splunk/
 
   - uuid: 91e16669-03b9-47ef-a93e-7e6c84cf4fe4
-    question: Quel paramètre est requis pour le driver `splunk` ?
+    question: Which parameter is required for the `splunk` driver?
     answers:
       - { value: 'splunk-user', correct: false }
       - { value: 'splunk-port', correct: false }
@@ -63,7 +63,7 @@ questions:
     help: https://docs.docker.com/config/containers/logging/splunk/
 
   - uuid: b0b7b3d6-dca0-40d7-881a-e0d1e8e6d7c7
-    question: Quelle commande permet de lancer un conteneur avec un driver de log personnalisé ?
+    question: Which command allows you to launch a container with a custom log driver?
     answers:
       - { value: 'docker start --driver-log=syslog nginx', correct: false }
       - { value: 'docker run --log-driver=syslog nginx', correct: true }
@@ -72,16 +72,16 @@ questions:
     help: https://docs.docker.com/config/containers/logging/configure/
 
   - uuid: 03e1fa7d-1e62-4ea3-a07f-b8912c51bb77
-    question: Que se passe-t-il si un driver de logs est mal configuré au lancement d’un conteneur ?
+    question: What happens if a log driver is misconfigured when launching a container?
     answers:
-      - { value: 'Docker remplace automatiquement par le driver `json-file`', correct: false }
-      - { value: 'Docker lance le conteneur avec syslog en fallback', correct: false }
-      - { value: 'Le conteneur ne démarre pas et une erreur s’affiche', correct: true }
-      - { value: 'Le conteneur démarre mais les logs sont perdus', correct: false }
+      - { value: "Docker automatically replaces it with the `json-file` driver", correct: false }
+      - { value: "Docker launches the container with syslog as fallback", correct: false }
+      - { value: "The container does not start and an error is displayed", correct: true }
+      - { value: "The container starts but the logs are lost", correct: false }
     help: https://docs.docker.com/config/containers/logging/configure/
 
   - uuid: 17b2435a-4b75-423c-85ec-e24a91b2ad52
-    question: Quel driver de log permet d’ignorer complètement les logs d’un conteneur ?
+    question: Which log driver completely ignores the logs of a container?
     answers:
       - { value: 'off', correct: false }
       - { value: 'null', correct: false }
