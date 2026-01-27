@@ -87,4 +87,4 @@ questions:
       - { value: '--join-token', correct: false }
       - { value: '--replica-id <value>', correct: true }
       - { value: '--sync-mode', correct: false }
-    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/install/add-replica.html
+    help: https://docs.mirantis.com/msr/2.9/cli-ref/join.html
