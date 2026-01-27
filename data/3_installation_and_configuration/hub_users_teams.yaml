@@ -60,7 +60,7 @@ questions:
       - { value: 'No', correct: true }
       - { value: 'Yes, if the image is public', correct: false }
       - { value: 'Yes, but only once', correct: false }
-    help: https://docs.docker.com/docker-hub/orgs/
+    help: https://docs.docker.com/admin/organization/manage-a-team/#permissions-reference
 
   - uuid: 0db6c25b-4b1f-497e-8c2c-18a22d7d92aa
     question: Can a Docker user have a personal repository and also belong to an organization?
@@ -87,4 +87,4 @@ questions:
       - { value: 'No, never', correct: false }
       - { value: 'Yes, automatically', correct: false }
       - { value: 'Yes, but only with read access', correct: false }
-    help: https://docs.docker.com/docker-hub/orgs/
+    help: https://docs.docker.com/docker-hub/repos/manage/access/

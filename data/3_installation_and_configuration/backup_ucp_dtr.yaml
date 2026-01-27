@@ -60,7 +60,7 @@ questions:
       - { value: 'Perform a manual backup once a month', correct: false }
       - { value: 'Delete old logs and volumes', correct: false }
       - { value: 'Create an image commit every night', correct: false }
-    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/backup-restore.html#best-practices
+    help: https://docs.mirantis.com/mke/3.7/ops/disaster-recovery/back-up-mke/backup-considerations.html
 
   - uuid: 65ae1827-32ec-4d6f-84ed-f41fef47135e
     question: Can a full UCP cluster be restored from a single backup?

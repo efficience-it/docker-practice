@@ -87,4 +87,4 @@ questions:
       - { value: 'sudo docker init', correct: false }
       - { value: 'sudo systemctl start docker', correct: true }
       - { value: 'service docker launch', correct: false }
-    help: https://docs.docker.com/engine/install/linux-postinstall/
+    help: https://docs.docker.com/engine/daemon/start/

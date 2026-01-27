@@ -6,16 +6,16 @@ questions:
       - { value: '1', correct: false }
       - { value: '2', correct: false }
       - { value: '8', correct: false }
-    help: https://docs.docker.com/ee/ucp/admin/install/system-requirements/
+    help: https://docs.mirantis.com/mke/3.4/launchpad/lp-system-requirements.html
 
   - uuid: bbc16b4e-7291-4b64-9270-14b60c9a0d79
     question: What is the minimum amount of RAM recommended for a UCP manager node?
     answers:
-      - { value: '16 GB', correct: false }
-      - { value: '8 GB', correct: true }
+      - { value: '16 GB', correct: true }
+      - { value: '8 GB', correct: false }
       - { value: '2 GB', correct: false }
       - { value: '4 GB', correct: false }
-    help: https://docs.docker.com/ee/ucp/admin/install/system-requirements/
+    help: https://docs.mirantis.com/mke/3.4/launchpad/lp-system-requirements.html
 
   - uuid: 23d16894-3160-442e-b03d-90919a251929
     question: What storage backend is recommended for production-grade Docker deployments?
@@ -78,7 +78,7 @@ questions:
       - { value: '443', correct: true }
       - { value: '1234', correct: false }
       - { value: '2377', correct: false }
-    help: https://docs.docker.com/ee/ucp/admin/install/system-requirements/
+    help: https://docs.mirantis.com/mke/3.7/install/predeployment/configure-networking/open-ports.html
 
   - uuid: 3ebadf1d-31d8-4e68-9626-58cc94a2bd6d
     question: When planning a Docker installation, why is it important to consider the total number of containers?
