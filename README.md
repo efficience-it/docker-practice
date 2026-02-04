@@ -1,4 +1,4 @@
-# Docker Practice - Comprehension training
+# ®Docker Practice - Comprehension training
 
 > ⚠️ **Disclaimer**: This project is **independent and unofficial**. It is **not affiliated**, **endorsed**, or **approved** by Docker Inc., Mirantis, or any of their affiliates.  
 > All quiz questions and content are **community-made** for educational and personal preparation purposes only.
@@ -137,6 +137,7 @@ Contributions are welcome! You can:
 * It is not sponsored or endorsed by Docker Inc. or Mirantis.
 * All trademarks such as “Docker”, “Mirantis”, “DTR”, and “UCP” are used only as references and remain the property of their respective owners.
 * This repository contains only original content, created under fair use for educational purposes.
+* Docker and the Docker logo are trademarks or registered trademarks of Docker, Inc. in the United States and/or other countries. Docker, Inc. and other parties may also hold trademark rights to other terms used in this document.
 
 ## 📄 License
 This project is licensed under the MIT License
