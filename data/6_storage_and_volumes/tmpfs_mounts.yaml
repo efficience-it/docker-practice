@@ -1,0 +1,54 @@
+questions:
+  - uuid: a1d4e7b3-5f29-4c8a-b6e2-9d3f8a1c7e50
+    question: What is the primary characteristic of a tmpfs mount in Docker?
+    answers:
+      - { value: 'Data is persisted to the host filesystem', correct: false }
+      - { value: 'Data is stored only in the host memory and never written to disk', correct: true }
+      - { value: 'Data is replicated across Swarm nodes', correct: false }
+      - { value: 'Data is stored inside the container image layer', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: b2c5f8a4-6e31-4d9b-a7f3-0e4a9b2d8f61
+    question: Which flag can be used to create a tmpfs mount when running a container?
+    answers:
+      - { value: '--memory-fs /app/cache', correct: false }
+      - { value: '--ramdisk /app/cache', correct: false }
+      - { value: '--tmpfs /app/cache', correct: true }
+      - { value: '--volatile /app/cache', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/#use-a-tmpfs-mount-in-a-container
+
+  - uuid: c3d6a9b5-7f42-4eac-b8a4-1f5b0c3e9a72
+    question: How do you specify a size limit of 64 megabytes for a tmpfs mount using the --mount syntax?
+    answers:
+      - { value: '--mount type=tmpfs,destination=/app/tmp,tmpfs-size=64m', correct: false }
+      - { value: '--mount type=tmpfs,destination=/app/tmp,tmpfs-size=67108864', correct: true }
+      - { value: '--mount type=tmpfs,destination=/app/tmp,size=64MB', correct: false }
+      - { value: '--mount type=tmpfs,destination=/app/tmp,max-size=64m', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/#specify-tmpfs-options
+
+  - uuid: 466f6942-30ac-4670-808d-fbe925e40832
+    question: What does the tmpfs-mode option control when creating a tmpfs mount?
+    answers:
+      - { value: 'The maximum number of files allowed in the tmpfs', correct: false }
+      - { value: 'The file permission mode of the tmpfs filesystem in octal', correct: true }
+      - { value: 'Whether the tmpfs operates in synchronous or asynchronous mode', correct: false }
+      - { value: 'The compression algorithm used for data in memory', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/#specify-tmpfs-options
+
+  - uuid: 5249cf97-189b-409f-bc8e-6cec89db2526
+    question: In which scenario is a tmpfs mount most appropriate?
+    answers:
+      - { value: 'Sharing configuration files between the host and container', correct: false }
+      - { value: 'Persisting database data across container restarts', correct: false }
+      - { value: 'Storing sensitive secrets or temporary data that should not persist on the host or in the container writable layer', correct: true }
+      - { value: 'Sharing data between multiple containers on different hosts', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 9252b98d-06ec-4cc5-96af-0d2bb7551ffe
+    question: How do you add a tmpfs mount to a Swarm service?
+    answers:
+      - { value: 'docker service create --tmpfs /run/secrets nginx', correct: false }
+      - { value: 'docker service create --mount type=tmpfs,destination=/run/secrets nginx', correct: true }
+      - { value: 'docker service create --volume type=tmpfs,target=/run/secrets nginx', correct: false }
+      - { value: 'docker service create --memory-mount /run/secrets nginx', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/#use-a-tmpfs-mount-in-a-service

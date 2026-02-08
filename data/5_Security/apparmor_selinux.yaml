@@ -1,0 +1,54 @@
+questions:
+  - uuid: b4d2e8a1-c5f3-4976-9d07-6b1a3e7f2c89
+    question: What type of access control do AppArmor and SELinux provide for Docker containers?
+    answers:
+      - { value: 'Discretionary Access Control (DAC)', correct: false }
+      - { value: 'Role-Based Access Control (RBAC)', correct: false }
+      - { value: 'Mandatory Access Control (MAC)', correct: true }
+      - { value: 'Attribute-Based Access Control (ABAC)', correct: false }
+    help: https://docs.docker.com/engine/security/apparmor/
+
+  - uuid: e7f1c3b5-a2d4-4868-b9e0-8d6a1f5c4b27
+    question: What is the name of the default AppArmor profile that Docker applies to containers?
+    answers:
+      - { value: 'docker-apparmor', correct: false }
+      - { value: 'container-default', correct: false }
+      - { value: 'docker-default', correct: true }
+      - { value: 'apparmor-docker-profile', correct: false }
+    help: https://docs.docker.com/engine/security/apparmor/
+
+  - uuid: 9a5b1d8e-f4c2-4637-a0b3-7e6d3c1f9a45
+    question: Which flag is used to specify a custom AppArmor profile when running a Docker container?
+    answers:
+      - { value: '--apparmor-profile=<profile>', correct: false }
+      - { value: '--security-opt apparmor=<profile>', correct: true }
+      - { value: '--cap-add apparmor=<profile>', correct: false }
+      - { value: '--mac-profile=<profile>', correct: false }
+    help: https://docs.docker.com/engine/security/apparmor/
+
+  - uuid: 2c8f4a6d-b1e3-4d59-87b0-5e9a3d7c1f62
+    question: How do you apply SELinux label options to a Docker container at runtime?
+    answers:
+      - { value: '--selinux=<label>', correct: false }
+      - { value: '--security-opt label=<option>', correct: true }
+      - { value: '--mac-opt selinux=<label>', correct: false }
+      - { value: '--label-security=<option>', correct: false }
+    help: https://docs.docker.com/engine/security/
+
+  - uuid: 6e3d1b7a-c8f2-4a15-9d04-0b5f8e2c4a93
+    question: What is the key difference between Mandatory Access Control (MAC) and Discretionary Access Control (DAC)?
+    answers:
+      - { value: 'DAC policies are enforced by the kernel and cannot be overridden by users', correct: false }
+      - { value: 'MAC policies are enforced by the system regardless of user permissions, while DAC allows resource owners to set permissions', correct: true }
+      - { value: 'MAC is only available on Windows systems, while DAC is Linux-specific', correct: false }
+      - { value: 'There is no difference; they are interchangeable terms', correct: false }
+    help: https://docs.docker.com/engine/security/apparmor/
+
+  - uuid: f1a9c5d3-e2b4-4786-b0e8-4d7a6f3c8b12
+    question: What happens when you run a Docker container with --security-opt apparmor=unconfined?
+    answers:
+      - { value: 'The container uses the docker-default AppArmor profile', correct: false }
+      - { value: 'The container runs without any AppArmor profile applied', correct: true }
+      - { value: 'The container is blocked from starting', correct: false }
+      - { value: 'AppArmor applies the most restrictive profile available', correct: false }
+    help: https://docs.docker.com/engine/security/apparmor/

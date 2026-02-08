@@ -1,0 +1,54 @@
+questions:
+  - uuid: a9d3e7b1-4c6f-4285-b0e8-2f5a1d8c3e97
+    question: What does seccomp stand for in the context of Docker security?
+    answers:
+      - { value: 'Secure Composition', correct: false }
+      - { value: 'Security Compliance', correct: false }
+      - { value: 'Secure Computing Mode', correct: true }
+      - { value: 'Secure Container Management Protocol', correct: false }
+    help: https://docs.docker.com/engine/security/seccomp/
+
+  - uuid: 2f8c4b6e-d1a3-4e57-9b0d-7a5e3c1f8d29
+    question: What does Docker's default seccomp profile do to containers?
+    answers:
+      - { value: 'It blocks all network access by default', correct: false }
+      - { value: 'It restricts the set of system calls available to the container process', correct: true }
+      - { value: 'It encrypts all filesystem operations', correct: false }
+      - { value: 'It prevents containers from using environment variables', correct: false }
+    help: https://docs.docker.com/engine/security/seccomp/
+
+  - uuid: 74e1a5c8-b3d2-4f96-80a7-9d6f2e4b1c53
+    question: Which flag is used to apply a custom seccomp profile when running a Docker container?
+    answers:
+      - { value: '--cap-add seccomp', correct: false }
+      - { value: '--seccomp-profile', correct: false }
+      - { value: '--security-opt seccomp=<profile.json>', correct: true }
+      - { value: '--profile seccomp=<profile.json>', correct: false }
+    help: https://docs.docker.com/engine/security/seccomp/
+
+  - uuid: c3b7d9e2-1f5a-4c68-b4d0-8e6a2f3c7b15
+    question: How do you disable the default seccomp profile for a Docker container?
+    answers:
+      - { value: '--security-opt seccomp=disabled', correct: false }
+      - { value: '--security-opt seccomp=unconfined', correct: true }
+      - { value: '--security-opt no-seccomp', correct: false }
+      - { value: '--disable-seccomp', correct: false }
+    help: https://docs.docker.com/engine/security/seccomp/
+
+  - uuid: 5e2a8d4f-c6b1-4397-a0e3-1b9f7d5c3a68
+    question: Which of the following system calls is blocked by Docker's default seccomp profile?
+    answers:
+      - { value: 'read', correct: false }
+      - { value: 'write', correct: false }
+      - { value: 'clone (with CLONE_NEWUSER flag)', correct: true }
+      - { value: 'open', correct: false }
+    help: https://docs.docker.com/engine/security/seccomp/
+
+  - uuid: 18f6c4a9-d2e3-4b75-8c1a-0d7b5e9f2a46
+    question: What format is used to define a custom seccomp profile for Docker?
+    answers:
+      - { value: 'YAML', correct: false }
+      - { value: 'XML', correct: false }
+      - { value: 'JSON', correct: true }
+      - { value: 'TOML', correct: false }
+    help: https://docs.docker.com/engine/security/seccomp/

@@ -108,6 +108,11 @@ The goal is to help candidates:
 * [Describe and demonstrate how to configure RBAC with UCP.](data/5_Security/ucp_rbac_config.yaml)
 * [Describe and demonstrate how to integrate UCP with LDAP/AD.](data/5_Security/ucp_ldap_ad_integration.yaml)
 * [Describe and demonstrate how to create UCP client bundles.](data/5_Security/ucp_client_bundle.yaml)
+* [Describe Docker Bench for Security.](data/5_Security/docker_bench_security.yaml)
+* [Describe seccomp profiles.](data/5_Security/seccomp_profiles.yaml)
+* [Describe AppArmor and SELinux with Docker.](data/5_Security/apparmor_selinux.yaml)
+* [Describe Docker secrets management.](data/5_Security/docker_secrets.yaml)
+* [Describe read-only containers.](data/5_Security/readonly_containers.yaml)
 
 ### Domain 6: Storage and Volumes (10% of exam)
 
@@ -120,6 +125,10 @@ The goal is to help candidates:
 * [Describe and demonstrate how storage can be used across cluster nodes.](data/6_storage_and_volumes/volume_cluster.yaml)
 * [Describe how to provision persistent storage to a Kubernetes pod using persistentVolumes.](data/6_storage_and_volumes/persistent_volumes.yaml)
 * [Describe the relationship between container storage interface drivers, storageClass, persistentVolumeClaim and volume objects in Kubernetes.](data/6_storage_and_volumes/relationship_storage_volume.yaml)
+* [Describe tmpfs mounts.](data/6_storage_and_volumes/tmpfs_mounts.yaml)
+* [Compare storage drivers.](data/6_storage_and_volumes/storage_driver_comparison.yaml)
+* [Describe docker system df and prune commands.](data/6_storage_and_volumes/system_cleanup.yaml)
+* [Describe volume plugins and NFS.](data/6_storage_and_volumes/volume_plugins_nfs.yaml)
 
 ## Contributions
 

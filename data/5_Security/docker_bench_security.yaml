@@ -1,0 +1,72 @@
+questions:
+  - uuid: 7a3e1f4b-92d8-4c6a-b5e7-1d8f3a2c9b04
+    question: What is Docker Bench for Security?
+    answers:
+      - { value: 'A Docker image scanning tool for CVEs', correct: false }
+      - { value: 'A script that checks for best practices around deploying Docker containers in production based on the CIS Docker Benchmark', correct: true }
+      - { value: 'A firewall configuration utility for Docker networks', correct: false }
+      - { value: 'A performance benchmarking tool for Docker containers', correct: false }
+    help: https://docs.docker.com/engine/security/
+
+  - uuid: 3b2d8e6f-a1c4-4f9b-87e5-6c0d4a3f1e28
+    question: How is the docker-bench-security tool typically executed?
+    answers:
+      - { value: 'By installing it as a Docker plugin', correct: false }
+      - { value: 'By running it as a Docker container with access to the Docker socket and system directories', correct: true }
+      - { value: 'By compiling it from source on the host', correct: false }
+      - { value: 'By enabling it in the Docker daemon configuration file', correct: false }
+    help: https://docs.docker.com/engine/security/
+
+  - uuid: d4f6a8c2-5b1e-4d93-a0f7-9e3c2b8d1a56
+    question: Which of the following is NOT one of the audit categories checked by Docker Bench for Security?
+    answers:
+      - { value: 'Host Configuration', correct: false }
+      - { value: 'Docker Daemon Configuration', correct: false }
+      - { value: 'Container Runtime', correct: false }
+      - { value: 'Application Source Code Quality', correct: true }
+    help: https://docs.docker.com/engine/security/
+
+  - uuid: 1e9b7c3a-8d4f-42a6-b5c1-0f6e2d8a4b79
+    question: What standard does Docker Bench for Security use as its baseline for security checks?
+    answers:
+      - { value: 'NIST SP 800-53', correct: false }
+      - { value: 'CIS Docker Benchmark', correct: true }
+      - { value: 'OWASP Top 10', correct: false }
+      - { value: 'PCI DSS v3.2', correct: false }
+    help: https://docs.docker.com/engine/security/
+
+  - uuid: 8c5f2d1a-b3e7-4a69-9d06-7f4e1c8b3a25
+    question: What does a WARN result in Docker Bench for Security output indicate?
+    answers:
+      - { value: 'The check was skipped because it does not apply', correct: false }
+      - { value: 'The check passed with minor observations', correct: false }
+      - { value: 'The configuration does not meet the CIS benchmark recommendation and should be remediated', correct: true }
+      - { value: 'The Docker daemon needs to be restarted', correct: false }
+    help: https://docs.docker.com/engine/security/
+
+  - uuid: 5a4e9b7d-c2f1-4683-b8d0-3e6f1a8c2d47
+    question: Which Docker Bench for Security section audits settings such as restricting network traffic between containers and configuring TLS authentication?
+    answers:
+      - { value: 'Container Images and Build File', correct: false }
+      - { value: 'Host Configuration', correct: false }
+      - { value: 'Docker Daemon Configuration', correct: true }
+      - { value: 'Docker Swarm Configuration', correct: false }
+    help: https://docs.docker.com/engine/security/
+
+  - uuid: f2c8b1d6-4a3e-4975-8e09-5d7a6c1f0b93
+    question: What type of checks does Docker Bench for Security classify as "manual" rather than "automated"?
+    answers:
+      - { value: 'Checks that require human judgment or organizational policy review', correct: true }
+      - { value: 'Checks that must be run on Windows hosts only', correct: false }
+      - { value: 'Checks that require the Docker daemon to be stopped', correct: false }
+      - { value: 'Checks that are only available in Docker Enterprise', correct: false }
+    help: https://docs.docker.com/engine/security/
+
+  - uuid: 6d1a3f8e-b5c2-4d07-9a4b-2e7c0f9d5b16
+    question: Which of the following is a host configuration recommendation checked by Docker Bench for Security?
+    answers:
+      - { value: 'Ensure that the Docker socket is exposed on TCP port 2375', correct: false }
+      - { value: 'Ensure containers run with the --privileged flag', correct: false }
+      - { value: 'Ensure auditing is configured for Docker files and directories', correct: true }
+      - { value: 'Ensure all containers use the host network mode', correct: false }
+    help: https://docs.docker.com/engine/security/
