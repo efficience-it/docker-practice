@@ -31,9 +31,9 @@ questions:
     answers:
       - { value: 'Docker always signs images', correct: false }
       - { value: 'Image signing is not supported', correct: false }
-      - { value: 'Docker Content Trust is enabled unless explicitly disabled', correct: true }
+      - { value: 'Docker Content Trust is disabled by default and must be enabled via DOCKER_CONTENT_TRUST=1', correct: true }
       - { value: 'Signing is enabled only with Docker EE', correct: false }
-    help: https://docs.docker.com/reference/cli/docker/image/push/#options
+    help: https://docs.docker.com/engine/security/trust/
 
   - uuid: cb4190c0-dad0-4e15-b028-92f7e5be63e1
     question: What happens when you press `CTRL-C` during a `docker image push`?

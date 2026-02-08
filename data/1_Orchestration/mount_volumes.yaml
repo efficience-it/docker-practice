@@ -63,13 +63,13 @@ questions:
     help: https://docs.docker.com/storage/volumes/#when-to-use-volumes
 
   - uuid: 7041ae89-e857-4c8c-93a6-418d8e7cfb79
-    question: Which flag must be used to mount a volume subdirectory?
+    question: Which flag syntax is used to mount a volume with specific options such as read-only access?
     answers:
-      - { value: 'subdir', correct: false }
-      - { value: 'volume-subpath', correct: true }
-      - { value: 'mount-dir', correct: false }
-      - { value: 'submount', correct: false }
-    help: https://docs.docker.com/storage/volumes/#mount-a-volume-subdirectory
+      - { value: '--volume-options ro', correct: false }
+      - { value: '--mount type=volume,source=myvolume,target=/data,readonly', correct: true }
+      - { value: '--mount-dir /data --readonly', correct: false }
+      - { value: '--volume-ro myvolume:/data', correct: false }
+    help: https://docs.docker.com/storage/volumes/#syntax
 
   - uuid: e1ff04e7-3483-4bc2-b8c2-f8a67e85b258
     question: Which command creates a named volume that uses the NFS driver with custom mount options?
