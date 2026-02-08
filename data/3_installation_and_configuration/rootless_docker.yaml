@@ -1,0 +1,54 @@
+questions:
+  - uuid: ca71052a-2e37-4568-8e90-e622eac367ec
+    question: Which script is used to install and configure Docker in rootless mode?
+    answers:
+      - { value: 'docker-rootless-install.sh', correct: false }
+      - { value: 'dockerd-rootless-setuptool.sh install', correct: true }
+      - { value: 'docker-setup --rootless', correct: false }
+      - { value: 'install-docker-rootless.sh', correct: false }
+    help: https://docs.docker.com/engine/security/rootless/
+
+  - uuid: 6d8f0b2c-7a95-4eb6-8f96-3e5bdf1a6c07
+    question: What must the DOCKER_HOST environment variable be set to when using Docker in rootless mode?
+    answers:
+      - { value: 'tcp://localhost:2375', correct: false }
+      - { value: 'unix:///var/run/docker.sock', correct: false }
+      - { value: 'unix://$XDG_RUNTIME_DIR/docker.sock', correct: true }
+      - { value: 'unix:///tmp/docker-rootless.sock', correct: false }
+    help: https://docs.docker.com/engine/security/rootless/
+
+  - uuid: 7e9a1c3d-8b06-4fc7-9a07-4f6cea2b7d18
+    question: Which of the following is a limitation of Docker rootless mode by default?
+    answers:
+      - { value: 'Containers cannot use bridge networking', correct: false }
+      - { value: 'Containers cannot use volumes', correct: false }
+      - { value: 'The --privileged flag is not allowed', correct: true }
+      - { value: 'Only one container can run at a time', correct: false }
+    help: https://docs.docker.com/engine/security/rootless/
+
+  - uuid: 62ee1613-cf07-4037-84e3-b2c2202a69eb
+    question: Which networking component does Docker rootless mode use by default instead of iptables for port forwarding?
+    answers:
+      - { value: 'nftables', correct: false }
+      - { value: 'slirp4netns', correct: true }
+      - { value: 'macvlan', correct: false }
+      - { value: 'ipvlan', correct: false }
+    help: https://docs.docker.com/engine/security/rootless/
+
+  - uuid: ece30377-a80c-4948-8071-baf6fe0e169d
+    question: Which kernel feature must be enabled for Docker rootless mode to provide UID/GID isolation between the host and containers?
+    answers:
+      - { value: 'cgroups v2', correct: false }
+      - { value: 'seccomp', correct: false }
+      - { value: 'user namespaces (unprivileged)', correct: true }
+      - { value: 'AppArmor', correct: false }
+    help: https://docs.docker.com/engine/security/rootless/
+
+  - uuid: 268277e6-27f1-4d4f-a88e-edf7942f2e4b
+    question: Which security module is not natively supported inside containers running in Docker rootless mode?
+    answers:
+      - { value: 'seccomp', correct: false }
+      - { value: 'SELinux', correct: false }
+      - { value: 'AppArmor', correct: true }
+      - { value: 'capabilities', correct: false }
+    help: https://docs.docker.com/engine/security/rootless/

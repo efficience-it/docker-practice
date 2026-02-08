@@ -1,0 +1,54 @@
+questions:
+  - uuid: ff898791-1a5f-4cf9-9272-0c8f10cee3b6
+    question: Where should you configure HTTP_PROXY and HTTPS_PROXY environment variables so that the Docker daemon uses them on a systemd-based Linux system?
+    answers:
+      - { value: '/etc/docker/daemon.json', correct: false }
+      - { value: 'A systemd drop-in file such as /etc/systemd/system/docker.service.d/http-proxy.conf', correct: true }
+      - { value: '/etc/environment', correct: false }
+      - { value: '/var/lib/docker/proxy.conf', correct: false }
+    help: https://docs.docker.com/engine/daemon/proxy/
+
+  - uuid: 7e04292f-182e-4eab-8369-c38f3514f445
+    question: Which file configures proxy settings that are automatically applied to containers during docker build and docker run?
+    answers:
+      - { value: '/etc/docker/daemon.json', correct: false }
+      - { value: '~/.docker/config.json', correct: true }
+      - { value: '/etc/default/docker', correct: false }
+      - { value: '~/.bashrc', correct: false }
+    help: https://docs.docker.com/network/proxy/
+
+  - uuid: fef6b35f-f2c1-475e-82b4-62049ba12732
+    question: Which environment variable is used to specify hosts that should bypass the proxy for the Docker daemon?
+    answers:
+      - { value: 'PROXY_BYPASS', correct: false }
+      - { value: 'DOCKER_NO_PROXY', correct: false }
+      - { value: 'NO_PROXY', correct: true }
+      - { value: 'SKIP_PROXY', correct: false }
+    help: https://docs.docker.com/engine/daemon/proxy/
+
+  - uuid: 99c5acd0-c628-4c5c-9414-131d9e329e3e
+    question: What command must be run after creating or modifying a systemd drop-in file for Docker proxy configuration?
+    answers:
+      - { value: 'systemctl restart docker', correct: false }
+      - { value: 'systemctl daemon-reload followed by systemctl restart docker', correct: true }
+      - { value: 'dockerd --reload', correct: false }
+      - { value: 'service docker reload', correct: false }
+    help: https://docs.docker.com/engine/daemon/proxy/
+
+  - uuid: 634bfe0a-1f67-4862-8bd6-b838f2899364
+    question: In ~/.docker/config.json, under which key are proxy settings for containers configured?
+    answers:
+      - { value: 'proxyConfig', correct: false }
+      - { value: 'network', correct: false }
+      - { value: 'proxies', correct: true }
+      - { value: 'httpSettings', correct: false }
+    help: https://docs.docker.com/network/proxy/
+
+  - uuid: d3f070b3-0919-4551-807c-c6a63c0fe440
+    question: When proxy settings are configured in ~/.docker/config.json, how are they passed to containers?
+    answers:
+      - { value: 'As Docker labels on the container', correct: false }
+      - { value: 'As environment variables injected automatically into the container', correct: true }
+      - { value: 'As arguments appended to the container entrypoint', correct: false }
+      - { value: 'As DNS records resolved by the Docker embedded DNS server', correct: false }
+    help: https://docs.docker.com/network/proxy/

@@ -83,6 +83,10 @@ The goal is to help candidates:
 * [Describe and interpret errors to troubleshoot installation issues without assistance.](data/3_installation_and_configuration/install_troubleshooting.yaml)
 * [Describe and demonstrate the steps to deploy the Docker engine, UCP (now MKE), and DTR (now MSR) on AWS and on-premises in an HA configuration.](data/3_installation_and_configuration/deploy_ucp_dtr_ha.yaml)
 * [Describe and demonstrate how to configure backups for UCP (now MKE) and DTR (now MSR).](data/3_installation_and_configuration/backup_ucp_dtr.yaml)
+* [Describe daemon.json configuration.](data/3_installation_and_configuration/daemon_json_config.yaml)
+* [Describe Docker editions (CE vs EE).](data/3_installation_and_configuration/docker_editions.yaml)
+* [Describe proxy configuration for Docker.](data/3_installation_and_configuration/proxy_configuration.yaml)
+* [Describe rootless Docker mode.](data/3_installation_and_configuration/rootless_docker.yaml)
 
 ### Domain 4: Networking (15% of exam)
 
@@ -98,6 +102,10 @@ The goal is to help candidates:
 * [Understand and describe the types of traffic that flow between the Docker engine, registry, and UCP (now MKE) controllers](data/4_Networking/understand_engine_registry_ucp_traffic.yaml)
 * [Describe and demonstrate how to deploy a service on a Docker overlay network.](data/4_Networking/deploy_overlay_service.yaml)
 * [Describe and demonstrate how to troubleshoot container and engine logs to resolve connectivity issues between containers.](data/4_Networking/troubleshoot_container_connectivity.yaml)
+* [Describe Docker DNS resolution.](data/4_Networking/docker_dns.yaml)
+* [Describe macvlan networks.](data/4_Networking/macvlan_networks.yaml)
+* [Describe advanced network troubleshooting.](data/4_Networking/network_troubleshooting_advanced.yaml)
+* [Describe network scoping (local vs swarm).](data/4_Networking/network_scoping.yaml)
 
 ### Domain 5: Security (15% of exam)
 
