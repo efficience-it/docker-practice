@@ -1,0 +1,54 @@
+questions:
+  - uuid: 3c5e7a9b-4f62-4d83-b8c3-0d2a6e8f5b74
+    question: What replaced Docker Enterprise Edition after Mirantis acquired it in 2019?
+    answers:
+      - { value: 'Docker Business Edition', correct: false }
+      - { value: 'Docker Pro', correct: false }
+      - { value: 'Mirantis Container Runtime', correct: true }
+      - { value: 'Docker Enterprise Community', correct: false }
+    help: https://docs.docker.com/engine/
+
+  - uuid: e915b4e4-d94a-4139-b6f8-3716c08c4191
+    question: Which release channel provides the most recent stable Docker CE builds intended for production use?
+    answers:
+      - { value: 'edge', correct: false }
+      - { value: 'nightly', correct: false }
+      - { value: 'stable', correct: true }
+      - { value: 'beta', correct: false }
+    help: https://docs.docker.com/engine/install/
+
+  - uuid: b5ee83b7-5ba4-4d4e-a3c5-ffcc33686e34
+    question: Which Docker release channel is intended for pre-release testing and includes features not yet available in the stable channel?
+    answers:
+      - { value: 'nightly', correct: false }
+      - { value: 'test', correct: true }
+      - { value: 'edge', correct: false }
+      - { value: 'dev', correct: false }
+    help: https://docs.docker.com/engine/install/
+
+  - uuid: f25cd4d9-b00d-47e6-9607-6179d5b531a9
+    question: What is Docker Desktop?
+    answers:
+      - { value: 'A lightweight Linux-only CLI tool for managing Docker images', correct: false }
+      - { value: 'An application for Mac and Windows that provides a GUI and bundled Docker Engine, CLI, Compose, and Kubernetes', correct: true }
+      - { value: 'A browser-based management console for Docker Swarm clusters', correct: false }
+      - { value: 'A Docker plugin for managing virtual machines on desktop systems', correct: false }
+    help: https://docs.docker.com/desktop/
+
+  - uuid: 5dd4a9a8-8765-4b2a-8101-040d1fe37fe7
+    question: Which component is the open-source Docker container runtime available on Linux, commonly installed via package managers?
+    answers:
+      - { value: 'Docker Desktop', correct: false }
+      - { value: 'Docker Machine', correct: false }
+      - { value: 'Docker Engine', correct: true }
+      - { value: 'Docker Toolbox', correct: false }
+    help: https://docs.docker.com/engine/
+
+  - uuid: 17c0df34-7659-4175-8a93-44810e7e8284
+    question: Docker Desktop requires a paid subscription for professional use in organizations of what size?
+    answers:
+      - { value: 'More than 10 employees', correct: false }
+      - { value: 'More than 100 employees', correct: false }
+      - { value: 'More than 250 employees or more than $10 million in annual revenue', correct: true }
+      - { value: 'All organizations regardless of size', correct: false }
+    help: https://docs.docker.com/subscription/

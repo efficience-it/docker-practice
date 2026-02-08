@@ -1,0 +1,54 @@
+questions:
+  - uuid: 8ed2749a-a63a-401d-a765-8e0122a5ae7c
+    question: What are the two network scopes available in Docker?
+    answers:
+      - { value: 'internal and external', correct: false }
+      - { value: 'local and swarm', correct: true }
+      - { value: 'host and container', correct: false }
+      - { value: 'private and public', correct: false }
+    help: https://docs.docker.com/network/#network-drivers
+
+  - uuid: 54ba4fa9-92ef-459a-9ae3-b0cada5c74d5
+    question: What is the default scope of the bridge network driver?
+    answers:
+      - { value: 'swarm', correct: false }
+      - { value: 'global', correct: false }
+      - { value: 'local', correct: true }
+      - { value: 'cluster', correct: false }
+    help: https://docs.docker.com/network/bridge/
+
+  - uuid: 5e32956b-85d4-485f-91bf-f81413c14af1
+    question: What is the default scope of the overlay network driver?
+    answers:
+      - { value: 'local', correct: false }
+      - { value: 'swarm', correct: true }
+      - { value: 'host', correct: false }
+      - { value: 'node', correct: false }
+    help: https://docs.docker.com/network/overlay/
+
+  - uuid: e7653bdf-6b26-443e-8ce3-cb23755e6a07
+    question: Which command filters Docker networks by their scope?
+    answers:
+      - { value: 'docker network ls --type swarm', correct: false }
+      - { value: 'docker network ls --filter scope=swarm', correct: true }
+      - { value: 'docker network ls --scope=swarm', correct: false }
+      - { value: 'docker network inspect --filter scope=swarm', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_ls/#filter
+
+  - uuid: b0b3fbbd-ac70-4636-998c-6c093bfe3c04
+    question: Which statement about cross-host container networking in Docker is correct?
+    answers:
+      - { value: 'Bridge networks can span multiple Docker hosts when Swarm mode is enabled', correct: false }
+      - { value: 'Overlay networks enable containers on different Docker hosts to communicate as if they are on the same network', correct: true }
+      - { value: 'Host network mode allows containers on separate hosts to share the same network namespace', correct: false }
+      - { value: 'Cross-host networking requires configuring macvlan on every node', correct: false }
+    help: https://docs.docker.com/network/overlay/
+
+  - uuid: dbacd0c0-25c9-4439-871d-9c9ab5e3b2ad
+    question: A network created with the bridge driver on a single Docker host is visible only on that host. What does this characteristic describe?
+    answers:
+      - { value: 'Network isolation', correct: false }
+      - { value: 'Network encryption', correct: false }
+      - { value: 'Local scope', correct: true }
+      - { value: 'Ingress mode', correct: false }
+    help: https://docs.docker.com/network/#network-drivers

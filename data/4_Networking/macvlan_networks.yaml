@@ -1,0 +1,54 @@
+questions:
+  - uuid: 6f870ccc-23cb-41ac-9056-073b6565a6ea
+    question: What is the primary use case for the macvlan network driver in Docker?
+    answers:
+      - { value: 'Encrypting traffic between containers on different hosts', correct: false }
+      - { value: 'Allowing containers to appear as physical devices on the network with their own MAC addresses', correct: true }
+      - { value: 'Providing DNS-based service discovery across Swarm nodes', correct: false }
+      - { value: 'Isolating container traffic from the host network entirely', correct: false }
+    help: https://docs.docker.com/network/macvlan/
+
+  - uuid: 89cde52c-5e0b-42f0-abc6-389ef2016677
+    question: Which command correctly creates a macvlan network attached to the host interface eth0 with a specified subnet and gateway?
+    answers:
+      - { value: 'docker network create --driver macvlan --subnet 192.168.1.0/24 --gateway 192.168.1.1 -o parent=eth0 my-macvlan', correct: true }
+      - { value: 'docker network create --type macvlan --interface eth0 --subnet 192.168.1.0/24 my-macvlan', correct: false }
+      - { value: 'docker macvlan create --parent eth0 --subnet 192.168.1.0/24 my-macvlan', correct: false }
+      - { value: 'docker network create --driver macvlan --bind eth0 my-macvlan', correct: false }
+    help: https://docs.docker.com/network/macvlan/#create-a-macvlan-network
+
+  - uuid: e7ad31be-5d2c-4f9e-8ca1-3bcd7a0e1fb4
+    question: What does the -o parent= option specify when creating a macvlan network?
+    answers:
+      - { value: 'The parent Docker network to inherit settings from', correct: false }
+      - { value: 'The host physical or virtual network interface to associate with the macvlan network', correct: true }
+      - { value: 'The parent container whose network namespace is shared', correct: false }
+      - { value: 'The parent Swarm manager node for the network', correct: false }
+    help: https://docs.docker.com/network/macvlan/#create-a-macvlan-network
+
+  - uuid: f8be42cf-6e3d-4a0f-9db2-4cde8b1f2ac5
+    question: How do you create a macvlan network in 802.1q trunk bridge mode to tag traffic with VLAN ID 100?
+    answers:
+      - { value: 'docker network create --driver macvlan --vlan 100 -o parent=eth0 my-macvlan', correct: false }
+      - { value: 'docker network create --driver macvlan -o parent=eth0.100 --subnet 192.168.100.0/24 my-macvlan', correct: true }
+      - { value: 'docker network create --driver macvlan --tag=100 -o parent=eth0 my-macvlan', correct: false }
+      - { value: 'docker network create --driver vlan --id 100 --parent eth0 my-macvlan', correct: false }
+    help: https://docs.docker.com/network/macvlan/#use-an-8021q-trunk-bridge-mode
+
+  - uuid: 02f282da-618a-4afd-bb6c-fb0a7dd83bfe
+    question: Which statement correctly describes a difference between macvlan and bridge network drivers?
+    answers:
+      - { value: 'Bridge networks assign unique MAC addresses to containers while macvlan does not', correct: false }
+      - { value: 'Macvlan containers communicate through the Docker bridge interface just like bridge networks', correct: false }
+      - { value: 'Macvlan containers are directly reachable on the physical network without NAT, whereas bridge containers use NAT for external access', correct: true }
+      - { value: 'Bridge networks require promiscuous mode on the host NIC but macvlan does not', correct: false }
+    help: https://docs.docker.com/network/macvlan/
+
+  - uuid: 4d82c19e-349e-4e7e-b408-385f8f88f364
+    question: What is a known limitation when using the macvlan network driver in Docker?
+    answers:
+      - { value: 'Containers on a macvlan network cannot communicate with external networks', correct: false }
+      - { value: 'The Docker host itself cannot directly communicate with its own macvlan containers without additional configuration', correct: true }
+      - { value: 'Macvlan networks do not support IPv4 addressing', correct: false }
+      - { value: 'Only one container can be attached to a macvlan network at a time', correct: false }
+    help: https://docs.docker.com/network/macvlan/

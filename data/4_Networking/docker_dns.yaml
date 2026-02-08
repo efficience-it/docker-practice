@@ -1,0 +1,72 @@
+questions:
+  - uuid: a3c7e1d4-5f28-4b9a-8e61-3d2f7c9a0b14
+    question: What is the IP address of the embedded DNS server that Docker provides to containers on user-defined networks?
+    answers:
+      - { value: '127.0.0.1', correct: false }
+      - { value: '127.0.0.11', correct: true }
+      - { value: '172.17.0.1', correct: false }
+      - { value: '8.8.8.8', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: b8d4f2e5-6a39-4c0b-9f72-4e3a8d1b2c25
+    question: On which type of Docker network does automatic DNS-based container name resolution work?
+    answers:
+      - { value: 'The default bridge network', correct: false }
+      - { value: 'User-defined networks only', correct: true }
+      - { value: 'All networks including host mode', correct: false }
+      - { value: 'Only overlay networks', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: 2d245c7f-6a3d-4723-8b78-a997a3962933
+    question: What does the --dns flag do when passed to a docker run command?
+    answers:
+      - { value: 'It changes the embedded DNS server address from 127.0.0.11', correct: false }
+      - { value: 'It sets a custom DNS server that the container uses for external name resolution', correct: true }
+      - { value: 'It disables DNS resolution entirely for the container', correct: false }
+      - { value: 'It configures DNS for the Docker daemon globally', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: ad53b53d-28c7-4512-a074-45170876e547
+    question: What is the purpose of the --dns-search flag in a docker run command?
+    answers:
+      - { value: 'It searches for containers with matching DNS names', correct: false }
+      - { value: 'It enables DNS lookup logging for debugging', correct: false }
+      - { value: 'It sets the DNS search domain so unqualified hostnames are resolved under that domain', correct: true }
+      - { value: 'It restricts DNS queries to a specific network', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: aa179ba0-8c07-41ae-9363-a9e918be1f48
+    question: Two containers named "web" and "api" are running on the same user-defined bridge network. How can the "web" container reach the "api" container?
+    answers:
+      - { value: 'By using the IP address of the Docker host', correct: false }
+      - { value: 'By using the container name "api" as the hostname', correct: true }
+      - { value: 'By publishing a port on the "api" container and using localhost', correct: false }
+      - { value: 'By using the container ID as the hostname on the default bridge', correct: false }
+    help: https://docs.docker.com/network/bridge/#differences-between-user-defined-bridges-and-the-default-bridge
+
+  - uuid: 9efc07d2-66ac-4556-8adf-87aa53686147
+    question: How does Docker Swarm provide DNS-based service discovery for services deployed on an overlay network?
+    answers:
+      - { value: 'Each task registers with an external Consul DNS server', correct: false }
+      - { value: 'The Swarm manager resolves service names to the virtual IP (VIP) of the service', correct: true }
+      - { value: 'Services must be configured with --dns pointing to the manager node', correct: false }
+      - { value: 'Service discovery is only available when using the host network driver', correct: false }
+    help: https://docs.docker.com/network/overlay/#service-discovery
+
+  - uuid: 77bcecab-5128-413f-bc60-d5929760a3a0
+    question: What is DNS round-robin in the context of Docker networking?
+    answers:
+      - { value: 'A method that assigns a unique DNS name to each container on a network', correct: false }
+      - { value: 'A resolution mode where a DNS lookup for a service name returns the IP addresses of all backing containers in rotation', correct: true }
+      - { value: 'A technique that forces DNS queries to alternate between internal and external DNS servers', correct: false }
+      - { value: 'A failover mechanism that redirects DNS traffic to a secondary Docker host', correct: false }
+    help: https://docs.docker.com/network/overlay/#customize-the-default-ingress-network
+
+  - uuid: 0b2a7d26-453c-433d-a3c2-ba9ef79a878e
+    question: Which docker run flag can be used to assign a network alias that other containers can use for DNS resolution?
+    answers:
+      - { value: '--hostname', correct: false }
+      - { value: '--name', correct: false }
+      - { value: '--network-alias', correct: true }
+      - { value: '--dns-alias', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/run/#network-alias

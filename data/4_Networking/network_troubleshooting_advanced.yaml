@@ -1,0 +1,72 @@
+questions:
+  - uuid: 1efe5950-3f81-461a-b845-95fbd471ffb9
+    question: Which command displays detailed information about a Docker network, including connected containers and their IP addresses?
+    answers:
+      - { value: 'docker network show my-network', correct: false }
+      - { value: 'docker network inspect my-network', correct: true }
+      - { value: 'docker network status my-network', correct: false }
+      - { value: 'docker info --network my-network', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_inspect/
+
+  - uuid: b304ad31-58f5-4a7e-9a82-406680fa726d
+    question: How can you run a network diagnostic command such as ping inside a running container?
+    answers:
+      - { value: 'docker attach <container> ping <target>', correct: false }
+      - { value: 'docker exec <container> ping <target>', correct: true }
+      - { value: 'docker run --net=container:<container> ping <target>', correct: false }
+      - { value: 'docker network ping <container> <target>', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/exec/
+
+  - uuid: 8c7106ec-edf5-4422-8c58-43d02c231259
+    question: What is the purpose of using nsenter when troubleshooting Docker network issues?
+    answers:
+      - { value: 'It creates a new network namespace for a container', correct: false }
+      - { value: 'It allows you to enter the network namespace of a container from the host to run diagnostic tools', correct: true }
+      - { value: 'It encrypts network traffic entering a container namespace', correct: false }
+      - { value: 'It maps container ports to host ports dynamically', correct: false }
+    help: https://docs.docker.com/engine/network/tutorials/standalone/
+
+  - uuid: 28a23f97-5485-4e77-8a20-511fd1d26e4c
+    question: Which iptables chain does Docker primarily use to handle NAT for container traffic leaving the host?
+    answers:
+      - { value: 'INPUT', correct: false }
+      - { value: 'FORWARD', correct: false }
+      - { value: 'POSTROUTING in the nat table', correct: true }
+      - { value: 'OUTPUT in the filter table', correct: false }
+    help: https://docs.docker.com/network/iptables/
+
+  - uuid: 1ee0c70d-3ede-4eb5-9370-60128971879b
+    question: What does the docker port command display?
+    answers:
+      - { value: 'All open ports on the Docker host', correct: false }
+      - { value: "The port mappings between a container's exposed ports and the host ports they are published to", correct: true }
+      - { value: 'The list of ports blocked by Docker firewall rules', correct: false }
+      - { value: 'The internal ports used by the Docker daemon', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/port/
+
+  - uuid: 4f2757aa-096a-4f69-bdde-88aa00c44643
+    question: How can you capture network traffic inside a Docker container for troubleshooting purposes?
+    answers:
+      - { value: 'docker logs --tcpdump <container>', correct: false }
+      - { value: 'docker network capture <container>', correct: false }
+      - { value: 'Run tcpdump inside the container using docker exec, provided tcpdump is installed in the container image', correct: true }
+      - { value: 'Use docker inspect --packet-trace <container>', correct: false }
+    help: https://docs.docker.com/engine/network/tutorials/standalone/
+
+  - uuid: c7eb31f8-5bc2-4d9a-8ae1-3fab6c4d7ef9
+    question: A container cannot reach external services on the internet. Which of the following should you check first?
+    answers:
+      - { value: 'Whether the container has a volume mounted', correct: false }
+      - { value: 'Whether the Docker image was pulled from a private registry', correct: false }
+      - { value: "Whether the container's network has a proper gateway and the host iptables rules allow forwarding", correct: true }
+      - { value: 'Whether the container is running in privileged mode', correct: false }
+    help: https://docs.docker.com/network/iptables/
+
+  - uuid: d8fc42a9-6cd3-4e0b-9bf2-4abc7d5e8fa0
+    question: Which docker network inspect format expression retrieves the subnet of a Docker network?
+    answers:
+      - { value: "docker network inspect --format '{{.Options.Subnet}}' my-network", correct: false }
+      - { value: "docker network inspect --format '{{range .IPAM.Config}}{{.Subnet}}{{end}}' my-network", correct: true }
+      - { value: "docker network inspect --format '{{.NetworkSettings.Subnet}}' my-network", correct: false }
+      - { value: "docker network inspect --format '{{.Config.IPAM.Subnet}}' my-network", correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_inspect/
