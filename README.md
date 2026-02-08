@@ -5,7 +5,7 @@
 
 ## 📘 About this project
 
-This repository offers a comprehensive collection of YAML-based quiz questions to help to train based on the **Mirantis DCA Study Guide (2025)**.
+This repository offers a comprehensive collection of YAML-based quiz questions to help train based on the **Mirantis DCA Study Guide (2025)**.
 
 The goal is to help candidates:
 - Test their knowledge of Docker engine, networking, security, orchestration, image management, and more.
@@ -27,7 +27,7 @@ The goal is to help candidates:
 * [Describe and demonstrate how to extend the instructions to run individual containers into running services under swarm.](data/1_Orchestration/extend_run_containers_to_services.yaml)
 * [Describe the importance of quorum in a swarm cluster.](data/1_Orchestration/describe_importance_quorum_swarm_cluster.yaml)
 * [Describe the difference between running a container and running a service.](data/1_Orchestration/describe_difference_between_running_container_and_service.yaml)
-* [Interpret the output of “docker inspect” commands.](data/1_Orchestration/interpret_output_docker_inspect_commend.yaml)
+* [Interpret the output of “docker inspect” commands.](data/1_Orchestration/interpret_output_docker_inspect_command.yaml)
 * [Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy"](data/1_Orchestration/convert_to_stack_file.yaml)
 * [Manipulate a running stack of services.](data/1_Orchestration/manipulate_stacks.yaml)
 * [Describe and demonstrate orchestration activities.](data/1_Orchestration/)
@@ -49,7 +49,7 @@ The goal is to help candidates:
 * [Identify and display the main parts of a Dockerfile.](data/2_Image_creation_management_registry/identify_display_main_parts_dockerfile.yaml)
 * [Describe and demonstrate how to create an efficient image via a Dockerfile.](data/2_Image_creation_management_registry/describe_demonstrate_how_create_efficient_image_via_dockerfile.yaml)
 * [Describe and demonstrate how to use CLI commands to manage images, such as list, delete, prune, rmi.](data/2_Image_creation_management_registry/describe_demonstrate_how_use_cli_command_manage_images_list_delete_prune_rmi.yaml)
-* [Describe and demonstrate how to inspect images and report specific attributes using filter and format](data/2_Image_creation_management_registry/describe_demonstrate_how_to_inspec_images_report_specifi_attributes_using_filter_format.yaml)
+* [Describe and demonstrate how to inspect images and report specific attributes using filter and format](data/2_Image_creation_management_registry/describe_demonstrate_how_to_inspect_images_report_specific_attributes_using_filter_format.yaml)
 * [Describe and demonstrate how to tag an image.](data/2_Image_creation_management_registry/describe_demonstrate_how_to_tag_image.yaml)
 * [Describe and demonstrate how to apply a file to create a Docker image.](data/2_Image_creation_management_registry/apply_file_create_image.yaml)
 * [Describe and demonstrate how to display layers of a Docker image](data/2_Image_creation_management_registry/display_layers.yaml)
@@ -84,14 +84,14 @@ The goal is to help candidates:
 * [Describe and demonstrate how to create a Docker bridge network for developers to use for their containers.](data/4_Networking/bridge_network_create.yaml)
 * [Describe and demonstrate how to publish a port so that an application is accessible externally.](data/4_Networking/describe_demonstrate_publish_port_application_accessible_externally.yaml)
 * [Identify which IP and port a container is externally accessible on.](data/4_Networking/identify_container_ip_port.yaml)
-* [Compare and contrast “host” and “ingress” publishing modes.](data/4_Networking/compare_contrats_host_ingress_publishing_modes.yaml)
+* [Compare and contrast “host” and “ingress” publishing modes.](data/4_Networking/compare_contrast_host_ingress_publishing_modes.yaml)
 * [Describe and demonstrate how to configure Docker to use external DNS.](data/4_Networking/configure_external_dns.yaml)
 * [Describe and demonstrate how to use Docker to load balance HTTP/HTTPs traffic to an application (Configure L7 load balancing with Docker EE)](data/4_Networking/http_https_load_balancing.yaml).
 * [Understand and describe the types of traffic that flow between the Docker engine, registry, and UCP controllers](data/4_Networking/understand_engine_registry_ucp_traffic.yaml)
 * [Describe and demonstrate how to deploy a service on a Docker overlay network.](data/4_Networking/deploy_overlay_service.yaml)
 * [Describe and demonstrate how to troubleshoot container and engine logs to resolve connectivity issues between containers.](data/4_Networking/troubleshoot_container_connectivity.yaml)
 * [Describe how to route traffic to Kubernetes pods using ClusterIP and NodePort services.](data/4_Networking/k8s_clusterip_nodeport.yaml)
-* [Describe the Kubertnetes’ container network model.](data/4_Networking/describe_kubernetes_container_network_model.yaml)
+* [Describe the Kubernetes container network model.](data/4_Networking/describe_kubernetes_container_network_model.yaml)
 
 ### Domain 5: Security (15% of exam)
 
@@ -111,14 +111,14 @@ The goal is to help candidates:
 
 ### Domain 6: Storage and Volumes (10% of exam)
 
-* [Identify the correct graph drivers to uses with various operating systems.](data/6_storage_and_volumes/graph_drivers.yaml)
+* [Identify the correct graph drivers to use with various operating systems.](data/6_storage_and_volumes/graph_drivers.yaml)
 * [Describe and demonstrate how to configure devicemapper.](data/6_storage_and_volumes/describe_demonstrate_how_to_configure_devicemapper.yaml)
 * [Compare and contrast object and block storage and when they should be used.](data/6_storage_and_volumes/contrast_object.yaml)
 * [Describe how an application is composed of layers and where these layers reside on the filesystem.](data/6_storage_and_volumes/layers_filesystem.yaml)
-* [Describe the use of volumes are used with Docker for persistent storage.](data/6_storage_and_volumes/persistent_storage.yaml)
+* [Describe the use of volumes with Docker for persistent storage.](data/6_storage_and_volumes/persistent_storage.yaml)
 * [Identify the steps to take to clean up unused images on a filesystem and DTR.](data/6_storage_and_volumes/unused_images.yaml)
 * [Describe and demonstrate how storage can be used across cluster nodes.](data/6_storage_and_volumes/volume_cluster.yaml)
-* [Describe how to provision persistent storage to a Kubernetes pod using persistentVolumes.](data/6_storage_and_volumes/peristent_volumes.yaml)
+* [Describe how to provision persistent storage to a Kubernetes pod using persistentVolumes.](data/6_storage_and_volumes/persistent_volumes.yaml)
 * [Describe the relationship between container storage interface drivers, storageClass, persistentVolumeClaim and volume objects in Kubernetes.](data/6_storage_and_volumes/relationship_storage_volume.yaml)
 
 ## Contributions
