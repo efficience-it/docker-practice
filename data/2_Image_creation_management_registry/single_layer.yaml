@@ -1,12 +1,12 @@
 questions:
   - uuid: 5f3ac20f-5ae4-40e5-9fa7-bcb3eaac4ea2
-    question: Which technique allows reducing a Docker image to a single final useful layer?
+    question: Which Docker build option squashes all layers of an image into a single layer?
     answers:
-      - { value: 'Use the --squash option by default', correct: false }
+      - { value: 'docker build --flatten', correct: false }
       - { value: 'Push the image to a private registry', correct: false }
-      - { value: 'Use a multi-stage build', correct: true }
-      - { value: 'Enable content trust', correct: false }
-    help: https://docs.docker.com/develop/develop-images/multistage-build/
+      - { value: 'docker build --squash', correct: true }
+      - { value: 'Use a multi-stage build', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/build/#squash-an-image
 
   - uuid: f2cbe39d-8e84-46d2-9434-d6b00b40c517
     question: Which command creates an image with layers squashed (merged) together?
