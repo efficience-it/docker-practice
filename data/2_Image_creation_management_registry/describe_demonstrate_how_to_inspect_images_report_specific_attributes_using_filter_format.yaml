@@ -40,6 +40,8 @@ questions:
     answers:
       - { value: 'docker images --format "{{.ID}}: {{.Repository}}"', correct: true }
       - { value: 'docker images --format "{{.Image}}: {{.Name}}"', correct: false }
+      - { value: 'docker images --template "ID={{.ID}}"', correct: false }
+      - { value: 'docker images --output "{{.Repository}}"', correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/
 
   - uuid: e54ad2de-5be4-4385-944b-d0c991d3f88e
@@ -59,15 +61,6 @@ questions:
       - { value: '.Label', correct: false }
       - { value: '.Tags', correct: false }
     help: https://docs.docker.com/reference/cli/docker/image/ls/#format-the-output---format
-
-  - uuid: 67917938-64c5-4a76-9152-871db7e60db8
-    question: What does the `--digests` flag show in `docker images`?
-    answers:
-      - { value: 'Untagged containers', correct: false }
-      - { value: 'Image file system structure', correct: false }
-      - { value: 'Content-addressable image identifiers', correct: true }
-      - { value: 'All intermediate layers', correct: false }
-    help: https://docs.docker.com/reference/cli/docker/image/ls/#list-image-digests---digests
 
   - uuid: 4622a734-8c7e-4f91-bd8a-55e7fd31c43e
     question: How can you list untagged (dangling) images?
