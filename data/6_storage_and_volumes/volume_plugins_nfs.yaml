@@ -1,0 +1,54 @@
+questions:
+  - uuid: a466b434-9c04-4d38-b6b6-fd3242843f4e
+    question: How do you create a Docker volume that uses NFS as the backing storage with the local driver?
+    answers:
+      - { value: 'docker volume create --driver nfs --opt server=nfs.example.com --opt share=/data myvolume', correct: false }
+      - { value: 'docker volume create --driver local --opt type=nfs --opt o=addr=nfs.example.com,rw --opt device=:/data myvolume', correct: true }
+      - { value: 'docker volume create --type nfs --server nfs.example.com --path /data myvolume', correct: false }
+      - { value: 'docker volume create --nfs-mount nfs.example.com:/data myvolume', correct: false }
+    help: https://docs.docker.com/storage/volumes/#create-a-service-which-creates-an-nfs-volume
+
+  - uuid: b1111aa0-2178-4974-b791-ac2738e45eac
+    question: Which command installs a Docker volume plugin from Docker Hub?
+    answers:
+      - { value: 'docker volume add-driver myplugin', correct: false }
+      - { value: 'docker plugin install myplugin', correct: true }
+      - { value: 'docker driver install myplugin', correct: false }
+      - { value: 'docker extension add myplugin', correct: false }
+    help: https://docs.docker.com/engine/extend/plugin_api/
+
+  - uuid: e4accb25-7e04-4edc-aeb0-b731dd6e21c2
+    question: What is the purpose of third-party volume plugins such as REX-Ray or Portworx in Docker?
+    answers:
+      - { value: 'They replace the Docker daemon with a custom storage engine', correct: false }
+      - { value: 'They provide integration with external or cloud-based storage systems for persistent data', correct: true }
+      - { value: 'They compress all volume data to reduce disk usage', correct: false }
+      - { value: 'They enforce encryption on all container filesystems', correct: false }
+    help: https://docs.docker.com/engine/extend/legacy_plugins/#volume-plugins
+
+  - uuid: 87897d9e-ba11-47bc-a722-e31f600e53b1
+    question: When creating a volume with the local driver and NFS options, which --opt parameter specifies the mount type?
+    answers:
+      - { value: '--opt driver=nfs', correct: false }
+      - { value: '--opt filesystem=nfs', correct: false }
+      - { value: '--opt type=nfs', correct: true }
+      - { value: '--opt proto=nfs', correct: false }
+    help: https://docs.docker.com/storage/volumes/#create-a-service-which-creates-an-nfs-volume
+
+  - uuid: 4bb83da8-6c5b-4221-8be6-ca18eb2a3f1b
+    question: Where does Docker look for volume plugin socket files on Linux by default?
+    answers:
+      - { value: '/etc/docker/plugins/', correct: false }
+      - { value: '/run/docker/plugins/', correct: true }
+      - { value: '/var/lib/docker/drivers/', correct: false }
+      - { value: '/opt/docker/volume-plugins/', correct: false }
+    help: https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery
+
+  - uuid: b6581de8-3eb3-4d0d-8940-4b7d9ebef186
+    question: How do you specify a volume driver when creating a named volume?
+    answers:
+      - { value: 'docker volume create --type mydriver myvolume', correct: false }
+      - { value: 'docker volume create -d mydriver myvolume', correct: true }
+      - { value: 'docker volume create --plugin mydriver myvolume', correct: false }
+      - { value: 'docker volume create --storage mydriver myvolume', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_create/

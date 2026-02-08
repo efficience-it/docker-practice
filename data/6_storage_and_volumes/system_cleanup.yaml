@@ -1,0 +1,54 @@
+questions:
+  - uuid: d70d5b33-5585-4e69-aa41-0c03a6ac042b
+    question: Which command shows a summary of disk space used by Docker images, containers, volumes, and build cache?
+    answers:
+      - { value: 'docker system usage', correct: false }
+      - { value: 'docker disk info', correct: false }
+      - { value: 'docker system df', correct: true }
+      - { value: 'docker storage stats', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/system_df/
+
+  - uuid: c5200061-f45e-48ae-ba03-46541582f36e
+    question: What does the command 'docker system prune' remove by default?
+    answers:
+      - { value: 'All stopped containers, all networks not used by at least one container, all dangling images, and all dangling build cache', correct: true }
+      - { value: 'All containers including running ones, all images, and all volumes', correct: false }
+      - { value: 'Only unused volumes and dangling images', correct: false }
+      - { value: 'Only stopped containers and their associated volumes', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/system_prune/
+
+  - uuid: 1e3f5a7b-9c0d-4e2f-8a4b-6c9d1e3f5a7b
+    question: What is the difference between a dangling image and an unused image?
+    answers:
+      - { value: 'Dangling images are corrupted; unused images are intact but old', correct: false }
+      - { value: "A dangling image is not tagged and not referenced by any container, while an unused image is any image not referenced by a container", correct: true }
+      - { value: 'Dangling images are in remote registries; unused images are local only', correct: false }
+      - { value: 'There is no difference; the terms are interchangeable', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/image_prune/
+
+  - uuid: 2f4a6b8c-0d1e-4f3a-9b5c-7d0e2f4a6b8c
+    question: Which command removes all volumes that are not currently mounted by at least one container?
+    answers:
+      - { value: 'docker volume rm --all', correct: false }
+      - { value: 'docker volume prune', correct: true }
+      - { value: 'docker system prune', correct: false }
+      - { value: 'docker volume clean', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_prune/
+
+  - uuid: d4ee6ded-10a1-4848-8100-30d8f1f51715
+    question: How can you use the --filter flag with 'docker image prune' to remove images created more than 24 hours ago?
+    answers:
+      - { value: 'docker image prune --filter age=24h', correct: false }
+      - { value: 'docker image prune --filter until=24h', correct: true }
+      - { value: 'docker image prune --filter older-than=24h', correct: false }
+      - { value: 'docker image prune --filter created=24h', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/image_prune/#filtering
+
+  - uuid: 079659ed-e2bd-42ea-8d46-9a834d1b76e0
+    question: What additional flag must be passed to 'docker system prune' to also remove unused volumes?
+    answers:
+      - { value: '--all', correct: false }
+      - { value: '--force', correct: false }
+      - { value: '--volumes', correct: true }
+      - { value: '--deep', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/system_prune/

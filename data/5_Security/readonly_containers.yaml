@@ -1,0 +1,54 @@
+questions:
+  - uuid: d6b3e1f8-c4a2-4957-8d0b-7e5a3c9f1b24
+    question: What does the --read-only flag do when used with docker run?
+    answers:
+      - { value: 'Prevents the container from reading environment variables', correct: false }
+      - { value: 'Blocks all network read operations', correct: false }
+      - { value: "Mounts the container's root filesystem as read-only", correct: true }
+      - { value: 'Makes all mounted volumes read-only', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#read-only
+
+  - uuid: a2f8d4b1-e6c3-4a75-9b07-1d5e8c3f7a92
+    question: How can you allow a read-only container to write to a specific directory?
+    answers:
+      - { value: 'Use --writable-dir to specify the directory', correct: false }
+      - { value: 'Use --tmpfs to mount a writable tmpfs filesystem at that path', correct: true }
+      - { value: 'Read-only containers cannot write to any directory', correct: false }
+      - { value: 'Use --read-only=partial to allow selective writes', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#read-only
+
+  - uuid: 5c9e1a7d-b2f4-4386-80d3-6a8b3e1f5c47
+    question: Which command runs a container with a read-only root filesystem and a writable /tmp directory?
+    answers:
+      - { value: 'docker run --read-only --writable /tmp myimage', correct: false }
+      - { value: 'docker run --read-only --tmpfs /tmp myimage', correct: true }
+      - { value: 'docker run --immutable --allow-write /tmp myimage', correct: false }
+      - { value: 'docker run --filesystem ro --exception /tmp myimage', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#read-only
+
+  - uuid: 8b4f2d6a-c1e3-4a58-97b0-3e7d5a9c1f82
+    question: What is a key security benefit of running containers with a read-only root filesystem?
+    answers:
+      - { value: 'It encrypts the container filesystem', correct: false }
+      - { value: 'It prevents attackers from modifying the container filesystem, such as installing malware or altering binaries', correct: true }
+      - { value: 'It automatically enables AppArmor for the container', correct: false }
+      - { value: 'It disables all Linux capabilities inside the container', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#read-only
+
+  - uuid: 1e7c3a5d-f8b2-4d96-a0b4-9d6e2f4c8b31
+    question: What happens when a process inside a read-only container attempts to write to the root filesystem?
+    answers:
+      - { value: 'The write is silently discarded', correct: false }
+      - { value: 'The container is automatically stopped', correct: false }
+      - { value: 'The process receives a read-only filesystem error', correct: true }
+      - { value: 'The write is redirected to a temporary overlay', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#read-only
+
+  - uuid: 4a9d6f2b-e3c1-4875-b8d0-5c7e1a3f9b64
+    question: Which combination of flags provides a read-only container with writable directories for /tmp and /var/run?
+    answers:
+      - { value: 'docker run --read-only --tmpfs /tmp --tmpfs /var/run myimage', correct: true }
+      - { value: 'docker run --read-only --volume /tmp --volume /var/run myimage', correct: false }
+      - { value: 'docker run --read-only --writable /tmp,/var/run myimage', correct: false }
+      - { value: 'docker run --immutable --except /tmp,/var/run myimage', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#read-only

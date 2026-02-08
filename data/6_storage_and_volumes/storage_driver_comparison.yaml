@@ -1,0 +1,72 @@
+questions:
+  - uuid: 1a3b5c7d-9e0f-4a2b-8c4d-6e8f0a1b3c5d
+    question: Which storage driver is the default and recommended driver for Docker on most modern Linux distributions?
+    answers:
+      - { value: 'aufs', correct: false }
+      - { value: 'devicemapper', correct: false }
+      - { value: 'overlay2', correct: true }
+      - { value: 'btrfs', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/select-storage-driver/
+
+  - uuid: 2b4c6d8e-0f1a-4b3c-9d5e-7f0a2b4c6d8e
+    question: What mechanism do Docker storage drivers use to avoid duplicating data across image layers?
+    answers:
+      - { value: 'Data deduplication', correct: false }
+      - { value: 'Copy-on-write (CoW)', correct: true }
+      - { value: 'RAID mirroring', correct: false }
+      - { value: 'Log-structured merge trees', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/#the-copy-on-write-cow-strategy
+
+  - uuid: 575439a5-ce5e-4a72-845a-731a0fbc3fac
+    question: Which command displays the current storage driver used by the Docker daemon?
+    answers:
+      - { value: 'docker storage info', correct: false }
+      - { value: 'docker inspect --driver', correct: false }
+      - { value: 'docker info', correct: true }
+      - { value: 'docker system driver', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/info/
+
+  - uuid: 9486e50b-0564-4354-ba03-366d42821ae8
+    question: What is a key requirement for overlay2 to function correctly on an xfs filesystem?
+    answers:
+      - { value: 'The xfs filesystem must be mounted with the nobarrier option', correct: false }
+      - { value: 'The xfs filesystem must be formatted with d_type=true (ftype=1)', correct: true }
+      - { value: 'The xfs filesystem must use a block size of 8192 bytes', correct: false }
+      - { value: 'The xfs filesystem must have journaling disabled', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/#prerequisites
+
+  - uuid: 100529f2-6e50-4196-aaeb-33c974d415b3
+    question: Which storage driver requires the backing filesystem to be the same type as the driver (e.g., a btrfs filesystem for the btrfs driver)?
+    answers:
+      - { value: 'overlay2', correct: false }
+      - { value: 'devicemapper', correct: false }
+      - { value: 'btrfs and zfs', correct: true }
+      - { value: 'aufs', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/select-storage-driver/#supported-backing-filesystems
+
+  - uuid: 6c4a2aba-583c-4e9f-a492-0cdb1fb8e276
+    question: In the copy-on-write strategy, when does Docker copy a file from a lower layer to the writable container layer?
+    answers:
+      - { value: 'When the container is started', correct: false }
+      - { value: 'When the file is read for the first time', correct: false }
+      - { value: 'When the file is modified for the first time', correct: true }
+      - { value: 'When the container image is pulled', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/#the-copy-on-write-cow-strategy
+
+  - uuid: ed8b27a0-6b76-4d9e-8374-9dcc4d1c9594
+    question: Why is the devicemapper driver in loop-lvm mode unsuitable for production?
+    answers:
+      - { value: 'It does not support any Linux distribution', correct: false }
+      - { value: 'It uses loopback devices which are slow and resource-intensive', correct: true }
+      - { value: 'It cannot store images larger than 1 GB', correct: false }
+      - { value: 'It requires a commercial Docker license', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/device-mapper-driver/#configure-loop-lvm-mode-for-testing
+
+  - uuid: 6da8b5c9-d21e-4ce4-b35f-747cad6e4f5e
+    question: Which storage driver uses OverlayFS with multiple lower directories, reducing inode consumption compared to its predecessor?
+    answers:
+      - { value: 'aufs', correct: false }
+      - { value: 'overlay (the original)', correct: false }
+      - { value: 'overlay2', correct: true }
+      - { value: 'devicemapper', correct: false }
+    help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/#how-the-overlay2-driver-works
