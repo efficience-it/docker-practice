@@ -41,6 +41,11 @@ The goal is to help candidates:
 * [Describe how a Dockerized application communicates with legacy systems.](data/1_Orchestration/legacy_communication.yaml)
 * [Describe how to deploy containerized workloads as Kubernetes pods and deployments.](data/1_Orchestration/k8s_pods_deployments.yaml)
 * [Describe how to provide configuration to Kubernetes pods using configMaps and secrets.](data/1_Orchestration/k8s_configmap_secret.yaml)
+* [Describe service update and rollback strategies.](data/1_Orchestration/service_update_rollback.yaml)
+* [Describe node availability (drain, active, pause).](data/1_Orchestration/node_availability.yaml)
+* [Describe the Swarm autolock feature.](data/1_Orchestration/swarm_autolock.yaml)
+* [Describe Docker secrets and configs in Swarm.](data/1_Orchestration/secrets_and_configs.yaml)
+* [Describe service health checks in Swarm.](data/1_Orchestration/service_healthcheck.yaml)
 
 ### Domain 2: Image Creation, Management, and Registry (20% of exam)
 
@@ -61,6 +66,11 @@ The goal is to help candidates:
 * [Push an image to a registry.](data/2_Image_creation_management_registry/push_an_image_to_a_registry.yaml)
 * [Sign an image in a registry.](data/2_Image_creation_management_registry/sign_an_image_in_a_registry.yaml)
 * [Pull and delete images from a registry.](data/2_Image_creation_management_registry/pull_delete_images_registry.yaml)
+* [Describe the HEALTHCHECK instruction in a Dockerfile.](data/2_Image_creation_management_registry/healthcheck_instruction.yaml)
+* [Describe BuildKit and docker buildx.](data/2_Image_creation_management_registry/buildkit_buildx.yaml)
+* [Compare CMD vs ENTRYPOINT instructions.](data/2_Image_creation_management_registry/cmd_vs_entrypoint.yaml)
+* [Compare ARG vs ENV instructions.](data/2_Image_creation_management_registry/arg_vs_env.yaml)
+* [Describe Docker build cache optimization.](data/2_Image_creation_management_registry/build_cache.yaml)
 
 ### Domain 3: Installation and Configuration (15% of exam)
 

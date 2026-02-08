@@ -1,0 +1,54 @@
+questions:
+  - uuid: a1f4e7b2-8c3d-4e6a-b9f1-2d5a8c3e7f01
+    question: What is the purpose of the HEALTHCHECK instruction in a Dockerfile?
+    answers:
+      - { value: 'To restart the container automatically when it crashes', correct: false }
+      - { value: 'To tell Docker how to test whether the container is still working correctly', correct: true }
+      - { value: 'To monitor host system resource usage for the container', correct: false }
+      - { value: 'To validate the Dockerfile syntax before building', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#healthcheck
+
+  - uuid: ad862055-0033-4ebc-94c4-3efdc473d257
+    question: Which flag sets the time between running the health check command in a HEALTHCHECK instruction?
+    answers:
+      - { value: '--timeout', correct: false }
+      - { value: '--retries', correct: false }
+      - { value: '--interval', correct: true }
+      - { value: '--start-period', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#healthcheck
+
+  - uuid: d61f7734-f997-4989-b3c1-07ea35e5ccfe
+    question: What does the --start-period flag do in a HEALTHCHECK instruction?
+    answers:
+      - { value: 'It sets the time to wait before the first health check is run, giving the container time to bootstrap', correct: true }
+      - { value: 'It defines the interval between subsequent health checks', correct: false }
+      - { value: 'It specifies the maximum time the container can remain unhealthy', correct: false }
+      - { value: 'It sets how long to wait before killing an unhealthy container', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#healthcheck
+
+  - uuid: 46d7b70a-d1fe-4c9d-8942-028ff0f85fd5
+    question: How do you disable any health check inherited from a base image?
+    answers:
+      - { value: 'HEALTHCHECK --disable', correct: false }
+      - { value: 'HEALTHCHECK OFF', correct: false }
+      - { value: 'HEALTHCHECK NONE', correct: true }
+      - { value: 'RUN rm /healthcheck', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#healthcheck
+
+  - uuid: 5fa4f009-33ad-4828-9fc2-81ce1721668f
+    question: What is the default value of the --retries flag in a HEALTHCHECK instruction?
+    answers:
+      - { value: '1', correct: false }
+      - { value: '5', correct: false }
+      - { value: '3', correct: true }
+      - { value: '10', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#healthcheck
+
+  - uuid: f6c9d2a7-db8c-4dbf-a4e6-7c0f3b8d2e56
+    question: What is the difference between the CMD and CMD-SHELL forms in a HEALTHCHECK instruction?
+    answers:
+      - { value: 'CMD runs the command directly without a shell, while CMD-SHELL runs the command inside a shell', correct: false }
+      - { value: 'CMD-SHELL runs the command inside the default shell (/bin/sh -c), while CMD runs the command directly as an exec array', correct: true }
+      - { value: 'CMD-SHELL is used on Windows only, while CMD is used on Linux', correct: false }
+      - { value: 'There is no difference; both forms behave identically', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#healthcheck

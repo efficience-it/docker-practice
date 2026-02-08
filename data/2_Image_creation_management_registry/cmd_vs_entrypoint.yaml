@@ -1,0 +1,72 @@
+questions:
+  - uuid: 04033ba6-479f-4e10-9bbd-9b7409b8f141
+    question: What is the primary difference between CMD and ENTRYPOINT in a Dockerfile?
+    answers:
+      - { value: 'CMD defines the main executable and ENTRYPOINT provides default arguments', correct: false }
+      - { value: 'ENTRYPOINT defines the main executable that always runs, while CMD provides default arguments that can be overridden', correct: true }
+      - { value: 'CMD runs at build time and ENTRYPOINT runs at container start', correct: false }
+      - { value: 'There is no difference; they are interchangeable instructions', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact
+
+  - uuid: fb222053-2b41-454f-bbe4-c1b2d1eb8326
+    question: What is the exec form of the CMD instruction?
+    answers:
+      - { value: 'CMD command param1 param2', correct: false }
+      - { value: 'CMD ["command", "param1", "param2"]', correct: true }
+      - { value: 'CMD {command, param1, param2}', correct: false }
+      - { value: 'CMD (command param1 param2)', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#cmd
+
+  - uuid: 66d3f744-48ec-4f43-80e3-ee6661d277ec
+    question: What happens when you specify a command at the end of docker run if a CMD instruction exists in the Dockerfile?
+    answers:
+      - { value: 'The command in docker run is appended to the CMD instruction', correct: false }
+      - { value: 'Docker throws an error because CMD cannot be overridden', correct: false }
+      - { value: 'The command specified in docker run replaces the CMD instruction entirely', correct: true }
+      - { value: 'Both commands execute sequentially inside the container', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#cmd
+
+  - uuid: 26631241-368d-452b-b3f3-3131a0e74c43
+    question: When ENTRYPOINT is set in exec form and CMD is also defined, what does CMD provide?
+    answers:
+      - { value: 'An alternative command that runs if ENTRYPOINT fails', correct: false }
+      - { value: 'Default arguments that are appended to the ENTRYPOINT command', correct: true }
+      - { value: 'A health check command for the container', correct: false }
+      - { value: 'Environment variables for the ENTRYPOINT process', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact
+
+  - uuid: 1e2f3a4b-5c6d-4e7f-8a9b-0c1d2e3f4a5b
+    question: How do you override the ENTRYPOINT at runtime when starting a container?
+    answers:
+      - { value: 'docker run --cmd <new-command> <image>', correct: false }
+      - { value: 'docker run --override <new-command> <image>', correct: false }
+      - { value: 'docker run --entrypoint <new-command> <image>', correct: true }
+      - { value: 'docker run --exec <new-command> <image>', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#entrypoint-default-command-to-execute-at-runtime
+
+  - uuid: 2f3a4b5c-6d7e-4f8a-9b0c-1d2e3f4a5b6c
+    question: What happens when CMD is written in shell form (CMD command param1)?
+    answers:
+      - { value: 'The command is executed directly without any shell', correct: false }
+      - { value: 'The command is executed as /bin/sh -c "command param1"', correct: true }
+      - { value: 'Docker wraps the command in a PowerShell process', correct: false }
+      - { value: 'The command is ignored if ENTRYPOINT is also defined', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#cmd
+
+  - uuid: 8432bcb7-4c09-457b-82eb-b93d0084d337
+    question: If a Dockerfile contains ENTRYPOINT in shell form, what happens to CMD arguments?
+    answers:
+      - { value: 'CMD arguments are appended to the ENTRYPOINT command', correct: false }
+      - { value: 'CMD arguments are passed as environment variables', correct: false }
+      - { value: 'CMD arguments are ignored because the shell form does not pass additional arguments', correct: true }
+      - { value: 'CMD arguments replace the ENTRYPOINT command', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact
+
+  - uuid: dd3c02f5-c181-4a2f-8ab3-84d95babf8b3
+    question: Which combination correctly uses ENTRYPOINT with CMD to run "python app.py --verbose" by default while allowing the arguments to be overridden?
+    answers:
+      - { value: 'ENTRYPOINT ["python", "app.py", "--verbose"]', correct: false }
+      - { value: 'CMD ["python", "app.py", "--verbose"]', correct: false }
+      - { value: 'ENTRYPOINT ["python", "app.py"] and CMD ["--verbose"]', correct: true }
+      - { value: 'ENTRYPOINT python and CMD app.py --verbose', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact

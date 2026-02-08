@@ -1,0 +1,54 @@
+questions:
+  - uuid: cadff67e-01cf-44f1-8209-b743fb8ebd05
+    question: What does the --autolock flag do when initializing a Docker Swarm?
+    answers:
+      - { value: 'It locks the Swarm so no new nodes can join', correct: false }
+      - { value: 'It encrypts the Raft logs and TLS keys at rest, requiring an unlock key when a manager restarts', correct: true }
+      - { value: 'It prevents any service updates without a password', correct: false }
+      - { value: 'It automatically locks containers after a timeout', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/swarm_manager_locking/'
+
+  - uuid: d6d2f0a3-4e1c-4b7d-a9f5-0c6e3d8b1a94
+    question: Which command is used to unlock a locked Swarm manager after it restarts?
+    answers:
+      - { value: 'docker swarm unlock-key', correct: false }
+      - { value: 'docker swarm init --unlock', correct: false }
+      - { value: 'docker swarm unlock', correct: true }
+      - { value: 'docker node unlock', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/swarm/unlock/'
+
+  - uuid: e7e3a1b4-5f2d-4c8e-b0a6-1d7f4e9c2b05
+    question: How do you retrieve the current unlock key for a Docker Swarm?
+    answers:
+      - { value: 'docker swarm inspect --unlock-key', correct: false }
+      - { value: 'docker swarm unlock --show', correct: false }
+      - { value: 'docker swarm unlock-key', correct: true }
+      - { value: 'docker info --swarm-key', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/swarm/unlock-key/'
+
+  - uuid: c7acd054-17ca-4ac7-8dc4-be0209999ae9
+    question: How do you enable autolock on an existing Swarm that was initialized without it?
+    answers:
+      - { value: 'docker swarm init --autolock', correct: false }
+      - { value: 'docker swarm update --autolock=true', correct: true }
+      - { value: 'docker swarm lock --enable', correct: false }
+      - { value: 'docker node update --autolock manager', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/swarm_manager_locking/#enable-or-disable-autolock-on-an-existing-swarm'
+
+  - uuid: a258e38b-0da0-48f4-8eee-2f29918b1815
+    question: How do you rotate the unlock key for a Docker Swarm?
+    answers:
+      - { value: 'docker swarm unlock-key --rotate', correct: true }
+      - { value: 'docker swarm rotate-key', correct: false }
+      - { value: 'docker swarm update --new-key', correct: false }
+      - { value: 'docker swarm unlock --regenerate', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/swarm/unlock-key/#--rotate'
+
+  - uuid: 59e724dd-1839-4a99-8afb-c9b99cceeb79
+    question: What happens if a locked Swarm manager restarts and is not unlocked?
+    answers:
+      - { value: 'It automatically leaves the Swarm', correct: false }
+      - { value: 'It continues to operate normally as a manager', correct: false }
+      - { value: 'It starts as a manager but cannot decrypt the Raft log or access cluster data until unlocked', correct: true }
+      - { value: 'It demotes itself to a worker node', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/swarm_manager_locking/'

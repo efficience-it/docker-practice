@@ -1,0 +1,54 @@
+questions:
+  - uuid: 1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d
+    question: How do you enable BuildKit for a Docker build using an environment variable?
+    answers:
+      - { value: 'DOCKER_BUILDKIT=0 docker build .', correct: false }
+      - { value: 'DOCKER_BUILDKIT=1 docker build .', correct: true }
+      - { value: 'BUILDKIT_ENABLED=true docker build .', correct: false }
+      - { value: 'DOCKER_BUILD_MODE=buildkit docker build .', correct: false }
+    help: https://docs.docker.com/build/buildkit/
+
+  - uuid: 2b3c4d5e-6f7a-4b8c-9d0e-1f2a3b4c5d6e
+    question: Which command is used to build images for multiple platforms simultaneously?
+    answers:
+      - { value: 'docker build --multi-platform', correct: false }
+      - { value: 'docker compose build --platform all', correct: false }
+      - { value: 'docker buildx build --platform linux/amd64,linux/arm64', correct: true }
+      - { value: 'docker image build --arch amd64,arm64', correct: false }
+    help: https://docs.docker.com/build/building/multi-platform/
+
+  - uuid: c9cb5ebb-21e1-41b6-bf42-a07ee93b219f
+    question: What is the purpose of the docker buildx create command?
+    answers:
+      - { value: 'To create a new Docker image from scratch', correct: false }
+      - { value: 'To create a new builder instance that can be used for building images', correct: true }
+      - { value: 'To create a new Dockerfile template', correct: false }
+      - { value: 'To initialize a new Docker registry', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/buildx_create/
+
+  - uuid: 64c3f27c-1e21-434a-ae67-150af7c3b95c
+    question: Which advantage does BuildKit provide over the legacy Docker build engine?
+    answers:
+      - { value: 'It removes the need for a Dockerfile', correct: false }
+      - { value: 'It automatically pushes images to a registry after build', correct: false }
+      - { value: 'It enables parallel execution of independent build stages and better caching', correct: true }
+      - { value: 'It requires less disk space for storing final images', correct: false }
+    help: https://docs.docker.com/build/buildkit/
+
+  - uuid: 0cca5e54-53d1-40c5-b02a-93a9ff0fc318
+    question: What does the --platform flag specify when used with docker buildx build?
+    answers:
+      - { value: 'The operating system of the host machine performing the build', correct: false }
+      - { value: 'The target platform(s) for the resulting image, such as linux/amd64 or linux/arm64', correct: true }
+      - { value: 'The Docker Engine version to use during the build', correct: false }
+      - { value: 'The cloud provider platform where the image will be deployed', correct: false }
+    help: https://docs.docker.com/build/building/multi-platform/
+
+  - uuid: 3254542e-ae41-48ad-831c-2394526fd73b
+    question: How do you switch to a specific builder instance created with docker buildx?
+    answers:
+      - { value: 'docker buildx switch <builder-name>', correct: false }
+      - { value: 'docker buildx set <builder-name>', correct: false }
+      - { value: 'docker buildx use <builder-name>', correct: true }
+      - { value: 'docker buildx activate <builder-name>', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/buildx_use/

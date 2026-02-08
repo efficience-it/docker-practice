@@ -1,0 +1,54 @@
+questions:
+  - uuid: 1c2d3e4f-5a6b-4c7d-8e9f-0a1b2c3d4e5f
+    question: How does Docker determine whether a layer can be reused from the build cache?
+    answers:
+      - { value: 'It compares the image size before and after each instruction', correct: false }
+      - { value: 'It checks whether the instruction string and the content of referenced files have changed', correct: true }
+      - { value: 'It always rebuilds every layer to ensure consistency', correct: false }
+      - { value: 'It checks the timestamp of the Dockerfile only', correct: false }
+    help: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#leverage-build-cache
+
+  - uuid: 2d3e4f5a-6b7c-4d8e-9f0a-1b2c3d4e5f6a
+    question: What happens to the build cache for all subsequent layers when an earlier layer is invalidated?
+    answers:
+      - { value: 'Only the invalidated layer is rebuilt; subsequent layers are reused', correct: false }
+      - { value: 'All subsequent layers after the invalidated layer are also rebuilt', correct: true }
+      - { value: 'Docker skips the invalidated layer and continues with the cache', correct: false }
+      - { value: 'Docker prompts the user to decide which layers to rebuild', correct: false }
+    help: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#leverage-build-cache
+
+  - uuid: 36e1ab90-15eb-4779-93d0-c3406eb44964
+    question: Why is it a best practice to place COPY instructions for frequently changing files toward the end of a Dockerfile?
+    answers:
+      - { value: 'Because COPY instructions at the end run faster', correct: false }
+      - { value: 'Because Docker requires COPY to be the last instruction', correct: false }
+      - { value: 'To maximize cache reuse by keeping stable layers early and volatile layers late', correct: true }
+      - { value: 'Because files copied later take up less disk space in the image', correct: false }
+    help: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#leverage-build-cache
+
+  - uuid: da7281c1-e78f-4ebf-b976-0f78d57a7b0f
+    question: What does the --no-cache flag do when running docker build?
+    answers:
+      - { value: 'It prevents the final image from being stored on disk', correct: false }
+      - { value: 'It forces Docker to rebuild all layers without using any existing cache', correct: true }
+      - { value: 'It disables caching for only the last layer in the build', correct: false }
+      - { value: 'It removes all previously cached images from the system', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/build/#options
+
+  - uuid: 5c802a7f-404a-4c72-9787-2529a04524f2
+    question: How does cache invalidation differ between COPY and ADD when referencing local files?
+    answers:
+      - { value: 'ADD always invalidates the cache, while COPY never does', correct: false }
+      - { value: 'COPY checks file checksums for cache validity, while ADD also invalidates the cache when referencing remote URLs', correct: true }
+      - { value: 'Both COPY and ADD ignore the cache entirely', correct: false }
+      - { value: 'COPY invalidates the cache based on filename only, while ADD uses file size', correct: false }
+    help: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#add-or-copy
+
+  - uuid: 30154ecc-0769-4e76-b520-3e53bacdab68
+    question: What is a cache mount in the context of BuildKit (RUN --mount=type=cache)?
+    answers:
+      - { value: 'A read-only volume that stores the final image layers', correct: false }
+      - { value: 'A persistent cache directory that survives across builds, useful for package manager caches', correct: true }
+      - { value: 'A network mount that downloads dependencies from a remote server', correct: false }
+      - { value: 'A temporary file system used only during the current RUN instruction', correct: false }
+    help: https://docs.docker.com/build/guide/mounts/

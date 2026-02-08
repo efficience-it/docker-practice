@@ -1,0 +1,54 @@
+questions:
+  - uuid: e9e5a3b6-7f4d-4c0e-b2a8-3d9f6e1b4c27
+    question: Which flag defines a health check command when creating a Docker Swarm service?
+    answers:
+      - { value: '--health-test', correct: false }
+      - { value: '--healthcheck', correct: false }
+      - { value: '--health-cmd', correct: true }
+      - { value: '--check-health', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/service/create/#health-cmd'
+
+  - uuid: 44213b9c-edb1-490e-b6d7-8b83c6e61051
+    question: What are the three possible health states of a container with a health check configured?
+    answers:
+      - { value: 'healthy, unhealthy, unknown', correct: false }
+      - { value: 'starting, healthy, unhealthy', correct: true }
+      - { value: 'running, stopped, failed', correct: false }
+      - { value: 'passing, warning, critical', correct: false }
+    help: 'https://docs.docker.com/reference/dockerfile/#healthcheck'
+
+  - uuid: 780e95d2-b8f5-428e-9ed7-2b2cd01147d7
+    question: What does the --health-retries flag specify?
+    answers:
+      - { value: 'The number of times to retry a failed service deployment', correct: false }
+      - { value: 'The number of consecutive health check failures needed to report unhealthy', correct: true }
+      - { value: 'The number of health checks to run in parallel', correct: false }
+      - { value: 'The number of nodes to check health on', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/service/create/#health-retries'
+
+  - uuid: 7ca92d5f-1075-4c7e-af6a-3ade80273bd3
+    question: What does the --health-start-period flag control?
+    answers:
+      - { value: 'The time to wait before the first health check runs', correct: false }
+      - { value: 'The grace period during which health check failures are not counted toward the maximum retries', correct: true }
+      - { value: 'The interval between health checks at service startup', correct: false }
+      - { value: 'The maximum time allowed for the service to start', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/service/create/#health-start-period'
+
+  - uuid: 96f70b46-c101-4d79-a032-d0fd10dc4297
+    question: What happens to a Swarm service task when its container is reported as unhealthy?
+    answers:
+      - { value: 'The task is paused and an alert is sent', correct: false }
+      - { value: 'Nothing happens; the task continues running', correct: false }
+      - { value: 'The task is stopped and a new task is scheduled to replace it', correct: true }
+      - { value: 'The task is moved to a different node', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/'
+
+  - uuid: d4d0f8a1-2e9c-4b5d-a7f3-8c4e1d6a9b72
+    question: What is the default interval between health checks if --health-interval is not specified?
+    answers:
+      - { value: '10s', correct: false }
+      - { value: '30s', correct: true }
+      - { value: '1m', correct: false }
+      - { value: '5s', correct: false }
+    help: 'https://docs.docker.com/reference/dockerfile/#healthcheck'
