@@ -5,6 +5,7 @@ questions:
       - { value: 'To deploy containers in Kubernetes', correct: false }
       - { value: 'To configure Docker Hub settings', correct: false }
       - { value: 'To automate image creation using versioned instructions', correct: true }
+      - { value: 'To manage Docker daemon runtime options', correct: false }
     help: https://docs.docker.com/engine/reference/builder/
 
   - uuid: c174e319-85dc-47d2-bde5-fc9482c87212
@@ -13,6 +14,7 @@ questions:
       - { value: 'It ensures repeatability and automation', correct: true }
       - { value: 'It creates containers instead of images', correct: false }
       - { value: 'It improves image compression', correct: false }
+      - { value: 'It bypasses the need for a base image', correct: false }
     help: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 
   - uuid: 1d87b0ec-ecc7-42f2-88d5-5cd193449bfa
@@ -21,6 +23,7 @@ questions:
       - { value: 'The orchestration of services across nodes', correct: false }
       - { value: 'The logging behavior of running containers', correct: false }
       - { value: 'The step-by-step instructions to build a Docker image', correct: true }
+      - { value: 'The network configuration of a Docker Swarm cluster', correct: false }
     help: https://docs.docker.com/engine/reference/builder/
 
   - uuid: e7f40412-2c7a-4bfa-9eac-7a5aa7e708f6
@@ -29,6 +32,7 @@ questions:
       - { value: 'It deploys applications to production automatically', correct: false }
       - { value: 'It enables consistent image builds across environments', correct: true }
       - { value: 'It replaces the Docker daemon configuration', correct: false }
+      - { value: 'It eliminates the need for version control', correct: false }
     help: https://docs.docker.com/build/ci/
 
   - uuid: 3c5fbd4f-cf77-46a3-a8a4-063408c5f9b3
@@ -37,4 +41,5 @@ questions:
       - { value: 'A volume definition file for persistent storage', correct: false }
       - { value: 'A text file containing image build instructions', correct: true }
       - { value: 'A binary image used to start containers', correct: false }
+      - { value: 'A YAML manifest for container orchestration', correct: false }
     help: https://docs.docker.com/engine/reference/builder/
