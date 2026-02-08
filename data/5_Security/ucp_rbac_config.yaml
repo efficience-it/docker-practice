@@ -1,6 +1,6 @@
 questions:
   - uuid: 0fc6d4e7-0179-48bb-b7e8-2a391d0c57f3
-    question: What does RBAC mean in the context of Docker UCP?
+    question: What does RBAC mean in the context of Docker UCP (now MKE)?
     answers:
       - { value: 'Role-Based Access Control', correct: true }
       - { value: 'Remote Backup Admin Console', correct: false }
@@ -9,7 +9,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
 
   - uuid: e271c7fd-2315-4d19-a08c-5bd614746847
-    question: Which UCP component allows defining roles and permissions?
+    question: Which UCP (now MKE) component allows defining roles and permissions?
     answers:
       - { value: 'RBAC', correct: true }
       - { value: 'Compose CLI', correct: false }
@@ -18,7 +18,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
 
   - uuid: 80129f0d-e8de-4034-97b0-96178b39b2e6
-    question: Which entity can be assigned an RBAC role in UCP?
+    question: Which entity can be assigned an RBAC role in UCP (now MKE)?
     answers:
       - { value: 'A volume', correct: false }
       - { value: 'A user or a team', correct: true }
@@ -27,7 +27,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
 
   - uuid: c4c84f21-5d8d-4e1d-8ab2-0ef03c88b9b7
-    question: What is the possible scope of a role in UCP?
+    question: What is the possible scope of a role in UCP (now MKE)?
     answers:
       - { value: 'Domain name, DNS, logs', correct: false }
       - { value: 'Service, namespace, container, node', correct: true }
@@ -36,7 +36,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
 
   - uuid: 8e352f44-30f3-42b4-b503-4c99ec93e764
-    question: Which RBAC role allows view-only access to resources in UCP?
+    question: Which RBAC role allows view-only access to resources in UCP (now MKE)?
     answers:
       - { value: 'Operator', correct: false }
       - { value: 'AdminAccess', correct: false }
@@ -54,16 +54,16 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
 
   - uuid: c1a99418-b50c-4e5a-9186-e28eb8d46f86
-    question: Where can RBAC roles be managed in UCP?
+    question: Where can RBAC roles be managed in UCP (now MKE)?
     answers:
       - { value: 'In the /etc/docker/daemon.json file', correct: false }
       - { value: 'In the Dockerfile', correct: false }
       - { value: 'Only with kubectl', correct: false }
-      - { value: 'In the UCP web interface or via API', correct: true }
+      - { value: 'In the UCP (now MKE) web interface or via API', correct: true }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
 
   - uuid: f4960718-c05b-4f09-85ee-2e21a3fdde2d
-    question: Can custom RBAC roles be created in UCP?
+    question: Can custom RBAC roles be created in UCP (now MKE)?
     answers:
       - { value: 'Yes, but only for registries', correct: false }
       - { value: 'No, this requires Docker Hub Pro', correct: false }
@@ -72,9 +72,9 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/custom-roles.html
 
   - uuid: a56ae8b1-7054-4c41-8461-2d89c35c4f0a
-    question: Which API allows automating RBAC configuration in UCP?
+    question: Which API allows automating RBAC configuration in UCP (now MKE)?
     answers:
-      - { value: 'UCP RBAC HTTP API', correct: true }
+      - { value: 'UCP (now MKE) RBAC HTTP API', correct: true }
       - { value: 'Kubernetes RBAC CRDs', correct: false }
       - { value: 'Docker Swarm REST API', correct: false }
       - { value: 'Docker CLI scan API', correct: false }

@@ -1,6 +1,6 @@
 questions:
   - uuid: 915cfc8c-72d3-46a7-9797-fc980ef2452d
-    question: What is the minimum recommended number of CPUs for installing Docker Universal Control Plane (UCP)?
+    question: What is the minimum recommended number of CPUs for installing Docker Universal Control Plane (UCP, now MKE)?
     answers:
       - { value: '4', correct: true }
       - { value: '1', correct: false }
@@ -9,7 +9,7 @@ questions:
     help: https://docs.mirantis.com/mke/3.4/launchpad/lp-system-requirements.html
 
   - uuid: bbc16b4e-7291-4b64-9270-14b60c9a0d79
-    question: What is the minimum amount of RAM recommended for a UCP manager node?
+    question: What is the minimum amount of RAM recommended for a UCP (now MKE) manager node?
     answers:
       - { value: '16 GB', correct: true }
       - { value: '8 GB', correct: false }
@@ -27,7 +27,7 @@ questions:
     help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/
 
   - uuid: 67a48e29-32c3-4267-a931-c08b3cb0531b
-    question: For DTR (Docker Trusted Registry), what is the minimum disk space required per node?
+    question: For DTR (Docker Trusted Registry, now MSR), what is the minimum disk space required per node?
     answers:
       - { value: '50 GB', correct: false }
       - { value: '100 GB', correct: true }
@@ -72,7 +72,7 @@ questions:
     help: https://docs.docker.com/storage/
 
   - uuid: 05176b68-5a8b-4814-8753-ffec40440f12
-    question: What is the typical port required to access UCP via a browser?
+    question: What is the typical port required to access UCP (now MKE) via a browser?
     answers:
       - { value: '8080', correct: false }
       - { value: '443', correct: true }

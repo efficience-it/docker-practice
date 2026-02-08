@@ -1,6 +1,6 @@
 questions:
   - uuid: 4a1fc56e-2199-4a8a-a431-0b49966e1db2
-    question: What built-in Docker EE feature provides Layer 7 load balancing for HTTP/HTTPS?
+    question: What built-in Docker Enterprise (now Mirantis) feature provides Layer 7 load balancing for HTTP/HTTPS?
     answers:
       - { value: 'Ingress overlay driver', correct: false }
       - { value: 'DNS round robin', correct: false }
@@ -9,10 +9,10 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/index.html
 
   - uuid: 9189e0aa-8e84-4dcb-8d7b-4e1c87979c5e
-    question: Which Docker EE component is used to automatically route traffic to services based on host or path?
+    question: Which Docker Enterprise (now Mirantis) component is used to automatically route traffic to services based on host or path?
     answers:
       - { value: 'Swarm Gossip Protocol', correct: false }
-      - { value: 'UCP routing mesh', correct: false }
+      - { value: 'UCP (now MKE) routing mesh', correct: false }
       - { value: 'Docker Daemon Proxy', correct: false }
       - { value: 'Interlock with NGINX', correct: true }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/architecture.html
@@ -36,7 +36,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/configuration/service-labels.html
 
   - uuid: 9e42e5fc-3877-4e8f-84ee-22d4463d0cb4
-    question: What is required on the UCP node for Interlock to terminate HTTPS traffic?
+    question: What is required on the UCP (now MKE) node for Interlock to terminate HTTPS traffic?
     answers:
       - { value: 'Swarm manager in leader mode only', correct: false }
       - { value: 'Custom iptables rules', correct: false }

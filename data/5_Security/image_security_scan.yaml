@@ -1,15 +1,15 @@
 questions:
   - uuid: b36df24b-b1b6-47a2-b8c1-4d0b4c98f689
-    question: Which platform in Docker Enterprise allows scanning images for vulnerabilities?
+    question: Which platform in Docker Enterprise (now Mirantis) allows scanning images for vulnerabilities?
     answers:
-      - { value: 'UCP (Universal Control Plane)', correct: false }
+      - { value: 'UCP (Universal Control Plane, now MKE)', correct: false }
       - { value: 'Docker Hub', correct: false }
-      - { value: 'DTR (Docker Trusted Registry)', correct: true }
+      - { value: 'DTR (Docker Trusted Registry, now MSR)', correct: true }
       - { value: 'Docker CLI', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html
 
   - uuid: 3d30c8d6-bfcb-4bb5-b066-0b31633c7a2b
-    question: When is a security scan triggered on an image in DTR?
+    question: When is a security scan triggered on an image in DTR (now MSR)?
     answers:
       - { value: 'Only manually from the UI', correct: false }
       - { value: 'Immediately after the image is pushed', correct: true }
@@ -18,7 +18,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html#image-scanning-flow
 
   - uuid: 6e5297cf-98c5-4978-a5a2-d9b87f119038
-    question: Which status in DTR indicates that an image has no critical vulnerabilities?
+    question: Which status in DTR (now MSR) indicates that an image has no critical vulnerabilities?
     answers:
       - { value: 'ScanPending', correct: false }
       - { value: 'Pass', correct: true }
@@ -27,16 +27,16 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html#scan-results
 
   - uuid: 51bd227f-7df8-48b4-8f90-1e88100cf037
-    question: Where can the security results of an image be viewed in DTR?
+    question: Where can the security results of an image be viewed in DTR (now MSR)?
     answers:
-      - { value: 'In the DTR web interface under the specific image', correct: true }
+      - { value: 'In the DTR (now MSR) web interface under the specific image', correct: true }
       - { value: 'In the Swarm configuration', correct: false }
       - { value: 'On Docker Hub in the Security tab', correct: false }
       - { value: 'Using docker scan <image>', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html#scan-results
 
   - uuid: 4a4210c4-93dc-49f2-a00e-204660a0ccba
-    question: What type of vulnerabilities are detected by the DTR scanner?
+    question: What type of vulnerabilities are detected by the DTR (now MSR) scanner?
     answers:
       - { value: 'Dockerfile syntax errors', correct: false }
       - { value: 'Flaws in volumes', correct: false }
@@ -57,13 +57,13 @@ questions:
     question: Is it possible to block the execution of vulnerable images using rules?
     answers:
       - { value: 'No, Docker does not offer this level of security', correct: false }
-      - { value: 'Yes, with admission rules in UCP', correct: true }
+      - { value: 'Yes, with admission rules in UCP (now MKE)', correct: true }
       - { value: 'Yes, but only on Docker Desktop', correct: false }
       - { value: 'Yes, but only via Docker Hub Pro', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/admission-control.html
 
   - uuid: a7e14311-5b38-4dd3-bf88-76d881e5e5bc
-    question: What vulnerability source is used by the DTR scanner?
+    question: What vulnerability source is used by the DTR (now MSR) scanner?
     answers:
       - { value: 'The NIST CVE (National Vulnerability Database)', correct: true }
       - { value: 'Dockerfile linting', correct: false }
@@ -72,7 +72,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/security/scan-images.html#scanner
 
   - uuid: 4dd21887-b9a0-41ae-b39e-0ef360f3c264
-    question: What does the “ScanPending” status mean for an image in DTR?
+    question: What does the "ScanPending" status mean for an image in DTR (now MSR)?
     answers:
       - { value: 'No issues detected', correct: false }
       - { value: 'The scan is running or scheduled but not yet complete', correct: true }

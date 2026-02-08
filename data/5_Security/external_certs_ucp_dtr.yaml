@@ -1,6 +1,6 @@
 questions:
   - uuid: b61f1b5e-d74e-432e-bc14-d1d8f58ab8c1
-    question: What is the purpose of using external certificates in UCP/DTR?
+    question: What is the purpose of using external certificates in UCP (now MKE)/DTR (now MSR)?
     answers:
       - { value: 'Authenticate connections with certificates issued by a trusted authority', correct: true }
       - { value: 'Replace Docker Hub as the image source', correct: false }
@@ -9,7 +9,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/external-ca.html
 
   - uuid: 72e2c462-56b4-44e9-9e88-9fa63129a548
-    question: Which files are required to use an external certificate in UCP?
+    question: Which files are required to use an external certificate in UCP (now MKE)?
     answers:
       - { value: 'A signed image', correct: false }
       - { value: 'A server certificate, a private key, and a CA chain', correct: true }
@@ -18,7 +18,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/external-ca.html#prerequisites
 
   - uuid: 61c27520-172b-457f-8727-b709c4f81b99
-    question: Which command is used to replace existing UCP certificates?
+    question: Which command is used to replace existing UCP (now MKE) certificates?
     answers:
       - { value: 'docker swarm tls renew', correct: false }
       - { value: 'docker container run --rm -v $(pwd):/certs docker/ucp replace-certs', correct: true }
@@ -27,7 +27,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/rotate-ca.html
 
   - uuid: 2833a6f3-d478-48c3-874b-8f47dc59a1fa
-    question: Which command configures DTR with an external CA after installation?
+    question: Which command configures DTR (now MSR) with an external CA after installation?
     answers:
       - { value: 'docker container exec dtr set-cert', correct: false }
       - { value: 'docker dtr certs reload', correct: false }
@@ -36,7 +36,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/install/use-external-ca.html
 
   - uuid: 3c0d3b9e-77e2-4ef9-bf2f-b607c12666da
-    question: At what point can external certificates be provided during UCP installation?
+    question: At what point can external certificates be provided during UCP (now MKE) installation?
     answers:
       - { value: 'Directly with the --external-server-cert option', correct: true }
       - { value: 'By modifying the UCP Dockerfile', correct: false }
@@ -45,12 +45,12 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/external-ca.html#during-installation
 
   - uuid: 9c88f204-cb01-49b1-9c14-1202b765d08a
-    question: What happens if UCP certificates expire and are not renewed in time?
+    question: What happens if UCP (now MKE) certificates expire and are not renewed in time?
     answers:
       - { value: 'Swarm is automatically recreated', correct: false }
       - { value: 'Containers are deleted', correct: false }
-      - { value: 'The UCP dashboard becomes inaccessible over HTTPS', correct: true }
-      - { value: 'DTR switches to read-only mode', correct: false }
+      - { value: 'The UCP (now MKE) dashboard becomes inaccessible over HTTPS', correct: true }
+      - { value: 'DTR (now MSR) switches to read-only mode', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/rotate-ca.html
 
   - uuid: 6ac7dc55-ff07-4190-aed5-10c8ef730ec8
@@ -58,21 +58,21 @@ questions:
     answers:
       - { value: 'To connect to Docker Hub', correct: false }
       - { value: 'So clients can validate the entire chain of trust up to the root CA', correct: true }
-      - { value: 'To enable UCP clustering', correct: false }
+      - { value: 'To enable UCP (now MKE) clustering', correct: false }
       - { value: 'To enable persistent volumes', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/tls/external-ca.html#prerequisites
 
   - uuid: 4d9e2259-c0d5-4062-91b5-0a3dbbeffcb8
-    question: Can DTR TLS certificates be replaced without downtime?
+    question: Can DTR (now MSR) TLS certificates be replaced without downtime?
     answers:
       - { value: 'Yes, using reconfigure in rolling mode', correct: true }
-      - { value: 'No, DTR must be reinstalled', correct: false }
+      - { value: 'No, DTR (now MSR) must be reinstalled', correct: false }
       - { value: 'Yes, but only with Docker Desktop', correct: false }
       - { value: 'No, because certificates are immutable', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/install/use-external-ca.html#replace-existing-certificates
 
   - uuid: b7d019c6-7c9b-464c-ae0e-ec64927a0149
-    question: What format must the certificates and keys provided to UCP/DTR follow?
+    question: What format must the certificates and keys provided to UCP (now MKE)/DTR (now MSR) follow?
     answers:
       - { value: 'PEM (base64 encoded)', correct: true }
       - { value: 'PKCS#11 token', correct: false }

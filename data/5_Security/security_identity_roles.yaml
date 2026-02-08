@@ -1,6 +1,6 @@
 questions:
   - uuid: 3aeb8d79-c346-4f29-95c7-3245ac9c7cb6
-    question: In UCP, what does RBAC stand for?
+    question: In UCP (now MKE), what does RBAC stand for?
     answers:
       - { value: 'Role-Based Access Control', correct: true }
       - { value: 'Registry-Based Access Control', correct: false }
@@ -9,7 +9,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/
 
   - uuid: 6f0a6a9e-3e91-472c-bd1c-8bdf1b179c92
-    question: Which built-in RBAC role grants read-only access to UCP resources?
+    question: Which built-in RBAC role grants read-only access to UCP (now MKE) resources?
     answers:
       - { value: 'ViewOnly', correct: true }
       - { value: 'AuditRead', correct: false }
@@ -27,7 +27,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/default-roles.html
 
   - uuid: 4b4ff307-79f0-4e5a-8c87-0ae4b21b1ef4
-    question: Which UCP role grants full access to resource actions?
+    question: Which UCP (now MKE) role grants full access to resource actions?
     answers:
       - { value: 'Operator', correct: false }
       - { value: 'RestrictedControl', correct: false }
@@ -36,7 +36,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/default-roles.html
 
   - uuid: 34781fc8-f57b-48e2-9b0e-4f2bbd54f5da
-    question: Which entity can be assigned an RBAC role in UCP?
+    question: Which entity can be assigned an RBAC role in UCP (now MKE)?
     answers:
       - { value: 'A container', correct: false }
       - { value: 'A volume', correct: false }
@@ -45,7 +45,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/rbac/manage-access.html
 
   - uuid: 05818c2f-b3c5-4dbb-939f-0ad5f98112c1
-    question: What does the scope of a role in UCP define?
+    question: What does the scope of a role in UCP (now MKE) define?
     answers:
       - { value: 'The number of allowed actions', correct: false }
       - { value: 'The priority level of the role', correct: false }
