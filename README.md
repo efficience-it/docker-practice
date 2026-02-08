@@ -39,8 +39,6 @@ The goal is to help candidates:
 * [Describe and demonstrate how to use templates with “docker service create”.](data/1_Orchestration/use_templates_with_service_create.yaml)
 * [Identify the steps needed to troubleshoot a service not deploying.](data/1_Orchestration/troubleshoot_service.yaml)
 * [Describe how a Dockerized application communicates with legacy systems.](data/1_Orchestration/legacy_communication.yaml)
-* [Describe how to deploy containerized workloads as Kubernetes pods and deployments.](data/1_Orchestration/k8s_pods_deployments.yaml)
-* [Describe how to provide configuration to Kubernetes pods using configMaps and secrets.](data/1_Orchestration/k8s_configmap_secret.yaml)
 * [Describe service update and rollback strategies.](data/1_Orchestration/service_update_rollback.yaml)
 * [Describe node availability (drain, active, pause).](data/1_Orchestration/node_availability.yaml)
 * [Describe the Swarm autolock feature.](data/1_Orchestration/swarm_autolock.yaml)
@@ -100,8 +98,6 @@ The goal is to help candidates:
 * [Understand and describe the types of traffic that flow between the Docker engine, registry, and UCP controllers](data/4_Networking/understand_engine_registry_ucp_traffic.yaml)
 * [Describe and demonstrate how to deploy a service on a Docker overlay network.](data/4_Networking/deploy_overlay_service.yaml)
 * [Describe and demonstrate how to troubleshoot container and engine logs to resolve connectivity issues between containers.](data/4_Networking/troubleshoot_container_connectivity.yaml)
-* [Describe how to route traffic to Kubernetes pods using ClusterIP and NodePort services.](data/4_Networking/k8s_clusterip_nodeport.yaml)
-* [Describe the Kubernetes container network model.](data/4_Networking/describe_kubernetes_container_network_model.yaml)
 
 ### Domain 5: Security (15% of exam)
 
@@ -133,8 +129,6 @@ The goal is to help candidates:
 * [Describe the use of volumes with Docker for persistent storage.](data/6_storage_and_volumes/persistent_storage.yaml)
 * [Identify the steps to take to clean up unused images on a filesystem and DTR.](data/6_storage_and_volumes/unused_images.yaml)
 * [Describe and demonstrate how storage can be used across cluster nodes.](data/6_storage_and_volumes/volume_cluster.yaml)
-* [Describe how to provision persistent storage to a Kubernetes pod using persistentVolumes.](data/6_storage_and_volumes/persistent_volumes.yaml)
-* [Describe the relationship between container storage interface drivers, storageClass, persistentVolumeClaim and volume objects in Kubernetes.](data/6_storage_and_volumes/relationship_storage_volume.yaml)
 * [Describe tmpfs mounts.](data/6_storage_and_volumes/tmpfs_mounts.yaml)
 * [Compare storage drivers.](data/6_storage_and_volumes/storage_driver_comparison.yaml)
 * [Describe docker system df and prune commands.](data/6_storage_and_volumes/system_cleanup.yaml)
