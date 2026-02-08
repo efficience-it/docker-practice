@@ -1,0 +1,72 @@
+questions:
+  - uuid: 7427d279-6a03-499d-8db8-8b33f60ec85e
+    question: Which command sets a Swarm node to drain availability?
+    answers:
+      - { value: 'docker node update --availability drain <node>', correct: true }
+      - { value: 'docker node drain <node>', correct: false }
+      - { value: 'docker swarm update --drain <node>', correct: false }
+      - { value: 'docker node set --status drain <node>', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/node/update/'
+
+  - uuid: f4a6b9b3-8933-4c9c-9ea1-d8345989ea76
+    question: What happens to running tasks on a node when its availability is set to drain?
+    answers:
+      - { value: 'Tasks are paused until the node is set back to active', correct: false }
+      - { value: 'Tasks are stopped and rescheduled on other available nodes', correct: true }
+      - { value: 'Tasks continue running but no new tasks are assigned', correct: false }
+      - { value: 'Tasks are deleted permanently', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/swarm-tutorial/drain-node/'
+
+  - uuid: 6d2a3fc6-f24e-4252-8e6b-1a7917f91a6e
+    question: What are the three possible availability states for a Docker Swarm node?
+    answers:
+      - { value: 'active, pause, drain', correct: true }
+      - { value: 'running, stopped, paused', correct: false }
+      - { value: 'active, inactive, drain', correct: false }
+      - { value: 'ready, standby, offline', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/node/update/'
+
+  - uuid: 70d6f4a7-8e5c-4b1d-a3f9-4c0e7d2b5a38
+    question: What is the effect of setting a node to "pause" availability?
+    answers:
+      - { value: 'All running tasks are stopped immediately', correct: false }
+      - { value: 'The node leaves the Swarm cluster', correct: false }
+      - { value: 'The node does not receive new tasks but existing tasks continue running', correct: true }
+      - { value: 'The node becomes a manager node', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/swarm-tutorial/drain-node/'
+
+  - uuid: 81e7a5b8-9f6d-4c2e-b4a0-5d1f8e3c6b49
+    question: Can a manager node be drained in Docker Swarm?
+    answers:
+      - { value: 'No, manager nodes cannot be drained', correct: false }
+      - { value: 'Yes, but it loses its manager status', correct: false }
+      - { value: 'Yes, it stops running tasks but retains its manager role', correct: true }
+      - { value: 'Yes, but only if there is a single manager in the cluster', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/swarm-tutorial/drain-node/'
+
+  - uuid: 71b27922-45ab-4e23-822e-692c78185b05
+    question: After draining a node and performing maintenance, which command makes the node available for tasks again?
+    answers:
+      - { value: 'docker node update --availability active <node>', correct: true }
+      - { value: 'docker node activate <node>', correct: false }
+      - { value: 'docker node update --status ready <node>', correct: false }
+      - { value: 'docker node resume <node>', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/node/update/'
+
+  - uuid: cde811d8-6da1-4771-8737-849ef4fab487
+    question: When a drained node is set back to active, do previously running tasks automatically move back to it?
+    answers:
+      - { value: 'Yes, all tasks return to their original node', correct: false }
+      - { value: 'Yes, but only global service tasks return', correct: false }
+      - { value: 'No, existing tasks stay where they are; the node only receives new or rebalanced tasks', correct: true }
+      - { value: 'No, the node must rejoin the Swarm to receive tasks', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/swarm-tutorial/drain-node/'
+
+  - uuid: f19b3d4c-c3dd-433a-9f25-3ec41f55aba0
+    question: Which command can you use to verify the current availability status of all Swarm nodes?
+    answers:
+      - { value: 'docker swarm status', correct: false }
+      - { value: 'docker node ls', correct: true }
+      - { value: 'docker info --nodes', correct: false }
+      - { value: 'docker service ps --all', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/node/ls/'

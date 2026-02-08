@@ -1,0 +1,90 @@
+questions:
+  - uuid: a3c7e1b4-9f2d-4e8a-b5c6-1d3f7a9e2b04
+    question: Which command updates the image of an existing Docker Swarm service named "web" to nginx:1.25?
+    answers:
+      - { value: 'docker service update --image nginx:1.25 web', correct: true }
+      - { value: 'docker service create --image nginx:1.25 web', correct: false }
+      - { value: 'docker service scale --image nginx:1.25 web', correct: false }
+      - { value: 'docker update --image nginx:1.25 web', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/service/update/'
+
+  - uuid: b8d4f2a5-6e3c-4b9d-a1f7-2c8e5d0a3b16
+    question: What does the --update-delay flag control during a service update?
+    answers:
+      - { value: 'The time to wait before starting the update', correct: false }
+      - { value: 'The time to wait between updating each group of tasks', correct: true }
+      - { value: 'The maximum time a single task update can take', correct: false }
+      - { value: 'The time to wait before rolling back on failure', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/services/#configure-a-services-update-behavior'
+
+  - uuid: c9e5a3b6-7f4d-4c0e-b2a8-3d9f6e1b4c27
+    question: What does --update-parallelism 3 mean when updating a service?
+    answers:
+      - { value: 'Three services are updated at the same time', correct: false }
+      - { value: 'The update runs on three nodes simultaneously', correct: false }
+      - { value: 'Three tasks are updated at a time during the rolling update', correct: true }
+      - { value: 'The update retries three times on failure', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/services/#configure-a-services-update-behavior'
+
+  - uuid: 39b5ce22-cbe0-465e-a39a-551f9775a62c
+    question: What is the default value for --update-failure-action in Docker Swarm?
+    answers:
+      - { value: 'rollback', correct: false }
+      - { value: 'continue', correct: false }
+      - { value: 'pause', correct: true }
+      - { value: 'stop', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/services/#configure-a-services-update-behavior'
+
+  - uuid: 216987ff-de4a-44e0-a854-38d136f311e9
+    question: Which command manually triggers a rollback of a Docker Swarm service?
+    answers:
+      - { value: 'docker service revert myservice', correct: false }
+      - { value: 'docker service update --undo myservice', correct: false }
+      - { value: 'docker service rollback myservice', correct: true }
+      - { value: 'docker service update --previous myservice', correct: false }
+    help: 'https://docs.docker.com/reference/cli/docker/service/rollback/'
+
+  - uuid: 42faf48b-afa1-46cd-b294-27d1b86f26ae
+    question: What does the --update-order start-first option do during a service update?
+    answers:
+      - { value: 'It starts the new task before stopping the old task', correct: true }
+      - { value: 'It stops the old task before starting the new task', correct: false }
+      - { value: 'It starts the update on the first node in the cluster', correct: false }
+      - { value: 'It prioritizes manager nodes during the update', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/services/#configure-a-services-update-behavior'
+
+  - uuid: 9c3cb4aa-daa3-4e0a-b80b-9ae8757d2ee6
+    question: What is the default update order for Docker Swarm service updates?
+    answers:
+      - { value: 'start-first', correct: false }
+      - { value: 'stop-first', correct: true }
+      - { value: 'parallel', correct: false }
+      - { value: 'round-robin', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/services/#configure-a-services-update-behavior'
+
+  - uuid: 14d0f8a1-2e9c-4b5d-a7f3-8c4e1d6a9b72
+    question: Which flag sets the maximum time a single task has to update before it is considered failed?
+    answers:
+      - { value: '--update-delay', correct: false }
+      - { value: '--update-timeout', correct: false }
+      - { value: '--update-monitor', correct: true }
+      - { value: '--update-max-time', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/services/#configure-a-services-update-behavior'
+
+  - uuid: 25e1a9b2-3f0d-4c6e-b8a4-9d5f2e7b0c83
+    question: How do you configure a service so that it automatically rolls back if an update fails?
+    answers:
+      - { value: '--update-failure-action rollback', correct: true }
+      - { value: '--rollback-on-failure true', correct: false }
+      - { value: '--update-auto-rollback', correct: false }
+      - { value: '--update-failure-action revert', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/services/#configure-a-services-update-behavior'
+
+  - uuid: 372fc663-77c2-4bcf-aa95-cc365ffac6f0
+    question: Which flag configures the delay between task rollbacks during an automatic rollback?
+    answers:
+      - { value: '--update-delay', correct: false }
+      - { value: '--rollback-delay', correct: true }
+      - { value: '--rollback-interval', correct: false }
+      - { value: '--rollback-wait', correct: false }
+    help: 'https://docs.docker.com/engine/swarm/services/#roll-back-to-the-previous-version-of-a-service'

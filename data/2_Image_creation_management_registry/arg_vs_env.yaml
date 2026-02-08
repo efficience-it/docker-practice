@@ -1,0 +1,54 @@
+questions:
+  - uuid: 9057af62-62e6-4e3a-9fbe-e07fbe0ef09c
+    question: What is the key difference between ARG and ENV in a Dockerfile?
+    answers:
+      - { value: 'ARG values persist in the running container, while ENV values do not', correct: false }
+      - { value: 'ARG is only available during the build process, while ENV persists in the running container', correct: true }
+      - { value: 'ENV can only be set at build time, while ARG can be changed at runtime', correct: false }
+      - { value: 'There is no difference; both behave the same way', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#arg
+
+  - uuid: bcaab5e0-aa29-4965-94fa-a4a7241de8b6
+    question: What happens to an ARG defined before the FROM instruction in a Dockerfile?
+    answers:
+      - { value: 'It is available throughout the entire Dockerfile', correct: false }
+      - { value: 'It can only be used in the FROM instruction itself and is not available after FROM', correct: true }
+      - { value: 'It overrides any ENV with the same name', correct: false }
+      - { value: 'It is ignored completely by the Docker builder', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
+
+  - uuid: 0c93c67a-c7bd-4245-8a86-6a8242b35ec8
+    question: How do you pass a build-time variable to a Dockerfile when running docker build?
+    answers:
+      - { value: 'docker build --env MY_VAR=value .', correct: false }
+      - { value: 'docker build --build-arg MY_VAR=value .', correct: true }
+      - { value: 'docker build --arg MY_VAR=value .', correct: false }
+      - { value: 'docker build --set MY_VAR=value .', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/build/#build-arg
+
+  - uuid: 11113d53-caba-4a96-a7d0-842e6fdd7c6c
+    question: Which of the following is a predefined ARG that Docker makes available without needing an ARG instruction in the Dockerfile?
+    answers:
+      - { value: 'DOCKER_HOST', correct: false }
+      - { value: 'HTTP_PROXY', correct: true }
+      - { value: 'CONTAINER_NAME', correct: false }
+      - { value: 'BUILD_DATE', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#predefined-args
+
+  - uuid: c1959e7d-90eb-47f6-9cd1-40c290377a50
+    question: If an ARG and an ENV instruction define the same variable name, which value takes precedence in subsequent instructions?
+    answers:
+      - { value: 'The ARG value always takes precedence', correct: false }
+      - { value: 'The ENV value always takes precedence over the ARG value', correct: true }
+      - { value: 'Docker throws an error due to the naming conflict', correct: false }
+      - { value: 'The value depends on the order they appear; the last one wins', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#using-arg-variables
+
+  - uuid: 5a257daa-dc10-4547-aceb-f1796c62c104
+    question: Why should sensitive data such as passwords not be passed using ARG instructions?
+    answers:
+      - { value: 'Because ARG values are encrypted in the image layers', correct: false }
+      - { value: 'Because ARG values are visible in the image history and build logs', correct: true }
+      - { value: 'Because ARG values are automatically published to Docker Hub', correct: false }
+      - { value: 'Because ARG values cannot contain special characters', correct: false }
+    help: https://docs.docker.com/engine/reference/builder/#arg
