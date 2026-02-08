@@ -9,7 +9,7 @@ questions:
     help: https://docs.docker.com/registry/spec/api/
 
   - uuid: d593dd0b-20d6-4c81-a4b4-63d234b99bce
-    question: Which port is typically used for secure traffic between UCP controllers and Docker engines?
+    question: Which port is typically used for secure traffic between UCP (now MKE) controllers and Docker engines?
     answers:
       - { value: '5000', correct: false }
       - { value: '443', correct: true }
@@ -18,7 +18,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/ucp-architecture.html
 
   - uuid: b2ea7eaf-813b-4e7f-a9ec-7819ff0f9695
-    question: What kind of internal communication occurs between UCP manager nodes?
+    question: What kind of internal communication occurs between UCP (now MKE) manager nodes?
     answers:
       - { value: 'Raft protocol for consensus', correct: true }
       - { value: 'SSH command relays', correct: false }
@@ -27,16 +27,16 @@ questions:
     help: https://docs.docker.com/engine/swarm/raft/
 
   - uuid: 1cbf7d01-1bcd-49a4-a372-60bb524a1aa7
-    question: Which service uses mutual TLS to authenticate communications with UCP?
+    question: Which service uses mutual TLS to authenticate communications with UCP (now MKE)?
     answers:
       - { value: 'Docker CLI only', correct: false }
       - { value: 'Docker engine', correct: true }
       - { value: 'External load balancer', correct: false }
-      - { value: 'DTR only', correct: false }
+      - { value: 'DTR (now MSR) only', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/ucp-architecture.html
 
   - uuid: 061dcd8d-255a-4cf3-8cf3-d663c34e5897
-    question: How does UCP handle secure communications to its API?
+    question: How does UCP (now MKE) handle secure communications to its API?
     answers:
       - { value: 'By requiring clients to SSH tunnel into manager nodes', correct: false }
       - { value: 'By exposing a TLS-enabled HTTPS API on port 443', correct: true }

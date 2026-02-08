@@ -1,6 +1,6 @@
 questions:
   - uuid: 8fdbfa8e-244d-46b8-9041-c74d649bca78
-    question: Which command installs UCP on an existing Docker node?
+    question: Which command installs UCP (now MKE) on an existing Docker node?
     answers:
       - { value: 'docker install ucp', correct: false }
       - { value: 'docker ucp deploy', correct: false }
@@ -9,7 +9,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/install/
 
   - uuid: 7b11b126-0b6a-4fdf-979c-2e2d413fc3fd
-    question: How many manager nodes are required for an HA UCP setup with quorum?
+    question: How many manager nodes are required for an HA UCP (now MKE) setup with quorum?
     answers:
       - { value: '5', correct: false }
       - { value: '3', correct: true }
@@ -18,7 +18,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/#high-availability
 
   - uuid: 2aeebc5e-b670-42b1-a5ff-8fa7ccedfe9e
-    question: Which command adds a new UCP manager node to an existing cluster?
+    question: Which command adds a new UCP (now MKE) manager node to an existing cluster?
     answers:
       - { value: 'docker swarm join --ucp-manager', correct: false }
       - { value: 'docker ucp add-manager', correct: false }
@@ -27,7 +27,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/install/join-linux-nodes.html
 
   - uuid: 21ef8613-10b2-4e0f-a2f3-e2c1d1c8593f
-    question: Which command is recommended to install DTR on a UCP node?
+    question: Which command is recommended to install DTR (now MSR) on a UCP (now MKE) node?
     answers:
       - { value: 'docker dtr deploy', correct: false }
       - { value: 'docker registry install', correct: false }
@@ -45,16 +45,16 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/ucp/on-aws/
 
   - uuid: c41396d4-17f0-4a8a-9981-1b205728c9c5
-    question: What requirement is necessary to deploy DTR in HA?
+    question: What requirement is necessary to deploy DTR (now MSR) in HA?
     answers:
       - { value: 'A latest tag on all images', correct: false }
       - { value: 'Shared or replicated persistent storage', correct: true }
       - { value: 'Root access on all workers', correct: false }
-      - { value: 'A single UCP manager', correct: false }
+      - { value: 'A single UCP (now MKE) manager', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/architecture/#high-availability
 
   - uuid: 85e4de92-7298-4217-9c7c-f3e3ea8c2e84
-    question: Which command checks the status of UCP services after installation?
+    question: Which command checks the status of UCP (now MKE) services after installation?
     answers:
       - { value: 'docker swarm status', correct: false }
       - { value: 'docker ucp status', correct: false }
@@ -63,16 +63,16 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/troubleshoot/
 
   - uuid: e65f1c8b-fba5-434a-a1bb-b8461c1d1b2e
-    question: What is a good practice to balance load across UCP nodes in HA?
+    question: What is a good practice to balance load across UCP (now MKE) nodes in HA?
     answers:
       - { value: 'Disable TLS', correct: false }
       - { value: 'Use a node label', correct: false }
-      - { value: 'Use a load balancer in front of UCP managers', correct: true }
+      - { value: 'Use a load balancer in front of UCP (now MKE) managers', correct: true }
       - { value: 'Enable debug mode', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/#ucp-high-availability
 
   - uuid: e47cb7f3-ef17-4718-bbe1-6b13de8ae260
-    question: Can UCP and DTR be deployed on the same nodes?
+    question: Can UCP (now MKE) and DTR (now MSR) be deployed on the same nodes?
     answers:
       - { value: 'No, except with Docker Desktop', correct: false }
       - { value: 'Yes, only on AWS', correct: false }
@@ -81,7 +81,7 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/install/plan-your-installation.html
 
   - uuid: cdb987f6-48b6-4f4c-9f2f-c34c1c36c837
-    question: Which option allows a secondary DTR node to synchronize with a primary node?
+    question: Which option allows a secondary DTR (now MSR) node to synchronize with a primary node?
     answers:
       - { value: '--standby', correct: false }
       - { value: '--join-token', correct: false }

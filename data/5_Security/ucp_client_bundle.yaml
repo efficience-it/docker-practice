@@ -1,15 +1,15 @@
 questions:
   - uuid: 2b30bb2a-07de-44ae-835c-6b9117ab05f9
-    question: What is the primary purpose of a UCP client bundle?
+    question: What is the primary purpose of a UCP (now MKE) client bundle?
     answers:
-      - { value: 'Connect DTR to Docker Hub', correct: false }
+      - { value: 'Connect DTR (now MSR) to Docker Hub', correct: false }
       - { value: 'Back up Docker volumes', correct: false }
-      - { value: 'Allow a user to connect to UCP via the Docker CLI with secure authentication', correct: true }
-      - { value: 'Deploy a new UCP instance', correct: false }
+      - { value: 'Allow a user to connect to UCP (now MKE) via the Docker CLI with secure authentication', correct: true }
+      - { value: 'Deploy a new UCP (now MKE) instance', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html
 
   - uuid: a7c3c109-2b07-44b4-8418-7d171fc6fe95
-    question: What does a UCP client bundle contain?
+    question: What does a UCP (now MKE) client bundle contain?
     answers:
       - { value: 'TLS certificates and Docker CLI configuration', correct: true }
       - { value: 'Log history', correct: false }
@@ -45,12 +45,12 @@ questions:
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html#use-client-bundle
 
   - uuid: 74e6e693-d376-486e-8d9e-79d60ce0bb0a
-    question: What condition must be met for a UCP user to download their client bundle?
+    question: What condition must be met for a UCP (now MKE) user to download their client bundle?
     answers:
-      - { value: 'Have access to DTR', correct: false }
+      - { value: 'Have access to DTR (now MSR)', correct: false }
       - { value: 'Be logged in as root', correct: false }
       - { value: 'Be a member of the Admin team only', correct: false }
-      - { value: 'Have the `Generate Client Bundle` permission in their UCP role', correct: true }
+      - { value: 'Have the `Generate Client Bundle` permission in their UCP (now MKE) role', correct: true }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html#access-control
 
   - uuid: 2ea49720-6b0d-4391-b5f7-24fae88a07d5
@@ -59,7 +59,7 @@ questions:
       - { value: 'Because it blocks port 443', correct: false }
       - { value: 'Because it contains private certificates and keys specific to a user', correct: true }
       - { value: 'Because it expires every 2 minutes', correct: false }
-      - { value: 'Because it contains the UCP image', correct: false }
+      - { value: 'Because it contains the UCP (now MKE) image', correct: false }
     help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/user-access/create-client-bundle.html#security
 
   - uuid: c9390103-5a79-4a50-92d8-9a2b17804287

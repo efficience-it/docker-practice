@@ -81,21 +81,21 @@ The goal is to help candidates:
 * [Describe and demonstrate how to use certificate-based client-server authentication to ensure a Docker daemon has the rights to access images on a registry.](data/3_installation_and_configuration/cert_based_auth_registry.yaml)
 * [Describe the use of namespaces, cgroups, and certificate configuration.](data/3_installation_and_configuration/describe_namespaces_cgroups_certificates.yaml)
 * [Describe and interpret errors to troubleshoot installation issues without assistance.](data/3_installation_and_configuration/install_troubleshooting.yaml)
-* [Describe and demonstrate the steps to deploy the Docker engine, UCP, and DTR on AWS and on-premises in an HA configuration.](data/3_installation_and_configuration/deploy_ucp_dtr_ha.yaml)
-* [Describe and demonstrate how to configure backups for UCP and DTR.](data/3_installation_and_configuration/backup_ucp_dtr.yaml)
+* [Describe and demonstrate the steps to deploy the Docker engine, UCP (now MKE), and DTR (now MSR) on AWS and on-premises in an HA configuration.](data/3_installation_and_configuration/deploy_ucp_dtr_ha.yaml)
+* [Describe and demonstrate how to configure backups for UCP (now MKE) and DTR (now MSR).](data/3_installation_and_configuration/backup_ucp_dtr.yaml)
 
 ### Domain 4: Networking (15% of exam)
 
 * [Describe the Container Network Model and how it interfaces with the Docker engine and network and IPAM drivers.](data/4_Networking/container_network_model.yaml)
 * [Describe the different types and use cases for the built-in network drivers.](data/4_Networking/describe_different_types_use_cases_built_in_network_drivers.yaml)
-* [Describe the types of traffic that flow between the Docker engine, registry and UCP controllers.](data/4_Networking/describe_engine_registry_ucp_traffic.yaml)
+* [Describe the types of traffic that flow between the Docker engine, registry and UCP (now MKE) controllers.](data/4_Networking/describe_engine_registry_ucp_traffic.yaml)
 * [Describe and demonstrate how to create a Docker bridge network for developers to use for their containers.](data/4_Networking/bridge_network_create.yaml)
 * [Describe and demonstrate how to publish a port so that an application is accessible externally.](data/4_Networking/describe_demonstrate_publish_port_application_accessible_externally.yaml)
 * [Identify which IP and port a container is externally accessible on.](data/4_Networking/identify_container_ip_port.yaml)
 * [Compare and contrast “host” and “ingress” publishing modes.](data/4_Networking/compare_contrast_host_ingress_publishing_modes.yaml)
 * [Describe and demonstrate how to configure Docker to use external DNS.](data/4_Networking/configure_external_dns.yaml)
-* [Describe and demonstrate how to use Docker to load balance HTTP/HTTPs traffic to an application (Configure L7 load balancing with Docker EE)](data/4_Networking/http_https_load_balancing.yaml).
-* [Understand and describe the types of traffic that flow between the Docker engine, registry, and UCP controllers](data/4_Networking/understand_engine_registry_ucp_traffic.yaml)
+* [Describe and demonstrate how to use Docker to load balance HTTP/HTTPs traffic to an application (Configure L7 load balancing with Docker Enterprise)](data/4_Networking/http_https_load_balancing.yaml).
+* [Understand and describe the types of traffic that flow between the Docker engine, registry, and UCP (now MKE) controllers](data/4_Networking/understand_engine_registry_ucp_traffic.yaml)
 * [Describe and demonstrate how to deploy a service on a Docker overlay network.](data/4_Networking/deploy_overlay_service.yaml)
 * [Describe and demonstrate how to troubleshoot container and engine logs to resolve connectivity issues between containers.](data/4_Networking/troubleshoot_container_connectivity.yaml)
 
@@ -107,13 +107,13 @@ The goal is to help candidates:
 * [Describe swarm default security.](data/5_Security/swarm_default_security.yaml)
 * [Describe MTLS.](data/5_Security/describe_mtls.yaml)
 * [Describe identity roles.](data/5_Security/security_identity_roles.yaml)
-* [Compare and contrast UCP workers and managers.](data/5_Security/compare_contrast_ucp_workers_managers.yaml)
-* [Describe the process to use external certificates with UCP and DTR.](data/5_Security/external_certs_ucp_dtr.yaml)
+* [Compare and contrast UCP (now MKE) workers and managers.](data/5_Security/compare_contrast_ucp_workers_managers.yaml)
+* [Describe the process to use external certificates with UCP (now MKE) and DTR (now MSR).](data/5_Security/external_certs_ucp_dtr.yaml)
 * [Describe and demonstrate that an image passes a security scan.](data/5_Security/image_security_scan.yaml)
 * [Describe and demonstrate how to enable Docker Content Trust.](data/5_Security/describe_demonstrate_how_enable_docker_content_trust.yaml)
-* [Describe and demonstrate how to configure RBAC with UCP.](data/5_Security/ucp_rbac_config.yaml)
-* [Describe and demonstrate how to integrate UCP with LDAP/AD.](data/5_Security/ucp_ldap_ad_integration.yaml)
-* [Describe and demonstrate how to create UCP client bundles.](data/5_Security/ucp_client_bundle.yaml)
+* [Describe and demonstrate how to configure RBAC with UCP (now MKE).](data/5_Security/ucp_rbac_config.yaml)
+* [Describe and demonstrate how to integrate UCP (now MKE) with LDAP/AD.](data/5_Security/ucp_ldap_ad_integration.yaml)
+* [Describe and demonstrate how to create UCP (now MKE) client bundles.](data/5_Security/ucp_client_bundle.yaml)
 * [Describe Docker Bench for Security.](data/5_Security/docker_bench_security.yaml)
 * [Describe seccomp profiles.](data/5_Security/seccomp_profiles.yaml)
 * [Describe AppArmor and SELinux with Docker.](data/5_Security/apparmor_selinux.yaml)
@@ -127,7 +127,7 @@ The goal is to help candidates:
 * [Compare and contrast object and block storage and when they should be used.](data/6_storage_and_volumes/contrast_object.yaml)
 * [Describe how an application is composed of layers and where these layers reside on the filesystem.](data/6_storage_and_volumes/layers_filesystem.yaml)
 * [Describe the use of volumes with Docker for persistent storage.](data/6_storage_and_volumes/persistent_storage.yaml)
-* [Identify the steps to take to clean up unused images on a filesystem and DTR.](data/6_storage_and_volumes/unused_images.yaml)
+* [Identify the steps to take to clean up unused images on a filesystem and DTR (now MSR).](data/6_storage_and_volumes/unused_images.yaml)
 * [Describe and demonstrate how storage can be used across cluster nodes.](data/6_storage_and_volumes/volume_cluster.yaml)
 * [Describe tmpfs mounts.](data/6_storage_and_volumes/tmpfs_mounts.yaml)
 * [Compare storage drivers.](data/6_storage_and_volumes/storage_driver_comparison.yaml)
@@ -148,7 +148,7 @@ Contributions are welcome! You can:
 
 * This is a community-driven, unofficial project.
 * It is not sponsored or endorsed by Docker Inc. or Mirantis.
-* All trademarks such as “Docker”, “Mirantis”, “DTR”, and “UCP” are used only as references and remain the property of their respective owners.
+* All trademarks such as "Docker", "Mirantis", "DTR" (now MSR), "UCP" (now MKE), "MKE", and "MSR" are used only as references and remain the property of their respective owners.
 * This repository contains only original content, created under fair use for educational purposes.
 * Docker and the Docker logo are trademarks or registered trademarks of Docker, Inc. in the United States and/or other countries. Docker, Inc. and other parties may also hold trademark rights to other terms used in this document.
 

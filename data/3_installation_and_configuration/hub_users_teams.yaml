@@ -22,7 +22,7 @@ questions:
     answers:
       - { value: 'Yes, but only with a paid account', correct: false }
       - { value: 'No, a user is tied to only one organization', correct: false }
-      - { value: 'No, except with Docker Enterprise', correct: false }
+      - { value: 'No, except with Docker Enterprise (now Mirantis)', correct: false }
       - { value: 'Yes', correct: true }
     help: https://docs.docker.com/docker-hub/orgs/
 
