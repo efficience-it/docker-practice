@@ -1,7 +1,7 @@
 # Contributing to docker-practice
 
 👋 Thank you for considering contributing to **docker-practice**!  
-This project is a community-driven, unofficial repository designed to help people training on docker.
+This project is a community-driven, unofficial repository designed to help people train on Docker.
 
 ---
 
