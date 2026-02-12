@@ -15,7 +15,7 @@ questions:
       - { value: 'mnt', correct: false }
       - { value: 'net', correct: true }
       - { value: 'uts', correct: false }
-    help: https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/
+    help: https://docs.docker.com/engine/security/userns-remap/
 
   - uuid: 00e37740-5f91-4fc7-9b01-063c1e26e426
     question: What does the 'pid' namespace isolate in Docker?
@@ -24,7 +24,7 @@ questions:
       - { value: 'Process IDs between containers', correct: true }
       - { value: 'Network connections between containers', correct: false }
       - { value: 'User IDs for file permissions', correct: false }
-    help: https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/
+    help: https://docs.docker.com/reference/cli/docker/container/run/#pid-settings-pid
 
   - uuid: 5e2b7025-35e4-499e-9372-3d62297bdbfa
     question: What is the purpose of cgroups in Docker?
