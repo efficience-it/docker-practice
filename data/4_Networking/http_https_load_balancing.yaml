@@ -51,7 +51,7 @@ questions:
       - { value: 'By using Consul for service discovery', correct: false }
       - { value: 'By running Interlock as a replicated service on Swarm', correct: true }
       - { value: 'By binding Interlock to the host’s loopback interface', correct: false }
-    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/architecture.html
+    help: https://docs.mirantis.com/containers/v2.1/dockeree-products/ucp/deploy-apps-with-swarm/layer-7-routing/architecture.html
 
   - uuid: f86c6404-f70c-413c-82b5-68fd66be6971
     question: Which of the following is a correct label to route traffic to a specific path?

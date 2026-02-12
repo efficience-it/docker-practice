@@ -38,7 +38,7 @@ questions:
   - uuid: b8704b3c-d6fd-4a6b-810f-7b94b8a869be
     question: Which command shows the storage driver currently used by Docker?
     answers:
-      - { value: 'docker info', correct: true }
+      - { value: 'docker system info', correct: true }
       - { value: 'docker volume inspect', correct: false }
       - { value: 'docker system inspect', correct: false }
       - { value: 'docker storage status', correct: false }
