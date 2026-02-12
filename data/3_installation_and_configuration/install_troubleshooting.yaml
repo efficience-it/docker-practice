@@ -51,7 +51,7 @@ questions:
       - { value: 'systemctl logs docker', correct: false }
       - { value: 'docker logs docker', correct: false }
       - { value: 'docker show-log', correct: false }
-    help: https://docs.docker.com/config/daemon/#troubleshoot-the-daemon
+    help: https://docs.docker.com/engine/daemon/logs/
 
   - uuid: 610ff302-cb2e-4d94-a4f2-9a0d2df460cf
     question: What should you check if Docker installation fails due to missing repositories on Ubuntu?
