@@ -15,7 +15,7 @@ questions:
       - { value: 'Delete all volumes', correct: false }
       - { value: 'Restart all containers', correct: false }
       - { value: 'Purge all logs', correct: false }
-    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/backup-restore.html#restore
+    help: https://docs.mirantis.com/mke/3.4/ops/disaster-recovery/restore-mke.html
 
   - uuid: fdc31b03-3093-4638-a77f-ef7b11860d88
     question: Which command allows you to back up a DTR (now MSR) instance?
@@ -33,7 +33,7 @@ questions:
       - { value: 'docker dtr load backup.tar', correct: false }
       - { value: 'docker dtr install --restore backup.tar', correct: false }
       - { value: 'docker run -i docker/dtr restore < backup.tar', correct: true }
-    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/dtr/backup-restore.html
+    help: https://docs.mirantis.com/msr/2.9/cli-ref/backup.html
 
   - uuid: 7b313274-0072-41a0-bd16-170c8672c845
     question: What is essential for a DTR (now MSR) restore to work correctly?
@@ -87,4 +87,4 @@ questions:
       - { value: 'Disable TLS to simplify restoration', correct: false }
       - { value: 'Manually compress Docker volumes', correct: false }
       - { value: 'Regularly test restorations', correct: true }
-    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/backup-restore.html#best-practices
+    help: https://docs.mirantis.com/mke/3.7/ops/disaster-recovery/back-up-mke/backup-considerations.html

@@ -6,7 +6,7 @@ questions:
       - { value: 'The Docker daemon is using a non-standard port', correct: false }
       - { value: 'The requested image does not exist', correct: false }
       - { value: 'A Docker command was misspelled', correct: false }
-    help: https://docs.docker.com/config/daemon/#start-the-daemon
+    help: https://docs.docker.com/engine/install/linux-postinstall/
 
   - uuid: 238c3d02-c1c4-4f77-97a0-146d472928e7
     question: Which command checks if the Docker service is active on a Linux machine?

@@ -15,7 +15,7 @@ questions:
       - { value: 'sudo systemctl enable docker', correct: true }
       - { value: 'docker enable daemon', correct: false }
       - { value: 'sudo docker start --on-boot', correct: false }
-    help: https://docs.docker.com/config/daemon/start/
+    help: https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot-with-systemd
 
   - uuid: 2f79646d-3aa6-42d6-9005-b2cf9ab32688
     question: How do you verify that the Docker daemon is enabled to start at boot?
@@ -24,7 +24,7 @@ questions:
       - { value: 'sudo systemctl is-enabled docker', correct: true }
       - { value: 'sudo docker daemon --check', correct: false }
       - { value: 'docker status --boot', correct: false }
-    help: https://docs.docker.com/config/daemon/start/
+    help: https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot-with-systemd
 
   - uuid: b3ea7a27-015d-4cd7-a314-1f56ddf8f727
     question: On a system using systemd, what does `systemctl enable docker` do?
@@ -33,7 +33,7 @@ questions:
       - { value: 'Starts the Docker service immediately', correct: false }
       - { value: 'Registers the Docker service to start at system boot', correct: true }
       - { value: 'Builds Docker images automatically', correct: false }
-    help: https://docs.docker.com/config/daemon/start/
+    help: https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot-with-systemd
 
   - uuid: 00ae3c6f-6e8a-4320-8792-71dc1e3cf7db
     question: Which Linux init system is typically used to manage Docker service startup?
