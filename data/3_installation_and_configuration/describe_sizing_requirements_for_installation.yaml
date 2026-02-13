@@ -27,13 +27,13 @@ questions:
     help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/
 
   - uuid: 67a48e29-32c3-4267-a931-c08b3cb0531b
-    question: For DTR (Docker Trusted Registry, now MSR), what is the minimum disk space required per node?
+    question: For DTR (Docker Trusted Registry, now MSR), what is the recommended disk space required per node?
     answers:
       - { value: '50 GB', correct: false }
       - { value: '100 GB', correct: true }
       - { value: '10 GB', correct: false }
       - { value: '20 GB', correct: false }
-    help: https://docs.docker.com/ee/dtr/admin/install/system-requirements/
+    help: https://docs.mirantis.com/msr/2.9/common/msr-system-reqs.html
 
   - uuid: 5a75c1b2-0cbd-4fc2-83cf-1f189d84cc13
     question: Why is it recommended to run Docker on a 64-bit operating system?
@@ -69,7 +69,7 @@ questions:
       - { value: 'It causes slow container startup', correct: false }
       - { value: 'Root volumes do not support overlay drivers', correct: false }
       - { value: "Security scanners can't access root volumes", correct: false }
-    help: https://docs.docker.com/storage/
+    help: https://docs.docker.com/engine/daemon/#daemon-data-directory
 
   - uuid: 05176b68-5a8b-4814-8753-ffec40440f12
     question: What is the typical port required to access UCP (now MKE) via a browser?

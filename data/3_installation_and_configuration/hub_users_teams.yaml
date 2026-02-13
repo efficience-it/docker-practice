@@ -51,7 +51,7 @@ questions:
       - { value: 'Public, Private, Restricted', correct: false }
       - { value: 'Guest, Developer, Owner', correct: false }
       - { value: 'Read, Write, Admin', correct: true }
-    help: https://docs.docker.com/docker-hub/repos/
+    help: https://docs.docker.com/admin/organization/manage-a-team/#set-team-repository-permissions
 
   - uuid: 2e83b0c4-8a9d-49cd-9968-62d86f032173
     question: Can a Docker Hub team member with Read access push an image?

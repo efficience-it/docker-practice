@@ -24,7 +24,7 @@ questions:
       - { value: 'docker ucp add-manager', correct: false }
       - { value: 'docker node promote manager', correct: false }
       - { value: 'docker container run --rm -it docker/ucp join --replica', correct: true }
-    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/install/join-linux-nodes.html
+    help: https://docs.mirantis.com/mke/3.4/ops/administer-cluster/join-nodes/join-linux-nodes.html
 
   - uuid: 21ef8613-10b2-4e0f-a2f3-e2c1d1c8593f
     question: Which command is recommended to install DTR (now MSR) on a UCP (now MKE) node?
@@ -42,7 +42,7 @@ questions:
       - { value: 'Terraform without configuration', correct: false }
       - { value: 'Docker Desktop with swarm mode', correct: false }
       - { value: 'Cloud-init or EC2 user-data scripts', correct: true }
-    help: https://docs.mirantis.com/docker-enterprise/v3.1/ucp/on-aws/
+    help: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/bootstrap_container_instance.html
 
   - uuid: c41396d4-17f0-4a8a-9981-1b205728c9c5
     question: What requirement is necessary to deploy DTR (now MSR) in HA?
@@ -69,7 +69,7 @@ questions:
       - { value: 'Use a node label', correct: false }
       - { value: 'Use a load balancer in front of UCP (now MKE) managers', correct: true }
       - { value: 'Enable debug mode', correct: false }
-    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/ucp/architecture/#ucp-high-availability
+    help: https://docs.mirantis.com/mke/3.8/install/predeployment/configure-loadbalancer.html?highlight=balance%20load
 
   - uuid: e47cb7f3-ef17-4718-bbe1-6b13de8ae260
     question: Can UCP (now MKE) and DTR (now MSR) be deployed on the same nodes?

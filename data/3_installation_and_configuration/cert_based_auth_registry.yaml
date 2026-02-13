@@ -51,7 +51,7 @@ questions:
       - { value: '2376', correct: false }
       - { value: '443', correct: true }
       - { value: '5000', correct: false }
-    help: https://docs.docker.com/registry/insecure/
+    help: https://distribution.github.io/distribution/about/deploying/
 
   - uuid: 1765e25a-12d3-4f61-993a-4d39487fd6a6
     question: Once certificates are properly configured, what does `docker pull myregistry.com/myimage` allow?
@@ -87,4 +87,4 @@ questions:
       - { value: 'No, except on Windows', correct: false }
       - { value: 'No, Docker reloads them dynamically', correct: false }
       - { value: 'Yes, so it reloads the certificates and establishes the secure connection', correct: true }
-    help: https://docs.docker.com/engine/security/certificates/
+    help: https://docs.docker.com/engine/security/protect-access/
