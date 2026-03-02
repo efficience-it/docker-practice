@@ -15,7 +15,7 @@ questions:
       - { value: 'mnt', correct: false }
       - { value: 'net', correct: true }
       - { value: 'uts', correct: false }
-    help: https://docs.docker.com/engine/security/userns-remap/#user-namespace-known-limitations
+    help: https://docs.docker.com/engine/security/userns-remap/
 
   - uuid: 00e37740-5f91-4fc7-9b01-063c1e26e426
     question: What does the 'pid' namespace isolate in Docker?
