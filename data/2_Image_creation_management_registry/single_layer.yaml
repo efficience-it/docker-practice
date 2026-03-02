@@ -15,7 +15,7 @@ questions:
       - { value: 'docker build --squash -t myimage .', correct: true }
       - { value: 'docker build --single-layer .', correct: false }
       - { value: 'docker prune --layers', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/build/#squash-an-image
+    help: https://docs.docker.com/reference/cli/docker/image/build/#squash
 
   - uuid: 8ed57f28-4734-4ed1-88b8-55e0e5c747b4
     question: What is a possible consequence of using --squash?

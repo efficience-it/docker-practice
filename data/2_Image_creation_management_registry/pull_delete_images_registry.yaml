@@ -50,7 +50,7 @@ questions:
       - { value: 'docker pull nginx --all', correct: false }
       - { value: 'docker image pull-all nginx', correct: false }
       - { value: 'docker pull --all-tags nginx', correct: true }
-      - { value: 'docker pull -a nginx', correct: false }
+      - { value: 'docker pull nginx:*', correct: false }
     help: 'https://docs.docker.com/reference/cli/docker/image/pull/#options'
 
   - uuid: 79c7dc5e-2878-4b61-9e32-9c7f7ff9694a
