@@ -6,7 +6,7 @@ questions:
       - { value: 'docker deploy registry', correct: false }
       - { value: 'docker run -d -p 5000:5000 --name registry registry:2', correct: true }
       - { value: 'docker image push registry:2', correct: false }
-    help: 'https://docs.docker.com/registry/deploying/'
+    help: 'https://distribution.github.io/distribution/about/deploying/'
 
   - uuid: 1ae849c1-286f-419b-a6df-7931a5f650e5
     question: Which port is exposed by default in the official Docker registry image?
@@ -15,7 +15,7 @@ questions:
       - { value: '443', correct: false }
       - { value: '5000', correct: true }
       - { value: '80', correct: false }
-    help: 'https://docs.docker.com/registry/'
+    help: 'https://distribution.github.io/distribution/about/deploying/'
 
   - uuid: b34b189f-1d12-452e-ae42-88c531cf9b26
     question: What is the purpose of setting the environment variable `REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY` in the registry container?
@@ -24,7 +24,7 @@ questions:
       - { value: 'To expose a custom port', correct: false }
       - { value: 'To connect to Docker Hub', correct: false }
       - { value: 'To define registry authentication', correct: false }
-    help: 'https://docs.docker.com/registry/configuration/'
+    help: 'https://distribution.github.io/distribution/about/configuration/'
 
   - uuid: 51a93188-2a87-4fd5-b1c4-c6373ce3e57a
     question: What storage backend is used by default in the official registry image?
@@ -60,7 +60,7 @@ questions:
       - { value: 'Use the Alpine base image', correct: false }
       - { value: 'Enable TLS using a valid certificate', correct: true }
       - { value: 'Run in host network mode', correct: false }
-    help: 'https://docs.docker.com/registry/deploying/#running-a-domain-registry'
+    help: 'https://distribution.github.io/distribution/about/deploying/'
 
   - uuid: 287ba12b-8638-4bcb-9fbd-34f5360a062c
     question: What is the risk of exposing a registry without TLS in production?
@@ -78,7 +78,7 @@ questions:
       - { value: 'docker run -v /opt/registry:/var/lib/registry registry:2', correct: true }
       - { value: 'docker run --mount type=bind,target=/var/run/docker.sock registry:2', correct: false }
       - { value: 'docker run --tmpfs /var/lib/registry registry:2', correct: false }
-    help: 'https://docs.docker.com/registry/storage-drivers/filesystem/'
+    help: 'https://distribution.github.io/distribution/about/deploying/'
 
   - uuid: f5d7dc60-c003-41e3-9058-381b2b0dd5c5
     question: Which configuration file allows customizing a registry with authentication, storage, and logging options?
@@ -87,4 +87,4 @@ questions:
       - { value: 'daemon.json', correct: false }
       - { value: 'registry.conf', correct: false }
       - { value: 'config.yml', correct: true }
-    help: 'https://docs.docker.com/registry/configuration/'
+    help: 'https://distribution.github.io/distribution/about/configuration/'

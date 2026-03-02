@@ -38,8 +38,8 @@ questions:
   - uuid: f4df88a0-c1f7-4c9d-bd0e-e2ad3ad66aa7
     question: Can `docker rmi` delete an image that is currently being used by a running container?
     answers:
-      - { value: 'Only if using the `--force` flag', correct: false }
-      - { value: 'No, you must stop and remove the container first', correct: true }
+      - { value: 'Only if using the `--force` flag', correct: true }
+      - { value: 'No, you must stop and remove the container first', correct: false }
       - { value: 'Yes, but the container will crash', correct: false }
       - { value: 'Yes, the image will be removed anyway', correct: false }
     help: 'https://docs.docker.com/reference/cli/docker/image/rm/'

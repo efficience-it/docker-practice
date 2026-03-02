@@ -69,7 +69,7 @@ questions:
       - { value: 'Use a .dockerignore file', correct: true }
       - { value: 'Use the --exclude flag', correct: false }
       - { value: 'Files are automatically excluded by Docker', correct: false }
-    help: 'https://docs.docker.com/reference/dockerfile/#dockerignore-file'
+    help: 'https://docs.docker.com/build/concepts/context/#dockerignore-files'
 
   - uuid: 6c02d847-f098-49b7-8547-08dfd53ef3b1
     question: Which of the following instructions is preferred for copying local files into an image when no archive extraction is needed?

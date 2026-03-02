@@ -78,7 +78,7 @@ questions:
       - { value: 'docker logout', correct: true }
       - { value: 'docker disconnect', correct: false }
       - { value: 'docker signout', correct: false }
-    help: https://docs.docker.com/reference/cli/docker/login/
+    help: https://docs.docker.com/reference/cli/docker/logout/
 
   - uuid: d1cd4f6f-6f11-4a39-a215-116e1d10c4d4
     question: If you omit a registry in docker login, which registry is used?

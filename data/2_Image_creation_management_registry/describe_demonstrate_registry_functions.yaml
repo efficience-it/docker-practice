@@ -60,7 +60,7 @@ questions:
       - { value: 'registry:2 image in a docker-compose file', correct: true }
       - { value: 'A config.json in ~/.docker', correct: false }
       - { value: 'A YAML Compose with alpine', correct: false }
-    help: https://docs.docker.com/registry/deploying/
+    help: https://distribution.github.io/distribution/about/deploying/
 
   - uuid: d6ebc119-9334-44e0-b49f-76a0ee29f2fa
     question: What environment variable can be used to set a registry credential for non-interactive login?
@@ -78,7 +78,7 @@ questions:
       - { value: 'It stores image logs', correct: false }
       - { value: 'It encrypts image layers', correct: false }
       - { value: 'It scopes images per user or org in the registry', correct: true }
-    help: https://docs.docker.com/docker-hub/repos/#repository-namespaces-and-repository-visibility
+    help: https://docs.docker.com/docker-hub/repos/create/
 
   - uuid: 34719f42-0321-4d5f-b5c2-0b1d676eb3f7
     question: Which of the following can be used to deploy a private registry securely?
