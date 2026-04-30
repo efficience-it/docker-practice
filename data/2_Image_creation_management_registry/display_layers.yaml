@@ -12,10 +12,10 @@ questions:
     question: Which 'docker history' option shows the cumulative size of image layers?
     answers:
       - { value: '--quiet', correct: false }
-      - { value: '--format', correct: false }
-      - { value: '--human', correct: true }
+      - { value: '--format "{{.Size}}"', correct: true }
+      - { value: '--human', correct: false }
       - { value: '--no-trunc', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/history/
+    help: https://docs.docker.com/reference/cli/docker/image/history/
 
   - uuid: 85dd16f7-d749-4132-9359-30c61d9bcd45
     question: What is the typical output of the command 'docker history nginx'?
@@ -66,9 +66,9 @@ questions:
     question: What is the best way to visualize the layers of an image with the exact commands used to generate them?
     answers:
       - { value: 'docker history --no-trunc nginx', correct: true }
-      - { value: 'docker ps -a', correct: false }
-      - { value: 'docker image inspect', correct: false }
-      - { value: 'docker diff', correct: false }
+      - { value: 'docker ps -a nginx', correct: false }
+      - { value: 'docker image inspect nginx', correct: false }
+      - { value: 'docker diff nginx', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/history/
 
   - uuid: cdc2fd95-fb2b-4b6c-8352-b453327cf98e

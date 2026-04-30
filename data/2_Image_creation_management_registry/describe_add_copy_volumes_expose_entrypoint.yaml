@@ -54,6 +54,7 @@ questions:
       - { value: 'The port is documented but not published to the host automatically', correct: true }
       - { value: 'Docker maps it to a random host port', correct: false }
     help: https://docs.docker.com/engine/reference/builder/#expose
+
   - uuid: 3fc5d85e-d5cd-4a96-9b27-bd10a5893e14
     question: What makes the ADD instruction different from COPY in Dockerfiles?
     answers:

@@ -105,7 +105,7 @@ questions:
       - { value: 'Letters and slashes only', correct: false }
       - { value: 'Only lowercase letters', correct: false }
       - { value: 'a-z, 0-9, hyphen (-), underscore (_) and dot (.)', correct: true }
-    help: https://docs.docker.com/reference/cli/docker/image/tag/#extended-description
+    help: https://docs.docker.com/reference/cli/docker/image/push/#examples
 
   - uuid: 0f93a32d-eac8-4ed6-8856-b2f5bcfc8e9b
     question: What does `--disable-content-trust` do?

@@ -69,7 +69,7 @@ questions:
       - { value: 'Docker removes the image from the local cache', correct: false }
       - { value: 'The image remains accessible via the other tag', correct: true }
       - { value: 'All tags are removed', correct: false }
-    help: https://docs.docker.com/reference/cli/docker/image/tag/
+    help: https://docs.docker.com/reference/cli/docker/image/rm/#description
 
   - uuid: e4cfbe38-3033-4b0e-8f2e-3f1ec1992c0e
     question: Can you tag an image with a full URL including port number?

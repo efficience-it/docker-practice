@@ -87,4 +87,4 @@ questions:
       - { value: 'Because ENV variables are not supported', correct: false }
       - { value: 'Because Docker blocks secret keys automatically', correct: false }
       - { value: 'Because they are encrypted by default', correct: false }
-    help: 'https://docs.docker.com/develop/dev-best-practices/#dont-store-secrets-in-images'
+    help: 'https://docs.docker.com/build/building/secrets'
